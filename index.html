@@ -708,8 +708,13 @@ input[type="submit"]:hover,
 
 /* Grille des blocs */
 .info-grid{
-    row-gap: 8rem;
-    column-gap: 5rem;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+
+    column-gap:5rem;
+    row-gap:8rem;
+
+    align-items:center;
 }
 
  .section-alt{
