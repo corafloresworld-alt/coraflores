@@ -707,12 +707,16 @@ input[type="submit"]:hover,
 }
 
 /* Grille des blocs */
-.info-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2.5rem;
+.info-grid{
+    row-gap: 8rem;
+    column-gap: 5rem;
 }
 
+ .section-alt{
+    background:#F8F6F2;
+    padding:8rem 0;
+}
+    
 /* Cartes, image des blocs */
 .info-card{
     background:transparent;
@@ -720,6 +724,7 @@ input[type="submit"]:hover,
     overflow:visible;
     padding-bottom:0;
     box-shadow:none;
+    margin: 3rem 0;
 }
 
 .info-card:hover{
