@@ -714,23 +714,24 @@ input[type="submit"]:hover,
 }
 
 /* Cartes, image des blocs */
-.info-card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  overflow: hidden;
-  padding-bottom: 1.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+.info-card{
+    background:transparent;
+    border-radius:0;
+    overflow:visible;
+    padding-bottom:0;
+    box-shadow:none;
 }
 
-.info-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+.info-card:hover{
+    transform:none;
+    box-shadow:none;
 }
 
-.info-card img {
-  width: 100%;
-  height: 320px;
-  object-fit: cover;
+.info-card img{
+    width:100%;
+    height:420px;
+    object-fit:cover;
+    border-radius:4px;
 }
 
 .info-card h3 {
@@ -897,11 +898,17 @@ input[type="submit"]:hover,
     grid-template-columns: 1fr;
   }
 
-  .problem-card{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    padding:3rem;
+.problem-card{
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 2rem 1rem 2rem 0;
+    transform: none !important;
+}
+
+.problem-card:hover{
+    transform:none;
+    box-shadow:none;
 }
 
 .problem-content{
