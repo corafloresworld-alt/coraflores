@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>contact</title>
+
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+  
+  <style>
+
+     /* ================================
+     🎨 PALETTE DE COULEURS – SITE
+     ================================ */
+  :root {
+    --color-bg-main: #042E89;
+    --color-bg-secondary: #021f5a;
+
+    --color-text-main: #ffffff;
+    --color-text-muted: #cfd8ff;
+
+    --color-accent: #4e8dff;
+    --color-accent-hover: #a72a50;
+
+    --color-border: rgba(255,255,255,0.2);
+  }
+
+    *,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+    @font-face {
+      font-family: 'Euclid';
+      src: url('../fonts/euclid.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    
+
+    .navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 95px;
+  background: rgba(4, 46, 137, 0.9);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  display: grid;
+  grid-template-columns: auto 1fr auto; 
+  align-items: center;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 70px;
+  width: auto;
+}
+
+/* Texte promo */
+.navbar-info {
+  text-align: center;
+  font-size: 0.9rem;
+  color: white;
+  opacity: 0.85;
+}
+
+/* Liens à droite */
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+  justify-self: end; /* 🔥 FORCE À DROITE */
+}
+
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  line-height: 1; /* 🔥 alignement vertical */
+  padding: 0;     /* 🔥 empêche décalage */
+}
+
+.navbar-links a.active {
+  font-weight: 700;
+  opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .navbar-info {
+    display: none;
+  }
+
+  .navbar-logo img {
+    height: 52px;
+  }
+} 
+
+
+body {
+  font-family: 'Euclid', sans-serif;
+  background-color: var(--color-bg-main);
+  color: var(--color-text-main);
+
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 3rem 1rem 1rem 1rem;
+  padding-top: 95px; /* 🔥 même valeur que les autres pages */
+}
+
+
+    h1 {
+      color: var(--color-accent);
+      margin-bottom: 1rem;
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.5rem;
+    }
+
+   p.intro {
+  max-width: 900px;          /* 🔥 plus large */
+  margin: 0 auto 3rem;       /* centre + espace bas */
+  padding: 0 1.5rem;         /* confort mobile */
+  text-align: center;
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-text-muted);
+}
+
+
+  form {
+  background: rgba(255, 255, 255, 0.08); /* 🔥 fond clair translucide */
+  backdrop-filter: blur(8px);             /* effet verre (si supporté) */
+  -webkit-backdrop-filter: blur(8px);
+  
+  border: 1px solid var(--color-border);
+  padding: 2.2rem;
+  border-radius: 16px;
+  max-width: 600px;
+  width: 100%;
+    
+  margin: 0 auto;
+
+  box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.7rem 1rem;
+      margin-bottom: 1.5rem;
+      border-radius: 8px;
+      border: none;
+      font-size: 1rem;
+      font-family: 'Euclid', sans-serif;
+      resize: vertical;
+    }
+
+    textarea {
+      min-height: 120px;
+    }
+
+    input[type="submit"] {
+      background-color: var(--color-accent);
+      border: none;
+      color: white;
+      font-weight: 700;
+      padding: 0.9rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+    }
+
+    input[type="submit"]:hover {
+  background-color: var(--color-accent-hover);
+    }
+
+    .contact-info {
+      margin-top: 2rem;
+      max-width: 600px;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.4;
+      color: var(--color-text-muted);
+    }
+
+    .contact-info a {
+      color: #f0b47c;
+      text-decoration: underline;
+    }
+
+    fieldset {
+      margin: 2rem 0;
+      padding: 1rem 1.2rem;
+      border-radius: 12px;
+      border: 1px solid var(--color-border);
+    }
+
+    legend {
+      font-weight: 700;
+      color: var(--color-accent);
+      padding: 0 0.5rem;
+    }
+
+    .formule-detail {
+      display: block;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: var(--color-text-muted);
+      margin-top: 0.2rem;
+      margin-left: 1.5rem;
+    }
+
+    .offre-visuelle {
+      margin-top: 3rem;
+      max-width: 1200px;
+      width: 100%;
+    }
+
+ .offre-container {
+  display: flex;
+  gap: 2rem;
+
+  justify-content: center;
+  align-items: stretch;   /* 🔥 IMPORTANT */
+
+  flex-wrap: wrap;
+}
+
+.contact-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  box-sizing: border-box;   /* ✅ empêche le dépassement */
+}
+
+
+
+   .offre-item {
+  background-color: var(--color-bg-main);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 1rem;
+
+  flex: 1 1 300px;   /* 🔥 flexible */
+  max-width: 340px;
+  text-align: center;
+}
+
+
+    .offre-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      object-fit: cover;
+    }
+
+   .offre-item h3 {
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  min-height: 2.6em; /* 🔥 réserve la place de 2 lignes */
+  margin-bottom: 1rem;
+}
+
+    /* Texte principal des cartes */
+.offre-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  margin-bottom: 0.8rem;
+}
+
+/* Texte secondaire / descriptif */
+.offre-text.muted {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+}
+
+
+
+  /* ================================
+   📋 FORMULAIRE – CONFORT MOBILE
+================================ */
+
+/* Conteneur formulaire */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem; /* espace entre chaque champ */
+}
+
+/* Labels */
+form label {
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Champs */
+form input,
+form select,
+form textarea {
+  padding: 0.9rem 1rem;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+/* Zone message */
+form textarea {
+  min-height: 160px;
+}
+
+/* Bouton */
+form input[type="submit"] {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  font-size: 1.05rem;
+}
+
+  /* Inputs – thème sombre cohérent */
+form input,
+form select,
+form textarea {
+  background: rgba(255,255,255,0.08);
+  color: var(--color-text-main);
+  border: 1px solid var(--color-border);
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--color-text-muted);
+}
+
+/* Focus */
+form input:focus,
+form select:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+}
+
+    /* ======================
+   RESPONSIVE NAVBAR MOBILE
+====================== */
+
+@media (max-width: 768px) {
+
+  .navbar {
+    height: 80px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .navbar-logo img {
+    height: 52px;
+  }
+
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  form {
+    padding: 1.2rem;
+  }
+
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+
+    <!-- Logo -->
+    <a href="/" class="navbar-logo">
+      <img src="/assets/images/logo2-blancbleu.png" alt="Guillaume Fishing Trip">
+    </a>
+
+    <!-- Texte promo caché -->
+    <div class="navbar-info" style="display:none;"></div>
+
+    <!-- Liens -->
+    <div class="navbar-links">
+      <a href="/apropos/">À propos</a>
+      <a href="/sejours/">Séjours</a>
+      <a href="/contact/" class="cta active">Réserver</a>
+    </div>
+
+  </div>
+</nav>
+
+<div class="contact-container">
+
+<h1>Réservez votre séjour de pêche</h1>
+
+<p class="intro">
+
+  Envie de vivre une expérience de pêche unique en Espagne ?<br>
+  Que vous soyez débutant ou passionné, je vous accompagne pour un séjour
+  sur mesure, entre mer, océan et lacs, dans un cadre naturel exceptionnel.<br><br>
+  Remplissez le formulaire ci-dessous pour recevoir votre devis personnalisé
+  et commencer l’aventure.
+</p>
+
+  <form method="POST" action="https://formspree.io/f/mqebrzwk">   <!-- site qui gere le formulaire -->
+    <input type="hidden" name="site" value="Guillaume Fishing Trip"> <!-- formspress compte email cora.flores13@gmail.com -->
+    <label for="name">Nom complet *</label>
+    <input type="text" id="name" name="name" required placeholder="Votre nom complet" />
+
+    <label for="email">Adresse e-mail *</label>
+    <input type="email" id="email" name="_replyto" required placeholder="exemple@domaine.com" />
+
+    <label for="phone">Téléphone</label>
+    <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" />
+
+    <label for="event-type">Type d'événement *</label>
+    <select id="event-type" name="event-type" required>
+      <option value="" disabled selected>Choisissez une option</option>
+      <option value="mariage">Mariage</option>
+      <option value="marché/festival">Anniversaire</option>
+      <option value="privatisation">Privatisation</option>
+      <option value="événement professionnel">Événement d'entreprise</option>
+      <option value="événement professionnel">Salon / pop up</option>
+      <option value="autre">Autres (à préciser dans votre message)</option>
+    </select>
+
+    <label for="location">Lieu de la prestation *</label>
+    <input type="text" id="location" name="location" required placeholder="Ville, adresse ou lieu précis" />
+
+    <label for="guests">Nombre approximatif de convives *</label>
+    <input type="number" id="guests" name="guests" required min="1" placeholder="Ex : 50" />
+
+    <fieldset>
+      <legend>Composez votre service café *</legend>
+
+      <label>
+        <input type="checkbox" name="formule" value="Essentiel" />
+       Pêche en mer
+        <span class="formule-detail">Canne, leurres, blabla ... </span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="formule" value="La rafraîchissante" />
+       Pêche en eau douce
+        <span class="formule-detail">Canne, leurres, blabla ...</span>
+      </label>
+
+      <label>
+        <input type="checkbox" name="formule" value="Gourmand" />
+        Pêche big fish
+        <span class="formule-detail">Canne, leurres, blabla ...</span>
+      </label>
+    </fieldset>
+
+    <label for="message">Votre message / demande particulière</label>
+    <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez vos questions..."></textarea>
+
+    <input type="submit" value="Envoyer votre demande de devis" />
+  </form>
+
+  <section class="offre-visuelle">
+    <div class="offre-container">
+   <div class="offre-item">
+  <img src="../assets/images/poisson1.png" alt="Pêche en mer et eau douce" />
+
+  <h3>Pêche en mer <br> & eau douce</h3>
+
+  <p class="offre-text">
+    Découvrez une grande diversité de spots entre mer, océan et lacs,
+    sélectionnés selon la saison, la météo et votre niveau.
+  </p>
+
+  <p class="offre-text muted">
+    Pêche du bord ou en bateau, techniques modernes ou traditionnelles,
+    recherche de sensations ou approche plus contemplative :
+    chaque sortie est pensée sur mesure.
+  </p>
+</div>
+
+
+    <div class="offre-item">
+  <img src="../assets/images/poisson2.png" alt="Bateau et encadrement" />
+
+  <h3>Bateau & encadrement</h3>
+
+  <p class="offre-text">
+    Vous êtes accompagné par un guide de pêche professionnel,
+    passionné et à l’écoute, pour progresser en toute confiance.
+  </p>
+
+  <p class="offre-text muted">
+    Bateau équipé, matériel adapté, conseils personnalisés
+    et sécurité maximale pour profiter pleinement de chaque sortie.
+  </p>
+</div>
+
+
+ <div class="offre-item">
+  <img src="../assets/images/poisson3.png" alt="Séjours de pêche" />
+
+  <h3>Séjours & expérience</h3>
+
+  <p class="offre-text">
+    Vivez bien plus qu’une simple session de pêche :
+    une immersion totale dans un cadre naturel exceptionnel en Andalousie.
+  </p>
+
+  <p class="offre-text muted">
+    Hébergement, organisation, rythme adapté,
+    moments de partage et souvenirs inoubliables :
+    tout est pensé pour une expérience authentique et humaine.
+  </p>
+</div>
+
+</section>
+  
+</div>
+  
+</body>
+</html>
+

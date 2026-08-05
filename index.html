@@ -1,0 +1,1163 @@
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Guillaume, guide de pêche .... Vivre un moment magique, entouré et formé par un professionnel et passioné.... Ambiance chaleureuse et conviviale." />
+
+  <title>Guillaume Fishing Trip</title>
+
+  
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+  
+  <style>
+
+/* ================================
+     🎨 PALETTE DE COULEURS – SITE
+     Modifier ici pour changer tout le site
+     ================================ */
+:root {
+  --color-bg-main: #042E89;
+  --color-bg-secondary: #021f5a;
+
+  --color-text-main: #ffffff;
+  --color-text-muted: #cfd8ff;
+
+  --color-accent: #4e8dff;
+  --color-accent-hover: #770628;
+
+  --color-border: rgba(255,255,255,0.2);
+}
+
+
+  /* ================================
+     TYPOGRAPHIE
+     ================================ */
+    
+    @font-face {
+      font-family: 'Euclid';
+      src: url('./fonts/euclid.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+  body {
+  font-family: 'Euclid', sans-serif;
+  background: var(--color-bg-main);
+  color: var(--color-text-main);
+  padding-top: 90px; /* 🔥 IMPORTANT pour la navbar fixe */
+}
+
+/* ======================
+   NAVBAR – UNIVERSELLE
+====================== */
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: rgba(4, 46, 137, 0.9);
+  backdrop-filter: blur(6px);
+  z-index: 9999;
+}
+
+.navbar-inner {
+  max-width: 1300px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* Logo */
+.navbar-logo img {
+  height: 70px;
+  width: auto;
+}
+
+.navbar-info {
+  flex: 1;                 /* 🔥 prend l'espace entre logo et liens */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.announcement {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.announcement span {
+  display: inline-block;
+  white-space: nowrap;
+
+  padding-left: 100%;     /* 🔥 start hors écran */
+  animation: scroll-text 20s linear infinite;
+
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+
+.navbar-links {
+  display: flex;
+  gap: 1.2rem;
+  margin-left: auto;   /* ✅ compatible Safari */
+  align-items: center;
+  flex-wrap: nowrap;   /* 🔥 sécurité Safari */
+}
+
+.navbar-links a {
+  color: var(--color-text-main);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  white-space: nowrap;   /* 🔥 empêche retour à la ligne Safari */
+}
+
+.navbar-links a.active {
+  font-weight: 700;
+  border-bottom: 2px solid var(--color-accent);
+}
+
+/* Bouton réserver */
+.navbar-links .cta {
+  background: var(--color-accent);
+  padding: 0.5rem 1.3rem;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.navbar-links .cta:hover {
+  background: var(--color-accent);
+}
+
+
+
+   /*  🎥 VIDEO HEADER – STANDARD SITE
+
+Format : 16:9 (paysage)
+Dimensions idéales :
+→ 1920 × 1080 px (Full HD)
+
+Utilisation :
+CSS object-fit: cover*/
+    
+.video-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+
+.video-header video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 65%; /* ⬅️ ici pour ajuster le cadrage de la vidéo, center 50%   /* centré *center 60%   /* un peu plus bas *center 70%   /* encore plus bas *center top   /* haut */
+  z-index: 1;
+}
+/* Overlay léger */
+.video-header .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+  z-index: 1;
+}
+
+/* ======================
+   HERO TEXTE SUR VIDÉO
+====================== */
+
+.video-header .overlay-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  z-index: 2;
+  padding: 2rem;
+  gap: 1.2rem;
+}
+
+.video-header h1 {
+  font-size: clamp(2.2rem, 5vw, 3.8rem);
+  font-weight: 700;
+  color: var(--color-text-main);
+  text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  max-width: 900px;
+}
+
+.video-header h2 {
+  text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  max-width: 700px;
+}
+
+
+    /* ================================
+   🚀 CALL TO ACTION – HERO
+=============================== */
+
+.cta-container {
+  margin-top: 2rem;
+}
+
+.cta-primary {
+  display: inline-block;
+  padding: 1rem 2.4rem;
+  background: var(--color-accent);
+  color: var(--color-text-main);
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-primary:hover {
+  background: var;
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0,0,0,0.4);
+}
+
+
+    /* LOGO CENTRÉ */
+    .logo {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 200px;
+      z-index: 4;
+      display: none; /* 👈 logo qui est dans la video-headercaché, en none il est caché. pour l'activer il faut mettre block a la place de none  */
+      
+    }
+
+    /* TEXTES PRINCIPAUX */
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: var(--color-text-main);
+      font-weight: normal;
+      max-width: 100%;
+      margin: 0rem auto;
+      text-align: left;
+      padding: 0 1rem;
+    }
+
+    .intro {
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: var(--color-text-main);
+  font-weight: normal;
+  margin: 4rem auto; /* ✅ Ajout de marge plus importante */
+  padding: 0 1rem;
+  max-width: 100%;
+}
+
+
+    .left-align {
+      text-align: left;
+      margin-left: 1rem;
+      max-width: 90%;
+    }
+
+    /* CONCEPTS CONTAINER */
+    .concepts-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      max-width: 1800px;
+    }
+
+    .concept {
+      background: transparent;
+      box-shadow: none;
+      padding: 0;
+      width: 45%;
+      min-height: 480px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      color: var(--color-text-main);
+    }
+
+    .concept:nth-child(2) {
+      color: var(--color-text-main);
+      padding-left: 1rem;
+    }
+
+    .concept h3 {
+      margin-left: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .concept p {
+      margin-left: 1rem;
+      max-width: 90%;
+    }
+
+    .concept-image {
+      width: 100%;
+      height: 750px;
+      object-fit: cover;
+      object-position: top;
+      border-radius: 13px;
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+/* ================================
+   🔘 BOUTONS D’ACTION PRINCIPAUX
+=============================== */
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 4rem auto 5rem;
+  flex-wrap: wrap;
+}
+
+.action-btn {
+  min-width: 240px;
+  height: 52px; /* 🔥 hauteur fixe propre */
+  
+  display: flex; /* 🔥 active centrage parfait */
+  align-items: center; /* 🔥 centre verticalement */
+  justify-content: center; /* 🔥 centre horizontalement */
+
+  padding: 0 2rem; /* 🔥 padding horizontal seulement */
+
+  background: var(--color-accent);
+  color: var(--color-text-main);
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+
+.action-btn:hover {
+  background: var(--color-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
+
+}
+
+    .btn,
+input[type="submit"],
+.cta-primary,
+.action-btn {
+  background: var(--color-accent);
+  color: var(--color-text-main);
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover,
+input[type="submit"]:hover,
+.cta-primary:hover,
+.action-btn:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-2px);
+}
+
+
+  
+    /* BOUTONS CONCEPT */
+
+    .concept-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.concept-buttons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2rem;
+  background:var(--color-accent);
+  color: var(--color-text-main);
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: bold;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  height: 48px;
+}
+
+
+
+
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+}
+
+.concept-buttons a.mariage-button img {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+
+.concept-buttons a:hover {
+  background: var(--color-bg-main);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+    
+
+/* ================================
+   🎣 INTRO AVIS / CONFIANCE
+================================ */
+
+.reviews-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 9rem auto 5rem; /* 🔥 GROS ESPACE AU-DESSUS */
+  padding: 0 1.5rem;
+}
+
+.reviews-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: var(--color-text-main);
+}
+
+.reviews-intro p {
+  font-size: 1.1rem;
+  text-align: center;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+    
+    /* ================================
+   🎞️ SLIDER AVIS – VERSION PRO
+================================ */
+
+.gallery-slider {
+  position: relative;
+  max-width: 1400px;
+  margin: 5rem auto;
+  padding: 0 4rem;
+}
+
+.gallery-slider::before,
+.gallery-slider::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 80px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.gallery-slider::before {
+  left: 0;
+  background: linear-gradient(to right, var(--color-bg-main), transparent);
+}
+
+.gallery-slider::after {
+  right: 0;
+  background: linear-gradient(to left, var(--color-bg-main), transparent);
+}
+
+
+
+/* Fenêtre visible */
+.slider-viewport {
+  overflow: hidden;
+}
+
+/* Track scrollable */
+.slider-track {
+  display: flex;
+  gap: 1.5rem;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 1rem 0;
+
+  scroll-snap-type: x mandatory;
+}
+
+
+.slider-track::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cartes */
+.slider-item {
+  flex: 0 0 260px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.06);
+
+  scroll-snap-align: start;
+
+}
+
+.slider-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+}
+
+/* ======================
+   FLÈCHES
+====================== */
+
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+
+  background: var(--color-accent);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
+}
+
+.slider-btn.prev {
+  left: 0;
+}
+
+.slider-btn.next {
+  right: 0;
+}
+
+.slider-btn:hover {
+  background: var(--color-accent-hover);
+}
+
+   
+
+.image-tile {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.image-tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* ================================
+   🐟 SECTION INFOS PRINCIPALES bloc en dessous de la vidéo
+   ================================ */
+
+.info-section {
+  max-width: 1400px;   /* 🔥 plus large */
+  margin: 5rem auto;
+  padding: 0 2rem;
+  color: var(--color-text-main);
+  margin-top: 8rem;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Intro */
+.info-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.info-intro h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.info-intro p {
+  font-size: 1.1rem;
+  color: var(--color-text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Grille des blocs */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+/* Cartes, image des blocs */
+.info-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  padding-bottom: 1.5rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+.info-card img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.info-card h3 {
+  font-size: 1.4rem;
+  text-align: center;
+  margin: 1.6rem 1.2rem 1.2rem;
+
+}
+
+.info-card p {
+  font-size: 1rem;
+  color: var(--color-text-muted);
+  margin: 0 1.2rem;
+  line-height: 1.6;
+}
+
+
+    /* =========================
+   BOUTON AVEC ICÔNE (INSTAGRAM)
+========================= */
+
+.action-btn--icon {
+  display: flex;              /* 🔥 centre le contenu */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Logo Instagram dans le bouton */
+.btn-icon {
+  height: 26px;               /* ✅ taille idéale */
+  width: auto;
+  display: block;
+}
+
+  
+   /* ================================
+   FOOTER – SIMPLE & CENTRÉ
+================================ */
+
+.site-footer {
+  width: 100%;
+  background: rgba(0,0,0,0.18);
+  padding: 2.5rem 1rem 2rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+  color: var(--color-text-muted);
+  font-size: 0.9rem;
+}
+
+.footer-main {
+  margin-bottom: 0.6rem;
+}
+
+.footer-made {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+}
+
+    .footer-contact {
+  margin-bottom: 0.8rem;
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+}
+
+.footer-contact a {
+  color: var(--color-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-contact a:hover {
+  text-decoration: underline;
+}
+
+
+/* 🔥 SÉCURITÉ ABSOLUE POUR LE LOGO PIPELETTE */
+.site-footer img {
+  width: auto !important;
+  max-width: none !important;
+}
+
+.footer-pipelette {
+  height: 26px !important;
+  width: auto !important;
+  max-width: 26px !important;
+}
+
+
+
+    /* 🔥 Bloc optionnel cachable */
+.info-hidden {
+  display: block; /* mets none pour cacher, block pour afficher */
+}
+
+
+ /* ======================
+   RESPONSIVE – MOBILE
+====================== */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar {
+    height: 80px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    height: 52px;
+  }
+
+  .navbar-links {
+    margin-left: auto;
+    gap: 1rem;
+  }
+
+    .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info-intro h2 {
+    font-size: 1.8rem;
+  }
+
+
+  /* SUPPRESSION ANNONCE */
+  .navbar-info,
+  .announcement {
+    display: none !important;
+  }
+
+  /* HERO */
+  .video-header {
+    height: 60vh;
+    min-height: 360px;
+  }
+
+  .overlay-content h1 {
+    font-size: 2.1rem;
+  }
+
+  .overlay-content h2 {
+    font-size: 1.05rem;
+  }
+
+  /* CARTES */
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* GALERIE */
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  /* BOUTONS */
+  .action-buttons {
+    flex-direction: column;
+  }
+
+  .action-btn {
+    width: 100%;
+  }
+
+  p {
+    text-align: center;
+    max-width: 95%;
+  }
+  
+.slider-item {
+  flex: 0 0 80%;
+}
+
+.slider-track {
+  padding-left: 1rem;
+}
+
+.gallery-slider {
+  padding: 0 1rem;
+}
+
+}
+
+/* EXTRA SMALL */
+@media (max-width: 480px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+  </style>
+</head>
+
+<script>
+  window.addEventListener("scroll", function() {
+    const navbar = document.querySelector(".navbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const track = document.querySelector('.slider-track');
+  const nextBtn = document.querySelector('.slider-btn.next');
+  const prevBtn = document.querySelector('.slider-btn.prev');
+
+  if (!track || !nextBtn || !prevBtn) return;
+
+  const scrollAmount = 320;
+
+  function updateButtons() {
+    const scrollLeft = track.scrollLeft;
+    const maxScroll = track.scrollWidth - track.clientWidth;
+
+    if (scrollLeft <= 10) {
+      prevBtn.style.opacity = "0";
+      prevBtn.style.pointerEvents = "none";
+    } else {
+      prevBtn.style.opacity = "1";
+      prevBtn.style.pointerEvents = "auto";
+    }
+
+    if (scrollLeft >= maxScroll - 10) {
+      nextBtn.style.opacity = "0";
+      nextBtn.style.pointerEvents = "none";
+    } else {
+      nextBtn.style.opacity = "1";
+      nextBtn.style.pointerEvents = "auto";
+    }
+  }
+
+  nextBtn.addEventListener('click', () => {
+    track.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    track.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+  });
+
+  track.addEventListener('scroll', updateButtons);
+
+  updateButtons();
+
+});
+</script>
+
+
+
+  
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+
+    <!-- Logo -->
+    <a href="/" class="navbar-logo">
+      <img src="/assets/images/logo2-blancbleu.png" alt="Guillaume Fishing Trip">
+    </a>
+
+   <div class="navbar-info">
+  <div class="announcement">
+    <span>OUVERTURES DES RÉSERVATIONS 2026 – PLACES LIMITÉES</span>
+  </div>
+</div>
+
+
+    <!-- Liens / Boutons à droite -->
+    <div class="navbar-links">
+      <a href="/apropos/">À propos</a>
+      <a href="/sejours/">Séjours</a>
+      <a href="/contact/" class="cta">Réserver</a>
+    </div>
+
+  </div>
+</nav>
+
+  <header class="video-header">
+<video autoplay muted loop playsinline webkit-playsinline>
+<source src="/assets/videos/fishing-boat-in-the-sunset_1798292.mp4" type="video/mp4" />
+      Votre navigateur ne supporte pas les vidéos HTML5.
+    </video>
+    <div class="overlay"></div>
+  <div class="overlay-content">
+  <h1>Des moments et des sensations inoubliables</h1>
+  <h2>Séjour de pêche avec Guillaume</h2>
+
+  <!-- 🔥 CTA ICI -->
+  <div class="cta-container">
+    <a href="/contact" class="cta-primary">Réserver mon séjour</a>
+  </div>
+</div>
+
+    <img class="logo" src="/assets/images/logo2-blancbleu.png" alt="Logo" />
+  </header>
+
+<section class="info-section">
+
+  <div class="info-intro">
+    <h2>Vivez une expérience de pêche unique en Andalousie</h2>
+    <p>
+      Entre mer, océan et lacs, je vous accueille pour des séjours de pêche sur mesure,
+      dans un cadre exceptionnel, entre passion, partage et sensations fortes.
+    </p>
+  </div>
+
+<div class="info-grid">
+
+
+<!-- =====================================================
+     📐 NOTES DESIGN – IMAGES GROS BLOCS INFO (FIGMA)
+
+     Format idéal pour les images des cartes :
+     ➤ 1200 px (largeur) × 800 px (hauteur)  → ratio 3:2
+     (ou 1600 × 1066 px pour meilleure qualité)
+
+     Conseils :
+     - Centrer le sujet horizontalement
+     - Laisser de la marge en haut et en bas
+     - Éviter de coller des éléments importants sur les bords
+     - Prévoir que l’image sera recadrée en "cover" en CSS
+
+     📐 NOTES DESIGN – IMAGES 5 PETITS BLOCS MINIATURES GALERIES 
+  800 px × 800 px   ✅ IDÉAL
+
+
+===================================================== -->
+  
+  <!-- BLOC 1 -->
+  <div class="info-card">
+    <img src="/assets/images/cartes1200x800.png" alt="Guide de pêche">
+    <h3>Guide de pêche professionnel</h3>
+    <p>
+      Accompagnement personnalisé avec un guide passionné, adapté à votre niveau,
+      pour découvrir les meilleurs spots et progresser rapidement.
+    </p>
+  </div>
+
+  <!-- BLOC 2 -->
+  <div class="info-card">
+    <img src="/assets/images/cartes1200x800.png" alt="Séjours pêche">
+    <h3>Séjours tout compris</h3>
+    <p>
+      Hébergement, sorties en bateau, matériel, conseils techniques…  
+      Je m’occupe de tout pour que vous profitiez pleinement de votre séjour.
+    </p>
+  </div>
+
+  <!-- BLOC 3  -->
+  <div class="info-card info-hidden">
+    <img src="/assets/images/cartes1200x800.png" alt="Techniques de pêche">
+    <h3>Techniques & perfectionnement</h3>
+    <p>
+      Apprenez les meilleures techniques modernes pour améliorer vos prises
+      et gagner en autonomie sur tous types de spots.
+    </p>
+  </div>
+
+  <!-- BLOC 4  -->
+  <div class="info-card info-hidden">
+    <img src="/assets/images/cartes1200x800.png" alt="Bateau et équipement">
+    <h3>Bateau & matériel haut de gamme</h3>
+    <p>
+      Navigation confortable, matériel professionnel et sécurité maximale
+      pour une expérience premium en toute sérénité.
+    </p>
+  </div>
+
+</div>
+
+
+<section class="reviews-intro">
+  <h2>Ils nous ont fait confiance</h2>
+  <p>
+    Des passionnés venus vivre une expérience de pêche unique,
+    entre mer, eau douce et moments partagés.
+  </p>
+</section>
+
+  
+
+<section class="gallery-slider">
+
+  <button class="slider-btn prev" aria-label="Précédent">‹</button>
+
+  <div class="slider-viewport">
+    <div class="slider-track">
+      <div class="slider-item">
+        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
+      </div>
+      <div class="slider-item">
+        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
+      </div>
+      <div class="slider-item">
+        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
+      </div>
+      <div class="slider-item">
+        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
+      </div>
+      <div class="slider-item">
+        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
+      </div>
+    </div>
+  </div>
+
+  <button class="slider-btn next" aria-label="Suivant">›</button>
+
+</section>
+
+
+  
+<div class="action-buttons">
+
+  <a href="/contact" class="action-btn">Demander un devis</a>
+
+  <a href="/sejours" class="action-btn">Découvrir les séjours</a>
+
+<a href="https://www.instagram.com/guillaumefishingtrip/" 
+   target="_blank" 
+   class="action-btn action-btn--icon">
+  
+  <img 
+    src="/assets/images/logoinstagram.png" 
+    alt="Instagram Guillaume Fishing Trip" 
+    class="btn-icon"
+  />
+
+</a>
+
+
+
+
+</div>
+
+<footer class="site-footer">
+  <p class="footer-main">
+    © 2026 Guillaume Fishing Trip. Tous droits réservés.
+  </p>
+
+  <p class="footer-contact">
+    Guillaume · 
+    <a href="mailto:contact@guillaumefishingtrip.com" target="_blank">
+      contact@guillaumefishingtrip.com
+    </a>
+  </p>
+
+  <div class="footer-made">
+    <span>Fait avec ❤️ par</span>
+  <a href="mailto:pipelettehouse@gmail.com" target="_blank">
+      <img
+        src="/assets/images/pipelette.png"
+        alt="Pipelette"
+        class="footer-pipelette"
+      />
+    </a>
+  </div>
+</footer>
+
+
+
+
+</body>
+</html>

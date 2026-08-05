@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Séjours de pêche – Guillaume Fishing Trip</title>
+
+  <link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+
+  <style>
+  /* ================================
+     🎨 PALETTE DE COULEURS – SITE
+     ================================ */
+  :root {
+    --color-bg-main: #042E89;
+    --color-bg-secondary: #021f5a;
+
+    --color-text-main: #ffffff;
+    --color-text-muted: #cfd8ff;
+
+    --color-accent: #4e8dff;
+    --color-border: rgba(255,255,255,0.2);
+  }
+
+  @font-face {
+    font-family: 'Euclid';
+    src: url('../fonts/euclid.woff') format('woff');
+  }
+
+body {
+  font-family: 'Euclid', sans-serif;
+  background: var(--color-bg-main);
+  color: var(--color-text-main);
+  margin: 0;
+  padding-top: 95px;
+}
+
+
+  /* ======================
+     NAVBAR
+  ====================== */
+  .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 95px;
+    background: rgba(4,46,137,0.9);
+    backdrop-filter: blur(6px);
+    z-index: 9999;
+  }
+
+  .navbar-inner {
+    max-width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    height: 70px;
+  }
+
+  .navbar-links {
+    display: flex;
+    gap: 1.4rem;
+    justify-self: end;
+  }
+
+  .navbar-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+  }
+
+  .navbar-links a.active {
+    font-weight: 700;
+  }
+
+  /* ======================
+     CONTENU
+  ====================== */
+  .page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 1.5rem 4rem;
+  }
+
+  h1 {
+    text-align: center;
+    font-size: 2.6rem;
+    color: var(--color-accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .intro {
+    max-width: 900px;
+    margin: 0 auto 3rem;
+    text-align: center;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    color: var(--color-text-muted);
+  }
+
+  /* ======================
+     LISTE POINTS CLÉS
+  ====================== */
+  .points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .point {
+    background: rgba(255,255,255,0.06);
+    border-radius: 14px;
+    padding: 1.6rem;
+  }
+
+  .point h3 {
+    margin-top: 0;
+    margin-bottom: 0.6rem;
+    color: var(--color-accent);
+    font-size: 1.3rem;
+    white-space: nowrap; /* 🔥 force sur une ligne */
+  }
+
+  .point p {
+    margin: 0;
+    line-height: 1.6;
+    color: var(--color-text-muted);
+    font-size: 1rem;
+  }
+
+    /* ======================
+   CTA – RÉSERVER LE SÉJOUR
+====================== */
+
+.cta-btn {
+  display: inline-block;
+  padding: 1.1rem 2.6rem;
+  background: var(--color-accent);   /* 🔥 BLEU */
+  color: white;
+  text-decoration: none;
+  font-size: 1.15rem;
+  font-weight: 600;
+  border-radius: 999px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+
+  .cta-center {
+  display: flex;
+  justify-content: center;
+  margin: 4rem 0; /* espace au-dessus et en dessous */
+}
+
+
+
+
+    
+  /* ======================
+     IMAGE IMMERSIVE
+  ====================== */
+.immersive {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.immersive img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px; /* 🔥 coins arrondis ici */
+}
+
+
+
+  /* ======================
+     MOBILE
+  ====================== */
+@media (max-width: 768px) {
+
+  /* Navbar mobile */
+  .navbar {
+    height: 80px;
+  }
+
+  body {
+    padding-top: 80px;
+  }
+
+  .navbar-inner {
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-logo img {
+    height: 52px;
+  }
+
+  .navbar-links {
+    margin-left: auto;
+    gap: 1rem;
+  }
+
+  /* Layout */
+  .points {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  .immersive img {
+    height: auto;
+    max-height: 340px;
+    object-fit: contain;
+    border-radius: 18px;
+  }
+
+}
+}
+
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-logo">
+      <img src="/assets/images/logo2-blancbleu.png" alt="Guillaume Fishing Trip">
+    </a>
+
+    <div class="navbar-links">
+      <a href="/apropos/">À propos</a>
+      <a href="/sejours/" class="active">Séjours</a>
+      <a href="/contact/">Réserver</a>
+    </div>
+  </div>
+</nav>
+
+<section class="page">
+
+  <h1>Les séjours de pêche</h1>
+
+  <p class="intro">
+    Les séjours Guillaume Fishing Trip sont conçus comme de véritables expériences,
+    alliant passion de la pêche, progression technique et immersion totale
+    dans des environnements naturels exceptionnels en Espagne.
+  </p>
+
+  <div class="points">
+
+    <div class="point">
+      <h3>Pêche en mer & eau douce</h3>
+      <p>
+        Selon la saison et vos envies, partez à la découverte de la pêche en mer,
+        en lacs ou en rivières, sur des spots soigneusement sélectionnés.
+      </p>
+    </div>
+
+    <div class="point">
+      <h3>Encadrement personnalisé</h3>
+      <p>
+        Chaque séjour est adapté à votre niveau : débutant curieux ou pêcheur confirmé,
+        avec un accompagnement bienveillant et pédagogique.
+      </p>
+    </div>
+
+    <div class="point">
+      <h3>Progression & technique</h3>
+      <p>
+        Apprentissage des techniques modernes, lecture de l’eau, choix du matériel,
+        stratégies de pêche : vous repartez avec de vraies compétences.
+      </p>
+    </div>
+
+    <div class="point">
+      <h3>Expérience humaine</h3>
+      <p>
+        Plus qu’un séjour, c’est un moment de partage, de passion et de connexion
+        à la nature, dans une ambiance simple et authentique.
+      </p>
+    </div>
+
+  </div>
+
+<div class="cta-center">
+  <a href="https://buy.stripe.com/test_28EeVd9AN0mrbo07RQ0kE00"
+     class="cta-btn"
+     target="_blank">
+    LE POINT DE DÉPART 89€
+  </a>
+</div>
+
+  
+  <div class="immersive">
+    <!-- Image optionnelle -->
+    <img src="/assets/images/peche-immersion.jpg" alt="Séjour de pêche en Espagne">
+  </div>
+
+  <a href="https://buy.stripe.com/test_28EeVd9AN0mrbo07RQ0kE00"
+   target="_blank"
+   style="color:var(--color-accent); font-weight:600; text-decoration:none;">
+  → Obtenir mon carnet de route
+</a>
+
+</p>
+
+
+</section>
+
+</body>
+</html>
+

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>À propos – Guillaume Fishing Trip</title>
+
+<link rel="icon" type="image/png" href="/favicon/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon/favicon.svg" />
+<link rel="shortcut icon" href="/favicon/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon/apple-touch-icon.png" />
+<link rel="manifest" href="/favicon/site.webmanifest" />
+
+
+  <style>
+    /* ================================
+       🎨 PALETTE DE COULEURS – SITE
+    ================================ */
+    :root {
+      --color-bg-main: #042E89;
+      --color-bg-secondary: #021f5a;
+      --color-text-main: #ffffff;
+      --color-text-muted: #cfd8ff;
+      --color-accent: #4e8dff;
+      --color-border: rgba(255,255,255,0.2);
+    }
+
+    @font-face {
+      font-family: 'Euclid';
+      src: url('../fonts/euclid.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Euclid', sans-serif;
+      background: var(--color-bg-main);
+      color: var(--color-text-main);
+      padding-top: 140px;
+    }
+
+    /* ================================
+       NAVBAR
+    ================================ */
+    .navbar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      height: 95px;
+      background: rgba(4,46,137,0.9);
+      backdrop-filter: blur(6px);
+      z-index: 9999;
+    }
+
+    .navbar-inner {
+      max-width: 1200px;
+      height: 100%;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      align-items: center;
+    }
+
+    .navbar-logo img {
+      height: 70px;
+    }
+
+    .navbar-links {
+      display: flex;
+      gap: 1.5rem;
+      justify-self: end;
+    }
+
+    .navbar-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .navbar-links a.active {
+      font-weight: 700;
+    }
+
+    /* ================================
+       CONTENU À PROPOS
+    ================================ */
+    .about-container {
+      max-width: 900px;
+      margin: 0 auto 6rem;
+      padding: 0 1.5rem;
+      text-align: center;
+    }
+
+    .about-container h1 {
+      font-size: 2.6rem;
+      color: var(--color-accent);
+      margin-bottom: 1.5rem;
+    }
+
+    .about-intro {
+      font-size: 1.2rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+      margin-bottom: 3rem;
+    }
+
+    .about-section {
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+
+    .about-section h2 {
+      font-size: 1.6rem;
+      color: var(--color-text-main);
+      margin-bottom: 1rem;
+    }
+
+    .about-section p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--color-text-muted);
+    }
+
+
+    /* ================================
+   🖼️ IMAGE IMMERSIVE – BAS DE PAGE IMAGE IMMERSIVE – TEMPLATE
+
+Dimensions idéales :
+- 2000 x 900 px
+================================ */
+
+.about-image {
+  margin: 4rem auto;
+  max-width: 1000px;
+  padding: 0 1.5rem;
+  text-align: center;
+}
+
+
+.about-image img {
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  border-radius: 18px;
+}
+
+
+
+
+@media (max-width: 768px) {
+
+  body {
+    padding-top: 80px;
+  }
+
+  .navbar {
+    height: 80px;
+  }
+
+  .navbar-logo img {
+    height: 52px;
+  }
+
+  .about-container h1 {
+    font-size: 2.1rem;
+  }
+
+  .about-container {
+    padding: 0 1.2rem;
+  }
+
+  .about-section {
+    text-align: left;
+  }
+  
+  .about-image {
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+
+  .about-image img {
+  height: auto;
+  max-height: 340px;
+  object-fit: contain;
+}
+
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<nav class="navbar">
+  <div class="navbar-inner">
+    <a href="/" class="navbar-logo">
+      <img src="/assets/images/logo2-blancbleu.png" alt="Guillaume Fishing Trip">
+    </a>
+
+    <div class="navbar-links">
+      <a href="/apropos/" class="active">À propos</a>
+      <a href="/sejours/">Séjours</a>
+      <a href="/contact/">Réserver</a>
+    </div>
+  </div>
+</nav>
+
+<main class="about-container">
+
+  <h1>À propos de Guillaume Fishing Trip</h1>
+
+  <p class="about-intro">
+    Une approche authentique de la pêche, guidée par la passion,
+    la transmission et le respect du milieu naturel.
+  </p>
+
+  <section class="about-section">
+    <h2>Une passion devenue métier</h2>
+    <p>
+      Guillaume Fishing Trip est né d’une passion transmise très tôt,
+      au fil des sorties, des saisons et des rencontres au bord de l’eau.
+      La pêche n’est pas ici une simple activité, mais une expérience complète,
+      mêlant technique, observation et sensations.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Des séjours sur mesure en Espagne</h2>
+    <p>
+      Installé en Espagne, entre mer, océan et eaux intérieures,
+      je propose des séjours de pêche adaptés à votre niveau et à vos envies.
+      Chaque sortie est pensée comme un moment privilégié, loin du stress du quotidien.
+    </p>
+  </section>
+
+  <section class="about-section">
+    <h2>Une approche responsable</h2>
+    <p>
+      Mon objectif est de vous faire progresser tout en partageant
+      une pêche respectueuse des poissons et des milieux.
+      Sécurité, convivialité et accompagnement personnalisé sont au cœur de chaque séjour.
+    </p>
+  </section>
+
+
+  <section class="about-image">
+  <img src="/assets/images/peche-immersion.jpg" alt="Séjour de pêche en Espagne">
+</section>
+
+</main>
+
+</body>
+</html>
+
