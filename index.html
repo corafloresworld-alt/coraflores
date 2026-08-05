@@ -897,6 +897,54 @@ input[type="submit"]:hover,
     grid-template-columns: 1fr;
   }
 
+  .problem-card{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:3rem;
+}
+
+.problem-content{
+    max-width:480px;
+}
+
+.problem-content h3{
+    text-align:left;
+    margin:0 0 2rem;
+    font-size:2rem;
+}
+
+.problem-content ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.problem-content li{
+    position:relative;
+    padding-left:30px;
+    margin-bottom:1.2rem;
+    color:var(--color-text-muted);
+    line-height:1.7;
+}
+
+.problem-content li::before{
+    content:"•";
+    position:absolute;
+    left:0;
+    top:0;
+    color:var(--color-accent);
+    font-size:1.5rem;
+}
+
+.problem-highlight{
+    margin-top:2.5rem;
+    font-size:1.15rem;
+    font-weight:600;
+    color:#fff;
+    padding:0;
+}
+
   /* GALERIE */
   .image-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -1100,14 +1148,30 @@ document.addEventListener("DOMContentLoaded", () => {
 ===================================================== -->
   
   <!-- BLOC 1 -->
-  <div class="info-card">
-    <img src="/assets/images/cartes1200x800.png" alt="Guide de pêche">
-    <h3>Guide de pêche professionnel</h3>
-    <p>
-      Accompagnement personnalisé avec un guide passionné, adapté à votre niveau,
-      pour découvrir les meilleurs spots et progresser rapidement.
-    </p>
-  </div>
+<div class="info-card problem-card">
+
+    <div class="problem-content">
+
+        <h3>Tu te reconnais dans l'une de ces situations&nbsp;?</h3>
+
+        <ul>
+            <li>Tu avances beaucoup… mais ton entreprise semble stagner.</li>
+
+            <li>Tu as mille idées mais tu ne sais plus lesquelles prioriser.</li>
+
+            <li>Tu travailles énormément sans retrouver de vraie clarté.</li>
+
+            <li>Tu sens qu'il est temps de prendre du recul.</li>
+        </ul>
+
+        <p class="problem-highlight">
+            Tu n'as pas besoin de travailler plus.<br>
+            Tu as besoin d'y voir plus clair.
+        </p>
+
+    </div>
+
+</div>
 
   <!-- BLOC 2 -->
   <div class="info-card">
