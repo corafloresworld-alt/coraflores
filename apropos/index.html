@@ -42,7 +42,6 @@
       font-family: 'Euclid', sans-serif;
       background: var(--color-bg-main);
       color: var(--color-text-main);
-      padding-top: 140px;
     }
 
     /* ================================
@@ -53,8 +52,9 @@
       top: 0;
       width: 100%;
       height: 95px;
-      background: rgba(4,46,137,0.9);
-      backdrop-filter: blur(6px);
+     background:rgba(20,20,20,.12);
+      backdrop-filter:blur(18px);
+      border-bottom:1px solid rgba(255,255,255,.08);
       z-index: 9999;
     }
 
@@ -98,18 +98,6 @@
       text-align: center;
     }
 
-    .about-container h1 {
-      font-size: 2.6rem;
-      color: var(--color-accent);
-      margin-bottom: 1.5rem;
-    }
-
-    .about-intro {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: var(--color-text-muted);
-      margin-bottom: 3rem;
-    }
 
     .about-section {
       margin-bottom: 3rem;
@@ -128,6 +116,8 @@
       color: var(--color-text-muted);
     }
 
+
+    
 
     /* ================================
    🖼️ IMAGE IMMERSIVE – BAS DE PAGE IMAGE IMMERSIVE – TEMPLATE
@@ -154,7 +144,107 @@ Dimensions idéales :
   border-radius: 18px;
 }
 
+/*==========================
+ABOUT HERO
+==========================*/
 
+.about-hero{
+
+    position:relative;
+
+    height:85vh;
+
+    overflow:hidden;
+
+}
+
+.about-hero video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    transform:scale(1.35);
+
+    filter:blur(14px) brightness(.45);
+
+    object-position:75% center;
+
+}
+
+.about-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.30),
+        rgba(0,0,0,.45)
+    );
+
+}
+
+.about-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:1200px;
+
+    height:100%;
+
+    margin:auto;
+
+    padding:0 2rem;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+}
+
+.about-content h1{
+
+    font-family:'Francois One',sans-serif;
+
+    font-size:clamp(3rem,5vw,5rem);
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    color:white;
+
+    max-width:800px;
+
+    margin:18px 0;
+
+}
+
+.about-content .about-intro{
+
+    max-width:560px;
+
+    font-size:1.3rem;
+
+    line-height:1.7;
+
+    color:white;
+
+    opacity:.9;
+
+}
 
 
 @media (max-width: 768px) {
@@ -216,9 +306,36 @@ Dimensions idéales :
   </div>
 </nav>
 
-<main class="about-container">
+<header class="about-hero">
 
-  <h1>À propos de Guillaume Fishing Trip</h1>
+    <video autoplay muted loop playsinline>
+        <source src="/assets/videos/video-velo.mp4" type="video/mp4">
+    </video>
+
+    <div class="about-overlay"></div>
+
+    <div class="about-content">
+
+        <p class="point-label">
+            À PROPOS
+        </p>
+
+        <h1>
+            Derrière chaque entreprise,<br>
+            il y a un entrepreneur.
+        </h1>
+
+        <p class="about-intro">
+            Avant les stratégies, les outils ou les plans d'action,
+            je crois qu'il faut comprendre la personne qui porte le projet.
+        </p>
+
+    </div>
+
+</header>
+
+<main class="about-container">
+  <h1>À propos de Cora Flores</h1>
 
   <p class="about-intro">
     Une approche authentique de la pêche, guidée par la passion,
