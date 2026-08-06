@@ -511,7 +511,189 @@ input[type="submit"]:hover,
   background: var(--color-bg-main);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
-    
+
+
+    /* ===================================================
+   SECTION - LE POINT DE DÉPART
+=================================================== */
+
+.point-depart{
+
+    background:#334434;
+
+    padding:90px 0;
+
+}
+
+.point-container{
+
+    max-width:1400px;
+
+    margin:auto;
+
+    padding:0 40px;
+
+    display:grid;
+
+    grid-template-columns:1.3fr 0.8fr;
+
+    gap:90px;
+
+    align-items:center;
+
+}
+
+.point-label{
+
+    font-size:14px;
+
+    text-transform:uppercase;
+
+    letter-spacing:.12em;
+
+    opacity:.7;
+
+    margin-bottom:18px;
+
+    padding:0;
+
+}
+
+.point-left h2{
+
+    font-family:'Francois One',sans-serif;
+
+    font-size:58px;
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    margin-bottom:30px;
+
+}
+
+.point-left h2 span{
+
+    color:#D7A84A;
+
+}
+
+.point-text{
+
+    max-width:640px;
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    opacity:.9;
+
+    padding:0;
+
+    margin-bottom:35px;
+
+}
+
+.point-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0 0 45px;
+
+}
+
+.point-list li{
+
+    margin-bottom:18px;
+
+    font-size:18px;
+
+}
+
+.point-button{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:18px 34px;
+
+    background:#D7A84A;
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    transition:.25s;
+
+}
+
+.point-button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.point-right{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:28px;
+
+}
+
+.point-card{
+
+    background:rgba(255,255,255,.06);
+
+    backdrop-filter:blur(6px);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    border-radius:22px;
+
+    padding:34px;
+
+}
+
+.point-card h3{
+
+    font-family:'Francois One';
+
+    font-size:34px;
+
+    margin-bottom:18px;
+
+}
+
+.point-card p{
+
+    padding:0;
+
+    margin:0;
+
+    line-height:1.8;
+
+}
+
+.point-card strong{
+
+    display:block;
+
+    margin-top:20px;
+
+}
 
 /* ================================
    🎣 INTRO AVIS / CONFIANCE
@@ -1266,6 +1448,72 @@ document.addEventListener("DOMContentLoaded", () => {
    </div>
 </section>
 
+
+  <section class="point-depart">
+
+<div class="point-container">
+
+<div class="point-left">
+
+<p class="point-label">
+LE POINT DE DÉPART
+</p>
+
+<h2>
+Un premier échange
+pour <span>faire le point.</span>
+</h2>
+
+<p class="point-text">
+Le Point de Départ est un échange stratégique de 75 minutes pour faire le point sur votre activité, clarifier vos priorités et identifier les actions qui auront le plus d'impact.
+</p>
+
+<ul class="point-list">
+<li>✓ 75 minutes en visio</li>
+<li>✓ Un regard extérieur</li>
+<li>✓ Des priorités claires</li>
+<li>✓ Un plan d'action concret</li>
+</ul>
+
+<a href="/contact" class="point-button">
+Réserver mon Point de Départ
+</a>
+
+</div>
+
+<div class="point-right">
+
+<div class="point-card">
+
+<h3>Pour qui ?</h3>
+
+<p>
+Pour les entrepreneurs qui sentent que leur entreprise peut passer un cap mais qui ne savent plus par où commencer.
+</p>
+
+</div>
+
+<div class="point-card">
+
+★★★★★
+
+<p>
+« Cet échange m'a permis de retrouver une vision claire de mon activité. »
+</p>
+
+<strong>— Marie</strong>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+  
 <section class="reviews-intro">
   <h2>Ils nous ont fait confiance</h2>
   <p>
