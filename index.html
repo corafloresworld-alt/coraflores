@@ -255,7 +255,7 @@ CSS object-fit: cover*/
 }
 
     /* ================================
-   🚀 CALL TO ACTION – HERO
+   🚀 CALL TO ACTION – HERO BOUTON
 =============================== */
     
 .cta-container {
@@ -263,32 +263,39 @@ CSS object-fit: cover*/
   align-self: flex-start;
 }
     
-.cta-primary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+.cta-primary{
 
-  padding:0.95rem 2rem;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
 
-  background: #334434;
+    padding:0.9rem 1.9rem;
 
-  color: #ffffff;
-  text-decoration: none;
+    background:#334434;
 
- font-size:15px;
- font-weight:500;
+    color:#fff;
 
-border-radius: 10px;
+    text-decoration:none;
 
-box-shadow: 0 10px 25px rgba(0,0,0,.18);
+    border-radius:10px;
 
-  transition: all .3s ease;
+    font-size:15px;
+    font-weight:500;
+
+    box-shadow:0 10px 24px rgba(0,0,0,.18);
+
+    transition:all .25s ease;
+
 }
 
 .cta-primary:hover{
-    background:#314F68;
+
     transform:translateY(-2px);
-    box-shadow:0 14px 28px rgba(0,0,0,.22);
+
+    background:#2C3A2C;
+
+    box-shadow:0 16px 32px rgba(0,0,0,.25);
+
 }
 
 .hero-social-proof{
@@ -416,54 +423,6 @@ box-shadow: 0 10px 25px rgba(0,0,0,.18);
   margin: 4rem auto 5rem;
   flex-wrap: wrap;
 }
-
-.action-btn {
-  min-width: 240px;
-  height: 52px; /* 🔥 hauteur fixe propre */
-  
-  display: flex; /* 🔥 active centrage parfait */
-  align-items: center; /* 🔥 centre verticalement */
-  justify-content: center; /* 🔥 centre horizontalement */
-
-  padding: 0 2rem; /* 🔥 padding horizontal seulement */
-
-  background: var(--color-accent);
-  color: var(--color-text-main);
-  text-decoration: none;
-  text-align: center;
-
-  border-radius: 999px;
-  font-size: 1rem;
-  font-weight: 600;
-
-  transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
-}
-
-
-.action-btn:hover {
-  background: var(--color-accent);
-  transform: translateY(-3px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.35);
-
-}
-
-    .btn, {
-input[type="submit"],
-.action-btn {
-  background: var(--color-accent);
-  color: var(--color-text-main);
-  border-radius: 999px;
-  font-weight: 600;
-  border: none;
-  transition: background 0.3s ease, transform 0.2s ease;
-}
-
-.btn:hover,{
-input[type="submit"]:hover,
-.action-btn:hover 
-}
-
 
   
     /* BOUTONS CONCEPT */
@@ -1553,24 +1512,17 @@ Pour les entrepreneurs qui sentent que leur entreprise peut passer un cap mais q
   
 <div class="action-buttons">
 
-  <a href="/contact" class="action-btn">Demander un devis</a>
+  <a href="/contact" class="cta-primary">
+      Me contacter
+  </a>
 
-  <a href="/sejours" class="action-btn">Découvrir les séjours</a>
+  <a href="/point-de-depart" class="cta-primary">
+      Découvrir le Point de Départ
+  </a>
 
-<a href="https://www.instagram.com/guillaumefishingtrip/" 
-   target="_blank" 
-   class="action-btn action-btn--icon">
-  
-  <img 
-    src="/assets/images/logoinstagram.png" 
-    alt="Instagram Guillaume Fishing Trip" 
-    class="btn-icon"
-  />
-
-</a>
-
-
-
+  <a href="/labascule" class="cta-primary">
+      Découvrir La Bascule
+  </a>
 
 </div>
 
