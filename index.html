@@ -1045,54 +1045,23 @@ CSS object-fit: cover*/
     transform:none;
     box-shadow:none;
 }
-
-  .problem-conclusion{
-
-    margin-top:4rem;
-
-    padding-top:2rem;
-
-    border-top:1px solid rgba(255,255,255,.15);
-
-    font-size:1.4rem;
-
-    line-height:1.7;
-
-    text-align:left;
-
-}
-
-.problem-conclusion strong{
-
-    display:block;
-
-    margin-top:.6rem;
-
-    font-size:1.7rem;
-
-    color:#fff;
-
-    font-family:'Francois One',sans-serif;
-
-    font-weight:400;
-
-}
-
 .problem-content{
-    max-width:480px;
+
+    max-width:560px;
+
 }
 
- .problem-content h2{
+.problem-content h2{
 
     font-family:'Francois One',sans-serif;
 
-    font-size:90px;
+    font-size:62px;
 
-    line-height:1.08;
+    line-height:1.05;
 
     font-weight:400;
 
-    margin-bottom:3rem;
+    margin:18px 0 36px;
 
 }
 
@@ -1102,40 +1071,100 @@ CSS object-fit: cover*/
 
     font-weight:400;
 
+}
+
+.problem-intro{
+
+    font-size:18px;
+
+    opacity:.75;
+
+    margin-bottom:34px;
+
+    padding:0;
 
 }
 
+.problem-list{
 
-.problem-content ul{
-    list-style:none;
-    padding:0;
+    display:flex;
+
+    flex-direction:column;
+
+    gap:26px;
+
+}
+
+.problem-item{
+
+    display:flex;
+
+    gap:18px;
+
+    align-items:flex-start;
+
+}
+
+.problem-item span{
+
+    color:#D7A84A;
+
+    font-size:24px;
+
+    margin-top:2px;
+
+    flex-shrink:0;
+
+}
+
+.problem-item p{
+
     margin:0;
-}
 
-.problem-content li{
-    position:relative;
-    padding-left:30px;
-    margin-bottom:1.8rem;
-    color:var(--color-text-muted);
-    line-height:1.8;
-}
-
-.problem-content li::before{
-    content:"•";
-    position:absolute;
-    left:0;
-    top:0;
-    color:var(--color-accent);
-    font-size:1.5rem;
-  
-}
-
-.problem-highlight{
-    margin-top:2.5rem;
-    font-size:1.15rem;
-    font-weight:600;
-    color:#fff;
     padding:0;
+
+    font-size:18px;
+
+    line-height:1.7;
+
+}
+
+.problem-conclusion{
+
+    margin-top:60px;
+
+    padding-top:36px;
+
+    border-top:1px solid rgba(255,255,255,.18);
+
+}
+
+.problem-conclusion .small{
+
+    font-size:18px;
+
+    opacity:.75;
+
+    padding:0;
+
+    margin:0;
+
+}
+
+.problem-conclusion h3{
+
+    font-family:'Francois One',sans-serif;
+
+    font-size:40px;
+
+    font-weight:400;
+
+    line-height:1.15;
+
+    margin-top:10px;
+
+    color:#fff;
+
 }
 
   /* GALERIE */
@@ -1341,30 +1370,58 @@ document.addEventListener("DOMContentLoaded", () => {
 ===================================================== -->
   
   <!-- BLOC 1 -->
+<!-- BLOC 1 -->
 <div class="info-card problem-card">
 
     <div class="problem-content">
 
-       <h2>
-Vous avez l'impression de beaucoup faire<br>
-<em>sans vraiment avancer&nbsp;?</em>
-</h2>
+  
 
-        <ul>
-            <li>Trop d'idées et vous ne savez plus par quoi commencer.</li>
+        <h2>
+            Vous avez l'impression<br>
+            de beaucoup faire<br>
+            <em>sans vraiment avancer ?</em>
+        </h2>
 
-            <li>Des journées chargées mais manque peu de résutlats.</li>
+        <p class="problem-intro">
+            Peut-être que vous vous reconnaissez là-dedans...
+        </p>
 
-            <li>vvvvvv.</li>
+        <div class="problem-list">
 
-            <li>ccccccccc.</li>
-        </ul>
+            <div class="problem-item">
+                <span>✦</span>
+                <p>Trop d'idées et vous ne savez plus par quoi commencer.</p>
+            </div>
 
-      
-<p class="problem-conclusion">
-    Tu n'as pas besoin de travailler plus.<br>
-    <strong>Tu as besoin d'y voir plus clair.</strong>
-</p>
+            <div class="problem-item">
+                <span>✦</span>
+                <p>Des journées bien remplies mais peu de résultats concrets.</p>
+            </div>
+
+            <div class="problem-item">
+                <span>✦</span>
+                <p>Vous avancez beaucoup… sans toujours savoir si vous avancez dans la bonne direction.</p>
+            </div>
+
+            <div class="problem-item">
+                <span>✦</span>
+                <p>Vous sentez qu'il est temps de reprendre du recul.</p>
+            </div>
+
+        </div>
+
+        <div class="problem-conclusion">
+
+            <p class="small">
+                Tu n'as pas besoin de travailler plus.
+            </p>
+
+            <h3>
+                Tu as besoin d'y voir plus clair.
+            </h3>
+
+        </div>
 
     </div>
 
