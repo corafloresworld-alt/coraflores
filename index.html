@@ -833,13 +833,12 @@ CSS object-fit: cover*/
 
 /* Grille des blocs */
 .info-grid{
+
     display:grid;
-    grid-template-columns:repeat(2,1fr);
+    grid-template-columns:42% 58%;
+     gap:5rem;
+      align-items:center;
 
-    column-gap:5rem;
-    row-gap:5rem;
-
-    align-items:center;
 }
 
  .section-alt{
@@ -1047,7 +1046,7 @@ CSS object-fit: cover*/
 }
 .problem-content{
 
-    max-width:560px;
+    max-width:680px;
 
 }
 
@@ -1097,11 +1096,13 @@ CSS object-fit: cover*/
 
 .problem-item{
 
-    display:flex;
+    display:grid;
 
-    gap:18px;
+    grid-template-columns:24px 1fr;
 
-    align-items:flex-start;
+    column-gap:18px;
+
+    align-items:start;
 
 }
 
@@ -1109,11 +1110,11 @@ CSS object-fit: cover*/
 
     color:#D7A84A;
 
-    font-size:24px;
+    font-size:18px;
+
+    line-height:1.7;
 
     margin-top:2px;
-
-    flex-shrink:0;
 
 }
 
@@ -1131,21 +1132,19 @@ CSS object-fit: cover*/
 
 .problem-conclusion{
 
-    margin-top:60px;
+    margin-top:70px;
 
-    padding-top:36px;
+    padding-top:45px;
 
-    border-top:1px solid rgba(255,255,255,.18);
+    border-top:1px solid rgba(255,255,255,.15);
 
 }
 
 .problem-conclusion .small{
 
-    font-size:18px;
+    font-size:22px;
 
     opacity:.75;
-
-    padding:0;
 
     margin:0;
 
@@ -1155,13 +1154,13 @@ CSS object-fit: cover*/
 
     font-family:'Francois One',sans-serif;
 
-    font-size:40px;
+    font-size:48px;
 
     font-weight:400;
 
     line-height:1.15;
 
-    margin-top:10px;
+    margin-top:18px;
 
     color:#fff;
 
@@ -1376,16 +1375,14 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="problem-content">
 
   
-
-        <h2>
-            Vous avez l'impression<br>
-            de beaucoup faire<br>
-            <em>sans vraiment avancer ?</em>
-        </h2>
-
-        <p class="problem-intro">
-            Peut-être que vous vous reconnaissez là-dedans...
-        </p>
+<h2>
+Vous avez l'impression de beaucoup faire<br>
+<em>sans vraiment avancer&nbsp;?</em>
+</h2>
+    
+<p class="problem-intro">
+Peut-être que vous vous reconnaissez là-dedans...
+ </p>
 
         <div class="problem-list">
 
