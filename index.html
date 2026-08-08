@@ -472,6 +472,59 @@ CSS object-fit: cover*/
 }
 
 
+.image-caption{
+
+    margin-top:32px;
+
+    max-width:430px;
+
+}
+
+.image-caption span{
+
+    display:block;
+
+    font-size:13px;
+
+    letter-spacing:.18em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    margin-bottom:18px;
+
+}
+
+.image-caption h3{
+
+    font-family:'Francois One';
+
+    font-size:46px;
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    margin-bottom:18px;
+
+}
+
+.image-caption p{
+
+    margin:0;
+
+    padding:0;
+
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:rgba(255,255,255,.82);
+
+}
+
+    
     /* ===================================================
    SECTION - LE POINT DE DÉPART
 =================================================== */
@@ -1071,41 +1124,42 @@ CSS object-fit: cover*/
     transform:none;
     box-shadow:none;
 }
+
 .problem-content{
 
-    max-width:680px;
+    max-width:620px;
 
 }
 
 .problem-content h2{
 
     font-family:'Francois One',sans-serif;
-
-    font-size:62px;
-
-    line-height:1.05;
-
+    font-size:68px;
+    line-height:1.02;
     font-weight:400;
 
-    margin:18px 0 36px;
+    margin:10px 0 42px;
+
+    letter-spacing:-1px;
 
 }
 
 .problem-content h2 em{
 
     font-style:italic;
-
     font-weight:400;
+
+    display:block;
 
 }
 
 .problem-intro{
 
-    font-size:18px;
+    font-size:20px;
 
-    opacity:.75;
+    color:rgba(255,255,255,.72);
 
-    margin-bottom:34px;
+    margin-bottom:46px;
 
     padding:0;
 
@@ -1117,31 +1171,33 @@ CSS object-fit: cover*/
 
     flex-direction:column;
 
-    gap:26px;
+    gap:34px;
 
 }
 
 .problem-item{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:24px 1fr;
+    align-items:flex-start;
 
-    column-gap:18px;
-
-    align-items:start;
+    gap:18px;
 
 }
 
 .problem-item span{
 
+    width:18px;
+
+    flex-shrink:0;
+
     color:#D7A84A;
 
-    font-size:18px;
+    font-size:15px;
 
-    line-height:1.7;
+    line-height:1.8;
 
-    margin-top:2px;
+    margin-top:7px;
 
 }
 
@@ -1151,15 +1207,17 @@ CSS object-fit: cover*/
 
     padding:0;
 
-    font-size:18px;
+    font-size:20px;
 
-    line-height:1.7;
+    line-height:1.8;
+
+    color:rgba(255,255,255,.94);
 
 }
 
 .problem-conclusion{
 
-    margin-top:70px;
+    margin-top:80px;
 
     padding-top:45px;
 
@@ -1171,25 +1229,25 @@ CSS object-fit: cover*/
 
     font-size:22px;
 
-    opacity:.75;
+    color:rgba(255,255,255,.55);
 
     margin:0;
+
+    padding:0;
 
 }
 
 .problem-conclusion h3{
 
-    font-family:'Francois One',sans-serif;
+    font-family:'Francois One';
 
-    font-size:48px;
+    font-size:54px;
 
     font-weight:400;
 
-    line-height:1.15;
+    line-height:1.05;
 
     margin-top:18px;
-
-    color:#fff;
 
 }
 
@@ -1438,13 +1496,18 @@ Peut-être que vous vous reconnaissez là-dedans...
         <div class="problem-conclusion">
 
             <p class="small">
-                Tu n'as pas besoin de travailler plus.
-            </p>
 
-            <h3>
-                Tu as besoin d'y voir plus clair.
-            </h3>
+Tu n'as pas besoin<br>
+de travailler plus.
 
+</p>
+
+<h3>
+
+Tu as besoin<br>
+d'y voir plus clair.
+
+</h3>
         </div>
 
     </div>
@@ -1454,9 +1517,26 @@ Peut-être que vous vous reconnaissez là-dedans...
   <!-- BLOC 2 -->
   <div class="info-card">
     <img src="/assets/images/cartes1200x800.png" alt="Séjours pêche">
+   <div class="image-caption">
+
+    <span>UN REGARD EXTÉRIEUR</span>
+
+    <h3>
+
+Retrouver
+un cap.
+
+    </h3>
+
     <p>
-    Besoin de direction / clarté ... 
+
+Quand tout avance en même temps,
+il devient difficile de distinguer
+l'essentiel.
+
     </p>
+
+</div>
   </div>
 
         </div>
