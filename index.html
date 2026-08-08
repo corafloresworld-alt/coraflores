@@ -1293,7 +1293,22 @@ CSS object-fit: cover*/
 }
 
 
-  </style>
+  
+/* ==== SECTION 1 CLEAN OVERRIDE ==== */
+.problem-content{max-width:640px}
+.problem-intro{margin:0 0 40px;padding:0;font-size:21px;color:rgba(255,255,255,.75)}
+.problem-list{display:flex;flex-direction:column;gap:24px}
+.problem-item{display:flex;align-items:flex-start;gap:18px}
+.problem-item span{width:20px;flex-shrink:0;font-size:13px;line-height:30px;color:#D7A84A}
+.problem-item p{margin:0!important;padding:0!important;font-size:22px;line-height:1.55;text-align:left}
+.problem-conclusion{margin-top:52px;padding-top:34px;border-top:1px solid rgba(255,255,255,.18)}
+.problem-conclusion .small{margin:0;padding:0;font-size:22px;opacity:.65;text-align:left}
+.problem-conclusion h3{margin-top:14px;font-family:'Francois One',sans-serif;font-size:58px;line-height:1.02;text-align:left}
+.image-caption{max-width:520px;margin:36px auto 0;text-align:center}
+.image-caption h3{font-size:56px}
+.image-caption p{text-align:center;font-size:22px;line-height:1.7}
+
+</style>
 </head>
 
 <script>
@@ -1454,67 +1469,23 @@ document.addEventListener("DOMContentLoaded", () => {
 ===================================================== -->
   
   <!-- BLOC 1 -->
-<!-- BLOC 1 -->
 <div class="info-card problem-card">
-
-    <div class="problem-content">
-
-  
-<h2>
-Vous avez l'impression de beaucoup faire<br>
-<em>sans vraiment avancer&nbsp;?</em>
-</h2>
-    
-<p class="problem-intro">
-Peut-être que vous vous reconnaissez là-dedans...
- </p>
-
-        <div class="problem-list">
-
-            <div class="problem-item">
-                <span>✦</span>
-                <p>Trop d'idées et vous ne savez plus par quoi commencer.</p>
-            </div>
-
-            <div class="problem-item">
-                <span>✦</span>
-                <p>Des journées bien remplies mais peu de résultats concrets.</p>
-            </div>
-
-            <div class="problem-item">
-                <span>✦</span>
-                <p>Vous avancez beaucoup… sans toujours savoir si vous avancez dans la bonne direction.</p>
-            </div>
-
-            <div class="problem-item">
-                <span>✦</span>
-                <p>Vous sentez qu'il est temps de reprendre du recul.</p>
-            </div>
-
-        </div>
-
-        <div class="problem-conclusion">
-
-            <p class="small">
-
-Tu n'as pas besoin<br>
-de travailler plus.
-
-</p>
-
-<h3>
-
-Tu as besoin<br>
-d'y voir plus clair.
-
-</h3>
-        </div>
-
-    </div>
-
+<div class="problem-content">
+<h2>Vous avez l'impression de beaucoup faire<br><em>sans vraiment avancer&nbsp;?</em></h2>
+<p class="problem-intro">Peut-être que vous vous reconnaissez là-dedans...</p>
+<div class="problem-list">
+<div class="problem-item"><span>✦</span><p><strong>Trop d'idées</strong> et vous ne savez plus par quoi commencer.</p></div>
+<div class="problem-item"><span>✦</span><p><strong>Des journées bien remplies</strong> mais peu de résultats concrets.</p></div>
+<div class="problem-item"><span>✦</span><p>Vous avancez beaucoup… sans toujours savoir si vous avancez dans la bonne direction.</p></div>
+<div class="problem-item"><span>✦</span><p>Vous sentez qu'il est temps de reprendre du recul.</p></div>
 </div>
-
-  <!-- BLOC 2 -->
+<div class="problem-conclusion">
+<p class="small">Tu n'as pas besoin de travailler plus.</p>
+<h3>Tu as besoin<br>d'y voir plus clair.</h3>
+</div>
+</div>
+</div>
+<!-- BLOC 2 -->
   <div class="info-card">
     <img src="/assets/images/cartes1200x800.png" alt="Séjours pêche">
    <div class="image-caption">
