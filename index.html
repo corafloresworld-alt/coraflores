@@ -1125,127 +1125,9 @@ CSS object-fit: cover*/
     box-shadow:none;
 }
 
-.problem-content{
 
-    max-width:620px;
 
-}
-
-.problem-content h2{
-    font-family:'Francois One', sans-serif;
-    font-size:54px;      /* au lieu de 76px */
-    line-height:1.08;
-    font-weight:400;
-    margin:0 0 24px;
-    letter-spacing:-0.5px;
-}
-
-.problem-content h2 em{
-
-    font-style:italic;
-    font-weight:400;
-
-    display:block;
-
-}
-
-.problem-intro{
-
-    font-size:20px;
-
-    color:rgba(255,255,255,.72);
-
-    margin-bottom:46px;
-
-    padding:0;
-
-}
-
-.problem-list{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:34px;
-
-}
-
-.problem-item{
-
-    display:flex;
-
-    align-items:flex-start;
-
-    gap:18px;
-
-}
-
-.problem-item span{
-
-    width:18px;
-
-    flex-shrink:0;
-
-    color:#D7A84A;
-
-    font-size:15px;
-
-    line-height:1.8;
-
-    margin-top:7px;
-
-}
-
-.problem-item p{
-
-    margin:0;
-
-    padding:0;
-
-    font-size:20px;
-
-    line-height:1.8;
-
-    color:rgba(255,255,255,.94);
-
-}
-
-.problem-conclusion{
-
-    margin-top:80px;
-
-    padding-top:45px;
-
-    border-top:1px solid rgba(255,255,255,.15);
-
-}
-
-.problem-conclusion .small{
-
-    font-size:22px;
-
-    color:rgba(255,255,255,.55);
-
-    margin:0;
-
-    padding:0;
-
-}
-
-.problem-conclusion h3{
-
-    font-family:'Francois One';
-
-    font-size:54px;
-
-    font-weight:400;
-
-    line-height:1.05;
-
-    margin-top:18px;
-
-}
+  
 
   /* GALERIE */
   .image-grid {
@@ -1294,7 +1176,10 @@ CSS object-fit: cover*/
 /* ===== SECTION 1 REDESIGN ===== */
 .problem-content{max-width:650px}
 .problem-content h2{font-family:'Francois One',sans-serif;font-size:48px;line-height:1.02;font-weight:400;margin:0 0 24px}
-.problem-content h2 em{display:block;font-style:italic}
+.problem-content h2 em{
+    font-style:italic;
+    font-weight:400;
+}
 .problem-intro{font-size:24px;color:#fff;margin:0 0 42px;padding:0}
 .problem-list{display:flex;flex-direction:column;gap:28px}
 .problem-item{display:flex;align-items:flex-start;gap:18px}
@@ -1468,8 +1353,11 @@ document.addEventListener("DOMContentLoaded", () => {
   <!-- BLOC 1 -->
 <div class="info-card problem-card">
 <div class="problem-content">
-<h2>Vous avez l'impression de beaucoup faire<br><em>sans vraiment avancer&nbsp;?</em></h2>
-<p class="problem-intro">Peut-être que vous vous reconnaissez là-dedans...</p>
+<h2>
+Vous avez l'impression de beaucoup faire<br>
+<em>sans vraiment avancer ?</em>
+</h2>
+  <p class="problem-intro">Peut-être que vous vous reconnaissez là-dedans...</p>
 <div class="problem-list">
 <div class="problem-item"><span>✦</span><p><strong>Trop d'idées</strong> et vous ne savez plus par quoi commencer.</p></div>
 <div class="problem-item"><span>✦</span><p><strong>Des journées bien remplies</strong> mais peu de résultats concrets.</p></div>
