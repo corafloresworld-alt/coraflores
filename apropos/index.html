@@ -97,14 +97,19 @@
     /* ================================
        CONTENU À PROPOS
     ================================ */
-    .about-container {
-      max-width: 900px;
-      margin: 0 auto 6rem;
-      padding: 0 1.5rem;
-      text-align: center;
-    }
+.about-container{
 
-    .about-container h1{
+    max-width:1400px;
+
+    margin:0 auto;
+
+    padding:90px 40px;
+
+    text-align:left;
+
+}
+
+   .about-container h1{
 
     font-family:'Francois One',sans-serif;
 
@@ -116,23 +121,32 @@
 
     color:#fff;
 
-    margin-bottom:32px;
+    margin-bottom:34px;
 
 }
 
-    .about-intro {
-      font-size: 1.2rem;
-      line-height: 1.7;
-      color: var(--color-text-muted);
-      margin-bottom: 3rem;
-    }
+   .about-intro{
+
+    max-width:760px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#fff;
+
+    margin-bottom:60px;
+
+}
 
     .about-section {
-      margin-bottom: 3rem;
-      text-align: left;
+    max-width:760px;
+
+    margin-bottom:55px;
+
     }
 
-   .about-section h2{
+ .about-section h2{
 
     font-family:'Francois One',sans-serif;
 
@@ -146,11 +160,15 @@
 
 }
 
-    .about-section p {
-      font-size: 1.05rem;
-      line-height: 1.7;
-      color: var(--color-text-muted);
-    }
+    .about-section p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    color:#fff;
+
+}
 
 
     /* ================================
@@ -160,23 +178,32 @@ Dimensions idéales :
 - 2000 x 900 px
 ================================ */
 
-.about-image {
-  margin: 4rem auto;
-  max-width: 1000px;
-  padding: 0 1.5rem;
-  text-align: center;
+.about-gallery{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:32px;
+
+    margin-top:80px;
+
 }
 
+    .about-gallery img{
 
-.about-image img {
-  width: 100%;
-  height: auto;
-  max-height: 520px;
-  object-fit: contain;
-  display: block;
-  margin: 0 auto;
-  border-radius: 18px;
+    width:100%;
+
+    height:420px;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    display:block;
+
 }
+
 
 
 
@@ -226,7 +253,7 @@ Dimensions idéales :
     
 .about-hero{
     position:relative;
-    height:82vh;
+    height:68vh;
     overflow:hidden;
 }
     .about-hero video{
@@ -362,10 +389,14 @@ Dimensions idéales :
     </p>
   </section>
 
+  <div class="about-gallery">
 
-  <section class="about-image">
-  <img src="/assets/images/peche-immersion.jpg" alt="Séjour de pêche en Espagne">
-</section>
+    <img src="/assets/images/peche-immersion.jpg" alt="">
+
+    <img src="/assets/images/photo2.jpg" alt="">
+
+</div>
+
 
 </main>
 
