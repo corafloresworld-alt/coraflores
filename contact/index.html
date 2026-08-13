@@ -412,9 +412,12 @@ form textarea:focus {
     
 .about-hero{
     position:relative;
-    height:68vh;
+    width:100vw;
+    margin-left:calc(50% - 50vw);
+    height:72vh;
     overflow:hidden;
 }
+    
     .about-hero video{
 
     position:absolute;
@@ -451,8 +454,20 @@ form textarea:focus {
     );
 
 }
-    .about-content{position:relative;z-index:2;max-width:1200px;height:100%;margin:auto;padding:0 2rem;display:flex;flex-direction:column;justify-content:center;}
-.about-content h1{
+.about-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    max-width:none;
+    height:100%;
+    margin:0;
+    padding:0 8%;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  
+}
+    .about-content h1{
 
     font-family:'Francois One',sans-serif;
 
