@@ -405,55 +405,83 @@ form textarea:focus {
   }
 
     }
-  
 
-/* ===== HERO VIDEO ===== */
-.hero-contact{
-position:relative;
-height:88vh;
-overflow:hidden;
-margin-top:-95px;
+
+  
+/* HERO ABOUT */
+    
+.about-hero{
+    position:relative;
+    height:68vh;
+    overflow:hidden;
 }
-.hero-contact video{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-object-fit:cover;
-object-position:75% center;
-transform:scale(1.35);
-filter:blur(12px) brightness(.45);
+    .about-hero video{
+
+    position:absolute;
+
+    inset:0;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:75% center;
+
+    transform:scale(1.08);
+
+    filter:blur(4px) brightness(.65);
+
 }
-.hero-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(to bottom,rgba(0,0,0,.2),rgba(0,0,0,.45));
+.about-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        to bottom,
+
+        rgba(0,0,0,.12),
+
+        rgba(0,0,0,.25)
+
+    );
+
 }
-.hero-content{
-position:relative;
-z-index:2;
-max-width:1200px;
-height:100%;
-margin:auto;
-padding:0 2rem;
-display:flex;
-flex-direction:column;
-justify-content:center;
+    .about-content{position:relative;z-index:2;max-width:1200px;height:100%;margin:auto;padding:0 2rem;display:flex;flex-direction:column;justify-content:center;}
+.about-content h1{
+
+    font-family:'Francois One',sans-serif;
+
+    font-size:clamp(2rem,4vw,4.1rem);
+
+    line-height:1.05;
+
+    font-weight:400;
+
+    max-width:650px;
+
+    color:#fff;
+
 }
-.hero-content h1{
-font-family:'Francois One',sans-serif;
-font-size:clamp(3rem,5vw,5rem);
-font-weight:400;
-line-height:1.05;
-color:#fff;
-margin:0 0 1rem;
+    
+.about-content .about-intro{
+
+    max-width:520px;
+
+    font-size:1.3rem;
+
+    line-height:1.6;
+
+    color:#fff;
+
 }
-.hero-content p{
-max-width:620px;
-font-size:1.2rem;
-line-height:1.7;
-color:#fff;
-}
+
+
+    
 
 </style>
 </head>
@@ -481,12 +509,14 @@ color:#fff;
 </nav>
 
 
-<header class="hero-contact">
-<video autoplay muted loop playsinline>
+<header class="about-hero">
+  <video autoplay muted loop playsinline>
 <source src="/assets/videos/video-velo.mp4" type="video/mp4">
 </video>
-<div class="hero-overlay"></div>
-<div class="hero-content">
+<div class="about-overlay">
+  
+</div>
+<div class="about-content">
 <p style="letter-spacing:.15em;text-transform:uppercase;color:#d7c3b6;">CONTACT</p>
 <h1>Parlons de votre projet.</h1>
 <p>Chaque collaboration commence par une conversation. Expliquez-moi où vous en êtes et ce que vous souhaitez construire.</p>
