@@ -178,46 +178,50 @@ Dimensions idéales :
 - 2000 x 900 px
 ================================ */
 
+    
 .about-gallery{
 
     display:flex;
 
     flex-direction:column;
 
-    gap:28px;
+    gap:24px;
 
-    align-items:flex-end;
+    position:sticky;
+
+    top:120px;
+
+    width:360px;
 
 }
-   .about-gallery img:first-child{
+
+  .about-gallery img{
 
     width:100%;
 
-    aspect-ratio:4/3;
+    display:block;
 
     object-fit:cover;
 
-    border-radius:10px;
-
-    display:block;
+    border-radius:14px;
 
 }
 
-    .about-gallery img:last-child{
+.about-gallery img:first-child{
 
-    width:78%;
-
-    aspect-ratio:4/3;
-
-    object-fit:cover;
-
-    border-radius:10px;
-
-    display:block;
+    height:300px;
 
 }
 
+.about-gallery img:last-child{
 
+    width:82%;
+
+    height:220px;
+
+    margin-left:auto;
+
+}
 
 
 
@@ -247,22 +251,20 @@ Dimensions idéales :
     text-align: left;
   }
   
-
+  }
 /* ===========================
    LAYOUT À PROPOS
 =========================== */
 
 .about-grid{
 
-    display:grid !important;
+    display:grid;
 
-    grid-template-columns:65% 35% !important;
+    grid-template-columns:minmax(0,1fr) 360px;
 
     gap:80px;
 
     align-items:start;
-
-    border:3px solid red;
 
 }
 
@@ -270,9 +272,7 @@ Dimensions idéales :
     border:3px solid blue;
 }
 
-.about-gallery{
-    border:3px solid yellow;
-}
+
 
   
 /* HERO ABOUT */
