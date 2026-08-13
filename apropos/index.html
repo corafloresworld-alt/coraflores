@@ -180,25 +180,38 @@ Dimensions idéales :
 
 .about-gallery{
 
-    display:grid;
+    display:flex;
 
-    grid-template-columns:1fr 1fr;
+    flex-direction:column;
 
-    gap:32px;
+    gap:28px;
 
-    margin-top:80px;
+    align-items:flex-end;
 
 }
-
-    .about-gallery img{
+   .about-gallery img:first-child{
 
     width:100%;
 
-    height:420px;
+    aspect-ratio:4/3;
 
     object-fit:cover;
 
-    border-radius:8px;
+    border-radius:10px;
+
+    display:block;
+
+}
+
+    .about-gallery img:last-child{
+
+    width:78%;
+
+    aspect-ratio:4/3;
+
+    object-fit:cover;
+
+    border-radius:10px;
 
     display:block;
 
@@ -234,15 +247,26 @@ Dimensions idéales :
     text-align: left;
   }
   
-  .about-image {
-    max-width: 100%;
-    padding: 0 1rem;
-  }
+/* ===========================
+   LAYOUT À PROPOS
+=========================== */
 
-  .about-image img {
-  height: auto;
-  max-height: 340px;
-  object-fit: contain;
+.about-grid{
+
+    display:grid;
+
+    grid-template-columns:1.15fr .75fr;
+
+    gap:80px;
+
+    align-items:start;
+
+}
+
+.about-text{
+
+    max-width:760px;
+
 }
 
 }
@@ -354,40 +378,48 @@ Dimensions idéales :
 
 <main class="about-container">
 
-  <h1>À propos de Guillaume Fishing Trip</h1>
+    <div class="about-grid">
 
-  <p class="about-intro">
-    Une approche authentique de la pêche, guidée par la passion,
-    la transmission et le respect du milieu naturel.
-  </p>
+        <div class="about-text">
 
-  <section class="about-section">
-    <h2>Une passion devenue métier</h2>
-    <p>
-      Guillaume Fishing Trip est né d’une passion transmise très tôt,
-      au fil des sorties, des saisons et des rencontres au bord de l’eau.
-      La pêche n’est pas ici une simple activité, mais une expérience complète,
-      mêlant technique, observation et sensations.
-    </p>
-  </section>
+            <h1>À propos de Guillaume</h1>
 
-  <section class="about-section">
-    <h2>Des séjours sur mesure en Espagne</h2>
-    <p>
-      Installé en Espagne, entre mer, océan et eaux intérieures,
-      je propose des séjours de pêche adaptés à votre niveau et à vos envies.
-      Chaque sortie est pensée comme un moment privilégié, loin du stress du quotidien.
-    </p>
-  </section>
+            <p class="about-intro">
+                Une approche authentique de la pêche, guidée par la passion,
+                la transmission et le respect du milieu naturel.
+            </p>
 
-  <section class="about-section">
-    <h2>Une approche responsable</h2>
-    <p>
-      Mon objectif est de vous faire progresser tout en partageant
-      une pêche respectueuse des poissons et des milieux.
-      Sécurité, convivialité et accompagnement personnalisé sont au cœur de chaque séjour.
-    </p>
-  </section>
+            <section class="about-section">
+                <h2>Une passion devenue métier</h2>
+                <p>
+                    Guillaume Fishing Trip est né d’une passion transmise très tôt,
+                    au fil des sorties, des saisons et des rencontres au bord de l’eau.
+                    La pêche n’est pas ici une simple activité, mais une expérience complète,
+                    mêlant technique, observation et sensations.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <h2>Des séjours sur mesure en Espagne</h2>
+                <p>
+                    Installé en Espagne, entre mer, océan et eaux intérieures,
+                    je propose des séjours de pêche adaptés à votre niveau et à vos envies.
+                    Chaque sortie est pensée comme un moment privilégié,
+                    loin du stress du quotidien.
+                </p>
+            </section>
+
+            <section class="about-section">
+                <h2>Une approche responsable</h2>
+                <p>
+                    Mon objectif est de vous faire progresser tout en partageant
+                    une pêche respectueuse des poissons et des milieux.
+                    Sécurité, convivialité et accompagnement personnalisé
+                    sont au cœur de chaque séjour.
+                </p>
+            </section>
+
+        </div>
 
   <div class="about-gallery">
 
@@ -397,6 +429,7 @@ Dimensions idéales :
 
 </div>
 
+ </div>
 
 </main>
 
