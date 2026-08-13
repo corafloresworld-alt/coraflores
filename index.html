@@ -635,16 +635,24 @@ CSS object-fit: cover*/
 }
 
 
-.roadbook-image{
+.roadbook-block{
+    margin-top:28px;
+}
+
+.roadbook-block .image-caption{
+    margin:0 0 8px;
+}
+
+roadbook-image{
     width:100%;
     max-width:420px;
     display:block;
-    margin-top:-28px;
-    margin-left:auto;
-    margin-right:auto;
+    margin:0 auto;
     border-radius:8px;
+
 }
 
+    
 .point-card h3{
 
     font-family:'Francois One';
@@ -965,10 +973,6 @@ CSS object-fit: cover*/
 }
 
 
-.point-right .image-caption{
-    margin:0 auto 38px;
-}
-
 .image-caption span{
 
     display:block;
@@ -991,11 +995,6 @@ CSS object-fit: cover*/
 
     border-bottom:1px solid rgba(215,168,74,.35);
 
-}
-
-.point-right .image-caption span{
-    margin-bottom:4px;
-    padding-bottom:10px;
 }
 
   
@@ -1579,14 +1578,18 @@ Pour les entrepreneurs qui sentent que leur entreprise peut passer un cap mais q
 </div>
 
 
-<div class="image-caption">
-    <span>LE CARNET DE ROUTE QUE VOUS RECEVREZ<br>AVANT NOTRE ÉCHANGE</span>
-</div>
+<div class="roadbook-block">
 
-  <img
-    src="/assets/images/moncarnetderoute.png"
-    alt="Carnet de route"
-    class="roadbook-image">
+    <div class="image-caption">
+        <span>LE CARNET DE ROUTE QUE VOUS RECEVREZ<br>AVANT NOTRE ÉCHANGE</span>
+    </div>
+
+    <img
+        src="/assets/images/moncarnetderoute.png"
+        alt="Carnet de route"
+        class="roadbook-image">
+
+</div>
 
 </div>
 
