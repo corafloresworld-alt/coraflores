@@ -263,10 +263,6 @@ body {
     margin:0 0 24px;
 }
 
-.contact-left{
-    width:100%;
-    max-width:620px;
-}
     
 .section-label{
     color:#D7A84A;
@@ -350,22 +346,14 @@ GALERIE CONTACT
     gap:80px;
 }
 
-.contact-gallery{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:24px;
-
-    position:sticky;
-
-    top:120px;
-
-    width:360px;
-
+.contact-left{
+    flex:1;
+    max-width:620px;
 }
 
+.contact-gallery{
+    flex:0 0 360px;
+}
 .contact-gallery img{
 
     width:100%;
@@ -588,7 +576,7 @@ Je reviendrai vers vous rapidement avec une proposition adaptée.
   et commencer l’aventure.
 </p>
 
-
+ <form>
     
   <form method="POST" action="https://formspree.io/f/mqebrzwk">   <!-- site qui gere le formulaire -->
     <input type="hidden" name="site" value="Guillaume Fishing Trip"> <!-- formspress compte email cora.flores13@gmail.com -->
@@ -648,6 +636,8 @@ Je reviendrai vers vous rapidement avec une proposition adaptée.
     
   </form>
 
+       </div> <!-- FIN contact-left -->
+
   <div class="contact-gallery">
 
     <img src="/assets/images/peche-immersion.jpg" alt="Pêche">
@@ -659,7 +649,6 @@ Je reviendrai vers vous rapidement avec une proposition adaptée.
 </div>
 
   
-</div>
   
 </body>
 </html>
