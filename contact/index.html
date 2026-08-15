@@ -331,6 +331,63 @@ form textarea:focus {
   border-color: var(--color-accent);
 }
 
+
+/* ======================
+GALERIE CONTACT
+====================== */
+
+.contact-grid{
+    display:flex;
+    align-items:flex-start;
+    justify-content:space-between;
+    gap:70px;
+}
+
+.contact-gallery{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:24px;
+
+    position:sticky;
+
+    top:120px;
+
+    width:360px;
+
+}
+
+.contact-gallery img{
+
+    width:100%;
+
+    display:block;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+}
+
+.contact-gallery img:first-child{
+
+    height:300px;
+
+}
+
+.contact-gallery img:last-child{
+
+    width:82%;
+
+    height:220px;
+
+    margin-left:auto;
+
+}
+
+    
     /* ======================
    RESPONSIVE NAVBAR MOBILE
 ====================== */
@@ -518,6 +575,9 @@ Je reviendrai vers vous rapidement avec une proposition adaptée.
   et commencer l’aventure.
 </p>
 
+
+  <div class="contact-grid">
+    
   <form method="POST" action="https://formspree.io/f/mqebrzwk">   <!-- site qui gere le formulaire -->
     <input type="hidden" name="site" value="Guillaume Fishing Trip"> <!-- formspress compte email cora.flores13@gmail.com -->
     <label for="name">Nom complet *</label>
@@ -573,6 +633,16 @@ Je reviendrai vers vous rapidement avec une proposition adaptée.
 
     <input type="submit" value="Envoyer votre demande de devis" />
   </form>
+
+  <div class="contact-gallery">
+
+    <img src="/assets/images/photo1.jpg" alt="Pêche">
+
+    <img src="/assets/images/photo2.jpg" alt="Pêche">
+
+</div>
+
+</div>
 
  <div class="about-gallery">
 
