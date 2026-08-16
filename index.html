@@ -1039,63 +1039,180 @@ CSS object-fit: cover*/
 }
 
   
-   /* ================================
-   FOOTER – SIMPLE & CENTRÉ
+/* ================================
+   FOOTER
 ================================ */
 
 .site-footer {
   width: 100%;
-  background: rgba(0,0,0,0.18);
-  padding: 2.5rem 1rem 2rem;
+  background: #111a1d;
+  color: var(--color-text-muted);
+  padding: 4.5rem 6% 2rem;
+}
 
+
+/* ================================
+   GRILLE PRINCIPALE
+================================ */
+
+.footer-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.3fr 1fr;
+  gap: 4rem;
+
+  padding-bottom: 3.5rem;
+}
+
+
+/* ================================
+   LOGO / MARQUE
+================================ */
+
+.footer-brand {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+}
 
-  text-align: center;
+.footer-logo {
+  height: 42px;
+  width: auto;
+  max-width: none;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.7;
   color: var(--color-text-muted);
-  font-size: 0.9rem;
 }
 
-.footer-main {
-  margin-bottom: 0.6rem;
-}
 
-.footer-made {
+/* ================================
+   COLONNES
+================================ */
+
+.footer-column {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.4rem;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
-    .footer-contact {
-  margin-bottom: 0.8rem;
-  font-size: 0.9rem;
-  color: var(--color-text-muted);
-}
+.footer-column h3 {
+  margin: 0 0 1.4rem;
 
-.footer-contact a {
-  color: var(--color-accent);
-  text-decoration: none;
+  font-family: 'Euclid', sans-serif;
+  font-size: 0.68rem;
   font-weight: 500;
+
+  letter-spacing: .16em;
+  text-transform: uppercase;
+
+  color: #D7A84A;
 }
 
-.footer-contact a:hover {
-  text-decoration: underline;
+
+.footer-column a {
+  margin-bottom: .75rem;
+
+  color: var(--color-text-muted);
+  text-decoration: none;
+
+  font-size: .82rem;
+  line-height: 1.5;
+
+  transition: color .2s ease;
 }
 
 
-/* 🔥 SÉCURITÉ ABSOLUE POUR LE LOGO PIPELETTE */
-.site-footer img{
-    display:block;
-    width:auto;
-    max-width:none;
+.footer-column a:hover {
+  color: #D7A84A;
 }
 
-.footer-logo{
-    height:26px;
-    width:auto;
+
+/* ================================
+   RÉSEAUX SOCIAUX
+================================ */
+
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.footer-social-links a {
+  margin: 0;
+}
+
+
+/* ================================
+   BAS DU FOOTER
+================================ */
+
+.footer-bottom {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(215,168,74,.18);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+
+  font-size: .68rem;
+  line-height: 1.5;
+
+  color: rgba(255,255,255,.45);
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 800px) {
+
+  .site-footer {
+    padding: 3.5rem 7% 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
 }
 
 
@@ -1701,29 +1818,83 @@ Pour les entrepreneurs qui sentent que leur entreprise peut passer un cap mais q
 </div>
 
 <footer class="site-footer">
-  <p class="footer-main">
-    © 2026 Cora Flores. Tous droits réservés.
-  </p>
 
-  <p class="footer-contact">
-  Cora · 
-    <a href="mailto: contact@coraflores.com" target="_blank">
-      contact@coraflores.com
-    </a>
-  </p>
+  <div class="footer-grid">
 
-  <div class="footer-made">
-    <span>Fait avec ❤️ par</span>
-  <a href="mailto:contact@coraflores.com" target="_blank">
+    <!-- COLONNE 1 : LOGO -->
+    <div class="footer-brand">
+
       <img
         src="/assets/images/logo-cf.png"
         alt="Cora Flores"
-        class="footer-logo"      />
-    </a>
+        class="footer-logo"
+      >
+
+      <p>
+        Entrepreneure opérationnelle.<br>
+        Faire le point. Faire les bons choix.<br>
+        Passer à l'action.
+      </p>
+
+    </div>
+
+
+    <!-- COLONNE 2 : NAVIGATION -->
+    <div class="footer-column">
+
+      <h3>NAVIGATION</h3>
+
+      <a href="#point-de-depart">Le Point de Départ</a>
+      <a href="#bascule">La Bascule</a>
+      <a href="/a-propos/">À propos</a>
+      <a href="#faq">FAQ</a>
+
+    </div>
+
+
+    <!-- COLONNE 3 : INFORMATIONS -->
+    <div class="footer-column">
+
+      <h3>INFORMATIONS</h3>
+
+      <a href="/contact/">Contact</a>
+      <a href="/mentions-legales/">Mentions légales</a>
+      <a href="/politique-confidentialite/">Politique de confidentialité</a>
+
+    </div>
+
+
+    <!-- COLONNE 4 : RÉSEAUX -->
+    <div class="footer-column footer-social">
+
+      <h3>SUIVEZ-MOI</h3>
+
+      <div class="footer-social-links">
+
+        <a href="#" aria-label="Instagram">
+          Instagram
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
   </div>
+
+
+  <div class="footer-bottom">
+
+    <span>© 2026 Cora Flores. Tous droits réservés.</span>
+
+    <span>Entrepreneure opérationnelle · Accompagnement commercial</span>
+
+  </div>
+
 </footer>
-
-
 
 
 </body>
