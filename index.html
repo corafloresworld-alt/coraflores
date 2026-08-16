@@ -1177,7 +1177,7 @@ CSS object-fit: cover*/
 
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   gap: 2rem;
 
   font-size: .68rem;
@@ -1187,6 +1187,34 @@ CSS object-fit: cover*/
 }
 
 
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.footer-made {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.footer-heart {
+  color: #b94a4a;
+  font-size: .9rem;
+  line-height: 1;
+}
+
+.footer-made img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-left: .1rem;
+}
+
+.footer-tagline {
+  text-align: right;
+}
 /* ================================
    RESPONSIVE
 ================================ */
@@ -1899,19 +1927,22 @@ Pour les entrepreneurs qui sentent que leur entreprise peut passer un cap mais q
   </div>
 
 
-  <div class="footer-bottom">
+<div class="footer-bottom">
 
+  <div class="footer-legal">
     <span>© 2026 Cora Flores. Tous droits réservés.</span>
 
-    <span>Entrepreneure opérationnelle · Accompagnement commercial</span>
-
     <span class="footer-made">
-    Fait avec
-    <img src="/assets/images/logo-cf.png" alt="CF">
+      Fait avec <span class="footer-heart">♥</span> par
+      <img src="/assets/images/logo-cf.png" alt="CF">
     </span>
-
-
   </div>
+
+  <span class="footer-tagline">
+    Entrepreneure opérationnelle · Accompagnement commercial
+  </span>
+
+</div>
 
 </footer>
 
