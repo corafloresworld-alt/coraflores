@@ -496,28 +496,8 @@ CSS object-fit: cover*/
 
 }
 
-.point-container{
 
-    position:relative;
-
-    max-width:1400px;
-
-    margin:auto;
-
-    padding:0 40px;
-
-    display:grid;
-
-    grid-template-columns:1.3fr 0.8fr;
-
-    gap:90px;
-
-    align-items:center;
-
-}
-
-
-.point-label{
+    .point-label{
     display:block;
     max-width:620px;
 
@@ -541,6 +521,34 @@ CSS object-fit: cover*/
 }
 
 
+.point-container{
+    position:relative;
+
+    max-width:1400px;
+    margin:auto;
+    padding:0 40px;
+
+    display:grid;
+    grid-template-columns:minmax(0, 1.3fr) minmax(0, 0.8fr);
+
+    gap:90px;
+    align-items:center;
+}
+
+
+.point-left{
+    grid-column:1;
+    min-width:0;
+}
+
+.point-right{
+    grid-column:2;
+    min-width:0;
+
+    display:flex;
+    flex-direction:column;
+    gap:28px;
+}
     
 .point-left h2{
 
@@ -658,15 +666,7 @@ CSS object-fit: cover*/
   }
 
 
-.point-right{
 
-    display:flex;
-
-    flex-direction:column;
-
-    gap:28px;
-
-}
 
 
 .point-steps{
