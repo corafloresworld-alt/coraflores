@@ -888,6 +888,396 @@ CSS object-fit: cover*/
 }
 
 
+/* ========================================
+   LA BASCULE
+======================================== */
+
+.bascule-section{
+    padding:120px 0;
+    background:#334434;
+}
+
+.bascule-container{
+    position:relative;
+
+    max-width:1400px;
+    margin:auto;
+    padding:0 40px;
+
+    display:grid;
+    grid-template-columns:minmax(0, 1.3fr) minmax(0, 0.8fr);
+
+    gap:90px;
+
+    align-items:start;
+}
+
+
+/* =========================
+   COLONNE GAUCHE
+========================= */
+
+.bascule-left{
+    grid-column:1;
+    min-width:0;
+}
+
+
+/* LABEL */
+
+.bascule-label{
+    display:block;
+
+    max-width:620px;
+
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.14em;
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    padding-bottom:22px;
+    margin-bottom:22px;
+
+    border-bottom:1px solid rgba(215,168,74,.35);
+}
+
+
+/* TITRE */
+
+.bascule-left h2{
+    font-family:'Francois One',sans-serif;
+
+    font-size:58px;
+    line-height:1.05;
+    font-weight:400;
+
+    margin-bottom:30px;
+}
+
+.bascule-left h2 span{
+    color:#D7A84A;
+}
+
+
+/* INTRO */
+
+.bascule-intro{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.72);
+
+    max-width:700px;
+
+    margin:0 0 45px;
+}
+
+
+/* =========================
+   ÉTAPES
+========================= */
+
+.bascule-steps{
+    position:relative;
+
+    margin-top:45px;
+}
+
+
+/* MÉTHODE VERTICALE */
+
+.bascule-methode{
+    position:absolute;
+
+    left:-155px;
+
+    top:0;
+    bottom:0;
+
+    width:120px;
+
+    pointer-events:none;
+}
+
+
+.bascule-methode::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    right:0;
+
+    width:1px;
+
+    background:rgba(215,168,74,.35);
+}
+
+
+/* REPÈRES */
+
+.bascule-methode-item{
+    position:absolute;
+
+    right:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transform:translateY(-50%);
+}
+
+
+.bascule-methode-item span{
+    font-family:'Euclid', sans-serif;
+
+    font-size:10px;
+    font-weight:500;
+
+    letter-spacing:.10em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    white-space:nowrap;
+
+    text-align:right;
+}
+
+
+.bascule-methode-item i{
+    display:block;
+
+    width:7px;
+    height:7px;
+
+    flex:0 0 7px;
+
+    border-radius:50%;
+
+    background:#D7A84A;
+}
+
+
+/* POSITIONS */
+
+.bascule-01{
+    top:12%;
+}
+
+.bascule-02{
+    top:38%;
+}
+
+.bascule-03{
+    top:66%;
+}
+
+.bascule-04{
+    top:94%;
+}
+
+
+/* =========================
+   TEXTE DES ÉTAPES
+========================= */
+
+.bascule-step{
+    margin-bottom:55px;
+
+    max-width:700px;
+}
+
+.bascule-step:last-child{
+    margin-bottom:0;
+}
+
+
+.bascule-step .step-title{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    font-weight:500;
+
+    color:#fff;
+
+    margin-bottom:14px;
+}
+
+
+.bascule-step .step-title span{
+    color:#D7A84A;
+
+    margin-right:10px;
+}
+
+
+.bascule-step p{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.72);
+}
+
+
+/* =========================
+   BLOC RÉSUMÉ
+========================= */
+
+.bascule-summary{
+    margin-top:70px;
+
+    padding:32px 35px;
+
+    border:1px solid rgba(215,168,74,.35);
+
+    background:rgba(255,255,255,.025);
+}
+
+
+.bascule-summary h3{
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.10em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    margin:0 0 25px;
+}
+
+
+.bascule-summary ul{
+    list-style:none;
+
+    padding:0;
+    margin:0;
+}
+
+
+.bascule-summary li{
+    font-family:'Euclid', sans-serif;
+
+    font-size:15px;
+    line-height:1.5;
+
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:15px;
+
+    display:flex;
+    gap:12px;
+}
+
+
+.bascule-summary li:last-child{
+    margin-bottom:0;
+}
+
+
+.bascule-summary li span{
+    color:#D7A84A;
+}
+
+
+/* =========================
+   COLONNE DROITE
+========================= */
+
+.bascule-right{
+    grid-column:2;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+}
+
+
+/* POUR QUI */
+
+.bascule-card{
+    padding:30px 32px;
+
+    border:1px solid rgba(215,168,74,.35);
+
+    background:rgba(255,255,255,.025);
+}
+
+
+.bascule-card h3{
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    margin:0 0 20px;
+}
+
+
+.bascule-card p{
+    font-family:'Euclid', sans-serif;
+
+    font-size:15px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.75);
+
+    margin:0;
+}
+
+
+/* PHOTO HORIZONTALE */
+
+.bascule-photo{
+    width:100%;
+
+    overflow:hidden;
+}
+
+
+.bascule-photo img{
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    aspect-ratio:16 / 9;
+
+    object-fit:cover;
+}
+
+
+    
     /* ================================
    🎞️ SLIDER AVIS – VERSION PRO
 ================================ */
@@ -1976,7 +2366,393 @@ Pour les entrepreneurs qui ont beaucoup construit, beaucoup réfléchi, beaucoup
   
 </section>
 
-  
+  /* ========================================
+   LA BASCULE
+======================================== */
+
+.bascule-section{
+    padding:120px 0;
+    background:#334434;
+}
+
+.bascule-container{
+    position:relative;
+
+    max-width:1400px;
+    margin:auto;
+    padding:0 40px;
+
+    display:grid;
+    grid-template-columns:minmax(0, 1.3fr) minmax(0, 0.8fr);
+
+    gap:90px;
+
+    align-items:start;
+}
+
+
+/* =========================
+   COLONNE GAUCHE
+========================= */
+
+.bascule-left{
+    grid-column:1;
+    min-width:0;
+}
+
+
+/* LABEL */
+
+.bascule-label{
+    display:block;
+
+    max-width:620px;
+
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.14em;
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    padding-bottom:22px;
+    margin-bottom:22px;
+
+    border-bottom:1px solid rgba(215,168,74,.35);
+}
+
+
+/* TITRE */
+
+.bascule-left h2{
+    font-family:'Francois One',sans-serif;
+
+    font-size:58px;
+    line-height:1.05;
+    font-weight:400;
+
+    margin-bottom:30px;
+}
+
+.bascule-left h2 span{
+    color:#D7A84A;
+}
+
+
+/* INTRO */
+
+.bascule-intro{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.72);
+
+    max-width:700px;
+
+    margin:0 0 45px;
+}
+
+
+/* =========================
+   ÉTAPES
+========================= */
+
+.bascule-steps{
+    position:relative;
+
+    margin-top:45px;
+}
+
+
+/* MÉTHODE VERTICALE */
+
+.bascule-methode{
+    position:absolute;
+
+    left:-155px;
+
+    top:0;
+    bottom:0;
+
+    width:120px;
+
+    pointer-events:none;
+}
+
+
+.bascule-methode::before{
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    bottom:0;
+
+    right:0;
+
+    width:1px;
+
+    background:rgba(215,168,74,.35);
+}
+
+
+/* REPÈRES */
+
+.bascule-methode-item{
+    position:absolute;
+
+    right:0;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    transform:translateY(-50%);
+}
+
+
+.bascule-methode-item span{
+    font-family:'Euclid', sans-serif;
+
+    font-size:10px;
+    font-weight:500;
+
+    letter-spacing:.10em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    white-space:nowrap;
+
+    text-align:right;
+}
+
+
+.bascule-methode-item i{
+    display:block;
+
+    width:7px;
+    height:7px;
+
+    flex:0 0 7px;
+
+    border-radius:50%;
+
+    background:#D7A84A;
+}
+
+
+/* POSITIONS */
+
+.bascule-01{
+    top:12%;
+}
+
+.bascule-02{
+    top:38%;
+}
+
+.bascule-03{
+    top:66%;
+}
+
+.bascule-04{
+    top:94%;
+}
+
+
+/* =========================
+   TEXTE DES ÉTAPES
+========================= */
+
+.bascule-step{
+    margin-bottom:55px;
+
+    max-width:700px;
+}
+
+.bascule-step:last-child{
+    margin-bottom:0;
+}
+
+
+.bascule-step .step-title{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    font-weight:500;
+
+    color:#fff;
+
+    margin-bottom:14px;
+}
+
+
+.bascule-step .step-title span{
+    color:#D7A84A;
+
+    margin-right:10px;
+}
+
+
+.bascule-step p{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.72);
+}
+
+
+/* =========================
+   BLOC RÉSUMÉ
+========================= */
+
+.bascule-summary{
+    margin-top:70px;
+
+    padding:32px 35px;
+
+    border:1px solid rgba(215,168,74,.35);
+
+    background:rgba(255,255,255,.025);
+}
+
+
+.bascule-summary h3{
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.10em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    margin:0 0 25px;
+}
+
+
+.bascule-summary ul{
+    list-style:none;
+
+    padding:0;
+    margin:0;
+}
+
+
+.bascule-summary li{
+    font-family:'Euclid', sans-serif;
+
+    font-size:15px;
+    line-height:1.5;
+
+    color:rgba(255,255,255,.75);
+
+    margin-bottom:15px;
+
+    display:flex;
+    gap:12px;
+}
+
+
+.bascule-summary li:last-child{
+    margin-bottom:0;
+}
+
+
+.bascule-summary li span{
+    color:#D7A84A;
+}
+
+
+/* =========================
+   COLONNE DROITE
+========================= */
+
+.bascule-right{
+    grid-column:2;
+
+    min-width:0;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:45px;
+}
+
+
+/* POUR QUI */
+
+.bascule-card{
+    padding:30px 32px;
+
+    border:1px solid rgba(215,168,74,.35);
+
+    background:rgba(255,255,255,.025);
+}
+
+
+.bascule-card h3{
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+
+    margin:0 0 20px;
+}
+
+
+.bascule-card p{
+    font-family:'Euclid', sans-serif;
+
+    font-size:15px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.75);
+
+    margin:0;
+}
+
+
+/* PHOTO HORIZONTALE */
+
+.bascule-photo{
+    width:100%;
+
+    overflow:hidden;
+}
+
+
+.bascule-photo img{
+    display:block;
+
+    width:100%;
+
+    height:auto;
+
+    aspect-ratio:16 / 9;
+
+    object-fit:cover;
+}
 
 <section class="gallery-slider">
 
