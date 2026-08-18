@@ -584,10 +584,6 @@ CSS object-fit: cover*/
 
 }
 
-.point-steps{
-    margin-top:45px;
-}
-
 .point-step{
     margin-bottom:55px;
 }
@@ -666,9 +662,6 @@ CSS object-fit: cover*/
   }
 
 
-
-
-
 .point-steps{
     position:relative;
     margin-top:45px;
@@ -681,54 +674,72 @@ CSS object-fit: cover*/
     bottom:0;
     width:120px;
 
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:space-between;
-
-    color:#D7A84A;
+    pointer-events:none;
 }
 
 .methode-verticale::before{
     content:"";
+
     position:absolute;
     top:0;
     bottom:0;
-    left:50%;
-    transform:translateX(-50%);
+    right:0;
 
     width:1px;
+
     background:rgba(215,168,74,.35);
 }
 
-.methode-label{
-    position:relative;
-    z-index:1;
+.methode-item{
+    position:absolute;
 
+    right:0;
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    transform:translateY(-50%);
+}
+
+.methode-item span{
     font-family:'Euclid', sans-serif;
-    font-size:13px;
+
+    font-size:10px;
     font-weight:500;
+
     letter-spacing:.10em;
     text-transform:uppercase;
 
     color:#D7A84A;
-    background:#334434;
-    padding:0 8px;
 
     white-space:nowrap;
 }
 
-.methode-dot{
-    position:relative;
-    z-index:2;
+.methode-item i{
+    display:block;
 
     width:7px;
     height:7px;
+
+    flex:0 0 7px;
+
     border-radius:50%;
 
     background:#D7A84A;
 }
-    
+
+.methode-01{
+    top:24%;
+}
+
+.methode-02{
+    top:54%;
+}
+
+.methode-03{
+    top:84%;
+}
 .point-card{
 
     background:rgba(255,255,255,.06);
@@ -1808,11 +1819,20 @@ Le Point de départ, c’est un premier travail à deux pour prendre du recul,<b
 
     <div class="methode-verticale">
 
-        <div class="methode-label">OBSERVER</div>
-        <div class="methode-dot"></div>
-        <div class="methode-label">COMPRENDRE</div>
-        <div class="methode-dot"></div>
-        <div class="methode-label">CLARIFIER</div>
+    <div class="methode-item methode-01">
+    <span>OBSERVER</span>
+    <i></i>
+</div>
+      
+ <div class="methode-item methode-02">
+    <span>COMPRENDRE</span>
+    <i></i>
+</div>
+      
+ <div class="methode-item methode-03">
+    <span>CLARIFIER</span>
+    <i></i>
+</div>
 
     </div>
 
