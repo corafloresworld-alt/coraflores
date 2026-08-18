@@ -669,71 +669,64 @@ CSS object-fit: cover*/
 }
 
 
+.point-steps{
+    position:relative;
+    margin-top:45px;
+}
+
 .methode-verticale{
     position:absolute;
-
     left:-75px;
-    top:150px;
-
+    top:0;
+    bottom:0;
     width:120px;
 
     display:flex;
     flex-direction:column;
     align-items:center;
+    justify-content:space-between;
 
     color:#D7A84A;
 }
 
+.methode-verticale::before{
+    content:"";
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:50%;
+    transform:translateX(-50%);
 
-/* LIGNE */
-
-.methode-line-top,
-.methode-line-bottom{
     width:1px;
-    height:70px;
-
     background:rgba(215,168,74,.35);
 }
 
+.methode-label{
+    position:relative;
+    z-index:1;
 
-/* MOTS */
-
-.methode-step{
-    width:120px;
-
-    display:flex;
-    justify-content:center;
-    align-items:center;
-
-    text-align:center;
-}
-
-.methode-step span{
     font-family:'Euclid', sans-serif;
-
     font-size:13px;
     font-weight:500;
-
     letter-spacing:.10em;
     text-transform:uppercase;
 
     color:#D7A84A;
+    background:#334434;
+    padding:0 8px;
 
     white-space:nowrap;
 }
 
-
-/* PETITS POINTS */
-
 .methode-dot{
+    position:relative;
+    z-index:2;
+
     width:7px;
     height:7px;
-
     border-radius:50%;
 
     background:#D7A84A;
-
-    margin:14px 0;
 }
     
 .point-card{
@@ -1806,30 +1799,6 @@ Vous avez l'impression de beaucoup faire
 <div class="point-container">
 
 
-  <div class="methode-verticale">
-
-    <div class="methode-line-top"></div>
-
-    <div class="methode-step">
-        <span>OBSERVER</span>
-    </div>
-
-    <div class="methode-dot"></div>
-
-    <div class="methode-step">
-        <span>COMPRENDRE</span>
-    </div>
-
-    <div class="methode-dot"></div>
-
-    <div class="methode-step">
-        <span>CLARIFIER</span>
-    </div>
-
-    <div class="methode-line-bottom"></div>
-
-</div>
-
 <div class="point-left">
 
 <p class="point-label">
@@ -1846,6 +1815,19 @@ Le Point de départ, c’est un premier travail à deux pour prendre du recul,<b
 </p>
 
 <div class="point-steps">
+
+    <div class="methode-verticale">
+
+        <div class="methode-label">OBSERVER</div>
+        <div class="methode-dot"></div>
+        <div class="methode-label">COMPRENDRE</div>
+        <div class="methode-dot"></div>
+        <div class="methode-label">CLARIFIER</div>
+
+    </div>
+
+    <div class="point-step">
+        ...
 
     <div class="point-step">
       
