@@ -887,10 +887,9 @@ CSS object-fit: cover*/
     padding-top:30px;
 }
 
-
-/* ========================================
+/* =========================================================
    LA BASCULE
-======================================== */
+========================================================= */
 
 .bascule-section{
     padding:120px 0;
@@ -898,38 +897,30 @@ CSS object-fit: cover*/
 }
 
 .bascule-container{
-    position:relative;
-
     max-width:1400px;
     margin:auto;
     padding:0 40px;
+}
 
-    display:grid;
-    grid-template-columns:minmax(0, 1.3fr) minmax(0, 0.8fr);
-
-    gap:90px;
-
-    align-items:start;
+.bascule-content{
+    position:relative;
+    width:100%;
 }
 
 
-/* =========================
-   COLONNE GAUCHE
-========================= */
-
-.bascule-left{
-    grid-column:1;
-    min-width:0;
-}
-
-
-/* LABEL */
+/* =========================================================
+   LABEL
+========================================================= */
 
 .bascule-label{
-    display:block;
-
     max-width:620px;
 
+    margin:0 0 22px;
+
+    text-align:left;
+}
+
+.bascule-label span{
     font-family:'Euclid', sans-serif;
 
     font-size:13px;
@@ -939,61 +930,70 @@ CSS object-fit: cover*/
     text-transform:uppercase;
 
     color:#D7A84A;
-
-    padding-bottom:22px;
-    margin-bottom:22px;
-
-    border-bottom:1px solid rgba(215,168,74,.35);
 }
 
 
-/* TITRE */
+/* =========================================================
+   TITRE
+========================================================= */
 
-.bascule-left h2{
+.bascule-content h2{
+
     font-family:'Francois One',sans-serif;
 
     font-size:58px;
     line-height:1.05;
+
     font-weight:400;
 
-    margin-bottom:30px;
+    margin:0 0 30px;
 }
 
-.bascule-left h2 span{
+.bascule-content h2 span{
     color:#D7A84A;
 }
 
 
-/* INTRO */
+/* =========================================================
+   INTRO
+========================================================= */
 
 .bascule-intro{
+
     font-family:'Euclid', sans-serif;
 
     font-size:16px;
     line-height:1.6;
 
-    color:rgba(255,255,255,.72);
+    color:#fff;
 
-    max-width:700px;
+    max-width:900px;
 
-    margin:0 0 45px;
+    margin:0 0 55px;
 }
 
 
-/* =========================
+/* =========================================================
    ÉTAPES
-========================= */
+========================================================= */
 
 .bascule-steps{
+
     position:relative;
 
     margin-top:45px;
+
+    max-width:900px;
 }
 
 
-/* MÉTHODE VERTICALE */
+/* =========================================================
+   MÉTHODE VERTICALE
+   MÊME POSITION QUE LE POINT DE DÉPART
+========================================================= */
 
 .bascule-methode{
+
     position:absolute;
 
     left:-155px;
@@ -1007,7 +1007,10 @@ CSS object-fit: cover*/
 }
 
 
+/* LIGNE */
+
 .bascule-methode::before{
+
     content:"";
 
     position:absolute;
@@ -1026,6 +1029,7 @@ CSS object-fit: cover*/
 /* REPÈRES */
 
 .bascule-methode-item{
+
     position:absolute;
 
     right:0;
@@ -1040,7 +1044,10 @@ CSS object-fit: cover*/
 }
 
 
+/* MOTS */
+
 .bascule-methode-item span{
+
     font-family:'Euclid', sans-serif;
 
     font-size:10px;
@@ -1058,7 +1065,10 @@ CSS object-fit: cover*/
 }
 
 
+/* POINTS */
+
 .bascule-methode-item i{
+
     display:block;
 
     width:7px;
@@ -1072,77 +1082,86 @@ CSS object-fit: cover*/
 }
 
 
-/* POSITIONS */
+/* POSITION DES 4 REPÈRES */
 
 .bascule-01{
-    top:12%;
+    top:8%;
 }
 
 .bascule-02{
-    top:38%;
+    top:34%;
 }
 
 .bascule-03{
-    top:66%;
+    top:61%;
 }
 
 .bascule-04{
-    top:94%;
+    top:92%;
 }
 
 
-/* =========================
-   TEXTE DES ÉTAPES
-========================= */
+/* =========================================================
+   TEXTES DES ÉTAPES
+========================================================= */
 
 .bascule-step{
+
     margin-bottom:55px;
 
-    max-width:700px;
+    max-width:900px;
 }
+
 
 .bascule-step:last-child{
     margin-bottom:0;
 }
 
 
-.bascule-step .step-title{
+/* TITRE — MÊME ESPRIT QUE LE POINT DE DÉPART */
+
+.bascule-step-title{
+
     font-family:'Euclid', sans-serif;
 
     font-size:16px;
-    font-weight:500;
+    font-weight:600;
+
+    line-height:1.4;
 
     color:#fff;
 
-    margin-bottom:14px;
+    margin:0 0 14px;
 }
 
 
-.bascule-step .step-title span{
-    color:#D7A84A;
+/* TEXTE */
 
-    margin-right:10px;
-}
+.bascule-step > p:not(.bascule-step-title){
 
-
-.bascule-step p{
     font-family:'Euclid', sans-serif;
 
     font-size:16px;
+
     line-height:1.6;
 
     color:rgba(255,255,255,.72);
+
+    margin:0;
 }
 
 
-/* =========================
-   BLOC RÉSUMÉ
-========================= */
+/* =========================================================
+   RECTANGLE DU BAS
+========================================================= */
 
 .bascule-summary{
-    margin-top:70px;
 
-    padding:32px 35px;
+    max-width:100%;
+
+    margin-top:75px;
+
+    padding:35px 40px;
 
     border:1px solid rgba(215,168,74,.35);
 
@@ -1151,6 +1170,7 @@ CSS object-fit: cover*/
 
 
 .bascule-summary h3{
+
     font-family:'Euclid', sans-serif;
 
     font-size:13px;
@@ -1167,87 +1187,49 @@ CSS object-fit: cover*/
 
 
 .bascule-summary ul{
+
     list-style:none;
 
     padding:0;
     margin:0;
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    column-gap:60px;
+
+    row-gap:18px;
 }
 
 
 .bascule-summary li{
-    font-family:'Euclid', sans-serif;
-
-    font-size:15px;
-    line-height:1.5;
-
-    color:rgba(255,255,255,.75);
-
-    margin-bottom:15px;
 
     display:flex;
+
     gap:12px;
-}
 
+    align-items:flex-start;
 
-.bascule-summary li:last-child{
-    margin-bottom:0;
+    margin:0;
 }
 
 
 .bascule-summary li span{
-    color:#D7A84A;
-}
-
-
-/* =========================
-   COLONNE DROITE
-========================= */
-
-.bascule-right{
-    grid-column:2;
-
-    min-width:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:45px;
-}
-
-
-/* POUR QUI */
-
-.bascule-card{
-    padding:30px 32px;
-
-    border:1px solid rgba(215,168,74,.35);
-
-    background:rgba(255,255,255,.025);
-}
-
-
-.bascule-card h3{
-    font-family:'Euclid', sans-serif;
-
-    font-size:13px;
-    font-weight:500;
-
-    letter-spacing:.14em;
-
-    text-transform:uppercase;
 
     color:#D7A84A;
 
-    margin:0 0 20px;
+    flex:0 0 auto;
 }
 
 
-.bascule-card p{
+.bascule-summary li p{
+
     font-family:'Euclid', sans-serif;
 
     font-size:15px;
-    line-height:1.6;
+
+    line-height:1.5;
 
     color:rgba(255,255,255,.75);
 
@@ -1255,28 +1237,30 @@ CSS object-fit: cover*/
 }
 
 
-/* PHOTO HORIZONTALE */
+/* =========================================================
+   GRANDE PHOTO HORIZONTALE
+========================================================= */
 
 .bascule-photo{
+
     width:100%;
+
+    margin-top:55px;
 
     overflow:hidden;
 }
 
 
 .bascule-photo img{
+
     display:block;
 
     width:100%;
 
-    height:auto;
-
-    aspect-ratio:16 / 9;
+    aspect-ratio:16 / 7;
 
     object-fit:cover;
 }
-
-
     
     /* ================================
    🎞️ SLIDER AVIS – VERSION PRO
@@ -1791,20 +1775,23 @@ CSS object-fit: cover*/
 @media (max-width:768px){
 
     .bascule-container{
-        grid-template-columns:1fr;
+        padding:0 25px;
     }
 
-    .bascule-left,
-    .bascule-right{
-        grid-column:1;
+    .bascule-content h2{
+        font-size:42px;
     }
 
     .bascule-methode{
         display:none;
     }
 
-    .bascule-left h2{
-        font-size:42px;
+    .bascule-summary ul{
+        grid-template-columns:1fr;
+    }
+
+    .bascule-photo img{
+        aspect-ratio:16 / 9;
     }
 
 }
@@ -2388,226 +2375,195 @@ Pour les entrepreneurs qui ont beaucoup construit, beaucoup réfléchi, beaucoup
   
 </section>
 
-
 <!-- =========================================================
      LA BASCULE
 ========================================================= -->
 
 <section class="bascule-section">
 
-  <div class="bascule-container">
+    <div class="bascule-container">
 
-    <!-- =========================
-         COLONNE GAUCHE
-    ========================== -->
+        <div class="bascule-content">
 
-    <div class="bascule-left">
+            <!-- IMAGE-CAPTION -->
 
-      <div class="bascule-label">
-        LA BASCULE
-      </div>
-
-      <h2>
-        Et si nous passions<br>
-        <span>à l'action ?</span>
-      </h2>
-
-      <p class="bascule-intro">
-        Une fois les priorités identifiées, nous pouvons aller plus loin
-        et travailler ensemble à leur mise en œuvre.
-      </p>
-
-
-      <!-- =========================
-           ÉTAPES
-      ========================== -->
-
-      <div class="bascule-steps">
-
-        <!-- MÉTHODE VERTICALE -->
-
-        <div class="bascule-methode">
-
-          <div class="bascule-methode-item bascule-01">
-            <span>CLARIFIER</span>
-            <i></i>
-          </div>
-
-          <div class="bascule-methode-item bascule-02">
-            <span>PRIORISER</span>
-            <i></i>
-          </div>
-
-          <div class="bascule-methode-item bascule-03">
-            <span>CONSTRUIRE</span>
-            <i></i>
-          </div>
-
-          <div class="bascule-methode-item bascule-04">
-            <span>AGIR</span>
-            <i></i>
-          </div>
-
-        </div>
-
-
-        <!-- ÉTAPE 01 -->
-
-        <div class="bascule-step">
-
-          <div class="step-title">
-            <span>01</span>
-            Clarifier
-          </div>
-
-          <p>
-            Nous mettons au clair ce qui doit réellement évoluer,
-            ce qui mérite votre énergie et ce qui peut attendre.
-          </p>
-
-        </div>
-
-
-        <!-- ÉTAPE 02 -->
-
-        <div class="bascule-step">
-
-          <div class="step-title">
-            <span>02</span>
-            Prioriser
-          </div>
-
-          <p>
-            Nous faisons le tri entre les idées, les envies et les
-            urgences pour identifier les actions qui auront le plus
-            d'impact pour votre activité.
-          </p>
-
-        </div>
-
-
-        <!-- ÉTAPE 03 -->
-
-        <div class="bascule-step">
-
-          <div class="step-title">
-            <span>03</span>
-            Construire
-          </div>
-
-          <p>
-            Nous transformons les priorités en une direction claire,
-            avec des actions concrètes et adaptées à votre réalité.
-          </p>
-
-        </div>
-
-
-        <!-- ÉTAPE 04 -->
-
-        <div class="bascule-step">
-
-          <div class="step-title">
-            <span>04</span>
-            Agir
-          </div>
-
-          <p>
-            Nous passons à la mise en œuvre, ensemble, pour faire
-            avancer les sujets qui comptent vraiment.
-          </p>
-
-        </div>
-
-      </div>
-
-
-      <!-- =========================
-           BLOC RÉSUMÉ
-      ========================== -->
-
-      <div class="bascule-summary">
-
-        <h3>
-          Concrètement
-        </h3>
-
-        <ul>
-
-          <li>
-            <span>✦</span>
-            <div>
-              Un accompagnement adapté à vos besoins et à votre rythme.
+            <div class="image-caption bascule-label">
+                <span>LA BASCULE</span>
             </div>
-          </li>
 
-          <li>
-            <span>✦</span>
-            <div>
-              Un regard extérieur pour prendre de meilleures décisions.
+
+            <!-- GRAND TITRE -->
+
+            <h2>
+                Une collaboration pour<br>
+                <span>construire et mettre en mouvement.</span>
+            </h2>
+
+
+            <!-- INTRO -->
+
+            <p class="bascule-intro">
+                La Bascule, c’est 3 mois de travail en partenariat pour transformer
+                la direction définie ensemble en actions concrètes et faire évoluer
+                votre activité.
+            </p>
+
+
+            <!-- =================================================
+                 ÉTAPES + MÉTHODE VERTICALE
+            ================================================== -->
+
+            <div class="bascule-steps">
+
+
+                <!-- MÉTHODE VERTICALE -->
+
+                <div class="bascule-methode">
+
+                    <div class="bascule-methode-item bascule-01">
+                        <span>PRIORISER</span>
+                        <i></i>
+                    </div>
+
+                    <div class="bascule-methode-item bascule-02">
+                        <span>CONSTRUIRE</span>
+                        <i></i>
+                    </div>
+
+                    <div class="bascule-methode-item bascule-03">
+                        <span>METTRE EN<br>MOUVEMENT</span>
+                        <i></i>
+                    </div>
+
+                    <div class="bascule-methode-item bascule-04">
+                        <span>CONTINUER</span>
+                        <i></i>
+                    </div>
+
+                </div>
+
+
+                <!-- ÉTAPE 1 -->
+
+                <div class="bascule-step">
+
+                    <p class="bascule-step-title">
+                        Prioriser
+                    </p>
+
+                    <p>
+                        Nous définissons ensemble les sujets qui méritent
+                        vraiment votre énergie et ceux qui peuvent attendre.
+                    </p>
+
+                </div>
+
+
+                <!-- ÉTAPE 2 -->
+
+                <div class="bascule-step">
+
+                    <p class="bascule-step-title">
+                        Construire
+                    </p>
+
+                    <p>
+                        Nous travaillons concrètement sur les sujets identifiés
+                        et construisons les solutions adaptées à votre activité.
+                    </p>
+
+                </div>
+
+
+                <!-- ÉTAPE 3 -->
+
+                <div class="bascule-step">
+
+                    <p class="bascule-step-title">
+                        Mettre en mouvement
+                    </p>
+
+                    <p>
+                        Nous passons à la mise en œuvre, testons, ajustons
+                        et faisons avancer les actions décidées ensemble.
+                    </p>
+
+                </div>
+
+
+                <!-- ÉTAPE 4 -->
+
+                <div class="bascule-step">
+
+                    <p class="bascule-step-title">
+                        Continuer
+                    </p>
+
+                    <p>
+                        Nous regardons ce qui fonctionne, ce qui évolue
+                        et ce qui mérite d’être poursuivi pour faire avancer
+                        votre activité.
+                    </p>
+
+                </div>
+
             </div>
-          </li>
 
-          <li>
-            <span>✦</span>
-            <div>
-              Des actions concrètes plutôt que de la théorie.
+
+            <!-- =================================================
+                 RECTANGLE
+            ================================================== -->
+
+            <div class="bascule-summary">
+
+                <h3>
+                    PENDANT 3 MOIS, NOUS TRAVAILLONS ENSEMBLE
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <span>✓</span>
+                        <p>Sur vos priorités réelles, au rythme de votre activité.</p>
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        <p>Sur les sujets qui doivent concrètement avancer.</p>
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        <p>Avec les outils et solutions adaptés à vos besoins.</p>
+                    </li>
+
+                    <li>
+                        <span>✓</span>
+                        <p>En ajustant au fil des résultats, des besoins et des évolutions.</p>
+                    </li>
+
+                </ul>
+
             </div>
-          </li>
 
-          <li>
-            <span>✦</span>
-            <div>
-              Un travail ensemble, sur la durée ou autour d'un sujet précis.
+
+            <!-- =================================================
+                 GRANDE PHOTO HORIZONTALE
+            ================================================== -->
+
+            <div class="bascule-photo">
+
+                <img
+                    src="/assets/images/bascule.jpg"
+                    alt="La Bascule — travail en partenariat"
+                >
+
             </div>
-          </li>
 
-        </ul>
 
-      </div>
+        </div>
 
     </div>
-
-
-    <!-- =========================
-         COLONNE DROITE
-    ========================== -->
-
-    <div class="bascule-right">
-
-
-      <!-- POUR QUI -->
-
-      <div class="bascule-card">
-
-        <h3>
-          Pour qui ?
-        </h3>
-
-        <p>
-          Pour les entrepreneurs qui ont beaucoup construit,
-          beaucoup réfléchi, beaucoup essayé… et qui veulent
-          faire le tri pour retrouver une direction claire.
-        </p>
-
-      </div>
-
-
-      <!-- PHOTO -->
-
-      <div class="bascule-photo">
-
-        <img
-          src="/assets/images/miniature800x800.png"
-          alt="Accompagnement entrepreneurial"
-        >
-
-      </div>
-
-
-    </div>
-
-  </div>
 
 </section>
 
