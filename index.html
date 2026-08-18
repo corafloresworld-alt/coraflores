@@ -2388,393 +2388,231 @@ Pour les entrepreneurs qui ont beaucoup construit, beaucoup réfléchi, beaucoup
   
 </section>
 
-  /* ========================================
-   LA BASCULE
-======================================== */
 
-.bascule-section{
-    padding:120px 0;
-    background:#334434;
-}
+<!-- =========================================================
+     LA BASCULE
+========================================================= -->
 
-.bascule-container{
-    position:relative;
+<section class="bascule-section">
 
-    max-width:1400px;
-    margin:auto;
-    padding:0 40px;
+  <div class="bascule-container">
 
-    display:grid;
-    grid-template-columns:minmax(0, 1.3fr) minmax(0, 0.8fr);
+    <!-- =========================
+         COLONNE GAUCHE
+    ========================== -->
 
-    gap:90px;
+    <div class="bascule-left">
 
-    align-items:start;
-}
+      <div class="bascule-label">
+        LA BASCULE
+      </div>
 
+      <h2>
+        Et si nous passions<br>
+        <span>à l'action ?</span>
+      </h2>
 
-/* =========================
-   COLONNE GAUCHE
-========================= */
+      <p class="bascule-intro">
+        Une fois les priorités identifiées, nous pouvons aller plus loin
+        et travailler ensemble à leur mise en œuvre.
+      </p>
 
-.bascule-left{
-    grid-column:1;
-    min-width:0;
-}
 
+      <!-- =========================
+           ÉTAPES
+      ========================== -->
 
-/* LABEL */
+      <div class="bascule-steps">
 
-.bascule-label{
-    display:block;
+        <!-- MÉTHODE VERTICALE -->
 
-    max-width:620px;
+        <div class="bascule-methode">
 
-    font-family:'Euclid', sans-serif;
+          <div class="bascule-methode-item bascule-01">
+            <span>CLARIFIER</span>
+            <i></i>
+          </div>
 
-    font-size:13px;
-    font-weight:500;
+          <div class="bascule-methode-item bascule-02">
+            <span>PRIORISER</span>
+            <i></i>
+          </div>
 
-    letter-spacing:.14em;
-    text-transform:uppercase;
+          <div class="bascule-methode-item bascule-03">
+            <span>CONSTRUIRE</span>
+            <i></i>
+          </div>
 
-    color:#D7A84A;
+          <div class="bascule-methode-item bascule-04">
+            <span>AGIR</span>
+            <i></i>
+          </div>
 
-    padding-bottom:22px;
-    margin-bottom:22px;
+        </div>
 
-    border-bottom:1px solid rgba(215,168,74,.35);
-}
 
+        <!-- ÉTAPE 01 -->
 
-/* TITRE */
+        <div class="bascule-step">
 
-.bascule-left h2{
-    font-family:'Francois One',sans-serif;
+          <div class="step-title">
+            <span>01</span>
+            Clarifier
+          </div>
 
-    font-size:58px;
-    line-height:1.05;
-    font-weight:400;
+          <p>
+            Nous mettons au clair ce qui doit réellement évoluer,
+            ce qui mérite votre énergie et ce qui peut attendre.
+          </p>
 
-    margin-bottom:30px;
-}
+        </div>
 
-.bascule-left h2 span{
-    color:#D7A84A;
-}
 
+        <!-- ÉTAPE 02 -->
 
-/* INTRO */
+        <div class="bascule-step">
 
-.bascule-intro{
-    font-family:'Euclid', sans-serif;
+          <div class="step-title">
+            <span>02</span>
+            Prioriser
+          </div>
 
-    font-size:16px;
-    line-height:1.6;
+          <p>
+            Nous faisons le tri entre les idées, les envies et les
+            urgences pour identifier les actions qui auront le plus
+            d'impact pour votre activité.
+          </p>
 
-    color:rgba(255,255,255,.72);
+        </div>
 
-    max-width:700px;
 
-    margin:0 0 45px;
-}
+        <!-- ÉTAPE 03 -->
 
+        <div class="bascule-step">
 
-/* =========================
-   ÉTAPES
-========================= */
+          <div class="step-title">
+            <span>03</span>
+            Construire
+          </div>
 
-.bascule-steps{
-    position:relative;
+          <p>
+            Nous transformons les priorités en une direction claire,
+            avec des actions concrètes et adaptées à votre réalité.
+          </p>
 
-    margin-top:45px;
-}
+        </div>
 
 
-/* MÉTHODE VERTICALE */
+        <!-- ÉTAPE 04 -->
 
-.bascule-methode{
-    position:absolute;
+        <div class="bascule-step">
 
-    left:-155px;
+          <div class="step-title">
+            <span>04</span>
+            Agir
+          </div>
 
-    top:0;
-    bottom:0;
+          <p>
+            Nous passons à la mise en œuvre, ensemble, pour faire
+            avancer les sujets qui comptent vraiment.
+          </p>
 
-    width:120px;
+        </div>
 
-    pointer-events:none;
-}
+      </div>
 
 
-.bascule-methode::before{
-    content:"";
+      <!-- =========================
+           BLOC RÉSUMÉ
+      ========================== -->
 
-    position:absolute;
+      <div class="bascule-summary">
 
-    top:0;
-    bottom:0;
+        <h3>
+          Concrètement
+        </h3>
 
-    right:0;
+        <ul>
 
-    width:1px;
+          <li>
+            <span>✦</span>
+            <div>
+              Un accompagnement adapté à vos besoins et à votre rythme.
+            </div>
+          </li>
 
-    background:rgba(215,168,74,.35);
-}
+          <li>
+            <span>✦</span>
+            <div>
+              Un regard extérieur pour prendre de meilleures décisions.
+            </div>
+          </li>
 
+          <li>
+            <span>✦</span>
+            <div>
+              Des actions concrètes plutôt que de la théorie.
+            </div>
+          </li>
 
-/* REPÈRES */
+          <li>
+            <span>✦</span>
+            <div>
+              Un travail ensemble, sur la durée ou autour d'un sujet précis.
+            </div>
+          </li>
 
-.bascule-methode-item{
-    position:absolute;
+        </ul>
 
-    right:0;
+      </div>
 
-    display:flex;
+    </div>
 
-    align-items:center;
 
-    gap:12px;
+    <!-- =========================
+         COLONNE DROITE
+    ========================== -->
 
-    transform:translateY(-50%);
-}
+    <div class="bascule-right">
 
 
-.bascule-methode-item span{
-    font-family:'Euclid', sans-serif;
+      <!-- POUR QUI -->
 
-    font-size:10px;
-    font-weight:500;
+      <div class="bascule-card">
 
-    letter-spacing:.10em;
+        <h3>
+          Pour qui ?
+        </h3>
 
-    text-transform:uppercase;
+        <p>
+          Pour les entrepreneurs qui ont beaucoup construit,
+          beaucoup réfléchi, beaucoup essayé… et qui veulent
+          faire le tri pour retrouver une direction claire.
+        </p>
 
-    color:#D7A84A;
+      </div>
 
-    white-space:nowrap;
 
-    text-align:right;
-}
+      <!-- PHOTO -->
 
+      <div class="bascule-photo">
 
-.bascule-methode-item i{
-    display:block;
+        <img
+          src="/assets/images/miniature800x800.png"
+          alt="Accompagnement entrepreneurial"
+        >
 
-    width:7px;
-    height:7px;
+      </div>
 
-    flex:0 0 7px;
 
-    border-radius:50%;
+    </div>
 
-    background:#D7A84A;
-}
+  </div>
 
+</section>
 
-/* POSITIONS */
 
-.bascule-01{
-    top:12%;
-}
-
-.bascule-02{
-    top:38%;
-}
-
-.bascule-03{
-    top:66%;
-}
-
-.bascule-04{
-    top:94%;
-}
-
-
-/* =========================
-   TEXTE DES ÉTAPES
-========================= */
-
-.bascule-step{
-    margin-bottom:55px;
-
-    max-width:700px;
-}
-
-.bascule-step:last-child{
-    margin-bottom:0;
-}
-
-
-.bascule-step .step-title{
-    font-family:'Euclid', sans-serif;
-
-    font-size:16px;
-    font-weight:500;
-
-    color:#fff;
-
-    margin-bottom:14px;
-}
-
-
-.bascule-step .step-title span{
-    color:#D7A84A;
-
-    margin-right:10px;
-}
-
-
-.bascule-step p{
-    font-family:'Euclid', sans-serif;
-
-    font-size:16px;
-    line-height:1.6;
-
-    color:rgba(255,255,255,.72);
-}
-
-
-/* =========================
-   BLOC RÉSUMÉ
-========================= */
-
-.bascule-summary{
-    margin-top:70px;
-
-    padding:32px 35px;
-
-    border:1px solid rgba(215,168,74,.35);
-
-    background:rgba(255,255,255,.025);
-}
-
-
-.bascule-summary h3{
-    font-family:'Euclid', sans-serif;
-
-    font-size:13px;
-    font-weight:500;
-
-    letter-spacing:.10em;
-
-    text-transform:uppercase;
-
-    color:#D7A84A;
-
-    margin:0 0 25px;
-}
-
-
-.bascule-summary ul{
-    list-style:none;
-
-    padding:0;
-    margin:0;
-}
-
-
-.bascule-summary li{
-    font-family:'Euclid', sans-serif;
-
-    font-size:15px;
-    line-height:1.5;
-
-    color:rgba(255,255,255,.75);
-
-    margin-bottom:15px;
-
-    display:flex;
-    gap:12px;
-}
-
-
-.bascule-summary li:last-child{
-    margin-bottom:0;
-}
-
-
-.bascule-summary li span{
-    color:#D7A84A;
-}
-
-
-/* =========================
-   COLONNE DROITE
-========================= */
-
-.bascule-right{
-    grid-column:2;
-
-    min-width:0;
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:45px;
-}
-
-
-/* POUR QUI */
-
-.bascule-card{
-    padding:30px 32px;
-
-    border:1px solid rgba(215,168,74,.35);
-
-    background:rgba(255,255,255,.025);
-}
-
-
-.bascule-card h3{
-    font-family:'Euclid', sans-serif;
-
-    font-size:13px;
-    font-weight:500;
-
-    letter-spacing:.14em;
-
-    text-transform:uppercase;
-
-    color:#D7A84A;
-
-    margin:0 0 20px;
-}
-
-
-.bascule-card p{
-    font-family:'Euclid', sans-serif;
-
-    font-size:15px;
-    line-height:1.6;
-
-    color:rgba(255,255,255,.75);
-
-    margin:0;
-}
-
-
-/* PHOTO HORIZONTALE */
-
-.bascule-photo{
-    width:100%;
-
-    overflow:hidden;
-}
-
-
-.bascule-photo img{
-    display:block;
-
-    width:100%;
-
-    height:auto;
-
-    aspect-ratio:16 / 9;
-
-    object-fit:cover;
-}
+  
 
 <section class="gallery-slider">
 
