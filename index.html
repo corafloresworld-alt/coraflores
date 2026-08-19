@@ -888,6 +888,7 @@ CSS object-fit: cover*/
 .after-transition .point-intro{
     margin:0 !important;
     padding-top:30px;
+
 }
 
 /* =========================================================
@@ -1248,6 +1249,160 @@ CSS object-fit: cover*/
     height:280px;
     object-fit:cover;
 }
+
+
+
+/* =========================================================
+   MISSION PONCTUELLE
+========================================================= */
+
+.mission-section{
+    width:100%;
+    padding:100px 0 120px;
+    background:#334434;
+}
+
+
+.mission-container{
+    max-width:1400px;
+    margin:0 auto;
+    padding:0 40px;
+
+    display:grid;
+    grid-template-columns:1fr 0.95fr;
+
+    gap:80px;
+
+    align-items:center;
+}
+
+
+/* =========================================================
+   COLONNE GAUCHE
+========================================================= */
+
+.mission-content{
+    min-width:0;
+}
+
+
+.mission-label{
+    display:block;
+
+    max-width:620px;
+
+    font-family:'Euclid', sans-serif;
+
+    font-size:13px;
+    font-weight:500;
+
+    letter-spacing:.14em;
+
+    text-transform:uppercase;
+
+    color:#D7A84A;
+}
+
+
+.mission-line{
+    width:100%;
+    max-width:620px;
+
+    height:1px;
+
+    margin-top:18px;
+
+    background:rgba(215,168,74,.35);
+}
+
+
+/* =========================================================
+   TITRE
+========================================================= */
+
+.mission-title{
+    font-family:'Francois One', sans-serif;
+
+    font-size:58px;
+    line-height:1.05;
+
+    font-weight:400;
+
+    color:#fff;
+
+    margin:38px 0 35px;
+}
+
+
+.mission-title em{
+    font-style:italic;
+    font-weight:400;
+
+    color:#fff;
+}
+
+
+/* =========================================================
+   TEXTE
+========================================================= */
+
+.mission-text{
+    max-width:720px;
+}
+
+
+.mission-text p{
+    font-family:'Euclid', sans-serif;
+
+    font-size:16px;
+    line-height:1.6;
+
+    color:rgba(255,255,255,.75);
+
+    margin:0 0 18px;
+}
+
+
+.mission-text p:last-child{
+    margin-bottom:0;
+}
+
+
+/* =========================================================
+   BOUTON
+========================================================= */
+
+.mission-btn{
+    display:inline-flex;
+
+    margin-top:35px;
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.mission-image{
+    width:100%;
+}
+
+
+.mission-image img{
+    display:block;
+
+    width:100%;
+    height:auto;
+
+    aspect-ratio:16 / 9;
+
+    object-fit:cover;
+
+    border-radius:2px;
+}
+
+
+
     
     /* ================================
    🎞️ SLIDER AVIS – VERSION PRO
@@ -2544,6 +2699,63 @@ Pour les entrepreneurs qui ont beaucoup construit, beaucoup réfléchi, beaucoup
 </section>
 
 
+  <!-- =========================================================
+     MISSION PONCTUELLE
+========================================================= -->
+
+<section class="mission-section">
+
+    <div class="mission-container">
+
+        <!-- COLONNE GAUCHE -->
+        <div class="mission-content">
+
+            <div class="mission-label">
+                UNE MISSION PONCTUELLE
+            </div>
+
+            <div class="mission-line"></div>
+
+            <h2 class="mission-title">
+                Pour un besoin précis,<br>
+                <em>à un moment précis.</em>
+            </h2>
+
+            <div class="mission-text">
+
+                <p>
+                    Vous avez un sujet précis à débloquer, un projet à faire avancer
+                    ou une mission que vous préférez me confier ?
+                </p>
+
+                <p>
+                    Design, commercial, communication, outils… vous avez un sujet
+                    à faire avancer : nous travaillons ensemble le temps nécessaire
+                    pour le faire aboutir.
+                </p>
+
+            </div>
+
+            <a href="/contact" class="cta-primary mission-btn">
+                PARLONS DE VOTRE PROJET
+            </a>
+
+        </div>
+
+
+        <!-- COLONNE DROITE : PHOTO -->
+        <div class="mission-image">
+
+            <img
+                src="/assets/images/mission-ponctuelle.jpg"
+                alt="Mission ponctuelle"
+            >
+
+        </div>
+
+    </div>
+
+</section>
   
 
 <section class="gallery-slider">
