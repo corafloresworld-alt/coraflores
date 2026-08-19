@@ -1649,11 +1649,27 @@ CSS object-fit: cover*/
     flex-direction:column;
     gap:16px;
 }
-.problem-item{display:flex;align-items:flex-start;gap:18px}
-.problem-item span{width:20px;flex:0 0 18px;color:#D7A84A;font-size:14px;line-height:34px}
-.problem-item p{
+
+.problem-item{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+}
+
+.problem-item span{
+    width:20px;
+    flex:0 0 18px;
+    color:#D7A84A;
+    font-size:14px;
+    line-height:34px;
+}
+
+.problem-item p,
+.problem-item p strong,
+.problem-item p b{
     font-family:'Euclid', sans-serif;
     font-size:18px !important;
+    font-weight:400 !important;
     line-height:1.6;
     color:#fff;
 }
