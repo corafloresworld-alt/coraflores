@@ -1243,7 +1243,7 @@ CSS object-fit: cover*/
 
 
 /* =========================================================
-   MISSION PONCTUELLE
+   MISSION PONCTUELLE et A PROPOS
 ========================================================= */
 
 .mission-section{
@@ -1391,47 +1391,6 @@ CSS object-fit: cover*/
 }
 
         
-/* - À PROPOS */
-
-.home-about{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    align-items:center;
-    max-width:1200px;
-    margin:0 auto;
-    padding:70px 2rem;
-    gap:90px;
-}
-
-.home-about-image{
-    width:100%;
-}
-
-.home-about-image img{
-    display:block;
-    width:100%;
-    height:360px;
-    object-fit:cover;
-}
-
-.home-about-content{
-    max-width:500px;
-}
-
-.home-about-content h2{
-    margin:28px 0 22px;
-}
-
-.home-about-content p{
-    max-width:470px;
-    margin-bottom:30px;
-}
-
-.about-button{
-    display:inline-block;
-}
-
-
 
 
 
@@ -2818,40 +2777,51 @@ Pour les entrepreneurs qui ont beaucoup construit, beaucoup réfléchi, beaucoup
    <!-- =========================================================
     A PROPOS SLIDE
 ========================================================= -->
+<section class="mission-section" style="padding:55px 0 65px;">
 
-  <section class="home-about">
+    <div class="mission-container">
 
-    <div class="home-about-image">
-        <img src="/assets/images/cora.jpg" alt="Cora Flores">
-    </div>
-
-    <div class="home-about-content">
-
-        <div class="section-label">
-            <span>À PROPOS</span>
-            <div class="label-line"></div>
+        <!-- PHOTO À GAUCHE -->
+        <div class="mission-image">
+            <img 
+                src="/assets/images/cora.jpg"
+                alt="Cora Flores"
+                style="max-height:280px;"
+            >
         </div>
 
-        <h2>
-            Derrière cette approche,<br>
-            <em>il y a Cora.</em>
-        </h2>
 
-        <p>
-            Entrepreneure opérationnelle, j'aime comprendre rapidement ce qui bloque, remettre les choses en ordre et transformer les idées en actions.
-        </p>
+        <!-- TEXTE À DROITE -->
+        <div class="mission-content">
 
-        <a href="/a-propos.html" class="about-button">
-            DÉCOUVRIR MON PARCOURS
-        </a>
+            <div class="mission-label">
+                À PROPOS
+            </div>
+
+            <div class="mission-line" style="max-width:450px;"></div>
+
+            <h2 class="mission-title">
+                Derrière cette approche,<br>
+                <em>il y a Cora.</em>
+            </h2>
+
+            <div class="mission-text">
+
+                <p>
+                    Entrepreneure opérationnelle, j'aime comprendre rapidement ce qui bloque, remettre les choses en ordre et transformer les idées en actions.
+                </p>
+
+            </div>
+
+            <a href="/a-propos.html" class="cta-primary mission-btn">
+                Découvrir mon parcours
+            </a>
+
+        </div>
 
     </div>
 
 </section>
-
-
-
-
 
 
 
