@@ -171,6 +171,32 @@
     margin-top:18px;
 }
 
+
+.about-list{
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+}
+
+.about-item{
+    display:flex;
+    align-items:flex-start;
+    gap:18px;
+}
+
+.about-item span{
+    width:20px;
+    flex:0 0 18px;
+    color:#D7A84A;
+    font-size:14px;
+    line-height:34px;
+}
+
+.about-item p{
+    margin:0;
+}
+
+    
     /* ================================
    🖼️ IMAGE IMMERSIVE – BAS DE PAGE IMAGE IMMERSIVE – TEMPLATE
 
@@ -438,13 +464,24 @@ Dimensions idéales :
             <section class="about-section">
                 <h2>Je sais ce que c'est…</h2>
               
-            <div class="about-list">
-                     <p><span>✦</span>d'avoir trop d'idées et de ne plus savoir par laquelle commencer.</p>
-                     <p><span>✦</span>de passer d'une casquette à l'autre dans la même journée.</p>
-                      <p><span>✦</span>de savoir qu'un sujet doit avancer, sans toujours trouver le temps ou l'énergie<br>pour s'en occuper.</p>
+       <div class="about-list">
 
-              </div>
+    <div class="about-item">
+        <span>✦</span>
+        <p>d'avoir trop d'idées et de ne plus savoir par laquelle commencer.</p>
+    </div>
 
+    <div class="about-item">
+        <span>✦</span>
+        <p>de passer d'une casquette à l'autre dans la même journée.</p>
+    </div>
+
+    <div class="about-item">
+        <span>✦</span>
+        <p>de savoir qu'un sujet doit avancer, sans toujours trouver le temps ou l'énergie<br>pour s'en occuper.</p>
+    </div>
+
+</div>
                  <p class="about-gap">
                  Bref, le joyeux bazar de l'entrepreneuriat !             
                 </p>
