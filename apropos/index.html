@@ -75,22 +75,43 @@
       height: 70px;
     }
 
-    .navbar-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-self: end;
-    }
+ .navbar-links {
+  display: flex;
+  gap: 3.5rem;
+  margin-left: auto;
+  align-items: center;
+  flex-wrap: nowrap;
+}
 
-    .navbar-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-    }
+.navbar-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 15.5px;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  transition: opacity 0.3s ease;
+}
 
-    .navbar-links a.active {
-      font-weight: 700;
-    }
+.navbar-links a:hover {
+  opacity: 0.7;
+}
 
+.navbar-links a.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 1px;
+}
+
+.navbar-links .cta {
+  background: none;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 400;
+}
+
+.navbar-links .cta:hover {
+  background: var(--color-accent);
+}
     /* ================================
        CONTENU À PROPOS
     ================================ */
