@@ -641,33 +641,43 @@ Une question, une idée, un besoin précis…<br>ou simplement envie d'échanger
   </option>
 </select>
 
-    <label for="location">Lieu de la prestation *</label>
-    <input type="text" id="location" name="location" required placeholder="Ville, adresse ou lieu précis" />
+  
+<fieldset>
+  <legend>De quoi avez-vous besoin ? *</legend>
 
-    <label for="guests">Nombre approximatif de convives *</label>
-    <input type="number" id="guests" name="guests" required min="1" placeholder="Ex : 50" />
+  <label>
+    <input type="checkbox" name="besoin" value="Point de Départ" />
+    Faire le Point de Départ
+    <span class="formule-detail">
+      Prendre du recul, faire le tri et identifier ce qui mérite votre attention.
+    </span>
+  </label>
 
-    <fieldset>
-      <legend>Composez votre service café *</legend>
+  <label>
+    <input type="checkbox" name="besoin" value="La Bascule" />
+    Débloquer une situation avec La Bascule
+    <span class="formule-detail">
+      Remettre de l'élan là où certains sujets sont restés en suspens.
+    </span>
+  </label>
 
-      <label>
-        <input type="checkbox" name="formule" value="Essentiel" />
-       Pêche en mer
-        <span class="formule-detail">Canne, leurres, blabla ... </span>
-      </label>
+  <label>
+    <input type="checkbox" name="besoin" value="Mission ponctuelle" />
+    Un coup de main sur un sujet précis
+    <span class="formule-detail">
+      Pour une mission ponctuelle, à un moment précis.
+    </span>
+  </label>
 
-      <label>
-        <input type="checkbox" name="formule" value="La rafraîchissante" />
-       Pêche en eau douce
-        <span class="formule-detail">Canne, leurres, blabla ...</span>
-      </label>
+  <label>
+    <input type="checkbox" name="besoin" value="Je ne sais pas encore" />
+    Je ne sais pas encore vraiment
+    <span class="formule-detail">
+      J'ai simplement envie d'en discuter.
+    </span>
+  </label>
 
-      <label>
-        <input type="checkbox" name="formule" value="Gourmand" />
-        Pêche big fish
-        <span class="formule-detail">Canne, leurres, blabla ...</span>
-      </label>
-    </fieldset>
+</fieldset>
 
     <label for="message">Dites-m'en un peu plus</label>
     <textarea id="message" name="message" placeholder="Quelques lignes suffisent. Expliquez-moi où vous en êtes, ce que vous avez en tête ou ce qui vous amène ici."></textarea>
