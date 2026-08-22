@@ -605,7 +605,7 @@ Une question, une idée, un besoin précis…<br>ou simplement envie d'échanger
   
     
   <form method="POST" action="https://formspree.io/f/mqebrzwk">   <!-- site qui gere le formulaire -->
-    <input type="hidden" name="site" value="Guillaume Fishing Trip"> <!-- formspress compte email cora.flores13@gmail.com -->
+    <input type="hidden" name="site" value="Cora Flores"> <!-- formspress compte email cora.flores13@gmail.com -->
     <label for="name">Nom complet *</label>
     <input type="text" id="name" name="name" required placeholder="Votre nom complet" />
 
@@ -615,16 +615,31 @@ Une question, une idée, un besoin précis…<br>ou simplement envie d'échanger
     <label for="phone">Téléphone</label>
     <input type="tel" id="phone" name="phone" placeholder="+33 6 12 34 56 78" />
 
-    <label for="event-type">Type d'événement *</label>
-    <select id="event-type" name="event-type" required>
-      <option value="" disabled selected>Choisissez une option</option>
-      <option value="mariage">Mariage</option>
-      <option value="marché/festival">Anniversaire</option>
-      <option value="privatisation">Privatisation</option>
-      <option value="événement professionnel">Événement d'entreprise</option>
-      <option value="événement professionnel">Salon / pop up</option>
-      <option value="autre">Autres (à préciser dans votre message)</option>
-    </select>
+  <label for="profil">Vous êtes… *</label>
+
+<select id="profil" name="profil" required>
+  <option value="" disabled selected>Choisissez une option</option>
+
+  <option value="independant-freelance">
+    Indépendant(e) / Freelance
+  </option>
+
+  <option value="entrepreneur">
+    Entrepreneur(e)
+  </option>
+
+  <option value="dirigeant-petite-entreprise">
+    Dirigeant(e) d'une petite entreprise
+  </option>
+
+  <option value="lancement-activite">
+    En train de lancer mon activité
+  </option>
+
+  <option value="autre">
+    Autre
+  </option>
+</select>
 
     <label for="location">Lieu de la prestation *</label>
     <input type="text" id="location" name="location" required placeholder="Ville, adresse ou lieu précis" />
@@ -654,10 +669,10 @@ Une question, une idée, un besoin précis…<br>ou simplement envie d'échanger
       </label>
     </fieldset>
 
-    <label for="message">Votre message / demande particulière</label>
-    <textarea id="message" name="message" placeholder="Décrivez votre projet ou posez vos questions..."></textarea>
+    <label for="message">Dites-m'en un peu plus</label>
+    <textarea id="message" name="message" placeholder="Quelques lignes suffisent. Expliquez-moi où vous en êtes, ce que vous avez en tête ou ce qui vous amène ici."></textarea>
 
-    <input type="submit" value="Envoyer votre demande de devis" />
+    <input type="submit" value="Envoyer" />
 
     
   </form>
