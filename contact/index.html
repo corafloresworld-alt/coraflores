@@ -699,6 +699,30 @@ Une question, une idée, un besoin précis…<br>ou simplement envie d'échanger
 
 </div>
 
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector('form[action*="formspree"]');
+  const checkboxes = document.querySelectorAll('input[name="besoin"]');
+
+  form.addEventListener("submit", function (event) {
+
+    const auMoinsUneCaseCochee = Array.from(checkboxes).some(
+      checkbox => checkbox.checked
+    );
+
+    if (!auMoinsUneCaseCochee) {
+      event.preventDefault();
+
+      alert("Merci de sélectionner au moins une option dans « De quoi avez-vous besoin ? ».");
+    }
+
+  });
+
+});
+</script>
+
   
   
 </body>
