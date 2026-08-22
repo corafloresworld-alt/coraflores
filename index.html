@@ -1253,12 +1253,17 @@ CSS object-fit: cover*/
 
 .bascule-transform{
     width:100%;
-    margin-top:70px;
-    padding:70px 0 40px;
+    max-width:1450px;
+
+    margin:70px auto 0;
+
+    padding:70px 70px 40px;
+
+    box-sizing:border-box;
 
     display:grid;
-    grid-template-columns:300px 1fr;
-    column-gap:70px;
+    grid-template-columns:320px minmax(0, 1fr);
+    column-gap:90px;
 }
 
 
