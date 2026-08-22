@@ -1449,145 +1449,7 @@ h2,
 
 
 
-    
-    /* ================================
-   🎞️ SLIDER AVIS – VERSION PRO
-================================ */
-
-.gallery-slider {
-  position: relative;
-  max-width: 1400px;
-  margin: 5rem auto;
-  padding: 0 4rem;
-}
-
-.gallery-slider::before,
-.gallery-slider::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 80px;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.gallery-slider::before {
-  left: 0;
-  background: linear-gradient(to right, var(--color-bg-main), transparent);
-}
-
-.gallery-slider::after {
-  right: 0;
-  background: linear-gradient(to left, var(--color-bg-main), transparent);
-}
-
-
-
-/* Fenêtre visible */
-.slider-viewport {
-  overflow: hidden;
-}
-
-/* Track scrollable */
-.slider-track {
-  display: flex;
-  gap: 1.5rem;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scrollbar-width: none;
-  padding: 1rem 0;
-
-  scroll-snap-type: x mandatory;
-}
-
-
-.slider-track::-webkit-scrollbar {
-  display: none;
-}
-
-/* Cartes */
-.slider-item {
-  flex: 0 0 260px;
-  border-radius: 16px;
-  overflow: hidden;
-  background: rgba(255,255,255,0.06);
-
-  scroll-snap-align: start;
-
-}
-
-.slider-item img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  display: block;
-}
-
-/* ======================
-   FLÈCHES
-====================== */
-
-.slider-btn {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-
-  background: var(--color-accent);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  width: 46px;
-  height: 46px;
-  border-radius: 50%;
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 8px 22px rgba(0,0,0,0.35);
-}
-
-.slider-btn.prev {
-  left: 0;
-}
-
-.slider-btn.next {
-  right: 0;
-}
-
-.slider-btn:hover {
-  background: var(--color-accent-hover);
-}
-
-   
-
-.image-tile {
-  background: rgba(255,255,255,0.05);
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 1 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.image-tile:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 30px rgba(0,0,0,0.25);
-}
-
-.image-tile img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-
-
+  
 /* ================================
    🐟 SECTION INFOS PRINCIPALES bloc en dessous de la vidéo
    ================================ */
@@ -2117,12 +1979,6 @@ body{
     font-size:32px;
 }
 
-/* GALERIE */
-
-.image-grid{
-    grid-template-columns:repeat(2,1fr);
-    gap:1.2rem;
-}
 
 /* BOUTONS */
 
@@ -2142,9 +1998,7 @@ body{
     padding-left:1rem;
 }
 
-.gallery-slider{
-    padding:0 1rem;
-}
+
 
 }
 
@@ -2912,35 +2766,6 @@ Et finalement, c'est devenu une vraie force !
 
 
   
-
-<section class="gallery-slider">
-
-  <button class="slider-btn prev" aria-label="Précédent">‹</button>
-
-  <div class="slider-viewport">
-    <div class="slider-track">
-      <div class="slider-item">
-        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
-      </div>
-      <div class="slider-item">
-        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
-      </div>
-      <div class="slider-item">
-        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
-      </div>
-      <div class="slider-item">
-        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
-      </div>
-      <div class="slider-item">
-        <img src="/assets/images/miniature800x800.png" alt="Séjour pêche">
-      </div>
-    </div>
-  </div>
-
-  <button class="slider-btn next" aria-label="Suivant">›</button>
-
-</section>
-
 
   
 <div class="action-buttons">
