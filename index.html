@@ -1247,215 +1247,215 @@ CSS object-fit: cover*/
     object-fit:cover;
 }
 
-
 /* =========================================================
-   AVANT/APRÈS— LA BASCULE
+   CE QUI CHANGE — LA BASCULE
 ========================================================= */
 
 .bascule-transform{
-
     width:100%;
-
     margin-top:70px;
-
-    padding:65px 70px 55px;
-
-    border-top:1px solid rgba(255,255,255,.14);
-    border-bottom:1px solid rgba(255,255,255,.14);
-
-}
-
-
-/* TITRE */
-
-.transform-heading{
-
-    margin-bottom:60px;
-
-}
-
-.transform-label{
-
-    display:block;
-
-    font-family:'Euclid', sans-serif;
-
-    font-size:12px;
-
-    font-weight:500;
-
-    letter-spacing:.16em;
-
-    color:#CF9F40;
-
-    margin-bottom:18px;
-
-}
-
-.transform-heading h3{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:42px;
-
-    line-height:1.05;
-
-    font-weight:400;
-
-    color:#F8F6F2;
-
-    margin:0;
-
-}
-
-.transform-heading h3 em{
-
-    font-style:italic;
-
-    font-weight:400;
-
-    color:#CF9F40;
-
-}
-
-
-/* LES 3 LIGNES */
-
-.transform-row{
+    padding:70px 0 40px;
 
     display:grid;
+    grid-template-columns:300px 1fr;
+    column-gap:70px;
+}
 
-    grid-template-columns:1fr 110px 1fr;
+
+/* =========================
+   COLONNE GAUCHE
+========================= */
+
+.transform-intro{
+    padding-top:20px;
+}
+
+.transform-intro h3{
+    font-family:'Cormorant Garamond', serif;
+    font-size:48px;
+    line-height:1.02;
+    font-weight:400;
+    color:#F8F6F2;
+    margin:0;
+}
+
+.transform-intro h3 em{
+    color:#CF9F40;
+    font-style:italic;
+    font-weight:400;
+}
+
+
+/* PETITE LIGNE */
+
+.transform-line{
+    width:45px;
+    height:1px;
+    background:#CF9F40;
+    margin:42px 0 30px;
+}
+
+
+/* TEXTE INTRO */
+
+.transform-intro p{
+    font-family:'Euclid', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    font-weight:400;
+    color:#F8F6F2;
+    margin:0;
+}
+
+
+/* =========================
+   COLONNE DROITE
+========================= */
+
+.transform-list{
+    width:100%;
+}
+
+
+/* UNE LIGNE */
+
+.transform-item{
+    display:grid;
+
+    grid-template-columns:
+        65px
+        150px
+        70px
+        1fr;
 
     align-items:center;
+    column-gap:20px;
 
-    gap:35px;
+    min-height:145px;
 
-    padding:32px 0;
-
-    border-top:1px solid rgba(255,255,255,.10);
-
+    border-bottom:
+        1px solid rgba(248,246,242,.15);
 }
 
 
-/* AVANT / APRÈS */
+/* PREMIERE LIGNE */
 
-.transform-small{
-
-    display:block;
-
-    font-family:'Euclid', sans-serif;
-
-    font-size:11px;
-
-    font-weight:500;
-
-    letter-spacing:.16em;
-
-    margin-bottom:12px;
-
+.transform-item:first-child{
+    border-top:
+        1px solid rgba(248,246,242,.15);
 }
 
 
-/* AVANT */
+/* =========================
+   ICONES
+========================= */
+
+.transform-icon{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.transform-icon img{
+    width:48px;
+    height:48px;
+    object-fit:contain;
+}
+
+
+/* =========================
+   TEXTE AVANT
+========================= */
 
 .transform-before{
-
-    text-align:right;
-
-    color:rgba(248,246,242,.55);
-
-}
-
-.transform-before .transform-small{
-
-    color:rgba(248,246,242,.38);
-
-}
-
-.transform-before p{
-
-    font-family:'Cormorant Garamond', serif;
-
-    font-size:31px;
-
-    line-height:1.12;
-
+    font-family:'Euclid', sans-serif;
+    font-size:18px;
+    line-height:1.55;
     font-weight:400;
 
-    margin:0;
-
-}
-
-.transform-before strong{
-
-    font-weight:500;
-
-}
-
-
-/* APRÈS */
-
-.transform-after{
-
     color:#F8F6F2;
-
 }
 
-.transform-after .transform-small{
+
+/* =========================
+   FLECHE
+========================= */
+
+.transform-arrow{
+    font-family:'Cormorant Garamond', serif;
+    font-size:45px;
+    line-height:1;
+
+    font-weight:400;
 
     color:#CF9F40;
 
+    text-align:center;
 }
 
-.transform-after p{
 
-    font-family:'Cormorant Garamond', serif;
+/* =========================
+   TEXTE APRES
+========================= */
 
-    font-size:31px;
-
-    line-height:1.12;
-
+.transform-after{
+    font-family:'Euclid', sans-serif;
+    font-size:18px;
+    line-height:1.55;
     font-weight:400;
 
-    margin:0;
-
+    color:#F8F6F2;
 }
 
 .transform-after strong{
-
     color:#CF9F40;
-
-    font-weight:500;
-
+    font-weight:400;
 }
 
 
-/* GRIBOUILLIS */
+/* =========================
+   FOOTER
+========================= */
 
-.transform-symbol{
+.transform-footer{
+    grid-column:1 / -1;
 
     display:flex;
+    flex-direction:column;
 
     align-items:center;
 
-    justify-content:center;
+    text-align:center;
 
+    margin-top:55px;
 }
 
-.transform-symbol img{
-
-    display:block;
-
-    width:70px;
-
-    height:70px;
+.transform-star{
+    width:34px;
+    height:34px;
 
     object-fit:contain;
 
+    margin-bottom:14px;
 }
 
+.transform-footer p{
+    font-family:'Cormorant Garamond', serif;
 
+    font-size:25px;
+
+    line-height:1.3;
+
+    font-weight:400;
+
+    color:#F8F6F2;
+
+    margin:0;
+}
+
+.transform-footer em{
+    font-style:italic;
+}
     
 
 /* =========================================================
@@ -2877,141 +2877,127 @@ Pour les entrepreneurs qui ont beaucoup construit, beaucoup réfléchi, beaucoup
 </section>
 
 
-
-
-     <!-- =================================================
-                AVANT/APRÈS
-            ================================================== -->
+<!-- =================================================
+     CE QUI CHANGE — LA BASCULE
+================================================== -->
 
 <div class="bascule-transform">
 
-    <div class="transform-heading">
+  <!-- COLONNE GAUCHE -->
+  <div class="transform-intro">
 
-        <span class="transform-label">
-            CE QUI CHANGE
-        </span>
+    <h3>
+      Ce qui <em>change</em><br>
+      quand on travaille<br>
+      ensemble.
+    </h3>
 
-        <h3>
-            Quand on arrête de tout faire,<br>
-            <em>pour commencer à faire ce qui compte.</em>
-        </h3>
+    <div class="transform-line"></div>
 
-    </div>
+    <p>
+      Moins d'énergie dispersée.<br>
+      Plus de clarté, de décisions<br>
+      et d'avancées concrètes.
+    </p>
 
-
-    <!-- TRANSFORMATION 1 -->
-
-    <div class="transform-row">
-
-        <div class="transform-before">
-            <span class="transform-small">AVANT</span>
-
-            <p>
-                Je faisais <strong>dix choses.</strong>
-            </p>
-        </div>
+  </div>
 
 
-        <div class="transform-symbol">
-            <img
-                src="/assets/images/gribouillis-fleche.png"
-                alt=""
-            >
-        </div>
+  <!-- COLONNE DROITE -->
+  <div class="transform-list">
 
+    <!-- LIGNE 1 -->
+    <div class="transform-item">
 
-        <div class="transform-after">
+      <div class="transform-icon">
+        <img src="/assets/images/gribouillis-dispersion.png" alt="">
+      </div>
 
-            <span class="transform-small">APRÈS</span>
+      <div class="transform-before">
+        Je faisais<br>
+        dix choses.
+      </div>
 
-            <p>
-                J'en fais trois…<br>
-                <strong>mais elles font avancer mon entreprise.</strong>
-            </p>
+      <div class="transform-arrow">
+        →
+      </div>
 
-        </div>
-
-    </div>
-
-
-    <!-- TRANSFORMATION 2 -->
-
-    <div class="transform-row">
-
-        <div class="transform-before">
-
-            <span class="transform-small">AVANT</span>
-
-            <p>
-                Je testais plein <strong>d'outils.</strong>
-            </p>
-
-        </div>
-
-
-        <div class="transform-symbol">
-
-            <img
-                src="/assets/images/gribouillis-outils.png"
-                alt=""
-            >
-
-        </div>
-
-
-        <div class="transform-after">
-
-            <span class="transform-small">APRÈS</span>
-
-            <p>
-                J'utilise quelques outils simples<br>
-                <strong>que je maîtrise vraiment.</strong>
-            </p>
-
-        </div>
+      <div class="transform-after">
+        J'en fais trois...<br>
+        <strong>mais elles font avancer<br>
+        mon entreprise.</strong>
+      </div>
 
     </div>
 
 
-    <!-- TRANSFORMATION 3 -->
+    <!-- LIGNE 2 -->
+    <div class="transform-item">
 
-    <div class="transform-row">
+      <div class="transform-icon">
+        <img src="/assets/images/gribouillis-noeud.png" alt="">
+      </div>
 
-        <div class="transform-before">
+      <div class="transform-before">
+        Je testais<br>
+        plein d'outils.
+      </div>
 
-            <span class="transform-small">AVANT</span>
+      <div class="transform-arrow">
+        →
+      </div>
 
-            <p>
-                Je cherchais des <strong>solutions.</strong>
-            </p>
-
-        </div>
-
-
-        <div class="transform-symbol">
-
-            <img
-                src="/assets/images/gribouillis-question.png"
-                alt=""
-            >
-
-        </div>
-
-
-        <div class="transform-after">
-
-            <span class="transform-small">APRÈS</span>
-
-            <p>
-                Je prends des <strong>décisions.</strong>
-            </p>
-
-        </div>
+      <div class="transform-after">
+        J'utilise quelques outils<br>
+        simples <strong>que je maîtrise<br>
+        vraiment.</strong>
+      </div>
 
     </div>
+
+
+    <!-- LIGNE 3 -->
+    <div class="transform-item">
+
+      <div class="transform-icon">
+        <img src="/assets/images/gribouillis-question.png" alt="">
+      </div>
+
+      <div class="transform-before">
+        Je cherchais<br>
+        des solutions.
+      </div>
+
+      <div class="transform-arrow">
+        →
+      </div>
+
+      <div class="transform-after">
+        Je prends<br>
+        des <strong>décisions.</strong>
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <!-- PHRASE DU BAS -->
+  <div class="transform-footer">
+
+    <img
+      src="/assets/images/gribouillis-etoile.png"
+      alt=""
+      class="transform-star"
+    >
+
+    <p>
+      <em>Et surtout, je sais pourquoi je fais chaque action.</em>
+    </p>
+
+  </div>
 
 </div>
-
   
 
   <!-- =========================================================
