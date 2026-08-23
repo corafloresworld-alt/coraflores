@@ -360,7 +360,46 @@
   background: #C5A15B;
   margin: 20px auto 65px;
 }
-    
+
+   /* Les 8 éléments du bandeau */
+
+.point-includes-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 25px;
+  align-items: start;
+}
+
+.point-include-item {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.point-include-item img {
+  width: 58px;
+  height: 58px;
+  object-fit: contain;
+  margin-bottom: 18px;
+}
+
+.point-include-item h3 {
+  font-family: 'Euclid', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #344535;
+  line-height: 1.35;
+  margin: 0 0 8px;
+}
+
+.point-include-item p {
+  font-family: 'Euclid', sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #344535;
+  margin: 0;
+} 
     
   </style>
 
