@@ -248,12 +248,26 @@
 /* Numéro */
 
 .step-number {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 2rem;
-  font-style: italic;
-  color: var(--gold);
-}
+  position: relative;
 
+  width: 42px;
+  height: 42px;
+
+  border-radius: 50%;
+
+  background: var(--green);
+  color: var(--cream);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: 'Euclid', sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+
+  z-index: 2;
+}
 /* Contenu */
 
 .step-content h2 {
