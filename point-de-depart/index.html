@@ -13,11 +13,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
   <link
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@400;500;600;700&family=Francois+One&display=swap"
-    rel="stylesheet"
-  >
+  href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Francois+One&display=swap"
+  rel="stylesheet"
+>
 
   <style>
+
+    @font-face {
+  font-family: 'Euclid';
+  src: url('../fonts/euclid.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
     /* ======================
        BASE
@@ -41,12 +48,11 @@
       scroll-behavior: smooth;
     }
 
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--cream);
-      color: var(--text);
-    }
-
+  body {
+  font-family: 'Euclid', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
 
 /* ======================
    NAVBAR
