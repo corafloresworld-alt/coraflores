@@ -222,9 +222,26 @@
 }
 
 .point-steps-inner {
+  position: relative;
+
   max-width: 1180px;
   margin: 0 auto;
   padding: 0 4%;
+}
+
+.point-steps-inner::before {
+  content: "";
+
+  position: absolute;
+
+  top: 21px;
+  bottom: 21px;
+
+  left: calc(4% + 145px);
+
+  width: 1px;
+
+  background: rgba(51, 68, 52, 0.25);
 }
 
 /* Chaque étape */
@@ -266,32 +283,13 @@
 
 
 .step-timeline {
-  position: relative;
   display: flex;
   justify-content: center;
   height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
-
-.step-timeline::after {
-  content: "";
-
-  position: absolute;
-
-  top: 42px;
-  bottom: -42px;
-
-  width: 1px;
-
-  background: rgba(51, 68, 52, 0.25);
-
-  z-index: 1;
-}
-
-
-.point-step:last-child .step-timeline::after {
-  display: none;
-}
     
 /* Contenu */
 
