@@ -335,7 +335,10 @@
 
 .point-includes {
   background: #DDD2C3;
-  padding: 45px 0 50px;
+  padding: 65px 0 70px;
+
+  position: relative;
+  z-index: 1;
 }
 
 .point-includes-inner {
@@ -416,11 +419,18 @@
    ENCADRÉ FINAL / STRIPE
 ========================= */
 
-.point-final {
+ .point-final {
   background: var(--cream);
-  padding: 90px 20px 110px;
+  padding: 0 20px 100px;
+
   display: flex;
   justify-content: center;
+
+  position: relative;
+  z-index: 2;
+
+  /* Fait remonter l'encadré sur le bloc des 89 € */
+  margin-top: -45px;
 }
 
 .point-final-card {
@@ -428,15 +438,22 @@
   max-width: 760px;
 
   background: #F7F3EC;
+
   border: 1px solid rgba(52, 69, 53, 0.12);
 
-  padding: 55px 50px 45px;
+  padding: 50px 50px 40px;
 
   text-align: center;
 
-  box-shadow: 0 4px 20px rgba(52, 69, 53, 0.04);
-}
+  /* Effet carte qui flotte */
+  box-shadow:
+    0 8px 25px rgba(52, 69, 53, 0.08),
+    0 2px 8px rgba(52, 69, 53, 0.06);
 
+  position: relative;
+  z-index: 3;
+}
+    
 .point-final-card h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.3rem, 4vw, 3.4rem);
