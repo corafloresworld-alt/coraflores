@@ -516,6 +516,212 @@
   color: #666B66;
 }
 
+
+
+   /* =====================================================
+   FOOTER
+===================================================== */
+
+.site-footer {
+  background: #344535;
+  padding: 4.5rem 7% 2rem;
+}
+
+
+/* ================================
+   GRILLE PRINCIPALE
+================================ */
+
+.footer-grid {
+  max-width: 950px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 2fr 1fr 1.3fr 1fr;
+  gap: 4rem;
+
+  padding-bottom: 3.5rem;
+}
+
+
+/* ================================
+   LOGO / MARQUE
+================================ */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo {
+  height: 52px;
+  width: auto;
+  max-width: none;
+  display: block;
+  margin-bottom: 1.5rem;
+}
+
+.footer-brand p {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.7;
+  color: rgba(255,255,255,.65);
+}
+
+
+/* ================================
+   COLONNES
+================================ */
+
+.footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-column h3 {
+  margin: 0 0 1.4rem;
+
+  font-family: 'Euclid', sans-serif;
+  font-size: 0.68rem;
+  font-weight: 500;
+
+  letter-spacing: .16em;
+  text-transform: uppercase;
+
+  color: #CF9F40;
+}
+
+.footer-column a {
+  margin-bottom: .75rem;
+
+  color: rgba(255,255,255,.65);
+  text-decoration: none;
+
+  font-size: .82rem;
+  line-height: 1.5;
+
+  transition: color .2s ease;
+}
+
+.footer-column a:hover {
+  color: #CF9F40;
+}
+
+
+/* ================================
+   RÉSEAUX SOCIAUX
+================================ */
+
+.footer-social-links {
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.footer-social-links a {
+  margin: 0;
+}
+
+
+/* ================================
+   BAS DU FOOTER
+================================ */
+
+.footer-bottom {
+  max-width: 950px;
+  margin: 0 auto;
+  padding-top: 1.5rem;
+
+  border-top: 1px solid rgba(215,168,74,.18);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  font-size: .68rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,.45);
+}
+
+.footer-legal {
+  display: flex;
+  flex-direction: column;
+  gap: .45rem;
+}
+
+.footer-made {
+  display: flex;
+  align-items: center;
+  gap: .35rem;
+}
+
+.footer-heart {
+  color: #b94a4a;
+  font-size: .9rem;
+  line-height: 1;
+}
+
+.footer-made img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+
+.footer-tagline {
+  text-align: right;
+}
+
+
+/* ================================
+   RESPONSIVE TABLETTE
+================================ */
+
+@media (max-width: 800px) {
+
+  .site-footer {
+    padding: 3.5rem 7% 1.5rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 2rem;
+  }
+
+  .footer-brand {
+    grid-column: 1 / -1;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: .5rem;
+  }
+
+  .footer-tagline {
+    text-align: left;
+  }
+
+}
+
+
+/* ================================
+   RESPONSIVE MOBILE
+================================ */
+
+@media (max-width: 500px) {
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .footer-brand {
+    grid-column: auto;
+  }
+
+} 
     
   </style>
 
@@ -986,7 +1192,99 @@
 </section>
 
 
+<footer class="site-footer">
 
+  <div class="footer-grid">
+
+    <!-- COLONNE 1 : LOGO -->
+    <div class="footer-brand">
+
+      <img
+        src="/assets/images/logo-cf.png"
+        alt="Cora Flores"
+        class="footer-logo"
+      >
+
+      <p>
+        Faire le point.<br>
+        Faire les bons choix.<br>
+        Passer à l'action.
+      </p>
+
+    </div>
+
+
+    <!-- COLONNE 2 : NAVIGATION -->
+    <div class="footer-column">
+
+      <h3>NAVIGATION</h3>
+
+      <a href="/point-de-depart">Le Point de Départ</a>
+      <a href="/labascule">La Bascule</a>
+      <a href="/a-propos/">À propos</a>
+
+    </div>
+
+
+    <!-- COLONNE 3 : INFORMATIONS -->
+    <div class="footer-column">
+
+      <h3>INFORMATIONS</h3>
+
+      <a href="mailto:contact@coraflores.com">Contact</a>
+      <a href="/mentions-legales/">Mentions légales</a>
+      <a href="/politique-confidentialite/">Politique de confidentialité</a>
+
+    </div>
+
+
+    <!-- COLONNE 4 : RÉSEAUX -->
+    <div class="footer-column footer-social">
+
+      <h3>SUIVEZ-MOI</h3>
+
+      <div class="footer-social-links">
+
+        <a href="#" aria-label="Instagram">
+          Instagram
+        </a>
+
+        <a href="#" aria-label="LinkedIn">
+          LinkedIn
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+  <div class="footer-bottom">
+
+    <div class="footer-legal">
+
+      <span>
+        © 2026 Cora Flores. Tous droits réservés.
+      </span>
+
+      <span class="footer-made">
+        Fait avec
+        <span class="footer-heart">♥</span>
+        par
+        <img src="/assets/images/logo-cf.png" alt="CF">
+      </span>
+
+    </div>
+
+
+    <span class="footer-tagline">
+      Entrepreneure opérationnelle · Accompagnement commercial
+    </span>
+
+  </div>
+
+</footer>
 
     
   </main>
