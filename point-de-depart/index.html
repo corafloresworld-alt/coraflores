@@ -414,33 +414,38 @@
   font-weight: 600;
 }
 
-
 /* =========================
    ENCADRÉ FINAL / STRIPE
 ========================= */
+
 .point-final {
   background: #F3EEE6;
   position: relative;
   z-index: 2;
+
   padding: 0 20px 100px;
 }
 
+/* La carte qui remonte sur le bandeau des 89 € */
+
 .point-final-card {
-  background: #DDD2C3;
   position: relative;
   z-index: 3;
-  margin-top: -60px;
-}
 
-  /* Effet carte qui flotte */
+  max-width: 850px;
+
+  margin: -60px auto 0;
+  padding: 65px 50px 45px;
+
+  text-align: center;
+
+  background: #DDD2C3;
+
   box-shadow:
     0 8px 25px rgba(52, 69, 53, 0.08),
     0 2px 8px rgba(52, 69, 53, 0.06);
-
-  position: relative;
-  z-index: 3;
 }
-    
+
 .point-final-card h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.3rem, 4vw, 3.4rem);
