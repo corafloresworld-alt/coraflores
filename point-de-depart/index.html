@@ -425,33 +425,40 @@
 ========================= */
 
 .point-final {
-  background: #F3EEE6;
   position: relative;
   z-index: 2;
 
-  padding: 0 20px 100px;
+  background: #F3EEE6;
+
+  padding: 0 20px 85px;
 }
 
-/* La carte qui remonte sur le bandeau des 89 € */
+
+/* La carte */
 
 .point-final-card {
   position: relative;
   z-index: 3;
 
-  max-width: 850px;
+  max-width: 780px;
+  width: 100%;
 
-  margin: -60px auto 0;
-  padding: 65px 50px 45px;
+  margin: 0 auto;
+
+  /* Remonte réellement sur le bandeau du dessus */
+  transform: translateY(-55px);
+
+  padding: 48px 50px 42px;
 
   text-align: center;
 
   background: #DDD2C3;
 
   box-shadow:
-    0 8px 25px rgba(52, 69, 53, 0.08),
-    0 2px 8px rgba(52, 69, 53, 0.06);
+    0 12px 30px rgba(52, 69, 53, 0.10),
+    0 3px 10px rgba(52, 69, 53, 0.06);
 }
-
+    
 .point-final-card h2 {
   font-family: 'Cormorant Garamond', serif;
   font-size: clamp(2.3rem, 4vw, 3.4rem);
@@ -459,7 +466,7 @@
 
   color: #344535;
 
-  margin: 0 0 5px;
+  margin: 0 0 4px;
 }
 
 .point-final-price {
@@ -469,32 +476,30 @@
 
   color: #344535;
 
-  margin-bottom: 28px;
+  margin: 0 0 25px;
 }
 
 .point-final-text {
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.5;
 
   color: #4F5650;
 
-  margin: 0 auto 25px;
+  margin: 0 auto 22px;
 }
-
+    
 .point-final-button {
   display: inline-block;
 
   background: #344535;
   color: #FFFFFF;
 
-  padding: 17px 38px;
+  padding: 16px 42px;
 
   text-decoration: none;
 
   font-size: 1rem;
   font-weight: 500;
-
-  transition: all 0.25s ease;
 }
 
 .point-final-button:hover {
@@ -503,7 +508,7 @@
 }
 
 .point-final-secure {
-  margin: 20px 0 0;
+  margin: 18px 0 0;
 
   font-size: 0.85rem;
 
