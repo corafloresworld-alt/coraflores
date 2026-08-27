@@ -1973,23 +1973,28 @@ h2,
     font-style:italic;
 }
 
-
-    /* Bascule Summary : tout en blanc */
+/* BASCULE SUMMARY — TOUT EN BLANC */
 .bascule-summary,
 .bascule-summary p,
 .bascule-summary li,
-.bascule-summary span,
+.bascule-summary li p,
 .bascule-summary strong {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 
-/* Mission text : tout en blanc */
+/* On garde uniquement les coches en doré */
+.bascule-summary li span {
+    color: #CF9F40 !important;
+}
+
+
+/* MISSION PONCTUELLE — TOUT LE TEXTE EN BLANC */
 .mission-text,
 .mission-text p,
 .mission-text li,
 .mission-text span,
 .mission-text strong {
-    color: #FFFFFF;
+    color: #FFFFFF !important;
 }
 /* ================================
    FOOTER
