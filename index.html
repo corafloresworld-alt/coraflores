@@ -892,31 +892,30 @@ CSS object-fit: cover*/
 
 }
 
-
-  /* =========================================
+/* =========================================
    IMAGE VERTICALE — LE POINT DE DÉPART
 ========================================= */
+
 .point-container {
     align-items: stretch;
-    grid-template-columns: 0.9fr 1.1fr;
 }
 
 .point-right {
     display: flex;
     align-items: stretch;
+    flex: 0 0 47%;
 }
 
 .point-vertical-image {
     display: block;
     width: 100%;
-    height: auto;
-    min-height: 850px;
-
+    height: calc(100% + 35px);
+    min-height: 880px;
     object-fit: cover;
-    object-position: center center;
-
+    object-position: center;
     border-radius: 4px;
 }
+
     
 /* =========================================
    BLOC BAS — POINT DE DÉPART
