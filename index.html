@@ -1110,6 +1110,26 @@ CSS object-fit: cover*/
 }
 
 
+    /* Titre + étoiles sur la même ligne */
+.testimonial-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.testimonial-title-row h3 {
+    margin: 0;
+}
+
+.testimonial-stars {
+    color: #E5B657;
+    font-size: 1rem;
+    white-space: nowrap;
+    line-height: 1;
+}
+
+
 /* ================================
    TRANSITION – ET APRÈS ?
 ================================ */
@@ -3151,15 +3171,15 @@ Certaines personnes repartent avec une direction claire pour la suite. Pour d’
                  alt="Témoignage">
         </div>
 
-        <h3>
-            Ce qu’en dit Marie
-        </h3>
+      <div class="testimonial-title-row">
+    <h3>Ce qu’en dit Marie</h3>
 
-        <div class="gold-line"></div>
+    <div class="testimonial-stars">
+        ★★★★★
+    </div>
+</div>
 
-        <div class="testimonial-stars">
-            ★★★★★
-        </div>
+<div class="gold-line"></div>
 
         <p class="point-depart-testimonial">
             « J’avais besoin de poser tout ce que
