@@ -915,6 +915,185 @@ CSS object-fit: cover*/
     border-radius: 4px;
 }
 
+
+
+/* =========================================
+   BLOC BAS — POINT DE DÉPART
+========================================= */
+
+.point-depart-bottom {
+    width: calc(100% - 60px);
+    max-width: 1500px;
+    margin: 60px auto 0;
+
+    display: grid;
+    grid-template-columns: 1.15fr 1fr 1fr;
+
+    border: 1px solid rgba(229, 182, 87, 0.55);
+    border-radius: 8px;
+
+    background: transparent;
+
+    overflow: hidden;
+}
+
+
+/* =========================================
+   COLONNES
+========================================= */
+
+.point-depart-column {
+    padding: 55px 42px 50px;
+    position: relative;
+}
+
+.point-depart-column + .point-depart-column {
+    border-left: 1px solid rgba(229, 182, 87, 0.55);
+}
+
+
+/* =========================================
+   ICÔNES
+========================================= */
+
+.point-depart-icon {
+    width: 55px;
+    height: 55px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+}
+
+.point-depart-icon img {
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+
+/* =========================================
+   TITRES
+========================================= */
+
+.point-depart-column h3 {
+    margin: 0;
+
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 1.65rem;
+    line-height: 1.25;
+
+    font-weight: 500;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   PETITE LIGNE JAUNE
+========================================= */
+
+.point-depart-column .gold-line {
+    width: 38px;
+    height: 1px;
+
+    background: #E5B657;
+
+    margin: 22px 0 28px;
+}
+
+
+/* =========================================
+   CHECKLIST
+========================================= */
+
+.point-depart-checklist {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+.point-depart-checklist li {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 17px;
+}
+
+.point-depart-checklist li span {
+    flex-shrink: 0;
+
+    color: #E5B657;
+
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+.point-depart-checklist li p {
+    margin: 0;
+
+    font-family: 'Euclid', sans-serif;
+
+    font-size: 0.95rem;
+    line-height: 1.65;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   TEXTE POUR QUI
+========================================= */
+
+.point-depart-text {
+    margin: 0;
+
+    font-family: 'Euclid', sans-serif;
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+
+    color: #FFFFFF;
+}
+
+
+/* =========================================
+   TÉMOIGNAGE
+========================================= */
+
+.testimonial-stars {
+    color: #E5B657;
+
+    font-size: 1.25rem;
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+.point-depart-testimonial {
+    margin: 0;
+
+    font-family: 'Euclid', sans-serif;
+
+    font-size: 0.95rem;
+    line-height: 1.75;
+
+    color: #FFFFFF;
+}
+
+
 /* ================================
    TRANSITION – ET APRÈS ?
 ================================ */
@@ -2325,6 +2504,39 @@ h2,
         min-width:0;
     }
 
+
+      
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .point-depart-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .point-depart-column + .point-depart-column {
+        border-left: none;
+        border-top: 1px solid rgba(229, 182, 87, 0.55);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .point-depart-bottom {
+        width: calc(100% - 30px);
+        margin-top: 40px;
+    }
+
+    .point-depart-column {
+        padding: 40px 28px;
+    }
+
+}
+
 }
 
     
@@ -2826,13 +3038,6 @@ Certaines personnes repartent avec une direction claire pour la suite. Pour d’
 
 </div>
 
-  
-<ul class="point-list">
-    <li>✓ Votre carnet de route pour préparer notre échange</li>
-    <li>✓ Un temps d’analyse consacré à votre situation</li>
-    <li>✓ Un regard extérieur et un échange qui font avancer</li>
-<li>✓ Une direction claire pour passer de la réflexion à l’action</li>
-</ul>
 
 <a href="/point-de-depart" class="cta-primary point-btn">
     Commencer le Point de Départ
@@ -2850,6 +3055,111 @@ Certaines personnes repartent avec une direction claire pour la suite. Pour d’
 
 </div>
   
+</div>
+
+
+  <!-- ================================
+     BLOC BAS — POINT DE DÉPART
+================================ -->
+
+<div class="point-depart-bottom">
+
+    <!-- COLONNE 1 -->
+    <div class="point-depart-column recap-column">
+
+        <div class="point-depart-icon">
+            <img src="/assets/images/icone-carnet-route.png"
+                 alt="Carnet de route">
+        </div>
+
+        <h3>
+            Ce que vous repartez<br>
+            avec le Point de Départ
+        </h3>
+
+        <div class="gold-line"></div>
+
+        <ul class="point-depart-checklist">
+
+            <li>
+                <span>✓</span>
+                <p>Votre carnet de route pour préparer notre échange</p>
+            </li>
+
+            <li>
+                <span>✓</span>
+                <p>Un temps d’analyse consacré à votre situation</p>
+            </li>
+
+            <li>
+                <span>✓</span>
+                <p>Un regard extérieur et un échange qui font avancer</p>
+            </li>
+
+            <li>
+                <span>✓</span>
+                <p>Une direction claire pour passer de la réflexion à l’action</p>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <!-- COLONNE 2 -->
+    <div class="point-depart-column">
+
+        <div class="point-depart-icon">
+            <img src="/assets/images/icone-pour-qui.png"
+                 alt="Pour qui">
+        </div>
+
+        <h3>Pour qui ?</h3>
+
+        <div class="gold-line"></div>
+
+        <p class="point-depart-text">
+            Pour les entrepreneurs qui ont beaucoup
+            construit, beaucoup réfléchi, beaucoup
+            essayé… et qui veulent faire le tri pour
+            retrouver une direction claire.
+        </p>
+
+    </div>
+
+
+    <!-- COLONNE 3 -->
+    <div class="point-depart-column testimonial-column">
+
+        <div class="point-depart-icon">
+            <img src="/assets/images/icone-temoignage.png"
+                 alt="Témoignage">
+        </div>
+
+        <h3>
+            Ce qu’en dit<br>
+            Marie
+        </h3>
+
+        <div class="gold-line"></div>
+
+        <div class="testimonial-stars">
+            ★★★★★
+        </div>
+
+        <p class="point-depart-testimonial">
+            « J’avais besoin de poser tout ce que
+            j’avais en tête. Avec Cora, j’ai pu avoir
+            un œil neuf sur mon activité et surtout
+            débloquer certains sujets sur lesquels
+            je n’avançais plus.
+            <br>
+            Je suis repartie avec des idées
+            concrètes à mettre en place. »
+        </p>
+
+    </div>
+
 </div>
 
 </section>
