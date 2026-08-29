@@ -918,7 +918,6 @@ CSS object-fit: cover*/
     border-radius: 4px;
 }
     
-
 /* =========================================
    BLOC BAS — POINT DE DÉPART
 ========================================= */
@@ -926,7 +925,8 @@ CSS object-fit: cover*/
 .point-depart-bottom {
     width: calc(100% - 60px);
     max-width: 1500px;
-    margin: 60px auto 0;
+
+    margin: 45px auto 0;
 
     display: grid;
     grid-template-columns: 1.15fr 1fr 1fr;
@@ -936,23 +936,37 @@ CSS object-fit: cover*/
 
     background: transparent;
 
-    overflow: hidden;
+    overflow: visible;
 }
-
 
 /* =========================================
    COLONNES
 ========================================= */
 
 .point-depart-column {
-    padding: 55px 42px 50px;
+    padding: 38px 42px 35px;
     position: relative;
 }
 
 .point-depart-column + .point-depart-column {
-    border-left: 1px solid rgba(229, 182, 87, 0.55);
+    border-left: none;
+    position: relative;
 }
 
+.point-depart-column + .point-depart-column::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+
+    /* espace avec le cadre du haut et du bas */
+    top: 38px;
+    bottom: 38px;
+
+    width: 1px;
+
+    background: rgba(229, 182, 87, 0.55);
+}
 
 /* =========================================
    ICÔNES
