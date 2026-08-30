@@ -1304,72 +1304,112 @@ CSS object-fit: cover*/
     position: relative;
 }
 
-/* La ligne verticale */
+/* =========================================================
+   MÉTHODE VERTICALE
+========================================================= */
+
 .bascule-methode {
     position: absolute;
-    left: -125px;
-    top: 0;
-    height: 100%;
-    width: 120px;
-    border-left: 1px solid rgba(228, 179, 79, 0.55);
 
-    display: block;
+    left: -131px;
+    top: 0;
+    bottom: 0;
+
+    width: 120px;
+
+    pointer-events: none;
 }
 
-/* Chaque repère */
+
+/* LIGNE VERTICALE */
+
+.bascule-methode::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    right: 0;
+
+    width: 1px;
+
+    background: rgba(215,168,74,.35);
+}
+
+
+/* REPÈRES */
+
 .bascule-methode-item {
     position: absolute;
+
     right: 0;
+
+    width: 100%;
+
     display: flex;
     align-items: center;
-    gap: 12px;
+
+    transform: translateY(-50%);
 }
 
-/* Le texte des repères */
+
+/* MOTS */
+
 .bascule-methode-item span {
+    font-family: 'Euclid', sans-serif;
+
+    font-size: 10px;
+    font-weight: 500;
+
     position: absolute;
     right: 18px;
 
-    color: #e4b34f;
-    font-size: 12px;
-    letter-spacing: 1px;
-    line-height: 1.3;
-    text-align: right;
+    letter-spacing: .10em;
+
+    text-transform: uppercase;
+
+    color: #E5B657;
+
     white-space: nowrap;
+
+    text-align: right;
 }
 
-/* Le petit point */
+
+/* POINTS */
+
 .bascule-methode-item i {
-    display: block;
-    width: 8px;
-    height: 8px;
+    position: absolute;
+
+    right: -3.5px;
+
+    width: 7px;
+    height: 7px;
+
     border-radius: 50%;
-    background: #e4b34f;
+
+    background: #E5B657;
 }
 
-/* =========================================
-   POSITION DE CHAQUE ÉTAPE
-========================================= */
 
-/* PRIORISER → étape 1 */
+/* POSITION DES 4 REPÈRES */
+
 .bascule-01 {
     top: 8%;
 }
 
-/* CONSTRUIRE → étape 2 */
 .bascule-02 {
-    top: 33.33%;
+    top: 36%;
 }
 
-/* METTRE EN MOUVEMENT → étape 3 */
 .bascule-03 {
-    top: 66.66%;
+    top: 63%;
 }
 
-/* CONTINUER → étape 4 */
 .bascule-04 {
-    top: 100%;
-    transform: translateY(-100%);
+    top: 91%;
 }
 /* =========================================================
    TEXTES DES ÉTAPES
