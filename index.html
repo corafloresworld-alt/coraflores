@@ -3169,6 +3169,125 @@ h2,
     aspect-ratio: 16 / 9;
     object-fit: cover;
 }
+
+/* ================================
+   CE QUI CHANGE — MOBILE
+================================ */
+
+.bascule-transform {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 3.5rem 22px;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* INTRO */
+
+.transform-intro {
+    width: 100%;
+    padding: 0;
+}
+
+.transform-intro h3 {
+    width: 100%;
+    font-size: 2.25rem;
+    line-height: 1.08;
+    white-space: normal;
+    margin: 0 0 1.5rem;
+}
+
+.transform-intro h3 br {
+    display: none;
+}
+
+.transform-intro .transform-text,
+.transform-text {
+    width: 100%;
+    max-width: 100%;
+    margin-top: 0;
+    font-size: 1rem;
+    line-height: 1.55;
+    white-space: normal;
+}
+
+/* LISTE */
+
+.transform-list {
+    width: 100%;
+    padding-left: 0;
+    box-sizing: border-box;
+}
+
+/* CHAQUE TRANSFORMATION */
+
+.transform-item {
+    display: grid;
+
+    grid-template-columns: 45px minmax(0, 1fr) 30px;
+    grid-template-rows: auto auto;
+
+    column-gap: 10px;
+    row-gap: 12px;
+
+    min-height: 0;
+    padding: 1.8rem 0;
+
+    border-bottom: 1px solid rgba(248,246,242,.15);
+}
+
+/* ICÔNE */
+
+.transform-icon {
+    grid-column: 1;
+    grid-row: 1 / 3;
+    align-self: center;
+}
+
+.transform-icon img {
+    width: 40px;
+    height: 40px;
+}
+
+/* AVANT */
+
+.transform-before {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-size: 1rem;
+    line-height: 1.45;
+}
+
+/* FLÈCHE */
+
+.transform-arrow {
+    grid-column: 3;
+    grid-row: 1;
+
+    align-self: center;
+    font-size: 28px;
+}
+
+/* APRÈS */
+
+.transform-after {
+    grid-column: 2 / 4;
+    grid-row: 2;
+
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.transform-before br,
+.transform-after br {
+    display: none;
+}
+
   
     /* =================================
        BOUTONS
