@@ -3009,7 +3009,166 @@ h2,
 .after-transition br {
     display: none;
 }
-  
+
+
+  /* ================================
+   LA BASCULE — MOBILE
+================================ */
+
+.bascule-section {
+    padding: 3.5rem 0;
+}
+
+.bascule-container {
+    width: 100%;
+    max-width: none;
+    padding: 0 22px;
+    box-sizing: border-box;
+}
+
+/* UNE SEULE COLONNE */
+.bascule-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 0;
+}
+
+/* LABEL */
+
+.bascule-label {
+    width: 100%;
+    margin: 0 0 2rem !important;
+    text-align: left;
+}
+
+.bascule-label br {
+    display: none;
+}
+
+.bascule-label span {
+    display: block;
+    font-size: 11px;
+    line-height: 1.5;
+    letter-spacing: .12em;
+}
+
+/* GRAND TITRE */
+
+.bascule-content h2 {
+    width: 100%;
+    max-width: 100%;
+    font-size: 2.35rem;
+    line-height: 1.08;
+    margin: 0 0 1.5rem;
+}
+
+.bascule-content h2 br {
+    display: none;
+}
+
+/* INTRO */
+
+.bascule-intro {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0 0 2.5rem;
+}
+
+/* ON SUPPRIME LA MÉTHODE VERTICALE */
+.bascule-methode {
+    display: none;
+}
+
+/* ÉTAPES */
+
+.bascule-steps {
+    width: 100%;
+}
+
+.bascule-step {
+    padding: 1.8rem 0;
+}
+
+.bascule-step:first-child {
+    padding-top: 0;
+}
+
+.bascule-step-title {
+    font-size: 17px;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.bascule-step > p:not(.bascule-step-title) {
+    width: 100%;
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* SUPPRESSION DES RETOURS FORCÉS DU DESKTOP */
+
+.bascule-step br {
+    display: none;
+}
+
+/* IMAGE */
+
+.bascule-image {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin-top: 1rem;
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.bascule-image img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+/* RECTANGLE DU BAS */
+
+.bascule-summary {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-top: 2.5rem;
+    padding: 2rem 1.5rem;
+}
+
+.bascule-summary ul {
+    grid-template-columns: 1fr;
+    row-gap: 1rem;
+}
+
+.bascule-summary li {
+    gap: 10px;
+}
+
+.bascule-summary li p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* PHOTO HORIZONTALE */
+.bascule-photo {
+    width: 100%;
+    margin-top: 2.5rem;
+}
+
+.bascule-photo img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
   
     /* =================================
        BOUTONS
