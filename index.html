@@ -2817,6 +2817,149 @@ h2,
     display: none;
 }
 
+/* ================================
+   LE POINT DE DÉPART
+================================ */
+
+.point-depart {
+    padding: 3.5rem 0;
+}
+
+.point-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+    width: 100%;
+    max-width: none;
+    padding: 0 22px;
+    box-sizing: border-box;
+}
+
+/* CONTENU PRINCIPAL */
+
+.point-left {
+    width: 100%;
+    min-width: 0;
+}
+
+.point-label {
+    max-width: 100%;
+    font-size: 11px;
+    line-height: 1.45;
+    margin-bottom: 2rem;
+}
+
+.point-label span {
+    margin-top: 10px;
+    padding-bottom: 16px;
+}
+
+.point-left h2 {
+    font-size: 2.25rem;
+    line-height: 1.08;
+    margin-bottom: 1.4rem;
+}
+
+.point-text,
+.point-intro {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+/* ÉTAPES */
+
+.point-steps {
+    margin-top: 2rem;
+}
+
+.point-step {
+    margin-bottom: 2.5rem;
+}
+
+.step-title {
+    font-size: 17px !important;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+.step-title span {
+    font-size: 22px;
+    margin-right: 7px;
+}
+
+.point-step p {
+    max-width: 100%;
+    font-size: 1rem;
+    line-height: 1.55;
+}
+
+/* On enlève les retours à la ligne forcés du desktop */
+.point-left br {
+    display: none;
+}
+
+/* MÉTHODE VERTICALE */
+.methode-verticale {
+    display: none;
+}
+
+/* BOUTON */
+
+.point-left .point-btn {
+    margin-top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    text-align: center;
+}
+
+/* IMAGE */
+
+.point-right {
+    width: 100%;
+    padding-top: 0;
+    flex: none;
+}
+
+.point-vertical-image {
+    width: 100%;
+    height: auto;
+    max-height: 520px;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* BLOC DU BAS */
+
+.point-depart-bottom {
+    width: calc(100% - 44px);
+    margin: 2.5rem auto 0;
+    grid-template-columns: 1fr;
+}
+
+.point-depart-column {
+    padding: 2rem 1.5rem;
+}
+
+.point-depart-column + .point-depart-column {
+    border-left: none;
+    border-top: 1px solid rgba(229, 182, 87, 0.55);
+}
+
+.point-depart-column h3 {
+    font-size: 1.4rem;
+    line-height: 1.2;
+}
+
+.point-depart-text,
+.point-depart-testimonial,
+.point-depart-checklist p {
+    font-size: 1rem;
+    line-height: 1.55;
+}
+  
   
     /* =================================
        BOUTONS
