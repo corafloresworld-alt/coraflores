@@ -284,7 +284,7 @@ Dimensions idéales :
 
 @media (max-width: 768px) {
 
-  /* ================================
+/* ================================
    NAVBAR — MOBILE
 ================================ */
 
@@ -297,33 +297,68 @@ body {
 }
 
 .navbar-inner {
+    position: relative;
     width: 100%;
     max-width: none;
     height: 100%;
     margin: 0;
     padding: 0 18px;
     box-sizing: border-box;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0;
 }
 
 /* LOGO */
 
 .navbar-logo {
-    flex: 0 0 auto;
-    width: auto;
-    max-width: 170px;
-    overflow: visible;
+    position: absolute;
+    left: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    width: 165px;
+    height: auto;
 }
 
 .navbar-logo img {
     display: block;
+    width: 165px;
+    height: auto;
+    max-width: none;
+    transform: none;
+}
+
+/* LIENS */
+
+.navbar-links {
+    position: absolute;
+    right: 18px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    margin: 0;
+    padding: 0;
     width: auto;
-    height: 46px;
-    max-width: 170px;
+}
+
+/* On cache Le Point de Départ + La Bascule */
+.navbar-links a:nth-child(2),
+.navbar-links a:nth-child(3) {
+    display: none !important;
+}
+
+/* On force À propos + Contact */
+
+.navbar-links a:nth-child(1),
+.navbar-links a:nth-child(4) {
+    display: block !important;
+    color: #fff;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
 }
 
 /* LIENS */
