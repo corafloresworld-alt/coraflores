@@ -397,22 +397,6 @@ Dimensions idéales :
         display: none;
     }
 }
-/* ===========================
-   LAYOUT À PROPOS
-=========================== */
-
-.about-grid{
-
-    display:grid;
-
-    grid-template-columns:minmax(0,1fr) 360px;
-
-    gap:80px;
-
-    align-items:start;
-
-}
-
 
 
   
@@ -512,6 +496,36 @@ Dimensions idéales :
 
     max-width:620px;
 }
+
+/* ================================
+   ABOUT CONTAINER + GRID
+================================ */
+
+.about-container {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.about-grid {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    gap: 0;
+}
+
+/* Chaque bloc prend toute la largeur */
+
+.about-grid > * {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+    
     
 </style>
 </head>
