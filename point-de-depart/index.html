@@ -6,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Le Point de Départ | Cora mFlores</title>
+  <title>Le Point de Départ | Cora Flores</title>
 
   <link rel="icon" type="image/png" href="/favicon/logo-fav-cf.png">
 
@@ -690,53 +690,416 @@
 
 
 /* ================================
-   RESPONSIVE TABLETTE
+   RESPONSIVE — MOBILE
 ================================ */
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
 
-  .site-footer {
-    padding: 3.5rem 7% 1.5rem;
-  }
+    /* =================================
+       NAVBAR
+    ================================= */
 
-  .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 3rem 2rem;
-  }
+    .navbar {
+        height: 72px;
+    }
 
-  .footer-brand {
-    grid-column: 1 / -1;
-  }
+    .navbar-inner {
+        height: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
 
-  .footer-bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: .5rem;
-  }
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
 
-  .footer-tagline {
-    text-align: left;
-  }
+    .navbar-logo img {
+        height: 46px;
+        width: auto;
+    }
 
+    .navbar-info {
+        display: none;
+    }
+
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-left: auto;
+    }
+
+    /* On garde À propos + Contact */
+    .navbar-links a:nth-child(2),
+    .navbar-links a:nth-child(3) {
+        display: none;
+    }
+
+    .navbar-links a {
+        font-size: 13px;
+        white-space: nowrap;
+    }
+
+
+    /* =================================
+       HERO / HEADER
+    ================================= */
+
+    .point-header {
+        min-height: 520px;
+        background-position: 62% center;
+    }
+
+    .point-header-content {
+        padding: 70px 22px 70px;
+        box-sizing: border-box;
+    }
+
+    .point-header .image-caption {
+        font-size: 0.7rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .point-header h1 {
+        max-width: 100%;
+        font-size: 2.55rem;
+        line-height: 1.05;
+        margin-bottom: 1.4rem;
+    }
+
+    .point-header .header-subtitle {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .hero-start-btn {
+        width: auto;
+        max-width: 100%;
+        box-sizing: border-box;
+
+        margin-top: 24px;
+        padding: 13px 18px;
+
+        font-size: 14px;
+        text-align: center;
+    }
+
+
+    /* =================================
+       LES 7 ÉTAPES
+    ================================= */
+
+    .point-steps {
+        padding: 45px 0 60px;
+    }
+
+    .point-steps-inner {
+        width: 100%;
+        max-width: none;
+        padding: 0 22px;
+        box-sizing: border-box;
+    }
+
+    /* On retire la grande ligne verticale desktop */
+    .point-steps-inner::before {
+        display: none;
+    }
+
+    .point-step {
+        display: grid;
+        grid-template-columns: 52px minmax(0, 1fr);
+        gap: 16px;
+
+        padding: 28px 0;
+        align-items: start;
+    }
+
+    .step-icon {
+        grid-column: 1;
+        grid-row: 1;
+        justify-content: flex-start;
+    }
+
+    .step-icon img {
+        width: 42px;
+        height: 42px;
+    }
+
+    .point-step-bascule .step-icon img {
+        width: 58px;
+        height: 58px;
+    }
+
+    .step-timeline {
+        grid-column: 1;
+        grid-row: 2;
+
+        height: auto;
+        justify-content: flex-start;
+    }
+
+    .step-number {
+        width: 38px;
+        height: 38px;
+        font-size: 13px;
+    }
+
+    .step-content {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+
+        min-width: 0;
+    }
+
+    .step-content h2 {
+        font-size: 1.7rem;
+        line-height: 1.1;
+        margin-bottom: 14px;
+    }
+
+    .step-content p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+
+    /* =================================
+       CE QUE COMPRENNENT LES 89 €
+    ================================= */
+
+    .point-includes {
+        padding: 55px 0 60px;
+    }
+
+    .point-includes-inner {
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .point-includes h2 {
+        font-size: 2rem;
+        line-height: 1.1;
+        margin-bottom: 2rem;
+    }
+
+    .point-includes-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px 18px;
+    }
+
+    .include-item {
+        padding-top: 0;
+    }
+
+    .include-item:first-child {
+        padding-top: 0;
+    }
+
+    .include-item img,
+    .include-item:first-child img {
+        width: 58px;
+        height: 58px;
+        margin-bottom: 12px;
+    }
+
+    .include-item h3 {
+        font-size: 0.9rem;
+    }
+
+    .include-item p {
+        font-size: 0.82rem;
+        line-height: 1.4;
+    }
+
+
+    /* =================================
+       BLOC FINAL / PAIEMENT
+    ================================= */
+
+    .point-final {
+        padding: 0 18px 65px;
+    }
+
+    .point-final-card {
+        width: 100%;
+        max-width: none;
+
+        box-sizing: border-box;
+
+        transform: translateY(-35px);
+
+        padding: 38px 22px 34px;
+    }
+
+    .point-final-card h2 {
+        font-size: 2.2rem;
+    }
+
+    .point-final-price {
+        font-size: 2.2rem;
+        margin-bottom: 20px;
+    }
+
+    .point-final-text {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .point-final-button {
+        width: 100%;
+        box-sizing: border-box;
+
+        padding: 15px 18px;
+        font-size: 0.95rem;
+    }
+
+
+    /* =================================
+       FOOTER
+    ================================= */
+
+    .site-footer {
+        padding: 3.5rem 22px 1.5rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-logo {
+        height: 48px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+    }
+
+    .footer-tagline {
+        text-align: left;
+    }
 }
 
 
 /* ================================
-   RESPONSIVE MOBILE
+   PETITS TÉLÉPHONES
 ================================ */
 
-@media (max-width: 500px) {
+@media (max-width: 480px) {
 
-  .footer-grid {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
+    .navbar {
+        height: 68px;
+    }
 
-  .footer-brand {
-    grid-column: auto;
-  }
+    .navbar-inner {
+        padding: 0 18px;
+    }
 
-} 
+    .navbar-logo img {
+        height: 43px;
+    }
+
+    .navbar-links {
+        gap: 1rem;
+    }
+
+    .navbar-links a {
+        font-size: 12px;
+    }
+
+
+    .point-header {
+        min-height: 500px;
+        background-position: 60% center;
+    }
+
+    .point-header-content {
+        padding: 60px 22px 60px;
+    }
+
+    .point-header h1 {
+        font-size: 2.3rem;
+    }
+
+    .point-header .header-subtitle {
+        font-size: 0.98rem;
+    }
+
+    .hero-start-btn {
+        width: 100%;
+    }
+
+
+    .point-steps-inner {
+        padding: 0 20px;
+    }
+
+    .point-step {
+        grid-template-columns: 46px minmax(0, 1fr);
+        gap: 14px;
+    }
+
+    .step-content h2 {
+        font-size: 1.55rem;
+    }
+
+    .step-content p {
+        font-size: 0.95rem;
+    }
+
+
+    .point-includes-inner {
+        padding: 0 18px;
+    }
+
+    .point-includes h2 {
+        font-size: 1.85rem;
+    }
+
+    .point-includes-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 14px;
+    }
+
+
+    .point-final {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    .point-final-card {
+        padding: 34px 18px 30px;
+    }
+}
+
+
+/* ================================
+   SÉCURITÉ
+================================ */
+
+html,
+body {
+    overflow-x: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+    display: block;
+}
+
+    
     
   </style>
 
