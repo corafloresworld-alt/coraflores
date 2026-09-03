@@ -277,115 +277,64 @@ Dimensions idéales :
 
 }
 
-
 /* ================================
    RESPONSIVE — MOBILE
 ================================ */
 
 @media (max-width: 768px) {
 
-/* ================================
-   NAVBAR — MOBILE
-================================ */
+    /* =================================
+       NAVBAR
+    ================================= */
 
-.navbar {
-    height: 72px;
-}
+    .navbar {
+        height: 72px;
+    }
 
-body {
-    padding-top: 72px;
-}
+    body {
+        padding-top: 72px;
+    }
 
-.navbar-inner {
-    position: relative;
-    width: 100%;
-    max-width: none;
-    height: 100%;
-    margin: 0;
-    padding: 0 18px;
-    box-sizing: border-box;
-}
+    .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 
-/* LOGO */
+    .navbar-logo img {
+        height: 46px;
+        width: auto;
+    }
 
-.navbar-logo {
-    position: absolute;
-    left: 18px;
-    top: 50%;
-    transform: translateY(-50%);
-    display: block;
-    width: 165px;
-    height: auto;
-}
+    /* On cache l'annonce */
+    .navbar-info,
+    .announcement {
+        display: none !important;
+    }
 
-.navbar-logo img {
-    display: block;
-    width: 165px;
-    height: auto;
-    max-width: none;
-    transform: none;
-}
+    /* Menu mobile */
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-left: auto;
+    }
 
-/* LIENS */
+    /* On garde seulement À propos et Contact */
+    .navbar-links a:nth-child(2),
+    .navbar-links a:nth-child(3) {
+        display: none;
+    }
 
-.navbar-links {
-    position: absolute;
-    right: 18px;
-    top: 50%;
-    transform: translateY(-50%);
+    .navbar-links a {
+        font-size: 13px;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+    }
 
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-
-    margin: 0;
-    padding: 0;
-    width: auto;
-}
-
-/* On cache Le Point de Départ + La Bascule */
-.navbar-links a:nth-child(2),
-.navbar-links a:nth-child(3) {
-    display: none !important;
-}
-
-/* On force À propos + Contact */
-
-.navbar-links a:nth-child(1),
-.navbar-links a:nth-child(4) {
-    display: block !important;
-    color: #fff;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
-    text-decoration: none;
-}
-
-/* LIENS */
-
-.navbar-links {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-
-    margin-left: auto;
-    gap: 1rem;
-
-    flex: 0 0 auto;
-    width: auto;
-}
-
-/* On garde uniquement À propos + Contact */
-.navbar-links a:nth-child(2),
-.navbar-links a:nth-child(3) {
-    display: none !important;
-}
-
-.navbar-links a {
-    display: block;
-    font-size: 12px;
-    line-height: 1;
-    white-space: nowrap;
 }
    
     /* ================================
