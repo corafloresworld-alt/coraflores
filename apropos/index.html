@@ -278,34 +278,106 @@ Dimensions idéales :
 }
 
 
+/* ================================
+   RESPONSIVE — MOBILE
+================================ */
 
 @media (max-width: 768px) {
 
-  body {
-    padding-top: 80px;
-  }
+    /* ================================
+       NAVBAR
+    ================================= */
 
-  .navbar {
-    height: 80px;
-  }
+    .navbar {
+        height: 72px;
+    }
 
-  .navbar-logo img {
-    height: 52px;
-  }
+    body {
+        padding-top: 72px;
+    }
 
-  .about-container h1 {
-    font-size: 2.1rem;
-  }
+    .navbar-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
 
-  .about-container {
-    padding: 0 1.2rem;
-  }
+    .navbar-logo img {
+        height: 46px;
+        width: auto;
+    }
 
-  .about-section {
-    text-align: left;
-  }
-  
-  }
+    .navbar-links {
+        display: flex;
+        align-items: center;
+        gap: 1.2rem;
+        margin-left: auto;
+    }
+
+    /* On garde À propos + Contact */
+    .navbar-links a:nth-child(2),
+    .navbar-links a:nth-child(3) {
+        display: none;
+    }
+
+    .navbar-links a {
+        font-size: 13px;
+        letter-spacing: 0.03em;
+        white-space: nowrap;
+    }
+
+
+    /* ================================
+       HERO À PROPOS
+    ================================= */
+
+    .about-hero {
+        height: 72vh;
+        min-height: 500px;
+        max-height: 720px;
+    }
+
+    .about-hero video {
+        object-position: 70% center;
+        transform: scale(1.08);
+    }
+
+    .about-content {
+        width: 100%;
+        max-width: none;
+        padding: 0 22px;
+        box-sizing: border-box;
+
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    .about-content h1 {
+        width: 100%;
+        max-width: 100%;
+        font-size: 2.45rem;
+        line-height: 1.08;
+        margin-bottom: 1.4rem;
+    }
+
+    .about-content h1 br {
+        display: none;
+    }
+
+    .about-content .about-intro {
+        width: 100%;
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    .about-content .about-intro br {
+        display: none;
+    }
+}
 /* ===========================
    LAYOUT À PROPOS
 =========================== */
