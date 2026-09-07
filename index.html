@@ -3867,8 +3867,8 @@ window.addEventListener('scroll', function() {
 </nav>
 
   <header class="video-header">
-<video autoplay muted loop playsinline webkit-playsinline>
-<source src="/assets/videos/video-velo.mp4" type="video/mp4" />
+<video autoplay muted loop playsinline webkit-playsinline preload="auto">
+  <source src="/assets/videos/video-velo.mp4" type="video/mp4" />
       Votre navigateur ne supporte pas les vidéos HTML5.
     </video>
     <div class="overlay"></div>
@@ -4809,6 +4809,7 @@ Et finalement, c'est devenu une vraie force !
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
+
     const toggle = document.querySelector(".mobile-menu-toggle");
     const menu = document.querySelector(".navbar-links");
 
@@ -4821,6 +4822,18 @@ document.addEventListener("DOMContentLoaded", function () {
             menu.classList.remove("is-open");
         });
     });
+
+    const video = document.querySelector(".video-header video");
+
+    if (video) {
+        video.muted = true;
+        video.defaultMuted = true;
+
+        video.play().catch(function () {
+            // Safari peut parfois bloquer l'autoplay
+        });
+    }
+
 });
 </script>
   
