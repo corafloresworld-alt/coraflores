@@ -2606,26 +2606,32 @@ h2,
         display: none !important;
     }
 
-    /* Menu mobile */
-    .navbar-links {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-        margin-left: auto;
-    }
+ /* Menu mobile */
+.navbar-links {
+    display: none;
+}
 
-    /* On garde seulement À propos et Contact */
-    .navbar-links a:nth-child(2),
-    .navbar-links a:nth-child(3) {
-        display: none;
-    }
+/* Bouton burger */
+.mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    margin-left: auto;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
 
-    .navbar-links a {
-        font-size: 13px;
-        letter-spacing: 0.03em;
-        white-space: nowrap;
-    }
-
+.mobile-menu-toggle span {
+    display: block;
+    width: 23px;
+    height: 1px;
+    background: #ffffff;
+}
 
    /* =================================
    HERO / VIDÉO
