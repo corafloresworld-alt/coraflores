@@ -2609,9 +2609,47 @@ h2,
         display: none !important;
     }
 
- /* Menu mobile */
+ /* ================================
+   MENU MOBILE
+================================ */
+
+.navbar-inner {
+    position: relative;
+}
+
+/* Menu fermé */
 .navbar-links {
     display: none;
+}
+
+/* Menu ouvert */
+.navbar-links.is-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+    margin: 0;
+    padding: 1rem 20px 1.2rem;
+
+    background: #415745;
+
+    box-sizing: border-box;
+    z-index: 10000;
+}
+
+/* Les 4 liens */
+.navbar-links.is-open a {
+    display: block !important;
+    width: 100%;
+    padding: 0.7rem 0;
+
+    color: #ffffff;
 }
 
 /* Bouton burger */
@@ -2620,10 +2658,13 @@ h2,
     flex-direction: column;
     justify-content: center;
     gap: 5px;
+
     width: 40px;
     height: 40px;
+
     padding: 0;
     margin-left: auto;
+
     border: none;
     background: transparent;
     cursor: pointer;
@@ -2634,23 +2675,6 @@ h2,
     width: 23px;
     height: 1px;
     background: #ffffff;
-}
-
-
-.navbar-links.is-open {
-    display: flex;
-    flex-direction: column;
-}
-
-.navbar-links.is-open a {
-    display: block !important;
-}
-
-
-.navbar-links.is-open a:first-child {
-    display: block !important;
-    visibility: visible !important;
-    opacity: 1 !important;
 }
   
    /* =================================
