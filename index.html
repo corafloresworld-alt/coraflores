@@ -2636,6 +2636,12 @@ h2,
     background: #ffffff;
 }
 
+
+  .navbar-links.is-open {
+    display: flex;
+    flex-direction: column;
+}
+
    /* =================================
    HERO / VIDÉO
 ================================ */
@@ -4766,6 +4772,16 @@ Et finalement, c'est devenu une vraie force !
 
 </footer>
 
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const menu = document.querySelector(".navbar-links");
 
+    toggle.addEventListener("click", function () {
+        menu.classList.toggle("is-open");
+    });
+});
+</script>
+  
 </body>
 </html>
