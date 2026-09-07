@@ -722,23 +722,73 @@
         display: none;
     }
 
-    .navbar-links {
-        display: flex;
-        align-items: center;
-        gap: 1.2rem;
-        margin-left: auto;
-    }
+  /* ================================
+   MENU MOBILE
+================================ */
 
-    /* On garde À propos + Contact */
-    .navbar-links a:nth-child(2),
-    .navbar-links a:nth-child(3) {
-        display: none;
-    }
+.navbar-inner {
+    position: relative;
+}
 
-    .navbar-links a {
-        font-size: 13px;
-        white-space: nowrap;
-    }
+/* Menu fermé */
+.navbar-links {
+    display: none;
+}
+
+/* Menu ouvert */
+.navbar-links.is-open {
+    display: flex;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 0;
+    margin: 0;
+    padding: 1rem 20px 1.2rem;
+
+    background: #415745;
+
+    box-sizing: border-box;
+    z-index: 10000;
+}
+
+/* Les 4 liens */
+.navbar-links.is-open a {
+    display: block !important;
+    width: 100%;
+    padding: 0.7rem 0;
+
+    color: #ffffff;
+}
+
+/* Bouton burger */
+.mobile-menu-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+
+    width: 40px;
+    height: 40px;
+
+    padding: 0;
+    margin-left: auto;
+
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    width: 23px;
+    height: 1px;
+    background: #ffffff;
+}
 
 
     /* =================================
@@ -1131,19 +1181,23 @@ video {
 
       <!-- LIENS -->
 
-      <nav class="navbar-links">
+   <nav class="navbar-links">
 
-        <a href="/apropos/">À propos</a>
+  <a href="/apropos/">À propos</a>
 
-        <a href="/#point-depart" class="active">Le Point de Départ</a>
-        
-        <a href="/#bascule">La Bascule</a>
+  <a href="/#point-depart" class="active">Le Point de Départ</a>
+  
+  <a href="/#bascule">La Bascule</a>
 
-        <a href="/contact/">Contact</a>
+  <a href="/contact/">Contact</a>
 
-      </nav>
+</nav>
 
-    </div>
+<button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
 
   </header>
 
@@ -1651,6 +1705,18 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
     
   </main>
 
+
+
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".mobile-menu-toggle");
+    const menu = document.querySelector(".navbar-links");
+
+    toggle.addEventListener("click", function () {
+        menu.classList.toggle("is-open");
+    });
+});
+</script>
 
 </body>
 
