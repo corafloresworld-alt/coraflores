@@ -2967,7 +2967,44 @@ h2,
 section.section-one {
     display: none !important;
 }
-        
+
+
+/* =========================================
+   TRANSITION — SECTION 2
+========================================= */
+
+.section-two-transition {
+    width: 100%;
+    margin: 55px auto 0;
+    padding: 28px 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(229, 182, 87, 0.45);
+}
+
+.section-two-transition p {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #FFFFFF;
+    text-transform: none;
+}
+
+/* Adaptation mobile */
+@media (max-width: 768px) {
+    .section-two-transition {
+        margin-top: 35px;
+        padding: 22px 0 0;
+    }
+
+    .section-two-transition p {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+}
+
+    
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
 ================================ */
@@ -4567,20 +4604,30 @@ Vous avez l'impression de beaucoup faire
                             <p>Construire et mettre en place ce qui peut réellement faire<br>avancer votre activité</p>
                         </div>
 
-                        <div class="problem-item">
+                              <div class="problem-item">
                             <span>✦</span>
-                            <p>Passer du « il faudrait » à « on le fait » !
+                            <p>Passer du « il faudrait » à « on le fait » !</p>
                         </div>
 
                     </div>
+                    <!-- Fin de problem-list -->
 
                 </div>
+                <!-- Fin de problem-content -->
 
             </div>
+            <!-- Fin de la carte texte -->
 
+        </div>
+        <!-- Fin de info-grid -->
+
+        <!-- TRANSITION : TRAVAILLER ENSEMBLE -->
+        <div class="on-part-de-la section-two-transition">
+            <p>Je ne travaille pas à côté de votre entreprise. Je travaille avec vous.</p>
         </div>
 
     </div>
+    <!-- Fin de info-section -->
 
 </section>
 
