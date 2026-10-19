@@ -3171,6 +3171,423 @@ section.section-one {
         width: auto !important;
     }
 }
+
+
+/* =========================================
+   NOUVELLE SECTION — COMMENT TRAVAILLER ENSEMBLE
+   Styles isolés : ne modifient pas les autres sections
+========================================= */
+
+.offres-home {
+    background: #263F32;
+    padding: 85px 0;
+    color: #F8F6F2;
+}
+
+.offres-home-inner {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.offres-home-heading {
+    max-width: 1100px;
+    margin-bottom: 38px;
+}
+
+.offres-home-label {
+    display: block;
+    margin: 0 0 22px;
+    font-family: 'Euclid', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #E5B657;
+}
+
+.offres-home h2 {
+    margin: 0 0 20px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(36px, 4vw, 58px);
+    line-height: 1.05;
+    font-weight: 400;
+    color: #F8F6F2;
+}
+
+.offres-home-intro {
+    max-width: 850px;
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #F8F6F2;
+}
+
+.offres-home-layout {
+    display: grid;
+    grid-template-columns: minmax(0, .9fr) minmax(0, 1.1fr) minmax(260px, .62fr);
+    gap: 14px;
+    align-items: stretch;
+}
+
+.offre-card {
+    min-width: 0;
+    padding: 28px;
+    border: 1px solid rgba(229, 182, 87, .35);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.offre-mission {
+    background: rgba(0, 0, 0, .12);
+}
+
+.offre-accompagnement {
+    background: #F0E5D6;
+    color: #263F32;
+}
+
+.offre-top {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    margin-bottom: 24px;
+}
+
+.offre-number {
+    width: 48px;
+    height: 48px;
+    flex: 0 0 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    background: rgba(255,255,255,.1);
+    color: #F8F6F2;
+}
+
+.offre-accompagnement .offre-number {
+    background: #E5D2BC;
+    color: #8A5A4A;
+}
+
+.offre-eyebrow {
+    margin: 0 0 5px;
+    color: #E5B657;
+    font-size: 11px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+}
+
+.offre-accompagnement .offre-eyebrow {
+    color: #8A5A4A;
+}
+
+.offres-home h3 {
+    margin: 0 0 5px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1.1;
+    font-weight: 500;
+}
+
+.offre-subtitle {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.45;
+    opacity: .85;
+}
+
+.offre-card > p {
+    margin: 0 0 20px;
+    font-size: 16px;
+    line-height: 1.65;
+}
+
+.offre-separator {
+    height: 1px;
+    margin: 0 0 18px;
+    background: rgba(229, 182, 87, .3);
+}
+
+.offre-list-title {
+    margin: 0 0 12px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.offre-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.offre-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.offre-list li span {
+    color: #E5B657;
+    flex: 0 0 auto;
+}
+
+.offre-accompagnement .offre-list li span {
+    color: #8A5A4A;
+}
+
+.offre-footnote {
+    margin-top: auto !important;
+    padding-top: 18px;
+    border-top: 1px solid rgba(229, 182, 87, .3);
+    font-size: 14px !important;
+}
+
+.offre-accompagnement .offre-footnote {
+    border-color: rgba(138, 90, 74, .25);
+}
+
+.offre-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.offre-step {
+    background: rgba(255,255,255,.58);
+    border: 1px solid rgba(138,90,74,.12);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.offre-step-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.offre-step-icon {
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 50%;
+    background: #DDE0D5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #415745;
+    font-size: 20px;
+}
+
+.offre-step h4 {
+    margin: 0 0 4px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    line-height: 1.15;
+    font-weight: 500;
+    color: #263F32;
+}
+
+.offre-step-subtitle {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.4;
+    color: #65584C;
+}
+
+.offre-price {
+    margin-left: auto;
+    padding-left: 8px;
+    color: #263F32;
+    text-align: right;
+    white-space: nowrap;
+}
+
+.offre-price strong {
+    display: block;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.offre-price span {
+    display: block;
+    margin-top: 5px;
+    font-size: 11px;
+    line-height: 1.3;
+}
+
+.offre-step > p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #3F443D;
+}
+
+.offre-continuite {
+    position: relative;
+    padding-top: 24px;
+}
+
+.offre-continuite::before {
+    content: "↓";
+    position: absolute;
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #B38B50;
+    font-size: 25px;
+}
+
+.offre-continuite .offre-step {
+    background: #E5D4C0;
+}
+
+.offre-continuite .offre-step-icon {
+    background: #D9C0A5;
+}
+
+.offre-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    margin-top: 24px;
+    padding: 15px 18px;
+    border-radius: 3px;
+    background: #F0E5D6;
+    color: #263F32;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background .2s ease, transform .2s ease;
+}
+
+.offre-accompagnement .offre-btn {
+    background: #263F32;
+    color: #FFFFFF;
+}
+
+.offre-btn:hover {
+    transform: translateY(-2px);
+    background: #E5B657;
+    color: #263F32;
+}
+
+.offres-home-photo {
+    min-width: 0;
+    min-height: 100%;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.offres-home-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Tablette */
+@media (min-width: 769px) and (max-width: 1100px) {
+    .offres-home-inner {
+        padding: 0 28px;
+    }
+
+    .offres-home-layout {
+        grid-template-columns: 1fr 1.15fr;
+    }
+
+    .offres-home-photo {
+        display: none;
+    }
+
+    .offre-card {
+        padding: 22px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .offres-home {
+        padding: 52px 0;
+    }
+
+    .offres-home-inner {
+        padding: 0 22px;
+    }
+
+    .offres-home-heading {
+        margin-bottom: 28px;
+    }
+
+    .offres-home h2 {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .offres-home-intro {
+        font-size: 16px;
+        line-height: 1.55;
+    }
+
+    .offres-home-layout {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .offre-card {
+        padding: 22px;
+    }
+
+    .offres-home h3 {
+        font-size: 28px;
+    }
+
+    .offre-card > p {
+        font-size: 15px;
+    }
+
+    .offres-home-photo {
+        display: block;
+        height: 300px;
+    }
+
+    .offres-home-photo img {
+        min-height: 0;
+        height: 300px;
+    }
+
+    .offre-step {
+        padding: 16px;
+    }
+
+    .offre-step-heading {
+        flex-wrap: wrap;
+    }
+
+    .offre-price {
+        margin-left: auto;
+    }
+}
+
+    
     
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
@@ -4853,12 +5270,204 @@ Vous avez l'impression de beaucoup faire
         </div>
 
     </div>
+
     <!-- Fin de info-section -->
+
+</section>
+
+<!-- =========================================
+     SECTION 3 — COMMENT TRAVAILLER ENSEMBLE
+========================================= -->
+
+<section class="offres-home" id="offres">
+
+  <div class="offres-home-inner">
+
+    <div class="offres-home-heading">
+
+      <span class="offres-home-label">MES OFFRES</span>
+
+      <h2>Comment peut-on travailler ensemble ?</h2>
+
+      <p class="offres-home-intro">
+        Selon votre situation, vos besoins et ce que vous souhaitez faire avancer,
+        deux façons de travailler ensemble sont possibles.
+      </p>
+
+    </div>
+
+    <div class="offres-home-layout">
+
+      <!-- OFFRE 1 : MISSION PONCTUELLE -->
+
+      <article class="offre-card offre-mission">
+
+        <div class="offre-top">
+
+          <div class="offre-number">01</div>
+
+          <div>
+            <p class="offre-eyebrow">BESOIN CIBLÉ</p>
+            <h3>Mission ponctuelle</h3>
+            <p class="offre-subtitle">Un sujet précis à faire avancer.</p>
+          </div>
+
+        </div>
+
+        <p>
+          Vous avez identifié ce qui bloque ou ce que vous souhaitez mettre en place ?
+          Nous travaillons directement sur ce sujet, avec une intervention ciblée
+          et adaptée à votre besoin.
+        </p>
+
+        <div class="offre-separator"></div>
+
+        <p class="offre-list-title">Exemples de missions :</p>
+
+        <ul class="offre-list">
+          <li><span>✓</span> Prospection et développement commercial</li>
+          <li><span>✓</span> Clarification du positionnement</li>
+          <li><span>✓</span> Stratégie et communication</li>
+          <li><span>✓</span> Organisation et outils</li>
+          <li><span>✓</span> Préparation et lancement d’un projet</li>
+          <li><span>✓</span> Et d’autres sujets selon vos besoins</li>
+        </ul>
+
+        <p class="offre-footnote">
+          Le périmètre, les objectifs et les modalités sont définis ensemble
+          en fonction de la mission.
+        </p>
+
+        <a href="/mission-ponctuelle" class="offre-btn">
+          Découvrir la mission ponctuelle <span>→</span>
+        </a>
+
+      </article>
+
+
+      <!-- OFFRE 2 : ACCOMPAGNEMENT -->
+
+      <article class="offre-card offre-accompagnement">
+
+        <div class="offre-top">
+
+          <div class="offre-number">02</div>
+
+          <div>
+            <p class="offre-eyebrow">PRENDRE DU RECUL ET AVANCER</p>
+            <h3>Accompagnement</h3>
+            <p class="offre-subtitle">Comprendre d’abord, agir ensuite.</p>
+          </div>
+
+        </div>
+
+        <p>
+          Vous avez besoin de faire le tri dans vos idées, de clarifier vos priorités
+          ou de faire évoluer plusieurs aspects de votre activité ?
+          Nous commençons par comprendre votre situation pour définir ensemble
+          la suite la plus adaptée.
+        </p>
+
+        <div class="offre-steps">
+
+          <!-- ETAPE 1 : POINT DE DEPART -->
+
+          <div class="offre-step">
+
+            <div class="offre-step-heading">
+
+              <div class="offre-step-icon">✳</div>
+
+              <div>
+                <h4>Le Point de Départ</h4>
+                <p class="offre-step-subtitle">Un premier travail pour faire le point.</p>
+              </div>
+
+              <div class="offre-price">
+                <strong>89 €</strong>
+                <span>Carnet de route<br>+ échange en visio</span>
+              </div>
+
+            </div>
+
+            <p>
+              Nous prenons du recul sur votre activité, regardons ce qui fonctionne,
+              ce qui bloque et ce qui mérite votre attention. Nous clarifions
+              vos priorités et faisons émerger des pistes concrètes pour la suite.
+            </p>
+
+          </div>
+
+          <!-- SUITE POSSIBLE : COLLABORATION DANS LA DUREE -->
+
+          <div class="offre-continuite">
+
+            <div class="offre-step">
+
+              <div class="offre-step-heading">
+
+                <div class="offre-step-icon">↗</div>
+
+                <div>
+                  <h4>Et si nous continuions ensemble ?</h4>
+                  <p class="offre-step-subtitle">
+                    Une collaboration à vos côtés, dans la durée.
+                  </p>
+                </div>
+
+              </div>
+
+              <p>
+                Si plusieurs sujets méritent d’être travaillés, ou si vous souhaitez
+                être accompagnés pour passer de la réflexion à l’action, nous pouvons
+                poursuivre ensemble sur plusieurs mois.
+              </p>
+
+              <p style="margin-top:12px;">
+                Nous avançons étape par étape : prioriser, construire les solutions
+                adaptées à votre réalité, les mettre en place et ajuster le travail
+                selon les besoins de votre activité.
+              </p>
+
+              <p style="margin-top:12px;">
+                La suite se définit ensemble à partir de votre situation et de
+                ce qui ressort du Point de Départ.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <a href="#point-depart" class="offre-btn">
+          Découvrir le Point de Départ <span>→</span>
+        </a>
+
+      </article>
+
+
+      <!-- PHOTO VERTICALE -->
+
+      <div class="offres-home-photo">
+
+        <img
+          src="/assets/images/vertical-depart1.png"
+          alt="Un temps de recul pour réfléchir à son activité"
+          loading="lazy"
+        >
+
+      </div>
+
+    </div>
+
+  </div>
 
 </section>
 
 
 <section class="point-depart" id="point-depart">
+
   
 <div class="point-container">
 
