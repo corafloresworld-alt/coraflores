@@ -254,13 +254,15 @@ CSS object-fit: cover*/
   white-space: nowrap;
 }
 
-.video-header h2 {
-    max-width: 100%;
-    margin: 0;
 
-    font-size: 1.05rem;
-    line-height: 1.45;
+.video-header h2 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    line-height: 1.5;
+    font-weight: 400;
 }
+
 
     /* ================================
    🚀 CALL TO ACTION – HERO BOUTON
@@ -334,15 +336,14 @@ CSS object-fit: cover*/
     flex-shrink:0;
 }
 
-.hero-social-proof p{
-    margin:0;
-    padding:0;
-    max-width:320px;
-
-    color:#fff;
-    font-size:16px;
-    line-height:1.35;
-    font-weight:400;
+.hero-social-proof p {
+    margin: 0;
+    padding: 0;
+    max-width: 390px;
+    color: #ffffff;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 400;
 }
     /* LOGO CENTRÉ */
     .logo {
@@ -3295,21 +3296,23 @@ section.section-one {
 .video-header h1 {
     max-width: 100%;
     margin: 0;
-
-    font-size: 2.7rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(2.4rem, 3.5vw, 4.1rem);
     line-height: 1.05;
+    font-weight: 400;
+    white-space: nowrap;
 }
 
 .video-header h1 em {
-    white-space: normal;
+    white-space: nowrap;
 }
 
-.video-header h2 {
-    max-width: 100%;
-    margin: 0;
 
-    font-size: 1.1rem;
-    font-weight: 600;
+.video-header h2 {
+    max-width: 760px;
+    margin: 0;
+    font-size: clamp(1.2rem, 1.5vw, 1.5rem);
+    font-weight: 500;
     line-height: 1.5;
 }
 
@@ -3321,6 +3324,24 @@ section.section-one {
 .cta-primary {
     font-size: 15px;
     padding: 0.85rem 1.5rem;
+}
+
+
+  
+@media (max-width: 768px) {
+    .video-header h1 {
+        white-space: normal;
+        font-size: clamp(2.2rem, 8vw, 3rem);
+    }
+
+    .video-header h1 em {
+        white-space: normal;
+    }
+
+    .video-header h2 {
+        font-size: 1.15rem;
+        max-width: 100%;
+    }
 }
 
 /* =================================
@@ -4553,14 +4574,15 @@ window.addEventListener('scroll', function() {
     <div class="overlay"></div>
   <div class="overlay-content">
 
-  <h1>
-  Vous avez un sujet<br>
-  <em>qui bloque</em>
+<h1>
+  Vous avez un sujet qui bloque
 </h1>
 
-    <h2>
-      Je travaille à vos côtés pour comprendre la situation, trouver la bonne solution et passer à l'action.
-    </h2>
+<h2>
+  Je travaille à vos côtés pour clarifier la situation,
+  trouver les bonnes solutions et passer à l’action.
+</h2>
+
 
     <div class="cta-container">
         <a href="#point-depart" class="cta-primary">
