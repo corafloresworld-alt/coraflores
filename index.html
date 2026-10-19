@@ -3037,6 +3037,13 @@ section.section-one {
     padding-left: 24px;
 }
 
+/* Alignement des deux offres */
+.offer-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+    
 .offer-dropdown-item h3 {
     font-size: 21px;
     font-weight: 500;
@@ -3056,13 +3063,15 @@ section.section-one {
 }
 
 .offer-dropdown-link {
-    color: #415745;
+    color: #415745 !important;
     font-size: 12px;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 0.04em;
     border-bottom: 1px solid #c5a46d;
     padding-bottom: 4px;
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .offers-chevron {
