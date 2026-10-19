@@ -3124,6 +3124,35 @@ section.section-one {
     color: #415745 !important;
 }
 
+
+
+/* Mini-vignettes du menu Mes offres */
+
+.offer-dropdown-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.offer-thumbnail {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: block;
+}
+
+.offer-dropdown-heading h3 {
+    margin: 0;
+    color: #415745 !important;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.2;
+}
+
+    
     
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
@@ -4480,8 +4509,10 @@ window.addEventListener('scroll', function() {
 
 <div class="offers-dropdown" id="offers-dropdown" hidden>
     <div class="offer-dropdown-item">
-        <h3>Accompagnements</h3>
-        <p>Prendre du recul, clarifier et avancer ensemble.</p>
+<div class="offer-dropdown-heading">
+    <img src="/assets/images/approche.png" alt="" class="offer-thumbnail">
+    <h3>Accompagnements</h3>
+</div>        <p>Prendre du recul, clarifier et avancer ensemble.</p>
         <p class="offer-details">Le Point de Départ · La Bascule</p>
         <a href="/point-de-depart/" class="offer-dropdown-link">
             Découvrir les accompagnements →
@@ -4489,8 +4520,11 @@ window.addEventListener('scroll', function() {
     </div>
 
     <div class="offer-dropdown-item">
-        <h3>Mission ponctuelle</h3>
-        <p>Faire avancer un sujet précis.</p>
+<div class="offer-dropdown-heading">
+    <img src="/assets/images/mission-ponctuelle11.jpg" alt="" class="offer-thumbnail">
+    <h3>Mission ponctuelle</h3>
+</div>
+      <p>Faire avancer un sujet précis.</p>
         <p class="offer-details">
             Commercial · Communication · Site web · Organisation
         </p>
