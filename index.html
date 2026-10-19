@@ -3004,6 +3004,106 @@ section.section-one {
     }
 }
 
+
+
+/* MENU DÉROULANT — MES OFFRES */
+
+.navbar {
+    position: fixed;
+}
+
+.offers-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: max(24px, calc((100vw - 1000px) / 2));
+    width: min(620px, calc(100vw - 32px));
+    padding: 26px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    background: #f7f3eb;
+    color: #415745;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+    z-index: 10000;
+}
+
+.offers-dropdown[hidden] {
+    display: none;
+}
+
+.offer-dropdown-item + .offer-dropdown-item {
+    border-left: 1px solid rgba(65, 87, 69, 0.2);
+    padding-left: 24px;
+}
+
+.offer-dropdown-item h3 {
+    font-size: 21px;
+    font-weight: 500;
+    margin: 0 0 10px;
+}
+
+.offer-dropdown-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.offer-dropdown-item .offer-details {
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 18px;
+}
+
+.offer-dropdown-link {
+    color: #415745;
+    font-size: 12px;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-bottom: 1px solid #c5a46d;
+    padding-bottom: 4px;
+}
+
+.offers-chevron {
+    display: inline-block;
+    margin-left: 4px;
+    transition: transform 0.2s ease;
+}
+
+.offers-toggle[aria-expanded="true"] .offers-chevron {
+    transform: rotate(180deg);
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+    .offers-dropdown {
+        position: fixed;
+        top: 80px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        padding: 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
+    .offer-dropdown-item + .offer-dropdown-item {
+        border-left: none;
+        border-top: 1px solid rgba(65, 87, 69, 0.2);
+        padding-left: 0;
+        padding-top: 18px;
+    }
+
+    .offer-dropdown-item h3 {
+        font-size: 19px;
+    }
+}
+
+
+    
     
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
@@ -4349,11 +4449,36 @@ window.addEventListener('scroll', function() {
     <!-- Liens / Boutons à droite -->
 
 <div class="navbar-links">
-    <a href="/mes-offres/">Mes offres</a>
+    <a href="#" class="offers-toggle"
+       aria-expanded="false"
+       aria-controls="offers-dropdown">
+       Mes offres <span class="offers-chevron">⌄</span>
+    </a>
     <a href="/apropos/">À propos</a>
     <a href="/contact/" class="cta">Contact</a>
 </div>
 
+<div class="offers-dropdown" id="offers-dropdown" hidden>
+    <div class="offer-dropdown-item">
+        <h3>Accompagnement</h3>
+        <p>Prendre du recul, clarifier et avancer ensemble.</p>
+        <p class="offer-details">Le Point de Départ · La Bascule</p>
+        <a href="/point-de-depart/" class="offer-dropdown-link">
+            Découvrir l’accompagnement →
+        </a>
+    </div>
+
+    <div class="offer-dropdown-item">
+        <h3>Mission ponctuelle</h3>
+        <p>Faire avancer un sujet précis, concrètement.</p>
+        <p class="offer-details">
+            Commercial · Communication · Site web · Organisation
+        </p>
+        <a href="/#mission" class="offer-dropdown-link">
+            Découvrir les missions →
+        </a>
+    </div>
+</div>
 
 <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu">
     <span></span>
@@ -5434,6 +5559,46 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+
+  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const toggle = document.querySelector(".offers-toggle");
+    const dropdown = document.getElementById("offers-dropdown");
+
+    if (!toggle || !dropdown) return;
+
+    function closeMenu() {
+        dropdown.hidden = true;
+        toggle.setAttribute("aria-expanded", "false");
+    }
+
+    toggle.addEventListener("click", function (event) {
+        event.preventDefault();
+
+        const isOpen = toggle.getAttribute("aria-expanded") === "true";
+
+        if (isOpen) {
+            closeMenu();
+        } else {
+            dropdown.hidden = false;
+            toggle.setAttribute("aria-expanded", "true");
+        }
+    });
+
+    document.addEventListener("click", function (event) {
+        if (!dropdown.contains(event.target) &&
+            !toggle.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape") closeMenu();
+    });
+});
+</script>
+
   
 </body>
 </html>
