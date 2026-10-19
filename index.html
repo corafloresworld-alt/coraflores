@@ -3153,7 +3153,24 @@ section.section-one {
     line-height: 1.2;
 }
 
-    
+    /* CORRECTION FINALE — TITRE HERO SUR UNE LIGNE */
+@media (min-width: 769px) {
+    header.video-header .overlay-content h1 {
+        display: block !important;
+        width: auto !important;
+        max-width: none !important;
+        white-space: nowrap !important;
+        font-size: clamp(2rem, 3.2vw, 3.5rem) !important;
+        flex-shrink: 0 !important;
+    }
+}
+
+@media (max-width: 768px) {
+    header.video-header .overlay-content h1 {
+        white-space: normal !important;
+        width: auto !important;
+    }
+}
     
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
