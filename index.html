@@ -2141,6 +2141,234 @@ h2,
   margin: 0 auto;
 }
 
+
+    /* =========================================
+   SECTION 2 — STYLE GÉNÉRAL
+========================================= */
+
+.section-two {
+    background: #8A5A4A;
+    padding: 55px 0 65px;
+}
+
+.section-two .info-section {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+/* Titre principal centré */
+.section-two .section-two-title {
+    width: 100%;
+    margin: 0 0 45px;
+    text-align: center;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    line-height: 1.08;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* Disposition ordinateur : image + texte */
+.section-two .info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 45px;
+    align-items: center;
+    width: 100%;
+    max-width: none;
+    margin: 0 auto;
+}
+
+/* Supprime les marges ajoutées aux cartes */
+.section-two .info-card {
+    min-width: 0;
+    margin: 0;
+}
+
+/* Image plus grande */
+.section-two .info-card:first-child img {
+    display: block;
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+/* Légende sous la photo */
+.section-two .image-caption {
+    width: 100%;
+    max-width: none;
+    margin: 24px 0 0;
+    text-align: left;
+    border-bottom-color: rgba(229, 182, 87, 0.55);
+}
+
+.section-two .image-caption span {
+    color: #E5B657 !important;
+    border-bottom-color: rgba(229, 182, 87, 0.55) !important;
+}
+
+/* Texte à droite */
+.section-two .problem-content {
+    max-width: 100%;
+}
+
+/* Sous-titre : plus petit que le titre principal */
+.section-two .section-two-subtitle {
+    margin: 0 0 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1.15;
+    font-weight: 400;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.section-two .section-two-subtitle em {
+    color: #FFFFFF !important;
+    font-size: 1em;
+    font-style: italic;
+    font-weight: 400;
+}
+
+/* Texte d'introduction */
+.section-two .problem-intro {
+    margin: 0 0 38px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #FFFFFF;
+}
+
+/* Liste */
+.section-two .problem-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.section-two .problem-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+}
+
+.section-two .problem-item span {
+    flex: 0 0 18px;
+    width: 18px;
+    color: #E5B657 !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.section-two .problem-item p,
+.section-two .problem-item p strong,
+.section-two .problem-item p b {
+    margin: 0;
+    color: #FFFFFF !important;
+    font-family: 'Euclid', sans-serif;
+    font-size: 18px !important;
+    font-weight: 400 !important;
+    line-height: 1.6;
+}
+
+/* =========================================
+   SECTION 2 — TABLETTE
+========================================= */
+
+@media (min-width: 769px) and (max-width: 1100px) {
+    .section-two .info-section {
+        padding: 0 28px;
+    }
+
+    .section-two .info-grid {
+        gap: 28px;
+    }
+
+    .section-two .info-card:first-child img {
+        height: 360px;
+    }
+
+    .section-two .section-two-subtitle {
+        font-size: 27px;
+    }
+
+    .section-two .problem-intro,
+    .section-two .problem-item p {
+        font-size: 16px !important;
+    }
+}
+
+/* =========================================
+   SECTION 2 — MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+    .section-two {
+        padding: 35px 0 40px;
+    }
+
+    .section-two .info-section {
+        padding: 0 22px;
+    }
+
+    /* Titre centré */
+    .section-two .section-two-title {
+        font-size: 32px;
+        line-height: 1.1;
+        margin-bottom: 28px;
+    }
+
+    /* Image au-dessus du texte */
+    .section-two .info-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .section-two .info-card:first-child img {
+        height: 260px;
+    }
+
+    .section-two .image-caption {
+        margin-top: 18px;
+    }
+
+    .section-two .section-two-subtitle {
+        font-size: 27px;
+        line-height: 1.15;
+        margin-bottom: 18px;
+    }
+
+    .section-two .problem-intro {
+        font-size: 16px;
+        line-height: 1.55;
+        margin-bottom: 25px;
+    }
+
+    .section-two .problem-list {
+        gap: 15px;
+    }
+
+    .section-two .problem-item {
+        gap: 12px;
+    }
+
+    .section-two .problem-item p,
+    .section-two .problem-item p strong,
+    .section-two .problem-item p b {
+        font-size: 16px !important;
+        line-height: 1.5;
+    }
+
+    /* Enlève les retours à la ligne forcés sur petit écran */
+    .section-two .problem-intro br,
+    .section-two .problem-item br {
+        display: none;
+    }
+}
+    
 /* Grille des blocs */
 .info-grid{
     display:grid;
@@ -4311,8 +4539,7 @@ Vous avez l'impression de beaucoup faire
                 <div class="problem-content">
 
         <h3 class="section-two-subtitle">
-                   Je vous aide à sortir la tête du guidon<br>
-                 <em>pour faire avancer ce qui compte.</em>
+                   Je vous aide à sortir la tête du guidon<br>pour faire avancer ce qui compte.
         </h3>
                     <p class="problem-intro">
                         Pas de solution toute prête. Nous partons de votre réalité et<br>de ce qui se joue aujourd'hui dans votre activité pour faire avancer les choses concrètement.
