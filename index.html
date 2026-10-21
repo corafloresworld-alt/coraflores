@@ -3826,7 +3826,313 @@ section.section-one {
     }
 }
 
-    
+
+
+
+/* =========================================
+   SECTION TÉMOIGNAGES — CORA FLORES
+========================================= */
+
+.temoignages-home {
+    --temo-cream: #F8F6F2;
+    --temo-green: #263F32;
+    --temo-gold: #D7B77C;
+    --temo-peach: #E8CEBC;
+
+    position: relative;
+    overflow: hidden;
+    background: var(--temo-cream);
+    color: var(--temo-green);
+    padding: 0 0 55px;
+}
+
+/* Transition depuis le fond vert des offres */
+.temoignages-transition {
+    width: 100%;
+    height: 90px;
+    margin-bottom: 8px;
+    background: var(--temo-green);
+}
+
+.temoignages-transition svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.temoignages-wave-left,
+.temoignages-wave-right {
+    fill: none;
+    stroke: var(--temo-gold);
+    stroke-width: 1.3;
+    vector-effect: non-scaling-stroke;
+}
+
+.temoignages-star {
+    fill: var(--temo-gold);
+    stroke: var(--temo-cream);
+    stroke-width: 2;
+    stroke-linejoin: round;
+    vector-effect: non-scaling-stroke;
+}
+
+/* Contenu principal */
+.temoignages-container {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.temoignages-heading {
+    text-align: center;
+    margin: 0 auto 38px;
+}
+
+.temoignages-label {
+    margin: 0 0 8px;
+    font-size: 13px;
+    letter-spacing: .12em;
+    font-weight: 500;
+}
+
+.temoignages-heading h2 {
+    margin: 0 0 10px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(34px, 3.4vw, 48px);
+    line-height: 1.1;
+    font-weight: 500;
+    color: var(--temo-green);
+}
+
+.temoignages-intro {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Carrousel */
+.temoignages-carousel {
+    overflow: hidden;
+}
+
+.temoignages-track {
+    display: flex;
+    align-items: stretch;
+    transition: transform .4s ease;
+    will-change: transform;
+}
+
+.temoignage-card {
+    flex: 0 0 33.333333%;
+    min-width: 0;
+    box-sizing: border-box;
+    padding: 0 24px 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-right: 1px solid rgba(38, 63, 50, .09);
+}
+
+.temoignage-card:last-child {
+    border-right: 0;
+}
+
+.temoignage-photo {
+    display: block;
+    width: 112px;
+    height: 112px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Rectangle pêche sous le portrait */
+.temoignage-type {
+    display: inline-block;
+    margin: 0 0 12px;
+    padding: 6px 16px;
+    background: var(--temo-peach);
+    color: var(--temo-green);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .08em;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
+
+.temoignage-contexte {
+    max-width: 360px;
+    min-height: 52px;
+    margin: 0 auto 12px;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.temoignage-separator {
+    display: block;
+    width: 48px;
+    height: 1px;
+    flex: 0 0 1px;
+    margin: 0 auto 20px;
+    background: rgba(38, 63, 50, .35);
+}
+
+/* Citation */
+.temoignage-card blockquote {
+    position: relative;
+    width: 100%;
+    max-width: 390px;
+    box-sizing: border-box;
+    margin: 0 auto 20px;
+    padding: 0 4px;
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.temoignage-author {
+    margin: auto 0 3px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+.temoignage-role {
+    margin: 0;
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+/* Flèches rondes et points */
+.temoignages-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 28px;
+}
+
+.temoignages-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border: 1px solid rgba(38, 63, 50, .55);
+    border-radius: 50%;
+    background: transparent;
+    color: var(--temo-green);
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.temoignages-arrow:hover {
+    background: var(--temo-green);
+    color: var(--temo-cream);
+}
+
+.temoignages-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.temoignages-dot {
+    width: 11px;
+    height: 11px;
+    padding: 0;
+    border: 1px solid #D9C9B9;
+    border-radius: 50%;
+    background: transparent;
+    cursor: pointer;
+}
+
+.temoignages-dot.is-active {
+    border-color: var(--temo-green);
+    background: var(--temo-green);
+}
+
+.temoignages-arrow:focus-visible,
+.temoignages-dot:focus-visible {
+    outline: 2px solid var(--temo-green);
+    outline-offset: 4px;
+}
+
+/* Tablette : deux cartes visibles */
+@media (min-width: 600px) and (max-width: 1000px) {
+    .temoignages-container {
+        padding: 0 28px;
+    }
+
+    .temoignage-card {
+        flex-basis: 50%;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+/* Mobile : une carte visible */
+@media (max-width: 599px) {
+    .temoignages-home {
+        padding-bottom: 42px;
+    }
+
+    .temoignages-transition {
+        height: 55px;
+    }
+
+    .temoignages-container {
+        padding: 0 22px;
+    }
+
+    .temoignages-heading {
+        margin-bottom: 30px;
+    }
+
+    .temoignages-heading h2 {
+        font-size: 34px;
+    }
+
+    .temoignages-intro {
+        font-size: 14px;
+    }
+
+    .temoignage-card {
+        flex-basis: 100%;
+        padding: 0 10px 8px;
+        border-right: 0;
+    }
+
+    .temoignage-photo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .temoignage-contexte {
+        min-height: 0;
+    }
+
+    .temoignages-controls {
+        gap: 20px;
+        margin-top: 22px;
+    }
+
+    .temoignages-arrow {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .temoignages-track {
+        transition: none;
+    }
+}
+
     
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
