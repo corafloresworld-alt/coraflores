@@ -3968,6 +3968,7 @@ section.section-one {
     margin: 0 auto 12px;
     font-size: 13px;
     line-height: 1.55;
+    color: #263f32;
 }
 
 .temoignage-separator {
@@ -7043,86 +7044,81 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.key === "Escape") closeMenu();
     });
 });
-</script>
 
 
 
-/* =========================================
-   TÉMOIGNAGES — CARROUSEL
-========================================= */
+  <script>
 (() => {
-    const track = document.getElementById('temoignages-track');
-    const prev = document.getElementById('temoignages-prev');
-    const next = document.getElementById('temoignages-next');
-    const dotsContainer = document.getElementById('temoignages-dots');
+  const track = document.getElementById('temoignages-track');
+  const prev = document.getElementById('temoignages-prev');
+  const next = document.getElementById('temoignages-next');
+  const dotsContainer = document.getElementById('temoignages-dots');
 
-    if (!track || !prev || !next || !dotsContainer) return;
+  if (!track || !prev || !next || !dotsContainer) return;
 
-    const cards = Array.from(
-        track.querySelectorAll('.temoignage-card')
-    );
-    const dots = Array.from(
-        dotsContainer.querySelectorAll('.temoignages-dot')
-    );
+  const cards = Array.from(track.querySelectorAll('.temoignage-card'));
+  const dots = Array.from(dotsContainer.querySelectorAll('.temoignages-dot'));
 
-    let index = 0;
+  let index = 0;
 
-    function visibleCards() {
-        if (window.matchMedia('(max-width: 599px)').matches) return 1;
-        if (window.matchMedia('(max-width: 1000px)').matches) return 2;
-        return 3;
-    }
+  function visibleCards() {
+    if (window.matchMedia('(max-width: 599px)').matches) return 1;
+    if (window.matchMedia('(max-width: 1000px)').matches) return 2;
+    return 3;
+  }
 
-    function maxIndex() {
-        return Math.max(0, cards.length - visibleCards());
-    }
+  function maxIndex() {
+    return Math.max(0, cards.length - visibleCards());
+  }
 
-    function render() {
-        index = Math.min(index, maxIndex());
+  function render() {
+    const max = maxIndex();
+    index = Math.max(0, Math.min(index, max));
 
-        const cardWidth = cards[0].getBoundingClientRect().width;
-        track.style.transform = `translateX(-${index * cardWidth}px)`;
-
-        dots.forEach((dot, i) => {
-            const active = i === index;
-            dot.classList.toggle('is-active', active);
-
-            if (active) {
-                dot.setAttribute('aria-current', 'true');
-            } else {
-                dot.removeAttribute('aria-current');
-            }
-        });
-
-        prev.disabled = index === 0;
-        next.disabled = index >= maxIndex();
-
-        prev.style.opacity = prev.disabled ? '.4' : '1';
-        next.style.opacity = next.disabled ? '.4' : '1';
-    }
-
-    prev.addEventListener('click', () => {
-        index = Math.max(0, index - 1);
-        render();
-    });
-
-    next.addEventListener('click', () => {
-        index = Math.min(maxIndex(), index + 1);
-        render();
-    });
+    const cardWidth = cards[0].getBoundingClientRect().width;
+    track.style.transform = `translateX(-${index * cardWidth}px)`;
 
     dots.forEach((dot, i) => {
-        dot.addEventListener('click', () => {
-            index = Math.min(i, maxIndex());
-            render();
-        });
+      const dotIndex = Math.round(i * max / Math.max(1, dots.length - 1));
+      const active = index === dotIndex;
+
+      dot.classList.toggle('is-active', active);
+
+      if (active) {
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.removeAttribute('aria-current');
+      }
     });
 
-    window.addEventListener('resize', render);
+    prev.disabled = index === 0;
+    next.disabled = index >= max;
+    prev.style.opacity = prev.disabled ? '.4' : '1';
+    next.style.opacity = next.disabled ? '.4' : '1';
+  }
 
+  prev.addEventListener('click', () => {
+    index--;
     render();
-})();
+  });
 
+  next.addEventListener('click', () => {
+    index++;
+    render();
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      index = Math.round(i * maxIndex() / Math.max(1, dots.length - 1));
+      render();
+    });
+  });
+
+  window.addEventListener('resize', render);
+
+  render();
+})();
+</script>
 
   
 </body>
