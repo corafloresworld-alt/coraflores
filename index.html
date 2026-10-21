@@ -3391,8 +3391,19 @@ section.section-one {
     margin-top: 8px;
     padding: 20px;
     background: rgba(255, 255, 255, .07);
-    border-left: 2px solid #E5B657;
+    border-left: none;
     border-radius: 2px;
+    position: relative;
+}
+
+.offre-testimonial::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 20px;
+    bottom: 20px;
+    width: 2px;
+    background: #E5B657;
 }
 
 .offre-testimonial-quote {
@@ -3778,7 +3789,6 @@ section.section-one {
     margin-top: 12px;
     margin-bottom: 24px;
     transform: translateY(-8px);
-    padding-bottom: 12px;
 
 }
 
