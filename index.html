@@ -4149,7 +4149,35 @@ section.section-one {
     font-weight: bold;
     line-height: 0;
 }
- 
+
+
+
+.temoignages-transition {
+    height: 25px;
+    background: #F7F3EA;
+    overflow: hidden;
+}
+
+.temoignages-transition svg {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: -25px;
+}
+
+
+.temoignages-transition {
+    height: 25px;
+    background: #F7F3EA;
+    overflow: hidden;
+}
+
+.temoignages-transition svg {
+    display: block;
+    width: 100%;
+    height: 50px;
+    margin-top: -25px;
+}
 
     
 /* ================================
@@ -6034,16 +6062,17 @@ Une collaboration dans la durée, au plus près de votre réalité : nous travai
 <section class="temoignages-home" id="temoignages">
 
   <!-- Transition crème : ligne courbe et étoile -->
-  <div class="temoignages-transition" aria-hidden="true">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
-      <path class="temoignages-wave-left"
-            d="M0,0 C300,0 480,8 720,78" />
-      <path class="temoignages-wave-right"
-            d="M720,78 C960,8 1140,0 1440,0" />
-      <path class="temoignages-star"
-            d="M720,51 L726,69 L744,78 L726,84 L720,100 L714,84 L696,78 L714,69 Z" />
-    </svg>
-  </div>
+
+<div class="temoignages-transition" aria-hidden="true">
+  <svg viewBox="0 0 1440 50" preserveAspectRatio="none">
+    <path d="M0 25 Q360 25 700 25"
+          fill="none" stroke="#D9B77A" stroke-width="1"/>
+    <path d="M740 25 Q1080 25 1440 25"
+          fill="none" stroke="#D9B77A" stroke-width="1"/>
+    <path d="M720 10 L724 21 L735 25 L724 29 L720 40 L716 29 L705 25 L716 21 Z"
+          fill="#D9B77A" stroke="#F7F3EA" stroke-width="1.5"/>
+  </svg>
+</div>
 
   <div class="temoignages-container">
 
