@@ -3847,34 +3847,38 @@ section.section-one {
 }
 
 /* Transition depuis le fond vert des offres */
+
+/* Transition élégante entre les offres et les témoignages */
 .temoignages-transition {
     width: 100%;
-    height: 90px;
-    margin-bottom: 8px;
-    background: var(--temo-green);
+    height: 80px;
+    margin: 0;
+    background: #263F32;
+    position: relative;
 }
 
 .temoignages-transition svg {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 80px;
+    overflow: visible;
 }
 
 .temoignages-wave-left,
 .temoignages-wave-right {
     fill: none;
-    stroke: var(--temo-gold);
-    stroke-width: 1.3;
+    stroke: #D7B77C;
+    stroke-width: 1.2;
     vector-effect: non-scaling-stroke;
 }
 
 .temoignages-star {
-    fill: var(--temo-gold);
-    stroke: var(--temo-cream);
+    fill: #D7B77C;
+    stroke: #F8F6F2;
     stroke-width: 2;
     stroke-linejoin: round;
-    vector-effect: non-scaling-stroke;
 }
+
 
 /* Contenu principal */
 .temoignages-container {
@@ -6063,16 +6067,18 @@ Une collaboration dans la durée, au plus près de votre réalité : nous travai
 
   <!-- Transition crème : ligne courbe et étoile -->
 
+
 <div class="temoignages-transition" aria-hidden="true">
-  <svg viewBox="0 0 1440 50" preserveAspectRatio="none">
-    <path d="M0 25 Q360 25 700 25"
-          fill="none" stroke="#D9B77A" stroke-width="1"/>
-    <path d="M740 25 Q1080 25 1440 25"
-          fill="none" stroke="#D9B77A" stroke-width="1"/>
-    <path d="M720 10 L724 21 L735 25 L724 29 L720 40 L716 29 L705 25 L716 21 Z"
-          fill="#D9B77A" stroke="#F7F3EA" stroke-width="1.5"/>
+  <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+    <path class="temoignages-wave-left"
+          d="M0,0 C300,0 480,8 720,78" />
+    <path class="temoignages-wave-right"
+          d="M720,78 C960,8 1140,0 1440,0" />
+    <path class="temoignages-star"
+          d="M720,51 L726,69 L744,78 L726,84 L720,100 L714,84 L696,78 L714,69 Z" />
   </svg>
 </div>
+
 
   <div class="temoignages-container">
 
