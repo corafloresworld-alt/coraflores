@@ -949,6 +949,94 @@ GALERIE CONTACT
     }
 
 
+
+/* CORRECTION DU MENU MES OFFRES SUR CONTACT */
+.navbar {
+    position: relative;
+    z-index: 9999;
+}
+
+.navbar-inner {
+    position: relative;
+}
+
+.offers-dropdown {
+    position: absolute !important;
+    top: calc(100% + 10px) !important;
+    right: 0 !important;
+    left: auto !important;
+    width: min(720px, calc(100vw - 32px)) !important;
+    padding: 26px 28px !important;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    box-sizing: border-box;
+    background: #f7f3eb;
+    color: #263f32;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.16);
+    z-index: 10000;
+}
+
+.offers-dropdown[hidden] {
+    display: none !important;
+}
+
+.offers-dropdown .offer-dropdown-item {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.offers-dropdown .offer-dropdown-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.offers-dropdown img.offer-thumbnail {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    max-width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.offers-dropdown .offer-dropdown-heading h3 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.offers-dropdown .offer-dropdown-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.offers-dropdown .offer-dropdown-link {
+    display: inline-block;
+    margin-top: 8px;
+}
+
+/* Affichage sur mobile */
+@media (max-width: 768px) {
+    .offers-dropdown {
+        position: fixed !important;
+        top: 80px !important;
+        left: 12px !important;
+        right: 12px !important;
+        width: auto !important;
+        grid-template-columns: 1fr;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+}
+
+
+  
     /* =================================
        FOOTER
     ================================= */
