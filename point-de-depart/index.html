@@ -1016,6 +1016,100 @@
 
 
 
+/* CORRECTION MENU MES OFFRES — DESKTOP */
+.offers-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: max(24px, calc((100vw - 1000px) / 2));
+    width: min(720px, calc(100vw - 32px));
+    padding: 26px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    box-sizing: border-box;
+    background: #f7f3eb;
+    color: #263f32;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.16);
+    z-index: 10000;
+}
+
+.offers-dropdown[hidden] {
+    display: none !important;
+}
+
+.offer-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.offer-dropdown-item + .offer-dropdown-item {
+    border-left: 1px solid rgba(65,87,69,0.2);
+    padding-left: 26px;
+}
+
+.offer-dropdown-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.offers-dropdown img.offer-thumbnail {
+    display: block;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    max-width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.offer-dropdown-heading h3 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.offer-dropdown-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.offer-dropdown-item .offer-details {
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.offer-dropdown-link {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Menu sur mobile */
+@media (max-width: 768px) {
+    .offers-dropdown {
+        position: fixed;
+        top: 80px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
+    .offer-dropdown-item + .offer-dropdown-item {
+        border-left: none;
+        border-top: 1px solid rgba(65,87,69,0.2);
+        padding-left: 0;
+        padding-top: 18px;
+    }
+}
+
 
     /* =================================
        FOOTER
