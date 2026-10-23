@@ -1011,278 +1011,6 @@
 
 
 
-/* =========================================
-   NOUVELLE NAVBAR — MES OFFRES
-========================================= */
-
-.navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100px;
-    z-index: 9999;
-    background: #263F32;
-    border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-
-.navbar-inner {
-    max-width: 1300px;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    padding: 10px 1.8rem 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.navbar-logo img {
-    height: 85px;
-    width: auto;
-    display: block;
-    transform: translateY(2px);
-}
-
-.navbar-links {
-    display: flex;
-    align-items: center;
-    gap: 2.5rem;
-    margin-left: auto;
-    flex-wrap: nowrap;
-}
-
-.navbar-links a {
-    color: #ffffff;
-    text-decoration: none;
-    font-size: 15.5px;
-    font-weight: 400;
-    letter-spacing: 0.04em;
-    transition: opacity 0.3s ease;
-}
-
-.navbar-links a:hover {
-    opacity: 0.7;
-}
-
-/* Lien actif : Mes offres */
-.navbar-links a.active {
-    text-decoration: underline;
-    text-underline-offset: 6px;
-    text-decoration-thickness: 1px;
-}
-
-.navbar-links .cta {
-    background: none;
-    padding: 0;
-    border-radius: 0;
-    font-weight: 400;
-}
-
-/* Bouton burger masqué sur ordinateur */
-.mobile-menu-toggle {
-    display: none;
-}
-
-/* =========================================
-   MENU DÉROULANT
-========================================= */
-
-.offers-dropdown {
-    position: absolute;
-    top: calc(100% + 10px);
-    right: max(24px, calc((100vw - 1000px) / 2));
-    width: min(620px, calc(100vw - 32px));
-    padding: 26px 28px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 26px;
-    background: #f7f3eb;
-    color: #263F32;
-    border-radius: 8px;
-    box-shadow: 0 12px 35px rgba(0,0,0,0.16);
-    z-index: 10000;
-}
-
-.offers-dropdown[hidden] {
-    display: none;
-}
-
-.offer-dropdown-item {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-}
-
-.offer-dropdown-item + .offer-dropdown-item {
-    border-left: 1px solid rgba(65,87,69,0.2);
-    padding-left: 24px;
-}
-
-.offer-dropdown-heading {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-}
-
-.offer-thumbnail {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.offer-dropdown-item h3 {
-    margin: 0;
-    font-size: 19px;
-    font-weight: 500;
-    line-height: 1.2;
-}
-
-.offer-dropdown-item p {
-    font-size: 14px;
-    line-height: 1.6;
-    margin: 0 0 10px;
-}
-
-.offer-dropdown-item .offer-details {
-    font-size: 12px;
-    opacity: 0.8;
-    margin-bottom: 18px;
-}
-
-.offer-dropdown-link {
-    color: #263F32 !important;
-    font-size: 12px;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    border-bottom: 1px solid #c5a46d;
-    padding-bottom: 4px;
-    align-self: flex-start;
-    margin-top: auto;
-}
-
-.offers-chevron {
-    display: inline-block;
-    margin-left: 4px;
-    transition: transform 0.2s ease;
-}
-
-.offers-toggle[aria-expanded="true"] .offers-chevron {
-    transform: rotate(180deg);
-}
-
-/* =========================================
-   NAVBAR — MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-    .navbar {
-        height: 72px;
-    }
-
-    body {
-        padding-top: 72px;
-    }
-
-    .navbar-inner {
-        padding: 0 20px;
-        justify-content: space-between;
-    }
-
-    .navbar-logo img {
-        height: 46px;
-    }
-
-    .navbar-links {
-        display: none;
-    }
-
-    .navbar-links.is-open {
-        display: flex;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0;
-        margin: 0;
-        padding: 1rem 20px 1.2rem;
-        background: #263F32;
-        box-sizing: border-box;
-        z-index: 10000;
-    }
-
-    .navbar-links.is-open a {
-        display: block;
-        width: 100%;
-        padding: 0.7rem 0;
-        color: #ffffff;
-    }
-
-    .mobile-menu-toggle {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        gap: 5px;
-        width: 40px;
-        height: 40px;
-        padding: 0;
-        margin-left: auto;
-        border: none;
-        background: transparent;
-        cursor: pointer;
-    }
-
-    .mobile-menu-toggle span {
-        display: block;
-        width: 23px;
-        height: 1px;
-        background: #ffffff;
-    }
-
-    .offers-dropdown {
-        position: fixed;
-        top: 80px;
-        left: 12px;
-        right: 12px;
-        width: auto;
-        padding: 20px;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-    }
-
-    .offer-dropdown-item + .offer-dropdown-item {
-        border-left: none;
-        border-top: 1px solid rgba(65,87,69,0.2);
-        padding-left: 0;
-        padding-top: 18px;
-    }
-
-    .offer-dropdown-item h3 {
-        font-size: 19px;
-    }
-}
-
-
-  
-.navbar-links {
-    list-style: none;
-}
-
-.navbar-links::after,
-.navbar-links a::after {
-    content: none !important;
-}
-
 
     /* =================================
        FOOTER
@@ -1438,33 +1166,36 @@ video {
 
 <body>
 
+
 <!-- NAVBAR -->
-<header class="navbar">
+<nav class="navbar">
   <div class="navbar-inner">
 
-    <!-- LOGO -->
+    <!-- Logo -->
     <a href="/" class="navbar-logo">
       <img src="/assets/images/sign_blanc3.png" alt="Cora Flores">
     </a>
 
-    <!-- LIENS -->
-    <nav class="navbar-links">
+    <!-- Espace central -->
+    <div class="navbar-info">
+      <div class="announcement">
+        <span>OUVERTURES DES RÉSERVATIONS 2026 – PLACES LIMITÉES</span>
+      </div>
+    </div>
 
-      <a href="/point-de-depart/" class="offers-toggle active"
+    <!-- Liens -->
+    <div class="navbar-links">
+      <a href="#" class="offers-toggle active"
          aria-expanded="false"
          aria-controls="offers-dropdown">
         Mes offres <span class="offers-chevron">⌄</span>
       </a>
-
       <a href="/apropos/">À propos</a>
-
       <a href="/contact/" class="cta">Contact</a>
+    </div>
 
-    </nav>
-
-    <!-- MENU DÉROULANT MES OFFRES -->
+    <!-- Menu déroulant -->
     <div class="offers-dropdown" id="offers-dropdown" hidden>
-
       <div class="offer-dropdown-item">
         <div class="offer-dropdown-heading">
           <img src="/assets/images/approche.png" alt="" class="offer-thumbnail">
@@ -1490,18 +1221,18 @@ video {
           Découvrir les missions →
         </a>
       </div>
-
     </div>
 
-    <!-- BOUTON MOBILE -->
-    <button class="mobile-menu-toggle" type="button"
-            aria-label="Ouvrir le menu" aria-expanded="false">
+    <!-- Bouton mobile -->
+    <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu">
       <span></span>
       <span></span>
       <span></span>
     </button>
 
   </div>
+</nav>
+
 </header>
 
 
