@@ -1027,13 +1027,14 @@
 }
 
 .navbar-inner {
-    position: relative;
     max-width: 1300px;
+    width: 100%;
     height: 100%;
     margin: 0 auto;
     padding: 10px 1.8rem 0;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     gap: 2rem;
 }
 
@@ -1047,7 +1048,7 @@
 .navbar-links {
     display: flex;
     align-items: center;
-    gap: 3.5rem;
+    gap: 2.5rem;
     margin-left: auto;
     flex-wrap: nowrap;
 }
@@ -1273,6 +1274,15 @@
 
 
   
+.navbar-links {
+    list-style: none;
+}
+
+.navbar-links::after,
+.navbar-links a::after {
+    content: none !important;
+}
+
 
     /* =================================
        FOOTER
