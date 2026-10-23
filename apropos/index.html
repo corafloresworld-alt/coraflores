@@ -765,6 +765,93 @@ video {
 }
 
 
+/* MENU DÉROULANT MES OFFRES — À PROPOS */
+.navbar-inner {
+    position: relative;
+}
+
+.offers-dropdown {
+    position: fixed;
+    top: 105px;
+    right: max(24px, calc((100vw - 1000px) / 2));
+    left: auto;
+    width: min(620px, calc(100vw - 32px));
+    padding: 26px 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 26px;
+    box-sizing: border-box;
+    background: #f7f3eb;
+    color: #263f32;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
+    z-index: 10000;
+}
+
+.offers-dropdown[hidden] {
+    display: none !important;
+}
+
+.offers-dropdown .offer-dropdown-item {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.offers-dropdown .offer-dropdown-item + .offer-dropdown-item {
+    border-left: 1px solid rgba(65, 87, 69, 0.2);
+    padding-left: 24px;
+}
+
+.offers-dropdown .offer-dropdown-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.offers-dropdown img.offer-thumbnail {
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    max-width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.offers-dropdown h3,
+.offers-dropdown p,
+.offers-dropdown a {
+    color: #263f32 !important;
+}
+
+.offers-dropdown .offer-dropdown-link {
+    display: inline-block;
+    margin-top: 8px;
+    align-self: flex-start;
+}
+
+@media (max-width: 768px) {
+    .offers-dropdown {
+        position: fixed;
+        top: 80px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px;
+        gap: 20px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
+    .offers-dropdown .offer-dropdown-item + .offer-dropdown-item {
+        border-left: none;
+        border-top: 1px solid rgba(65, 87, 69, 0.2);
+        padding: 18px 0 0;
+    }
+}
+
 
 </style>
 </head>
@@ -939,24 +1026,6 @@ video {
  </div>
 
 </main>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".mobile-menu-toggle");
-    const menu = document.querySelector(".navbar-links");
-
-    toggle.addEventListener("click", function () {
-        menu.classList.toggle("is-open");
-    });
-
-    menu.querySelectorAll("a").forEach(function (link) {
-        link.addEventListener("click", function () {
-            menu.classList.remove("is-open");
-        });
-    });
-});
-</script>
-
 
 
 <script>
