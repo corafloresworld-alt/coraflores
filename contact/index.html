@@ -949,6 +949,83 @@ GALERIE CONTACT
     }
 
 
+  
+    /* =================================
+       FOOTER
+    ================================= */
+
+.site-footer {
+    padding: 2rem 22px 1.8rem;
+    box-sizing: border-box;
+}
+
+    .footer-grid {
+        width: 100%;
+        max-width: none;
+
+        grid-template-columns: 1fr 1fr;
+        gap: 2.5rem 1.8rem;
+
+        padding-bottom: 2.5rem;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        width: 100%;
+    }
+
+    .footer-logo {
+        height: 40px;
+        margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+        font-size: .82rem;
+        line-height: 1.65;
+    }
+
+    .footer-column {
+        width: 100%;
+    }
+
+    .footer-column h3 {
+        font-size: .68rem;
+        margin-bottom: 1.2rem;
+    }
+
+    .footer-column a {
+        font-size: .82rem;
+        line-height: 1.5;
+        margin-bottom: .7rem;
+    }
+
+    .footer-social {
+        grid-column: 1 / -1;
+    }
+
+    .footer-social-links {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .footer-bottom {
+        width: 100%;
+        padding-top: 1.5rem;
+
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+
+        font-size: .68rem;
+    }
+
+    .footer-tagline {
+        text-align: left;
+    }
+}
+
+
+
 /* CORRECTION MENU MES OFFRES — CONTACT */
 .navbar {
     position: fixed !important;
@@ -1048,82 +1125,7 @@ GALERIE CONTACT
         padding: 18px 0 0;
     }
 }
-
-  
-    /* =================================
-       FOOTER
-    ================================= */
-
-.site-footer {
-    padding: 2rem 22px 1.8rem;
-    box-sizing: border-box;
-}
-
-    .footer-grid {
-        width: 100%;
-        max-width: none;
-
-        grid-template-columns: 1fr 1fr;
-        gap: 2.5rem 1.8rem;
-
-        padding-bottom: 2.5rem;
-    }
-
-    .footer-brand {
-        grid-column: 1 / -1;
-        width: 100%;
-    }
-
-    .footer-logo {
-        height: 40px;
-        margin-bottom: 1rem;
-    }
-
-    .footer-brand p {
-        font-size: .82rem;
-        line-height: 1.65;
-    }
-
-    .footer-column {
-        width: 100%;
-    }
-
-    .footer-column h3 {
-        font-size: .68rem;
-        margin-bottom: 1.2rem;
-    }
-
-    .footer-column a {
-        font-size: .82rem;
-        line-height: 1.5;
-        margin-bottom: .7rem;
-    }
-
-    .footer-social {
-        grid-column: 1 / -1;
-    }
-
-    .footer-social-links {
-        flex-direction: row;
-        gap: 1.5rem;
-    }
-
-    .footer-bottom {
-        width: 100%;
-        padding-top: 1.5rem;
-
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
-
-        font-size: .68rem;
-    }
-
-    .footer-tagline {
-        text-align: left;
-    }
-}
-
+    
 
 /* ================================
    PETITS TÉLÉPHONES
@@ -1502,16 +1504,6 @@ Une question, une idée, un besoin précis…<br>ou simplement envie d'échanger
 
 </footer>
 
-  <script>
-document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".mobile-menu-toggle");
-    const menu = document.querySelector(".navbar-links");
-
-    toggle.addEventListener("click", function () {
-        menu.classList.toggle("is-open");
-    });
-});
-</script>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
