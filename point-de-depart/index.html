@@ -387,10 +387,11 @@
    /* Les 8 éléments du bandeau */
 
 .point-includes-grid {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 40px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 .include-item {
