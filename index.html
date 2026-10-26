@@ -2305,22 +2305,40 @@ h2,
     color: #FFFFFF;
 }
 
-/* 5 colonnes sur grand écran */
+
+/* EXEMPLES CONCRETS — PHOTO + TEXTE */
 
 .concret-examples-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     column-gap: 24px;
-    row-gap: 22px;
+    row-gap: 24px;
 }
 
 .concret-example {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+}
+
+.concret-example img {
+    display: block;
+    flex: 0 0 42%;
+    width: 42%;
+    aspect-ratio: 1.25 / 1;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.concret-example > div {
+    flex: 1;
     min-width: 0;
 }
 
 .concret-example span {
     display: block;
-    margin-bottom: 7px;
+    margin: 0 0 7px;
     font-family: 'Cormorant Garamond', serif;
     font-size: 23px;
     line-height: 1;
@@ -2330,126 +2348,52 @@ h2,
 .concret-example p {
     margin: 0;
     font-family: 'Euclid', sans-serif;
-    font-size: 16px;
-    line-height: 1.45;
+    font-size: 15px;
+    line-height: 1.4;
     color: #FFFFFF;
 }
 
-/* Phrase de transition */
-
-.concret-section .section-two-transition {
-    width: 100%;
-    margin: 35px 0 0;
-    padding: 25px 0 0;
-    border-top: 1px solid rgba(229, 182, 87, 0.45);
-    text-align: center;
-}
-
-.concret-section .section-two-transition p {
-    margin: 0;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    line-height: 1.25;
-    font-weight: 400;
-    color: #FFFFFF;
-}
-
-/* Tablette */
+/* TABLETTE */
 
 @media (max-width: 1100px) {
-    .concret-top {
-        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
-        gap: 32px;
-    }
-
-    .concret-title {
-        font-size: 36px;
-    }
-
-    .concret-photo img {
-        height: 330px;
-    }
-
     .concret-examples-grid {
         grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 20px;
+        row-gap: 22px;
     }
 }
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 768px) {
-    .concret-section {
-        padding: 40px 0;
-    }
-
-    .concret-container {
-        padding: 0 22px;
-    }
-
-    .concret-top {
-        grid-template-columns: 1fr;
-        gap: 28px;
-    }
-
-    .concret-label {
-        margin-bottom: 22px;
-    }
-
-    .concret-title {
-        font-size: 34px;
-        line-height: 1.1;
-    }
-
-    .concret-intro {
-        font-size: 16px;
-    }
-
-    .concret-points li {
-        font-size: 16px;
-    }
-
-    .concret-photo {
-        max-width: 100%;
-        justify-self: stretch;
-    }
-
-    .concret-photo img {
-        height: 260px;
-    }
-
-    .concret-examples {
-        margin-top: 30px;
-        padding-top: 20px;
-    }
-
-    .concret-examples h3 {
-        font-size: 25px;
-        margin-bottom: 20px;
-    }
-
     .concret-examples-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        column-gap: 20px;
-        row-gap: 20px;
+        column-gap: 16px;
+        row-gap: 22px;
+    }
+
+    .concret-example {
+        gap: 9px;
+    }
+
+    .concret-example img {
+        flex-basis: 38%;
+        width: 38%;
+        aspect-ratio: 1 / 1;
     }
 
     .concret-example span {
-        font-size: 21px;
+        font-size: 20px;
+        margin-bottom: 5px;
     }
 
     .concret-example p {
-        font-size: 15px;
-    }
-
-    .concret-section .section-two-transition {
-        margin-top: 30px;
-        padding-top: 22px;
-    }
-
-    .concret-section .section-two-transition p {
-        font-size: 24px;
+        font-size: 13px;
+        line-height: 1.35;
+        overflow-wrap: anywhere;
     }
 }
+
 
     
 /* Grille des blocs */
@@ -5936,65 +5880,60 @@ Vous avez l'impression de beaucoup faire
     </div>
 
     <!-- SÉPARATION ET EXEMPLES -->
-    <div class="concret-examples">
+  
+<div class="concret-examples-grid">
 
-      <h3>Des exemples concrets de ce que je peux faire avec vous</h3>
-
-      <div class="concret-examples-grid">
-
-        <div class="concret-example">
-          <span>01</span>
-          <p>Trouver de nouveaux clients</p>
-        </div>
-
-        <div class="concret-example">
-          <span>02</span>
-          <p>Refaire vos supports commerciaux</p>
-        </div>
-
-        <div class="concret-example">
-          <span>03</span>
-          <p>Organiser vos réseaux sociaux</p>
-        </div>
-
-        <div class="concret-example">
-          <span>04</span>
-          <p>Améliorer votre site internet</p>
-        </div>
-
-        <div class="concret-example">
-          <span>05</span>
-          <p>Structurer le suivi de vos clients</p>
-        </div>
-
-        <div class="concret-example">
-          <span>06</span>
-          <p>Débloquer un projet qui stagne</p>
-        </div>
-
-        <div class="concret-example">
-          <span>07</span>
-          <p>Trouver de nouveaux canaux de vente</p>
-        </div>
-
-        <div class="concret-example">
-          <span>08</span>
-          <p>Lancer une nouvelle offre</p>
-        </div>
-
-        <div class="concret-example">
-          <span>09</span>
-          <p>Simplifier votre organisation</p>
-        </div>
-
-        <div class="concret-example">
-          <span>10</span>
-          <p>Clarifier une offre difficile à vendre</p>
-        </div>
-
-      </div>
-
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-01.jpg" alt="">
+        <div><span>01</span><p>Trouver de nouveaux clients</p></div>
     </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-02.jpg" alt="">
+        <div><span>02</span><p>Reprendre vos supports commerciaux</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-03.jpg" alt="">
+        <div><span>03</span><p>Organiser vos réseaux sociaux</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-04.jpg" alt="">
+        <div><span>04</span><p>Améliorer votre site internet</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-05.jpg" alt="">
+        <div><span>05</span><p>Structurer le suivi de vos clients</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-06.jpg" alt="">
+        <div><span>06</span><p>Débloquer un projet qui stagne</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-07.jpg" alt="">
+        <div><span>07</span><p>Développer de nouvelles opportunités</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-08.jpg" alt="">
+        <div><span>08</span><p>Lancer une nouvelle offre</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-09.jpg" alt="">
+        <div><span>09</span><p>Simplifier votre organisation</p></div>
+    </div>
+
+    <div class="concret-example">
+        <img src="/assets/images/photo-exemple-10.jpg" alt="">
+        <div><span>10</span><p>Clarifier une offre difficile à vendre</p></div>
+    </div>
+
+</div>
 
     <!-- PHRASE DE TRANSITION CONSERVÉE -->
     <div class="section-two-transition">
