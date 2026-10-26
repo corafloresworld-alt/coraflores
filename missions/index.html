@@ -1357,6 +1357,137 @@ video {
 
     
     
+  
+/* ================================
+   MISSIONS PONCTUELLES — PAGE SIMPLIFIÉE
+================================ */
+.missions-hero {
+  min-height: 430px;
+  display: flex;
+  align-items: center;
+  background: #DDD2C3;
+  color: #344535;
+}
+.missions-hero-inner {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 72px 4%;
+}
+.missions-hero .image-caption {
+  display: inline-block;
+  color: #A66B50;
+  font-size: .78rem;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin-bottom: 1.1rem;
+}
+.missions-hero h1 {
+  max-width: 760px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.7rem, 5vw, 4.2rem);
+  font-weight: 400;
+  line-height: 1.02;
+  margin: 0 0 1.2rem;
+}
+.missions-hero p {
+  max-width: 620px;
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #46413A;
+}
+.missions-hero .hero-start-btn { margin-top: 24px; }
+.missions-tools {
+  background: #F3EEE6;
+  padding: 68px 0 76px;
+}
+.missions-tools-inner {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0 4%;
+}
+.missions-tools h2,
+.missions-contact h2 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #344535;
+  font-size: clamp(2.1rem, 3.5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  text-align: center;
+  margin: 0 0 16px;
+}
+.missions-tools-intro {
+  max-width: 650px;
+  margin: 0 auto 38px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4F5650;
+}
+.missions-tools-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+  align-items: center;
+  gap: clamp(28px, 5vw, 70px);
+}
+.missions-toolbox {
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+  height: auto;
+  object-fit: contain;
+}
+.missions-examples h3 {
+  font-family: 'Cormorant Garamond', serif;
+  color: #344535;
+  font-size: 1.8rem;
+  font-weight: 500;
+  margin: 0 0 18px;
+}
+.missions-examples ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px 18px;
+}
+.missions-examples li {
+  border-top: 1px solid rgba(65,87,69,.28);
+  padding-top: 11px;
+  color: #46413A;
+  font-size: .98rem;
+  line-height: 1.45;
+}
+.missions-contact {
+  background: #DDD2C3;
+  padding: 54px 22px 64px;
+  text-align: center;
+}
+.missions-contact p {
+  max-width: 570px;
+  margin: 0 auto 22px;
+  color: #4F5650;
+  line-height: 1.65;
+}
+.missions-contact .point-final-button { margin-top: 2px; }
+@media (max-width: 768px) {
+  .missions-hero { min-height: 0; }
+  .missions-hero-inner { padding: 64px 22px 68px; }
+  .missions-hero h1 { font-size: 2.65rem; }
+  .missions-hero p { font-size: 1rem; }
+  .missions-tools { padding: 52px 0 58px; }
+  .missions-tools-inner { padding: 0 22px; }
+  .missions-tools-layout { grid-template-columns: 1fr; gap: 26px; }
+  .missions-toolbox { max-width: 480px; }
+  .missions-examples h3 { text-align: center; font-size: 1.65rem; }
+  .missions-examples ul { gap: 12px; }
+}
+@media (max-width: 480px) {
+  .missions-hero h1 { font-size: 2.35rem; }
+  .missions-tools h2, .missions-contact h2 { font-size: 2rem; }
+  .missions-examples ul { grid-template-columns: 1fr 1fr; gap: 10px 14px; }
+  .missions-examples li { font-size: .9rem; }
+}
+
   </style>
 
 </head>
@@ -1430,417 +1561,47 @@ video {
 
 
   <!-- CONTENU DE LA PAGE -->
-
-  <main>
-
-  <section class="point-header">
-
-  <div class="point-header-content">
-
-    <span class="image-caption">
-      MISSIONS PONCTUELLES
-    </span>
-
-    <h1>
-     Un sujet à faire avancer,<br> je m'en occupe pour vous
-    </h1>
-
-    <p class="header-subtitle">
-Je vous accompagne de manière ponctuelle et opérationnelle pour vous aider à passer de l'idée à l'action, sans perte de temps.    </p>
-
-
- 
-<a href="#point-steps" class="hero-start-btn">
-  Concrètement comment ça se passe ? →
-</a>
-
-    
-  </div>
-
-</section>
-
-
-
-<section class="point-steps" id="point-steps">
-
-  <div class="point-steps-inner">
-
-
-    <!-- 01 -->
-
-    <article class="point-step">
-
-
-         <div class="step-icon">
-        <img
-          src="/assets/images/icon-carnet.png"
-          alt="">
-      </div>
-      
-
-<div class="step-timeline">
-  <div class="step-number">01</div>
-</div>
-
-      
-      <div class="step-content">
-
-        <h2>Vous recevez votre Carnet de Route</h2>
-
-        <p>
-          Une fois votre inscription confirmée, vous recevez par e-mail la version numérique du Carnet de Route, ainsi que sa version papier,<br<envoyée à l'adresse postale que vous m'avez indiquée.
-        </p>
-
-        <p>
-          Vous travaillez ensuite sur la version qui vous convient le mieux.
-          <br>À l'intérieur : plus de 15 exercices et réflexions pour commencer
-          à observer, comprendre et clarifier votre activité.
-        </p>
-
-      </div>
-
-  
-
-    </article>
-
-
-    <!-- 02 -->
-
-    <article class="point-step">
-
-      <div class="step-icon">
-        <img
-          src="/assets/images/icon-reflexion.png"
-          alt=""
-        >
-      </div>
-
-<div class="step-timeline">
-  <div class="step-number">02</div>
-</div>
-      <div class="step-content">
-
-        <h2>Vous questionnez vos habitudes</h2>
-
-        <p>
-         À travers les exercices, vous prenez du recul sur votre activité et questionnez ce que vous faites parfois sans même y penser.<br>Peu à peu, de nouvelles questions émergent, des idées prennent forme et des pistes inattendues se dessinent.
-        </p>
-
-      </div>
-
-      
-
-    </article>
-
-
-    <!-- 03 -->
-
-    <article class="point-step">
-
- <div class="step-icon">
-        <img
-          src="/assets/images/icon-partage.png"
-          alt=""
-        >
-      </div>
-      
-<div class="step-timeline">
-  <div class="step-number">03</div>
-</div>
-      <div class="step-content">
-
-        <h2>On fixe notre premier échange</h2>
-
-        <p>
-Lorsque vous avez terminé votre Carnet de Route, ou suffisamment avancé dans votre réflexion, vous choisissez le créneau qui vous convient pour notre première séance, directement via mon agenda en ligne.<br>Vous me transmettez ensuite vos exercices et réflexions, en m'envoyant les pages complétées de votre Carnet ou votre version numérique.        </p>
-
-      </div>
-
-  
-
-    </article>
-
-
-    <!-- 04 -->
-
-    <article class="point-step">
-
-  <div class="step-icon">
-        <img
-          src="/assets/images/icon-analyse.png"
-          alt=""
-        >
-      </div>
-
-      
-<div class="step-timeline">
-  <div class="step-number">04</div>
-</div>
-      
-      <div class="step-content">
-
-        <h2>Je prépare notre échange</h2>
-
-        <p>
-         Avant notre rendez-vous, je prends le temps de découvrir votre activité, de relire vos réponses et d'observer ce qui ressort de vos réflexions. 
-        <p>
-Cela me permet de préparer notre échange et de déjà commencer à<br>identifier les sujets que nous allons approfondir ensemble.
-        </p>
-        </p>
-
-      </div>
-
-
-    </article>
-
-
-    <!-- 05 -->
-
-    <article class="point-step">
-
-       <div class="step-icon">
-        <img
-          src="/assets/images/icon-visio.png"
-          alt=""
-        >
-      </div>
-
-<div class="step-timeline">
-  <div class="step-number">05</div>
-</div>
-      
-      <div class="step-content">
-
-        <h2>On entre dans le vif du sujet</h2>
-
-        <p>
-          Pendant notre première séance en visio, nous reprenons ensemble
-          ce qui est ressorti de votre Carnet de Route.
-          <br>On approfondit, on décortique et on remet les choses dans leur contexte.
-        </p>
-
-      </div>
-
-    </article>
-
-
-    <!-- 06 -->
-
-    <article class="point-step">
-
-
-        <div class="step-icon">
-        <img
-          src="/assets/images/icon-feuille-route.png"
-          alt=""
-        >
-      </div>
-
-
-<div class="step-timeline">
-  <div class="step-number">06</div>
-</div>
-
-      
-      <div class="step-content">
-
-        <h2>On construit la suite</h2>
-
-        <p>
-        Après notre premier échange, je prépare votre feuille de route.<br>Lors d'une seconde séance, nous la reprenons ensemble pour clarifier vos priorités et définir les premières actions à mettre en place.
-        </p>
-
-
-
-      </div>
-
-    </article>
-
-
-    <!-- 07 -->
-
-   <article class="point-step point-step-bascule">
-
-  <div class="step-icon">
-    <img
-      src="/assets/images/icon-bascule.png"
-      alt=""
-    >
-  </div>
-
-     
-<div class="step-timeline">
-  <div class="step-number">07</div>
-</div>
-
-      
-      <div class="step-content">
-
-        <h2>Et après ?</h2>
-
-        <p>
-Vous repartez avec vos priorités et un plan d’action clair.
-        </p>
-
-        <p>
-Vous pouvez continuer en autonomie ou poursuivre à mes côtés avec un accompagnement plus opérationnel, sur devis.
-        </p>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</section>
-
-
-
-    <!-- ======================
-     CE QUE COMPRENNENT LES 89 €
-====================== -->
-
-<section class="point-includes">
-
-  <div class="point-includes-inner">
-
-    <h2>Bref, tout ce qu’il vous faut pour avancer.</h2>
-
-    <div class="point-includes-grid">
-
-      <!-- 1 -->
-      <div class="include-item">
-        <img src="/assets/images/include-carnet.png"
-             alt="Mon Carnet de Route">
-
-        <p>
-          <strong>Mon Carnet de Route</strong><br>
-          Plus de 15 exercices et réflexions.
-        </p>
-      </div>
-
-      <!-- 2 -->
-      <div class="include-item">
-        <img src="/assets/images/include-temps.png"
-             alt="Le temps nécessaire">
-
-        <p>
-          <strong>Le temps nécessaire</strong><br>
-          pour compléter le carnet et avancer
-          dans votre réflexion.
-        </p>
-      </div>
-
-      <!-- 3 -->
-      <div class="include-item">
-        <img src="/assets/images/include-analyse.png"
-             alt="Mon travail d'analyse">
-
-        <p>
-          <strong>Mon travail de préparation</strong><br>
-          et d'analyse avant notre échange.
-        </p>
-      </div>
-
-      <!-- 4 -->
-      <div class="include-item">
-        <img src="/assets/images/include-visio-1.png"
-             alt="Première séance individuelle">
-
-        <p>
-          <strong>Une première séance individuelle</strong><br>
-          en visio.
-        </p>
-      </div>
-
-      <!-- 5 -->
-      <div class="include-item">
-        <img src="/assets/images/include-travail.png"
-             alt="Mon travail après notre échange">
-
-        <p>
-          <strong>Mon travail après notre échange</strong><br>
-         pour analyser et structurer la suite.
-        </p>
-      </div>
-
-      <!-- 6 -->
-      <div class="include-item">
-        <img src="/assets/images/include-visio-2.png"
-             alt="Deuxième séance individuelle">
-
-        <p>
-          <strong>Une deuxième séance individuelle</strong><br>
-          de restitution.
-        </p>
-      </div>
-
-      <!-- 7 -->
-      <div class="include-item">
-        <img src="/assets/images/include-feuille-route.png"
-             alt="Feuille de route personnalisée">
-
-        <p>
-          <strong>Votre feuille de route</strong><br>
-          personnalisée.
-        </p>
-      </div>
-
-    
+<main>
+  <section class="missions-hero">
+    <div class="missions-hero-inner">
+      <span class="image-caption">MISSIONS PONCTUELLES</span>
+      <h1>Un sujet à faire avancer.<br>On s’en occupe ensemble.</h1>
+      <p>Besoin d’un coup de main sur un sujet précis ? Je vous aide à passer à l’action, concrètement et sans vous engager dans un accompagnement au long cours.</p>
+      <a href="/contact/" class="hero-start-btn">Parlons de votre besoin →</a>
     </div>
+  </section>
 
-  </div>
+  <section class="missions-tools" id="sujets">
+    <div class="missions-tools-inner">
+      <h2>Sur quels sujets puis-je vous aider&nbsp;?</h2>
+      <p class="missions-tools-intro">De la prospection à la communication, des outils à l’organisation : nous ciblons le besoin et faisons avancer ce qui compte pour vous.</p>
 
-</section>
-    
+      <div class="missions-tools-layout">
+        <img class="missions-toolbox" src="/assets/images/les-outils.png" alt="Boîte à outils : web, partenariats, CRM, organisation, design, intelligence artificielle, tableaux de bord, prospection, communication et réseaux, ateliers et templates">
 
-<!-- =========================
-     ET APRÈS LE POINT DE DÉPART
-========================= -->
-
-<section class="point-next">
-  <div class="point-next-inner">
-
-    <h2>Et après ?</h2>
-
-   <p class="point-next-intro">
-  Le Point de Départ est une première étape pour y voir plus clair, définir vos priorités et savoir comment avancer.
-</p>
-
-    <div class="point-next-options">
-
-      <div class="point-next-option">
-        <h3>Continuer en autonomie</h3>
-        <p>
-          Vous avancez à votre rythme, avec votre feuille de route
-          et un cap plus clair.
-        </p>
+        <div class="missions-examples">
+          <h3>Quelques exemples de missions</h3>
+          <ul>
+            <li>Préparer une démarche de prospection</li>
+            <li>Développer des partenariats</li>
+            <li>Créer des supports de communication</li>
+            <li>Organiser vos contenus et réseaux sociaux</li>
+            <li>Améliorer une page de votre site</li>
+            <li>Mettre en place un tableau de suivi ou un CRM</li>
+            <li>Clarifier une offre ou préparer son lancement</li>
+            <li>Simplifier votre organisation et vos outils</li>
+          </ul>
+        </div>
       </div>
-
-      <div class="point-next-option">
-        <h3>Poursuivre ensemble</h3>
-        <p>
-          Si vous souhaitez aller plus loin, nous pouvons prolonger
-          le travail dans la durée : un accompagnement opérationnel,
-          au plus près de votre activité, pour transformer vos priorités
-          en actions concrètes.
-        </p>
-        <p>
-          Je deviens alors une véritable partenaire à vos côtés,
-          un bras droit sur lequel vous appuyer. <br>La suite se construit selon vos besoins, sur devis.
-
-
-        </p>
-      </div>
-
     </div>
+  </section>
 
-
-
-  </div>
-</section>
-
+  <section class="missions-contact">
+    <h2>Vous avez un sujet en tête&nbsp;?</h2>
+    <p>Expliquez-moi ce que vous souhaitez faire avancer. Nous verrons ensemble comment je peux vous aider.</p>
+    <a href="/contact/" class="point-final-button">Me contacter →</a>
+  </section>
+</main>
 
 
 <footer class="site-footer">
