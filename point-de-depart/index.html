@@ -1090,13 +1090,15 @@
 }
 
 .point-next-intro {
-  max-width: 700px;
+  max-width: none;
+  width: 100%;
   margin: 0 auto 38px;
   color: #4F5650;
   font-size: 1rem;
   line-height: 1.7;
+  text-align: center;
+  white-space: nowrap;
 }
-
 .point-next-options {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1125,7 +1127,9 @@
 }
 
 .point-next-note {
-  margin: 35px 0 0;
+  width: 100%;
+  margin: 35px auto 0;
+  text-align: center;
   font-size: 0.9rem;
   font-style: italic;
   color: #4F5650;
@@ -1136,6 +1140,10 @@
     padding: 0 22px 60px;
   }
 
+.point-next-intro {
+  white-space: normal;
+}
+  
   .point-next-intro {
     margin-bottom: 28px;
   }
@@ -1841,10 +1849,9 @@ Vous pouvez continuer en autonomie ou poursuivre à mes côtés avec un accompag
 
     <h2>Et après ?</h2>
 
-    <p class="point-next-intro">
-      Le Point de Départ est une première étape pour y voir plus clair,
-      définir vos priorités et savoir comment avancer.
-    </p>
+   <p class="point-next-intro">
+  Le Point de Départ est une première étape pour y voir plus clair, définir vos priorités et savoir comment avancer.
+</p>
 
     <div class="point-next-options">
 
