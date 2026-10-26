@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -7,7 +6,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Missions ponctuelles| Cora Flores</title>
+  <title>Les missions | Cora Flores</title>
 
   <link rel="icon" type="image/png" href="/favicon/logo-fav-cf.png">
 
@@ -34,7 +33,7 @@
     ====================== */
 
     :root {
-      --green: #415745;
+      --green: #263F32;
       --gold: #CF9F40;
       --cream: #DDD2C3;
       --text: #46413A;
@@ -74,16 +73,17 @@
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
+
 .navbar-inner {
-  max-width: 1300px;
-  height: 100%;
-
-  margin: 0 auto;
-  padding: 10px 1.8rem 0;
-
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+    max-width: 1300px;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 10px 1.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
 }
 
 
@@ -115,11 +115,15 @@
 
 /* Liens */
 
+
 .navbar-links {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+    margin-left: auto;
+    flex-wrap: nowrap;
 }
+
 
 .navbar-links a {
   color: #ffffff;
@@ -383,10 +387,11 @@
    /* Les 8 éléments du bandeau */
 
 .point-includes-grid {
-  display: grid;
-  grid-template-columns: repeat(8, 1fr);
-  gap: 40px;
-  align-items: start;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin-inline: auto;
 }
 
 .include-item {
@@ -436,19 +441,7 @@
   font-weight: 600;
 }
 
-/* =========================
-   ENCADRÉ FINAL / STRIPE
-========================= */
-
-.point-final {
-  position: relative;
-  z-index: 2;
-
-  background: #F3EEE6;
-
-  padding: 0 20px 85px;
-}
-
+    
 
 /* La carte */
 
@@ -504,6 +497,17 @@
 
   margin: 0 auto 22px;
 }
+
+.point-final-benefit {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+  font-weight: 500;
+  line-height: 1.2;
+  color: #344535;
+  max-width: 650px;
+  margin: 0 auto 18px;
+}
+
     
 .point-final-button {
   display: inline-block;
@@ -1011,6 +1015,9 @@
     }
 
 
+
+
+
     /* =================================
        FOOTER
     ================================= */
@@ -1045,6 +1052,201 @@
     }
 }
 
+
+/* =========================
+   ET APRÈS LE POINT DE DÉPART
+========================= */
+
+.point-next {
+  background: #F3EEE6;
+  padding: 10px 20px 90px;
+  color: #344535;
+}
+
+.point-next-inner {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.point-next h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 3vw, 2.7rem);
+  font-weight: 500;
+  line-height: 1.1;
+  margin: 0 0 18px;
+}
+
+.point-next-intro {
+  max-width: none;
+  width: 100%;
+  margin: 0 auto 38px;
+  color: #4F5650;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: center;
+  white-space: nowrap;
+}
+.point-next-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  text-align: left;
+}
+
+.point-next-option {
+  padding-top: 22px;
+  border-top: 1px solid #CF9F40;
+}
+
+.point-next-option h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.65rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.point-next-option p {
+  color: #4F5650;
+  font-size: 0.98rem;
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+.point-next .point-next-inner > .point-next-note {
+  display: block;
+  width: 100%;
+  max-width: none;
+  margin: 35px auto 0;
+  text-align: center !important;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: #4F5650;
+  clear: both;
+  position: relative;
+}
+
+@media (max-width: 600px) {
+  .point-next {
+    padding: 0 22px 60px;
+  }
+
+.point-next-intro {
+  white-space: normal;
+}
+  
+  .point-next-intro {
+    margin-bottom: 28px;
+  }
+
+  .point-next-options {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .point-next-option h3 {
+    font-size: 1.5rem;
+  }
+}
+
+    
+
+/* CORRECTION MENU MES OFFRES — DESKTOP */
+.offers-dropdown {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: max(24px, calc((100vw - 1000px) / 2));
+    width: min(720px, calc(100vw - 32px));
+    padding: 26px 28px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 26px;
+    box-sizing: border-box;
+    background: #f7f3eb;
+    color: #263f32;
+    border-radius: 8px;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.16);
+    z-index: 10000;
+}
+
+.offers-dropdown[hidden] {
+    display: none !important;
+}
+
+.offer-dropdown-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+}
+
+.offer-dropdown-item + .offer-dropdown-item {
+    border-left: 1px solid rgba(65,87,69,0.2);
+    padding-left: 26px;
+}
+
+.offer-dropdown-heading {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 10px;
+}
+
+.offers-dropdown img.offer-thumbnail {
+    display: block;
+    width: 50px !important;
+    height: 50px !important;
+    min-width: 50px;
+    max-width: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.offer-dropdown-heading h3 {
+    margin: 0;
+    font-size: 19px;
+    line-height: 1.2;
+}
+
+.offer-dropdown-item p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 0 0 10px;
+}
+
+.offer-dropdown-item .offer-details {
+    font-size: 12px;
+    margin-bottom: 18px;
+}
+
+.offer-dropdown-link {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Menu sur mobile */
+@media (max-width: 768px) {
+    .offers-dropdown {
+        position: fixed;
+        top: 80px;
+        left: 12px;
+        right: 12px;
+        width: auto;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        max-height: calc(100vh - 100px);
+        overflow-y: auto;
+    }
+
+    .offer-dropdown-item + .offer-dropdown-item {
+        border-left: none;
+        border-top: 1px solid rgba(65,87,69,0.2);
+        padding-left: 0;
+        padding-top: 18px;
+    }
+}
+
+    
 
 /* ================================
    PETITS TÉLÉPHONES
@@ -1162,48 +1364,69 @@ video {
 
 <body>
 
-  <!-- NAVBAR -->
 
-  <header class="navbar">
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="navbar-inner">
 
-    <div class="navbar-inner">
+    <!-- Logo -->
+    <a href="/" class="navbar-logo">
+      <img src="/assets/images/sign_blanc3.png" alt="Cora Flores">
+    </a>
 
-      <!-- LOGO -->
 
-      <a href="/" class="navbar-logo">
-        <img
-          src="/assets/images/sign_blanc3.png"
-          alt="Cora Flores"
-        >
+    <!-- Liens -->
+    <div class="navbar-links">
+      <a href="#" class="offers-toggle active"
+         aria-expanded="false"
+         aria-controls="offers-dropdown">
+        Mes offres <span class="offers-chevron">⌄</span>
       </a>
+      <a href="/apropos/">À propos</a>
+      <a href="/contact/" class="cta">Contact</a>
+    </div>
 
+    <!-- Menu déroulant -->
+    <div class="offers-dropdown" id="offers-dropdown" hidden>
+      <div class="offer-dropdown-item">
+        <div class="offer-dropdown-heading">
+          <img src="/assets/images/approche.png" alt="" class="offer-thumbnail">
+          <h3>Accompagnements</h3>
+        </div>
+        <p>Prendre du recul, clarifier et avancer ensemble.</p>
+        <p class="offer-details">FGDFGDD · FSFSFS</p>
+        <a href="/point-de-depart/" class="offer-dropdown-link">
+          Découvrir les accompagnements →
+        </a>
+      </div>
 
-      <!-- ESPACE CENTRAL -->
+      <div class="offer-dropdown-item">
+        <div class="offer-dropdown-heading">
+          <img src="/assets/images/mission-ponctuelle11.jpg" alt="" class="offer-thumbnail">
+          <h3>Mission ponctuelle</h3>
+        </div>
+        <p>Faire avancer un sujet précis.</p>
+        <p class="offer-details">
+          Commercial · Communication · Site web · Organisation
+        </p>
+        <a href="/missions/" class="offer-dropdown-link">
+          Découvrir les missions →
+        </a>
+      </div>
+    </div>
 
-      <div class="navbar-info"></div>
+    <!-- Bouton mobile -->
+    <button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
 
-
-      <!-- LIENS -->
-
-   <nav class="navbar-links">
-
-  <a href="/apropos/">À propos</a>
-
-  <a href="/#point-depart" class="active">Le Point de Départ</a>
-  
-  <a href="/#bascule">La Bascule</a>
-
-  <a href="/contact/">Contact</a>
-
+  </div>
 </nav>
 
-<button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
+</header>
 
-  </header>
 
 
   <!-- CONTENU DE LA PAGE -->
@@ -1215,30 +1438,31 @@ video {
   <div class="point-header-content">
 
     <span class="image-caption">
-     Missions ccvccc 
+      L'ACCOMPAGNEMENT
     </span>
 
     <h1>
-      Concrètement,qu'est-ce qui se passe<br>
-      quand on <em>commence</em> ?
+     Votre activité mérite<br> un nouveau regard.
     </h1>
 
     <p class="header-subtitle">
-     Avant d'aller plus loin, prenons le temps de comprendre où vous en êtes vraiment, 
-    ce qui se joue dans votre entreprise et, surtout, de savoir où aller ensuite.
+    Un temps pour comprendre votre situation, clarifier vos choix et construire la suite qui vous correspond.
     </p>
 
 
-    <a href="https://buy.stripe.com/6oU3cpcc26tu3w2ch6gjC00" class="hero-start-btn">
-  Commencer le point de départ · 89 € →
+ 
+<a href="#point-steps" class="hero-start-btn">
+  Concrètement comment ça se passe ? →
 </a>
+
     
   </div>
 
 </section>
 
 
-<section class="point-steps">
+
+<section class="point-steps" id="point-steps">
 
   <div class="point-steps-inner">
 
@@ -1297,10 +1521,10 @@ video {
 </div>
       <div class="step-content">
 
-        <h2>Vous changez de regard</h2>
+        <h2>Vous questionnez vos habitudes</h2>
 
         <p>
-         À travers les exercices, vous prenez du recul sur votre activité et questionnez ce que vous faites parfois sans même y penser.<br>Un vrai temps de réflexion pour regarder les choses autrement, ouvrir de nouvelles pistes de réflexion et provoquer des déclics. Un temps investi aujourd'hui pour mieux avancer demain.
+         À travers les exercices, vous prenez du recul sur votre activité et questionnez ce que vous faites parfois sans même y penser.<br>Peu à peu, de nouvelles questions émergent, des idées prennent forme et des pistes inattendues se dessinent.
         </p>
 
       </div>
@@ -1456,12 +1680,11 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
         <h2>Et après ?</h2>
 
         <p>
-          Vous repartez avec une vision plus claire, des priorités et une feuille de route pour continuer à avancer à votre manière.
+Vous repartez avec vos priorités et un plan d’action clair.
         </p>
 
         <p>
-      Et lorsque vient le moment de passer à l'action, nous pouvons poursuivre avec <strong>La Bascule</strong> : un accompagnement plus opérationnel, dans lequel je deviens un véritable partenaire à vos côtés.
-     
+Vous pouvez continuer en autonomie ou poursuivre à mes côtés avec un accompagnement plus opérationnel, sur devis.
         </p>
 
       </div>
@@ -1483,7 +1706,7 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
 
   <div class="point-includes-inner">
 
-    <h2>Ce que comprennent réellement les 89 €</h2>
+    <h2>Bref, tout ce qu’il vous faut pour avancer.</h2>
 
     <div class="point-includes-grid">
 
@@ -1565,16 +1788,7 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
         </p>
       </div>
 
-      <!-- 8 -->
-      <div class="include-item">
-        <img src="/assets/images/include-suite.png"
-             alt="Réflexion sur la suite">
-
-        <p>
-          La possibilité<br> <strong>d'aller plus loin </strong><br>avec La Bascule.
-        </p>
-      </div>
-
+    
     </div>
 
   </div>
@@ -1583,33 +1797,51 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
     
 
 <!-- =========================
-     ENCADRÉ FINAL / STRIPE
+     ET APRÈS LE POINT DE DÉPART
 ========================= -->
 
-<section class="point-final">
-  <div class="point-final-card">
+<section class="point-next">
+  <div class="point-next-inner">
 
-    <h2>Le Point de Départ</h2>
+    <h2>Et après ?</h2>
 
-    <div class="point-final-price">89 €</div>
+   <p class="point-next-intro">
+  Le Point de Départ est une première étape pour y voir plus clair, définir vos priorités et savoir comment avancer.
+</p>
 
-    <p class="point-final-text">
-      Le premier pas pour y voir plus clair et avancer avec confiance.
-    </p>
+    <div class="point-next-options">
 
-    <a 
-      href="https://buy.stripe.com/6oU3cpcc26tu3w2ch6gjC00"
-      class="point-final-button"
-    >
-      Commencer le Point de Départ
-    </a>
+      <div class="point-next-option">
+        <h3>Continuer en autonomie</h3>
+        <p>
+          Vous avancez à votre rythme, avec votre feuille de route
+          et un cap plus clair.
+        </p>
+      </div>
 
-    <p class="point-final-secure">
-      🔒 Paiement sécurisé par Stripe
-    </p>
+      <div class="point-next-option">
+        <h3>Poursuivre ensemble</h3>
+        <p>
+          Si vous souhaitez aller plus loin, nous pouvons prolonger
+          le travail dans la durée : un accompagnement opérationnel,
+          au plus près de votre activité, pour transformer vos priorités
+          en actions concrètes.
+        </p>
+        <p>
+          Je deviens alors une véritable partenaire à vos côtés,
+          un bras droit sur lequel vous appuyer. <br>La suite se construit selon vos besoins, sur devis.
+
+
+        </p>
+      </div>
+
+    </div>
+
+
 
   </div>
 </section>
+
 
 
 <footer class="site-footer">
@@ -1639,9 +1871,9 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
 
       <h3>NAVIGATION</h3>
 
-  <a href="/#point-depart">Le Point de Départ</a>
-<a href="/#bascule">La Bascule</a>
-<a href="/apropos/">À propos</a>
+ <a href="/point-de-depart/">Mes offres</a>
+      <a href="/apropos/">À propos</a>
+        <a href="/contact/">Contact</a>
       
     </div>
 
@@ -1651,7 +1883,6 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
 
       <h3>INFORMATIONS</h3>
 
-      <a href="mailto:bonjour@coraflores.com">Contact</a>
       <a href="/mentions-legales/">Mentions légales</a>
       <a href="/politique-confidentialite/">Politique de confidentialité</a>
 
@@ -1711,16 +1942,73 @@ Cela me permet de préparer notre échange et de déjà commencer à<br>identifi
 
 
 
-  <script>
+<script>
 document.addEventListener("DOMContentLoaded", function () {
-    const toggle = document.querySelector(".mobile-menu-toggle");
-    const menu = document.querySelector(".navbar-links");
 
-    toggle.addEventListener("click", function () {
-        menu.classList.toggle("is-open");
-    });
+    const burger = document.querySelector(".mobile-menu-toggle");
+    const menu = document.querySelector(".navbar-links");
+    const offersToggle = document.querySelector(".offers-toggle");
+    const dropdown = document.getElementById("offers-dropdown");
+
+    /* Ouvrir / fermer le menu mobile */
+    if (burger && menu) {
+        burger.addEventListener("click", function () {
+            const isOpen = menu.classList.toggle("is-open");
+            burger.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        menu.querySelectorAll("a:not(.offers-toggle)").forEach(function (link) {
+            link.addEventListener("click", function () {
+                menu.classList.remove("is-open");
+                burger.setAttribute("aria-expanded", "false");
+            });
+        });
+    }
+
+    /* Ouvrir / fermer Mes offres */
+    if (offersToggle && dropdown) {
+
+        function closeOffers() {
+            dropdown.hidden = true;
+            offersToggle.setAttribute("aria-expanded", "false");
+        }
+
+        offersToggle.addEventListener("click", function (event) {
+            event.preventDefault();
+
+            const isOpen =
+                offersToggle.getAttribute("aria-expanded") === "true";
+
+            dropdown.hidden = isOpen;
+            offersToggle.setAttribute("aria-expanded", String(!isOpen));
+        });
+
+        /* Fermer en cliquant à l'extérieur */
+        document.addEventListener("click", function (event) {
+            if (
+                !dropdown.contains(event.target) &&
+                !offersToggle.contains(event.target)
+            ) {
+                closeOffers();
+            }
+        });
+
+        /* Fermer après avoir choisi une offre */
+        dropdown.querySelectorAll("a").forEach(function (link) {
+            link.addEventListener("click", closeOffers);
+        });
+
+        /* Fermer avec la touche Échap */
+        document.addEventListener("keydown", function (event) {
+            if (event.key === "Escape") {
+                closeOffers();
+            }
+        });
+    }
+
 });
 </script>
+
 
 </body>
 
