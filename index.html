@@ -3061,11 +3061,11 @@ section.section-one {
 .offers-dropdown {
     position: absolute;
     top: calc(100% + 10px);
-    right: max(24px, calc((100vw - 1000px) / 2));
-    width: min(620px, calc(100vw - 32px));
+    right: 24px;
+    width: 710px;
     padding: 26px 28px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 26px;
     background: #f7f3eb;
     color: #263F32;
