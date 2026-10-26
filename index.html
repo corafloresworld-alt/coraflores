@@ -2165,16 +2165,18 @@ h2,
 }
 
 
-    /* =========================================
-   SECTION 2 — STYLE GÉNÉRAL
+  
+/* =========================================
+   CONCRÈTEMENT — NOUVELLE MISE EN PAGE
 ========================================= */
 
-.section-two {
+.concret-section {
     background: #8A5A4A;
-    padding: 55px 0 65px;
+    padding: 65px 0 55px;
+    color: #FFFFFF;
 }
 
-.section-two .info-section {
+.concret-container {
     width: 100%;
     max-width: 1480px;
     margin: 0 auto;
@@ -2182,215 +2184,273 @@ h2,
     box-sizing: border-box;
 }
 
-/* Titre principal centré */
-.section-two .section-two-title {
-    width: 100%;
-    margin: 0 0 45px;
-    text-align: center;
+/* Partie haute : texte à gauche, photo à droite */
 
+.concret-top {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    gap: 65px;
+    align-items: center;
+}
+
+.concret-content {
+    min-width: 0;
+}
+
+/* Petit titre doré et trait horizontal */
+
+.concret-label {
+    max-width: 680px;
+    margin-bottom: 28px;
+}
+
+.concret-label span {
+    display: block;
+    padding-bottom: 18px;
+    border-bottom: 1px solid rgba(229, 182, 87, 0.6);
+    font-family: 'Euclid', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #E5B657;
+}
+
+/* Grand titre */
+
+.concret-title {
+    margin: 0 0 24px;
     font-family: 'Cormorant Garamond', serif;
-    font-size: 38px;
+    font-size: 42px;
     line-height: 1.08;
     font-weight: 400;
     color: #FFFFFF;
 }
 
-/* Disposition ordinateur : image + texte */
-.section-two .info-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 45px;
-    align-items: center;
-    width: 100%;
-    max-width: none;
-    margin: 0 auto;
-}
-
-/* Supprime les marges ajoutées aux cartes */
-.section-two .info-card {
-    min-width: 0;
-    margin: 0;
-}
-
-/* Image plus grande */
-.section-two .info-card:first-child img {
+.concret-title span {
     display: block;
-    width: 100%;
-    height: 430px;
-    object-fit: cover;
 }
 
-/* Légende sous la photo */
-.section-two .image-caption {
-    width: 100%;
-    max-width: none;
-    margin: 24px 0 0;
-    text-align: left;
-    border-bottom-color: rgba(229, 182, 87, 0.55);
-}
+/* Texte introductif */
 
-.section-two .image-caption span {
-    color: #E5B657 !important;
-    border-bottom-color: rgba(229, 182, 87, 0.55) !important;
-}
-
-/* Texte à droite */
-.section-two .problem-content {
-    max-width: 100%;
-}
-
-/* Sous-titre : plus petit que le titre principal */
-.section-two .section-two-subtitle {
+.concret-intro {
     margin: 0 0 24px;
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 30px;
-    line-height: 1.15;
-    font-weight: 400;
-    text-align: left;
-    color: #FFFFFF;
-}
-
-.section-two .section-two-subtitle em {
-    color: #FFFFFF !important;
-    font-size: 1em;
-    font-style: italic;
-    font-weight: 400;
-}
-
-/* Texte d'introduction */
-.section-two .problem-intro {
-    margin: 0 0 38px;
+    font-family: 'Euclid', sans-serif;
     font-size: 18px;
     line-height: 1.6;
+    font-weight: 400;
     color: #FFFFFF;
 }
 
-/* Liste */
-.section-two .problem-list {
+/* Liste des actions */
+
+.concret-points {
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 10px;
 }
 
-.section-two .problem-item {
-    display: flex;
-    align-items: flex-start;
-    gap: 18px;
-}
-
-.section-two .problem-item span {
-    flex: 0 0 18px;
-    width: 18px;
-    color: #E5B657 !important;
-    font-size: 14px;
-    line-height: 1.6;
-}
-
-.section-two .problem-item p,
-.section-two .problem-item p strong,
-.section-two .problem-item p b {
-    margin: 0;
-    color: #FFFFFF !important;
+.concret-points li {
+    position: relative;
+    padding-left: 27px;
     font-family: 'Euclid', sans-serif;
-    font-size: 18px !important;
-    font-weight: 400 !important;
-    line-height: 1.6;
+    font-size: 17px;
+    line-height: 1.5;
+    color: #FFFFFF;
 }
 
-/* =========================================
-   SECTION 2 — TABLETTE
-========================================= */
+.concret-points li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 0;
+    color: #E5B657;
+    font-size: 17px;
+}
 
-@media (min-width: 769px) and (max-width: 1100px) {
-    .section-two .info-section {
-        padding: 0 28px;
+/* Photo du vélo */
+
+.concret-photo {
+    width: 100%;
+    max-width: 560px;
+    justify-self: end;
+}
+
+.concret-photo img {
+    display: block;
+    width: 100%;
+    height: 390px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+}
+
+/* Trait horizontal et exemples */
+
+.concret-examples {
+    margin-top: 35px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(229, 182, 87, 0.6);
+}
+
+.concret-examples h3 {
+    margin: 0 0 24px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 27px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* 5 colonnes sur grand écran */
+
+.concret-examples-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 22px;
+}
+
+.concret-example {
+    min-width: 0;
+}
+
+.concret-example span {
+    display: block;
+    margin-bottom: 7px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 23px;
+    line-height: 1;
+    color: #E5B657;
+}
+
+.concret-example p {
+    margin: 0;
+    font-family: 'Euclid', sans-serif;
+    font-size: 16px;
+    line-height: 1.45;
+    color: #FFFFFF;
+}
+
+/* Phrase de transition */
+
+.concret-section .section-two-transition {
+    width: 100%;
+    margin: 35px 0 0;
+    padding: 25px 0 0;
+    border-top: 1px solid rgba(229, 182, 87, 0.45);
+    text-align: center;
+}
+
+.concret-section .section-two-transition p {
+    margin: 0;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* Tablette */
+
+@media (max-width: 1100px) {
+    .concret-top {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+        gap: 32px;
     }
 
-    .section-two .info-grid {
-        gap: 28px;
+    .concret-title {
+        font-size: 36px;
     }
 
-    .section-two .info-card:first-child img {
-        height: 360px;
+    .concret-photo img {
+        height: 330px;
     }
 
-    .section-two .section-two-subtitle {
-        font-size: 27px;
-    }
-
-    .section-two .problem-intro,
-    .section-two .problem-item p {
-        font-size: 16px !important;
+    .concret-examples-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }
 
-/* =========================================
-   SECTION 2 — MOBILE
-========================================= */
+/* Mobile */
 
 @media (max-width: 768px) {
-    .section-two {
-        padding: 35px 0 40px;
+    .concret-section {
+        padding: 40px 0;
     }
 
-    .section-two .info-section {
+    .concret-container {
         padding: 0 22px;
     }
 
-    /* Titre centré */
-    .section-two .section-two-title {
-        font-size: 32px;
-        line-height: 1.1;
-        margin-bottom: 28px;
-    }
-
-    /* Image au-dessus du texte */
-    .section-two .info-grid {
+    .concret-top {
         grid-template-columns: 1fr;
         gap: 28px;
     }
 
-    .section-two .info-card:first-child img {
+    .concret-label {
+        margin-bottom: 22px;
+    }
+
+    .concret-title {
+        font-size: 34px;
+        line-height: 1.1;
+    }
+
+    .concret-intro {
+        font-size: 16px;
+    }
+
+    .concret-points li {
+        font-size: 16px;
+    }
+
+    .concret-photo {
+        max-width: 100%;
+        justify-self: stretch;
+    }
+
+    .concret-photo img {
         height: 260px;
     }
 
-    .section-two .image-caption {
-        margin-top: 18px;
+    .concret-examples {
+        margin-top: 30px;
+        padding-top: 20px;
     }
 
-    .section-two .section-two-subtitle {
-        font-size: 27px;
-        line-height: 1.15;
-        margin-bottom: 18px;
+    .concret-examples h3 {
+        font-size: 25px;
+        margin-bottom: 20px;
     }
 
-    .section-two .problem-intro {
-        font-size: 16px;
-        line-height: 1.55;
-        margin-bottom: 25px;
+    .concret-examples-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 20px;
+        row-gap: 20px;
     }
 
-    .section-two .problem-list {
-        gap: 15px;
+    .concret-example span {
+        font-size: 21px;
     }
 
-    .section-two .problem-item {
-        gap: 12px;
+    .concret-example p {
+        font-size: 15px;
     }
 
-    .section-two .problem-item p,
-    .section-two .problem-item p strong,
-    .section-two .problem-item p b {
-        font-size: 16px !important;
-        line-height: 1.5;
+    .concret-section .section-two-transition {
+        margin-top: 30px;
+        padding-top: 22px;
     }
 
-    /* Enlève les retours à la ligne forcés sur petit écran */
-    .section-two .problem-intro br,
-    .section-two .problem-item br {
-        display: none;
+    .concret-section .section-two-transition p {
+        font-size: 24px;
     }
 }
+
     
 /* Grille des blocs */
 .info-grid{
@@ -5835,84 +5895,113 @@ Vous avez l'impression de beaucoup faire
     </div>
 </section>
 
-<section class="section-two">
+<section class="section-two concret-section">
 
-  <div class="info-section">
+  <div class="concret-container">
 
-    <h2 class="section-two-title">Concrètement, on fait quoi ?</h2>
+    <!-- INTRODUCTION : TEXTE À GAUCHE, PHOTO À DROITE -->
+    <div class="concret-top">
 
-    <div class="info-grid">
+      <div class="concret-content">
 
-        <!-- IMAGE -->
-        <div class="info-card">
-
-            <img src="/assets/images/approche.png" alt="Approche">
-
-            <div class="image-caption">
-                <span>UNE APPROCHE SUR-MESURE</span>
-            </div>
-
+        <div class="concret-label">
+          <span>CONCRÈTEMENT, ON FAIT QUOI ?</span>
         </div>
 
-        <!-- TEXTE -->
-        <div class="info-card problem-card">
-          
-                <div class="problem-content">
+        <h2 class="concret-title">
+          Je vous aide à sortir la tête du guidon
+          <span>pour faire avancer ce qui compte.</span>
+        </h2>
 
-        <h3 class="section-two-subtitle">
-                   Je vous aide à sortir la tête du guidon<br>pour faire avancer ce qui compte.
-        </h3>
-                    <p class="problem-intro">
-                       Je ne pars pas d’une solution toute faite.<br>Je pars de votre réalité, de ce qui se passe aujourd’hui dans votre activité et de ce qui bloque ou mérite d’avancer.
-                    </p>
+        <p class="concret-intro">
+          Je ne pars pas d’une solution toute faite.
+          Je pars de votre réalité, de ce qui se passe aujourd’hui dans
+          votre activité et de ce qui bloque ou mérite d’avancer.
+        </p>
 
-                    <div class="problem-list">
+        <ul class="concret-points">
+          <li>Prendre le temps de regarder ce que vous n’avez plus le temps de regarder.</li>
+          <li>Faire le tri pour identifier ce qui mérite vraiment votre attention.</li>
+          <li>Chercher les bonnes solutions en fonction de votre situation.</li>
+          <li>Construire et mettre en place ce qui peut réellement faire avancer votre activité.</li>
+          <li>Passer du « il faudrait » à « on le fait » !</li>
+        </ul>
 
-                        <div class="problem-item">
-                            <span>✦</span>
-                            <p> Prendre le temps de regarder ce que vous n'avez plus le temps de regarder.</p>
-                        </div>
+      </div>
 
-                        <div class="problem-item">
-                            <span>✦</span>
-                            <p> Faire le tri pour identifier ce qui mérite vraiment votre attention</p>
-                        </div>
-
-                        <div class="problem-item">
-                            <span>✦</span>
-                            <p>Chercher les bonnes solutions en fonction de votre situation</p>
-                        </div>
-
-                        <div class="problem-item">
-                            <span>✦</span>
-                            <p>Construire et mettre en place ce qui peut réellement faire<br>avancer votre activité</p>
-                        </div>
-
-                              <div class="problem-item">
-                            <span>✦</span>
-                            <p>Passer du « il faudrait » à « on le fait » !</p>
-                        </div>
-
-                    </div>
-                    <!-- Fin de problem-list -->
-
-                </div>
-                <!-- Fin de problem-content -->
-
-            </div>
-            <!-- Fin de la carte texte -->
-
-        </div>
-        <!-- Fin de info-grid -->
-
-        <!-- TRANSITION : TRAVAILLER ENSEMBLE -->
-        <div class="on-part-de-la section-two-transition">
-            <p>Je ne travaille pas à côté de votre entreprise. Je travaille avec vous.</p>
-        </div>
+      <div class="concret-photo">
+        <img src="/assets/images/approche.png" alt="Vélo contre un mur ensoleillé">
+      </div>
 
     </div>
 
-    <!-- Fin de info-section -->
+    <!-- SÉPARATION ET EXEMPLES -->
+    <div class="concret-examples">
+
+      <h3>Des exemples concrets de ce que je peux faire avec vous</h3>
+
+      <div class="concret-examples-grid">
+
+        <div class="concret-example">
+          <span>01</span>
+          <p>Trouver de nouveaux clients</p>
+        </div>
+
+        <div class="concret-example">
+          <span>02</span>
+          <p>Reprendre vos supports commerciaux</p>
+        </div>
+
+        <div class="concret-example">
+          <span>03</span>
+          <p>Organiser vos réseaux sociaux</p>
+        </div>
+
+        <div class="concret-example">
+          <span>04</span>
+          <p>Améliorer votre site internet</p>
+        </div>
+
+        <div class="concret-example">
+          <span>05</span>
+          <p>Structurer le suivi de vos clients</p>
+        </div>
+
+        <div class="concret-example">
+          <span>06</span>
+          <p>Débloquer un projet qui stagne</p>
+        </div>
+
+        <div class="concret-example">
+          <span>07</span>
+          <p>Préparer une démarche de partenariat</p>
+        </div>
+
+        <div class="concret-example">
+          <span>08</span>
+          <p>Lancer une nouvelle offre</p>
+        </div>
+
+        <div class="concret-example">
+          <span>09</span>
+          <p>Simplifier votre organisation</p>
+        </div>
+
+        <div class="concret-example">
+          <span>10</span>
+          <p>Clarifier une offre difficile à vendre</p>
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PHRASE DE TRANSITION CONSERVÉE -->
+    <div class="section-two-transition">
+      <p>Je ne travaille pas à côté de votre entreprise. Je travaille avec vous.</p>
+    </div>
+
+  </div>
 
 </section>
 
