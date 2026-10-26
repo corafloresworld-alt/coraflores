@@ -1126,13 +1126,17 @@
   margin: 0 0 12px;
 }
 
-.point-next-note {
+.point-next .point-next-inner > .point-next-note {
+  display: block;
   width: 100%;
+  max-width: none;
   margin: 35px auto 0;
-  text-align: center;
+  text-align: center !important;
   font-size: 0.9rem;
   font-style: italic;
   color: #4F5650;
+  clear: both;
+  position: relative;
 }
 
 @media (max-width: 600px) {
