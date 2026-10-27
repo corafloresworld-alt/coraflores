@@ -1290,6 +1290,79 @@
 }
 
 
+
+/* DOMAINES D'INTERVENTION */
+.missions-domains {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+.mission-domain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  min-width: 0;
+}
+
+.mission-domain-icon {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+  padding: 16px;
+  border-radius: 50%;
+  background: #E8E1D5;
+  margin-bottom: 16px;
+}
+
+.mission-domain h3 {
+  font-family: 'Euclid', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.3;
+  color: var(--green);
+  margin: 0 0 12px;
+}
+
+.mission-domain p {
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text);
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .missions-domains {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 38px;
+  }
+}
+
+@media (max-width: 600px) {
+  .missions-domains {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 32px 20px;
+    margin-top: 34px;
+  }
+
+  .mission-domain-icon {
+    width: 66px;
+    height: 66px;
+    padding: 14px;
+  }
+
+  .mission-domain h3 {
+    font-size: 0.95rem;
+  }
+
+  .mission-domain p {
+    font-size: 0.85rem;
+  }
+}
+
+
 /* ================================
    PETITS TÉLÉPHONES
 ================================ */
@@ -1662,24 +1735,51 @@ video {
 <h2 class="section-title">Sur quels sujets puis-je vous aider ?</h2>
 
    
-      <div class="missions-tools-layout">
-        <img class="missions-toolbox" src="/assets/images/les-outils.png" alt="Boîte à outils : web, partenariats, CRM, organisation, design, intelligence artificielle, tableaux de bord, prospection, communication et réseaux, ateliers et templates">
 
-        <div class="missions-examples">
-          <h3>Quelques exemples de missions</h3>
-          <ul>
-            <li>Préparer une démarche de prospection</li>
-            <li>Développer des partenariats</li>
-            <li>Créer des supports de communication</li>
-            <li>Organiser vos contenus et réseaux sociaux</li>
-            <li>Améliorer une page de votre site</li>
-            <li>Mettre en place un tableau de suivi ou un CRM</li>
-            <li>Clarifier une offre ou préparer son lancement</li>
-            <li>Simplifier votre organisation et vos outils</li>
-          </ul>
-        </div>
-      </div>
-    </div>
+<p class="missions-tools-intro">
+  Du développement commercial à l’organisation, je vous aide à concrétiser vos projets et à faire avancer votre activité.
+</p>
+
+<div class="missions-domains">
+
+  <article class="mission-domain">
+    <img src="/assets/images/mission-commercial.png" alt="" class="mission-domain-icon">
+    <h3>Commercial</h3>
+    <p>Préparer une démarche de prospection, développer des partenariats et trouver de nouveaux clients.</p>
+  </article>
+
+  <article class="mission-domain">
+    <img src="/assets/images/mission-communication.png" alt="" class="mission-domain-icon">
+    <h3>Communication</h3>
+    <p>Créer des supports de communication, organiser vos contenus et préparer vos publications sur les réseaux sociaux.</p>
+  </article>
+
+  <article class="mission-domain">
+    <img src="/assets/images/mission-web.png" alt="" class="mission-domain-icon">
+    <h3>Web</h3>
+    <p>Améliorer une page de votre site, clarifier la présentation de vos offres et optimiser vos contenus web.</p>
+  </article>
+
+  <article class="mission-domain">
+    <img src="/assets/images/mission-organisation.png" alt="" class="mission-domain-icon">
+    <h3>Organisation</h3>
+    <p>Structurer votre organisation, créer des outils de suivi et simplifier vos processus de travail.</p>
+  </article>
+
+  <article class="mission-domain">
+    <img src="/assets/images/mission-lancement.png" alt="" class="mission-domain-icon">
+    <h3>Lancement de projet</h3>
+    <p>Préparer le lancement d’une offre, structurer les étapes et mettre en place un plan d’action.</p>
+  </article>
+
+  <article class="mission-domain">
+    <img src="/assets/images/mission-optimisation.png" alt="" class="mission-domain-icon">
+    <h3>Optimisation</h3>
+    <p>Clarifier une offre, améliorer vos supports et mettre en place des outils plus adaptés à vos besoins.</p>
+  </article>
+
+</div>
+
   </section>
 
   <section class="missions-contact">
