@@ -1342,7 +1342,7 @@
 .mission-domain h3 {
   font-family: 'Euclid', sans-serif;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 500;
   line-height: 1.3;
   color: var(--green);
   margin: 0 0 12px;
@@ -1671,6 +1671,90 @@ video {
   .missions-examples li { font-size: .9rem; }
 }
 
+  
+
+/* COLLABORATION CONCRÈTE ET FLEXIBLE */
+.missions-collaboration {
+  background: #F3EEE6;
+  padding: 72px 0 78px;
+}
+.missions-collaboration-inner {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 2%;
+}
+.missions-collaboration-eyebrow {
+  display: block;
+  width: fit-content;
+  color: var(--gold);
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+  margin: 0 0 18px;
+}
+.missions-collaboration-rule {
+  width: 410px;
+  max-width: 100%;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 0 32px;
+}
+.missions-collaboration-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .95fr) minmax(0, 1.25fr);
+  gap: clamp(32px, 4.5vw, 64px);
+  align-items: center;
+}
+.missions-collaboration-photo {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1.48 / 1;
+  object-fit: cover;
+  border-radius: 2px;
+}
+.missions-collaboration-points {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.missions-collaboration-points li {
+  position: relative;
+  padding-left: 24px;
+  color: #4F5650;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+.missions-collaboration-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: .68em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.missions-collaboration-points strong {
+  display: block;
+  color: var(--green);
+  font-size: 1.08rem;
+  font-weight: 700;
+  margin-bottom: 3px;
+}
+@media (max-width: 760px) {
+  .missions-collaboration { padding: 54px 0 60px; }
+  .missions-collaboration-inner { padding: 0 22px; }
+  .missions-collaboration-rule { width: 100%; max-width: 410px; margin-bottom: 26px; }
+  .missions-collaboration-grid { grid-template-columns: 1fr; gap: 28px; }
+  .missions-collaboration-photo { aspect-ratio: 1.55 / 1; }
+  .missions-collaboration-points { gap: 20px; }
+}
+
   </style>
 
 </head>
@@ -1805,6 +1889,43 @@ video {
 
 </div>
 
+  </section>
+
+
+
+  <section class="missions-collaboration" aria-label="Une collaboration concrète et flexible">
+    <div class="missions-collaboration-inner">
+      <span class="missions-collaboration-eyebrow">UNE COLLABORATION CONCRÈTE ET FLEXIBLE</span>
+      <div class="missions-collaboration-rule"></div>
+
+      <div class="missions-collaboration-grid">
+        <img
+          class="missions-collaboration-photo"
+          src="/assets/images/mission-collaboration.jpg"
+          alt="Une personne préparant un projet dans un carnet de notes à son bureau"
+          loading="lazy"
+        >
+
+        <ul class="missions-collaboration-points">
+          <li>
+            <strong>On échange sur votre besoin</strong>
+            Vous m’expliquez votre projet, vos objectifs et vos contraintes.
+          </li>
+          <li>
+            <strong>Nous définissons le cadre de la mission</strong>
+            Nous nous mettons d’accord sur le périmètre, les livrables, les délais et les priorités.
+          </li>
+          <li>
+            <strong>Je passe à l’action</strong>
+            Je réalise la mission en respectant le planning convenu et je vous tiens informé de l’avancement.
+          </li>
+          <li>
+            <strong>Vous validez le résultat final</strong>
+            Nous échangeons sur le rendu et j’effectue les ajustements nécessaires jusqu’à ce que le résultat vous convienne.
+          </li>
+        </ul>
+      </div>
+    </div>
   </section>
 
   <section class="missions-contact">
