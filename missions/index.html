@@ -1247,30 +1247,48 @@
 }
 
     
-/* Légende, titre et trait alignés à gauche */
+
+/* En-tête de la section Missions */
 .missions-tools .section-eyebrow {
   display: block;
+  width: fit-content;
+  color: var(--gold);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem;
   text-align: left;
 }
 
 .missions-tools .section-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.1rem, 3.5vw, 3rem);
+  font-weight: 500;
+  line-height: 1.1;
+  color: var(--green);
   text-align: left;
-  margin-left: 0;
+  margin: 0 0 18px;
 }
 
 .missions-tools .section-rule {
+  display: block;
   width: 42%;
   max-width: 360px;
-  margin-left: 0;
-  margin-right: auto;
+  height: 1px;
+  background-color: var(--gold);
+  margin: 0 0 22px;
 }
 
-/* Le texte d'introduction reste sous le titre, aligné à gauche */
 .missions-tools .missions-tools-intro {
   max-width: 650px;
   margin: 0 0 38px;
   text-align: left;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: #4F5650;
 }
+
 
 /* ================================
    PETITS TÉLÉPHONES
@@ -1462,10 +1480,13 @@ video {
   padding: 68px 0 76px;
 }
 .missions-tools-inner {
-  max-width: 1500px;
+  max-width: 1300px;
+  width: 100%;
   margin: 0 auto;
-  padding: 0 9%;
+  padding: 0 2%;
 }
+
+    
 .missions-tools h2,
 .missions-contact h2 {
   font-family: 'Cormorant Garamond', serif;
