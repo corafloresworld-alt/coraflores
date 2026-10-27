@@ -1361,19 +1361,55 @@ video {
 /* ================================
    MISSIONS PONCTUELLES — PAGE SIMPLIFIÉE
 ================================ */
+
 .missions-hero {
+  position: relative;
   min-height: 430px;
   display: flex;
   align-items: center;
-  background: #DDD2C3;
+  background-color: #DDD2C3;
+  background-image:
+    linear-gradient(
+      90deg,
+      rgba(221, 210, 195, 0.08) 0%,
+      rgba(221, 210, 195, 0) 58%
+    ),
+    url('/assets/images/bandeau-mission.png');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
   color: #344535;
 }
+
 .missions-hero-inner {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  max-width: 1180px;
+  max-width: 1500px;
   margin: 0 auto;
   padding: 72px 4%;
 }
+
+@media (max-width: 768px) {
+  .missions-hero {
+    min-height: 500px;
+    background-size: auto 100%;
+    background-position: 68% center;
+    background-color: #DDD2C3;
+  }
+
+  .missions-hero-inner {
+    padding: 60px 22px;
+  }
+}
+
+@media (max-width: 480px) {
+  .missions-hero {
+    min-height: 520px;
+    background-position: 70% center;
+  }
+}
+
 .missions-hero .image-caption {
   display: inline-block;
   color: #A66B50;
