@@ -1308,16 +1308,34 @@
 }
 
 
-.mission-domain-icon {
-  display: block;
-  width: 58px;
-  height: 58px;
-  padding: 0;
+.mission-domain-icon-wrap {
+  width: 76px;
+  height: 76px;
   margin: 0 auto 16px;
-  object-fit: contain;
-  flex-shrink: 0;
+  flex: 0 0 76px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 50%;
   background: #E8E1D5;
+  overflow: hidden;
+}
+
+/* Le cercle reste fixe ; seul le dessin est réduit pour ne plus être coupé. */
+.mission-domain-icon-wrap .mission-domain-icon {
+  display: block !important;
+  width: 68% !important;
+  height: 68% !important;
+  max-width: 68% !important;
+  max-height: 68% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  object-fit: contain !important;
+  object-position: center !important;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  flex: 0 0 auto;
 }
 
 
@@ -1351,10 +1369,17 @@
     margin-top: 34px;
   }
 
-  .mission-domain-icon {
-    width: 54px;
-    height: 54px;
-    padding: 0;
+  .mission-domain-icon-wrap {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+
+  .mission-domain-icon-wrap .mission-domain-icon {
+    width: 68% !important;
+    height: 68% !important;
+    max-width: 68% !important;
+    max-height: 68% !important;
   }
 
   .mission-domain h3 {
@@ -1743,37 +1768,37 @@ video {
 <div class="missions-domains">
 
   <article class="mission-domain">
-    <img src="/assets/images/mission-commercial.png" alt="" class="mission-domain-icon">
+    <span class="mission-domain-icon-wrap"><img src="/assets/images/mission-commercial.png" alt="" class="mission-domain-icon"></span>
     <h3>Commercial</h3>
     <p>Préparer une démarche de prospection, développer des partenariats et trouver de nouveaux clients.</p>
   </article>
 
   <article class="mission-domain">
-    <img src="/assets/images/mission-communication.png" alt="" class="mission-domain-icon">
+    <span class="mission-domain-icon-wrap"><img src="/assets/images/mission-communication.png" alt="" class="mission-domain-icon"></span>
     <h3>Communication</h3>
     <p>Créer des supports de communication, organiser vos contenus et préparer vos publications sur les réseaux sociaux.</p>
   </article>
 
   <article class="mission-domain">
-    <img src="/assets/images/mission-web.png" alt="" class="mission-domain-icon">
+    <span class="mission-domain-icon-wrap"><img src="/assets/images/mission-web.png" alt="" class="mission-domain-icon"></span>
     <h3>Web</h3>
     <p>Améliorer une page de votre site, clarifier la présentation de vos offres et optimiser vos contenus web.</p>
   </article>
 
   <article class="mission-domain">
-    <img src="/assets/images/mission-organisation.png" alt="" class="mission-domain-icon">
+    <span class="mission-domain-icon-wrap"><img src="/assets/images/mission-organisation.png" alt="" class="mission-domain-icon"></span>
     <h3>Organisation</h3>
     <p>Structurer votre organisation, créer des outils de suivi et simplifier vos processus de travail.</p>
   </article>
 
   <article class="mission-domain">
-    <img src="/assets/images/mission-lancement.png" alt="" class="mission-domain-icon">
+    <span class="mission-domain-icon-wrap"><img src="/assets/images/mission-lancement.png" alt="" class="mission-domain-icon"></span>
     <h3>Lancement de projet</h3>
     <p>Préparer le lancement d’une offre, structurer les étapes et mettre en place un plan d’action.</p>
   </article>
 
   <article class="mission-domain">
-    <img src="/assets/images/mission-optimisation.png" alt="" class="mission-domain-icon">
+    <span class="mission-domain-icon-wrap"><img src="/assets/images/mission-optimisation.png" alt="" class="mission-domain-icon"></span>
     <h3>Optimisation</h3>
     <p>Clarifier une offre, améliorer vos supports et mettre en place des outils plus adaptés à vos besoins.</p>
   </article>
