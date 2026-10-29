@@ -6113,6 +6113,59 @@ video {
     }
 }
 
+
+/* =========================================================
+   RÉACTIVER LA SECTION « À PROPOS » SUR LA PAGE D'ACCUEIL
+   Placée après « Ce qui change » et avant l'appel à l'action final.
+   Les autres sections .mission-section restent masquées.
+========================================================= */
+
+section.about-home-section {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    background: #D6C6AF;
+    padding: 30px 0 35px !important;
+}
+
+section.about-home-section .mission-container {
+    display: grid !important;
+    grid-template-columns: 1fr 0.95fr;
+    gap: 80px;
+    align-items: center;
+}
+
+section.about-home-section .mission-image,
+section.about-home-section .mission-content {
+    display: block !important;
+    min-width: 0;
+}
+
+section.about-home-section .mission-image img {
+    display: block !important;
+    width: 97%;
+    height: 330px;
+    max-height: none;
+    object-fit: cover;
+    object-position: center 15%;
+    border-radius: 2px;
+}
+
+/* La section reste confortable sur tablette et mobile */
+@media (max-width: 900px) {
+    section.about-home-section .mission-container {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    section.about-home-section .mission-image img {
+        width: 100%;
+        height: auto;
+        max-height: 420px;
+        object-fit: cover;
+    }
+}
+
 </style>
 </head>
 
