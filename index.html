@@ -4433,6 +4433,180 @@ section.section-one {
 }
    
 
+    /* =========================================
+   ACCUEIL — MES DOMAINES D’INTERVENTION
+========================================= */
+
+.home-domaines {
+    width: 100%;
+    background: #F8F6F2;
+    color: #263F32;
+    padding: 65px 0 75px;
+}
+
+.home-domaines-container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* EN-TÊTE */
+
+.home-domaines-heading {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.home-domaines-label {
+    margin: 0 0 18px;
+    font-family: 'Euclid', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #8A5A4A;
+}
+
+.home-domaines-heading h2 {
+    margin: 0 0 18px;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3.2vw, 44px);
+    line-height: 1.15;
+    font-weight: 500;
+    color: #263F32;
+}
+
+.home-domaines-intro {
+    max-width: 720px;
+    margin: 0 auto;
+    font-family: 'Euclid', sans-serif;
+    font-size: 17px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: #263F32;
+}
+
+/* GRILLE DES SIX DOMAINES */
+
+.home-domaines-grid {
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 24px;
+    row-gap: 38px;
+    align-items: start;
+}
+
+/* CHAQUE DOMAINE */
+
+.home-domaine {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* PICTOGRAMME */
+
+.home-domaine-icon {
+    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin: 0 auto 18px;
+    flex-shrink: 0;
+}
+
+/* INTITULÉ CENTRÉ SOUS LE PICTOGRAMME */
+
+.home-domaine h3 {
+    width: 100%;
+    margin: 0 0 14px;
+    font-family: 'Euclid', sans-serif;
+    font-size: 18px;
+    line-height: 1.35;
+    font-weight: 500;
+    text-align: center;
+    color: #263F32;
+}
+
+/* DESCRIPTION */
+
+.home-domaine p {
+    width: 100%;
+    margin: 0;
+    font-family: 'Euclid', sans-serif;
+    font-size: 15px;
+    line-height: 1.55;
+    font-weight: 400;
+    text-align: center;
+    color: #263F32;
+}
+
+/* TABLETTE */
+
+@media (max-width: 1100px) {
+    .home-domaines-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        column-gap: 35px;
+        row-gap: 40px;
+    }
+
+    .home-domaine-icon {
+        width: 95px;
+        height: 95px;
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .home-domaines {
+        padding: 48px 0 55px;
+    }
+
+    .home-domaines-container {
+        padding: 0 22px;
+    }
+
+    .home-domaines-heading {
+        margin-bottom: 35px;
+    }
+
+    .home-domaines-heading h2 {
+        font-size: 32px;
+        line-height: 1.15;
+    }
+
+    .home-domaines-intro {
+        font-size: 15px;
+        line-height: 1.6;
+    }
+
+    .home-domaines-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        column-gap: 22px;
+        row-gap: 32px;
+    }
+
+    .home-domaine-icon {
+        width: 82px;
+        height: 82px;
+        margin-bottom: 14px;
+    }
+
+    .home-domaine h3 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .home-domaine p {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}  
     
 /* ================================
    FIN STYLE CSS CLASSIQUE HORS RESPONSIVE
@@ -6552,6 +6726,123 @@ Une collaboration dans la durée, au plus près de votre réalité : nous travai
 </section>
 
 
+
+    <!-- =========================================
+     SECTION — MES DOMAINES D’INTERVENTION
+========================================= -->
+
+<section class="home-domaines" id="domaines">
+
+  <div class="home-domaines-container">
+
+    <header class="home-domaines-heading">
+      <p class="home-domaines-label">MES DOMAINES D’INTERVENTION</p>
+
+      <h2>Des sujets variés, un même objectif : faire avancer vos projets.</h2>
+
+      <p class="home-domaines-intro">
+        Selon vos besoins et vos priorités, je peux intervenir sur différents
+        aspects de votre activité, de la réflexion à la mise en œuvre.
+      </p>
+    </header>
+
+    <div class="home-domaines-grid">
+
+      <!-- COMMERCIAL -->
+      <article class="home-domaine">
+        <img
+          src="/assets/images/mission-commercial.png"
+          alt=""
+          class="home-domaine-icon"
+          loading="lazy"
+        >
+        <h3>Commercial</h3>
+        <p>
+          Préparer une démarche de prospection, développer des partenariats
+          et trouver de nouveaux clients.
+        </p>
+      </article>
+
+      <!-- COMMUNICATION -->
+      <article class="home-domaine">
+        <img
+          src="/assets/images/mission-communication.png"
+          alt=""
+          class="home-domaine-icon"
+          loading="lazy"
+        >
+        <h3>Communication</h3>
+        <p>
+          Créer des supports de communication, organiser vos contenus
+          et préparer vos publications sur les réseaux sociaux.
+        </p>
+      </article>
+
+      <!-- WEB -->
+      <article class="home-domaine">
+        <img
+          src="/assets/images/mission-web.png"
+          alt=""
+          class="home-domaine-icon"
+          loading="lazy"
+        >
+        <h3>Web</h3>
+        <p>
+          Améliorer une page de votre site, clarifier la présentation
+          de vos offres et optimiser vos contenus web.
+        </p>
+      </article>
+
+      <!-- ORGANISATION -->
+      <article class="home-domaine">
+        <img
+          src="/assets/images/mission-organisation.png"
+          alt=""
+          class="home-domaine-icon"
+          loading="lazy"
+        >
+        <h3>Organisation</h3>
+        <p>
+          Structurer votre organisation, créer des outils de suivi
+          et simplifier vos processus de travail.
+        </p>
+      </article>
+
+      <!-- LANCEMENT DE PROJET -->
+      <article class="home-domaine">
+        <img
+          src="/assets/images/mission-lancement.png"
+          alt=""
+          class="home-domaine-icon"
+          loading="lazy"
+        >
+        <h3>Lancement de projet</h3>
+        <p>
+          Préparer le lancement d’une offre, structurer les étapes
+          et mettre en place un plan d’action.
+        </p>
+      </article>
+
+      <!-- OPTIMISATION -->
+      <article class="home-domaine">
+        <img
+          src="/assets/images/mission-optimisation.png"
+          alt=""
+          class="home-domaine-icon"
+          loading="lazy"
+        >
+        <h3>Optimisation</h3>
+        <p>
+          Clarifier une offre, améliorer vos supports et mettre en place
+          des outils plus adaptés à vos besoins.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
 
 
 <!-- =========================================
