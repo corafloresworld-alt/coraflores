@@ -6044,6 +6044,47 @@ video {
     }
 }
 
+
+/* =========================================================
+   CORRECTION — LE HAUT DE « CE QUI CHANGE » EST COUPÉ
+   Descendre tout le contenu sous la section précédente.
+========================================================= */
+
+.bascule-transform-section {
+    padding-top: 42px !important;
+    overflow: visible !important;
+}
+
+.bascule-transform-section .bascule-transform {
+    margin-top: 0 !important;
+}
+
+.bascule-transform-section .transform-intro {
+    padding-top: 0 !important;
+}
+
+/* Garder les espacements compacts sur ordinateur */
+@media (min-width: 769px) {
+    .bascule-transform-section .transform-item {
+        min-height: 105px !important;
+    }
+
+    .bascule-transform-section .transform-footer {
+        margin-top: 8px !important;
+    }
+}
+
+/* Sur mobile, réduire un peu le décalage tout en évitant la coupe */
+@media (max-width: 768px) {
+    .bascule-transform-section {
+        padding-top: 28px !important;
+    }
+
+    .bascule-transform-section .bascule-transform {
+        padding-top: 0 !important;
+    }
+}
+
 </style>
 </head>
 
