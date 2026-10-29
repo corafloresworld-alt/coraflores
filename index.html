@@ -5928,6 +5928,47 @@ video {
     }
 }
 
+
+/* =========================================================
+   CE QUI CHANGE QUAND ON TRAVAILLE ENSEMBLE
+   Palette identique à la section Témoignages
+========================================================= */
+
+.bascule-transform-section {
+    width: 100%;
+    background: #F8F6F2;
+    color: #263F32;
+    overflow: hidden;
+}
+
+.bascule-transform-section .transform-intro h3,
+.bascule-transform-section .transform-intro p,
+.bascule-transform-section .transform-before,
+.bascule-transform-section .transform-after,
+.bascule-transform-section .transform-footer p {
+    color: #263F32 !important;
+}
+
+.bascule-transform-section .transform-intro h3 em,
+.bascule-transform-section .transform-arrow,
+.bascule-transform-section .transform-after strong {
+    color: #8A5A4A !important;
+}
+
+.bascule-transform-section .transform-item {
+    border-bottom-color: rgba(38, 63, 50, 0.18);
+}
+
+.bascule-transform-section .transform-item:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .bascule-transform-section {
+        padding-top: 1px;
+    }
+}
+
 </style>
 </head>
 
@@ -7389,6 +7430,8 @@ Certaines personnes repartent avec une direction claire pour la suite. Pour d’
      CE QUI CHANGE — LA BASCULE
 ================================================== -->
 
+<section class="bascule-transform-section">
+
 <div class="bascule-transform">
 
   <!-- COLONNE GAUCHE -->
@@ -7495,7 +7538,8 @@ Certaines personnes repartent avec une direction claire pour la suite. Pour d’
   </div>
 
 </div>
-  
+
+</section>
 
   <!-- =========================================================
      MISSION PONCTUELLE
