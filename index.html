@@ -4612,45 +4612,6 @@ section.section-one {
 
 
 
-/* MES DOMAINES D'INTERVENTION */
-
-/* Tous les textes en blanc */
-.domaines-intervention h2,
-.domaines-intervention h3,
-.domaines-intervention h4,
-.domaines-intervention p {
-  color: #ffffff !important;
-}
-
-/* Petit titre doré */
-.domaines-intervention .section-label {
-  color: #e6b45f !important;
-}
-
-/* Icônes plus petites */
-.domaines-intervention .elementor-icon svg,
-.domaines-intervention .elementor-icon i {
-  width: 65px !important;
-  height: 65px !important;
-  font-size: 65px !important;
-}
-
-/* Espacement sous les icônes */
-.domaines-intervention .elementor-icon-box-icon {
-  margin-bottom: 14px !important;
-}
-
-/* Titres des domaines */
-.domaines-intervention .elementor-icon-box-title {
-  color: #ffffff !important;
-  margin-bottom: 12px !important;
-}
-
-/* Descriptions */
-.domaines-intervention .elementor-icon-box-description {
-  color: #ffffff !important;
-  line-height: 1.6;
-}
 
 
       
@@ -5925,6 +5886,46 @@ video {
         text-align: left;
     }
 
+}
+
+
+/* =========================================================
+   CORRECTION — MES DOMAINES D'INTERVENTION
+   Cible les vraies classes présentes dans cette page.
+========================================================= */
+
+#domaines.home-domaines .home-domaines-heading h2,
+#domaines.home-domaines .home-domaine h3,
+#domaines.home-domaines .home-domaine p {
+    color: #FFFFFF !important;
+}
+
+/* Icônes réduites sur ordinateur */
+#domaines.home-domaines .home-domaine-icon {
+    width: 68px !important;
+    height: 68px !important;
+    max-width: 68px !important;
+    margin: 0 auto 15px !important;
+    object-fit: contain;
+}
+
+/* Tablette */
+@media (max-width: 1100px) {
+    #domaines.home-domaines .home-domaine-icon {
+        width: 64px !important;
+        height: 64px !important;
+        max-width: 64px !important;
+    }
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+    #domaines.home-domaines .home-domaine-icon {
+        width: 58px !important;
+        height: 58px !important;
+        max-width: 58px !important;
+        margin-bottom: 12px !important;
+    }
 }
 
 </style>
