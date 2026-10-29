@@ -6004,6 +6004,46 @@ video {
     color: #FFFFFF !important;
 }
 
+
+/* =========================================================
+   AJUSTEMENTS — SECTION « CE QUI CHANGE »
+   Titre plus bas, lignes plus compactes et footer rapproché
+========================================================= */
+
+/* Ordinateur : descendre le titre et compacter les 3 transformations */
+@media (min-width: 769px) {
+    .bascule-transform-section .transform-intro {
+        padding-top: 50px !important;
+    }
+
+    .bascule-transform-section .transform-item {
+        grid-template-columns: 55px 150px 50px minmax(0, 1fr) !important;
+        column-gap: 12px !important;
+        min-height: 105px !important;
+    }
+
+    .bascule-transform-section .transform-footer {
+        margin-top: 8px !important;
+    }
+}
+
+/* Mobile : garder la mise en page mobile et rapprocher la phrase finale */
+@media (max-width: 768px) {
+    .bascule-transform-section .transform-intro {
+        padding-top: 0 !important;
+    }
+
+    .bascule-transform-section .transform-item {
+        padding-top: 1.1rem !important;
+        padding-bottom: 1.1rem !important;
+        row-gap: 8px !important;
+    }
+
+    .bascule-transform-section .transform-footer {
+        margin-top: 0 !important;
+    }
+}
+
 </style>
 </head>
 
