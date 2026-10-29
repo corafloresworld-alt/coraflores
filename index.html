@@ -4266,7 +4266,172 @@ section.section-one {
 }
 
 
-      
+   
+/* =========================================
+   HOME — POINT DE DÉPART VERSION COURTE
+========================================= */
+
+.home-point-intro {
+    width: 100%;
+    background: #263F32;
+    padding: 65px 0 75px;
+    color: #FFFFFF;
+}
+
+.home-point-container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.75fr);
+    gap: 75px;
+    align-items: center;
+}
+
+.home-point-content {
+    min-width: 0;
+}
+
+/* Petit titre doré et ligne horizontale */
+
+.home-point-caption {
+    width: 100%;
+    max-width: 680px;
+    margin: 0 0 28px;
+    text-align: left;
+}
+
+.home-point-caption span {
+    display: block;
+    width: 100%;
+    padding-bottom: 18px;
+    margin-bottom: 0;
+
+    font-family: 'Euclid', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: #E5B657;
+
+    border-bottom: 1px solid rgba(215, 168, 74, .45);
+}
+
+/* Titre principal */
+
+.home-point-title {
+    margin: 0 0 24px;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(32px, 3.2vw, 44px);
+    line-height: 1.1;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* Texte */
+
+.home-point-text {
+    max-width: 650px;
+    margin: 0 0 16px;
+
+    font-family: 'Euclid', sans-serif;
+    font-size: 18px;
+    line-height: 1.65;
+    font-weight: 400;
+    color: #FFFFFF;
+}
+
+/* Bouton : reprend le style existant */
+
+.home-point-btn {
+    display: inline-flex;
+    margin-top: 18px;
+    background: #8A5A4A;
+    color: #FFFFFF;
+}
+
+/* Photo rectangulaire à droite */
+
+.home-point-image {
+    width: 100%;
+    max-width: 440px;
+    justify-self: end;
+    margin: 0;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.home-point-image img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 3px;
+}
+
+/* Tablette */
+
+@media (max-width: 900px) {
+    .home-point-container {
+        grid-template-columns: minmax(0, 1fr) minmax(220px, .8fr);
+        gap: 35px;
+        padding: 0 30px;
+    }
+
+    .home-point-title {
+        font-size: 36px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 650px) {
+    .home-point-intro {
+        padding: 48px 0 55px;
+    }
+
+    .home-point-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 22px;
+    }
+
+    .home-point-caption {
+        margin-bottom: 24px;
+    }
+
+    .home-point-title {
+        font-size: 34px;
+        line-height: 1.12;
+    }
+
+    .home-point-text {
+        font-size: 16px;
+        line-height: 1.65;
+    }
+
+    .home-point-btn {
+        margin-top: 12px;
+        max-width: 100%;
+        padding: 15px 20px;
+        font-size: 15px;
+    }
+
+    .home-point-image {
+        width: 100%;
+        max-width: none;
+        justify-self: stretch;
+    }
+
+    .home-point-image img {
+        aspect-ratio: 4 / 3;
+    }
+}
+   
 
     
 /* ================================
@@ -6386,7 +6551,62 @@ Une collaboration dans la durée, au plus près de votre réalité : nous travai
   </div>
 </section>
 
-  
+
+
+
+<!-- =========================================
+     SECTION — LE POINT DE DÉPART (VERSION COURTE)
+     À placer juste après les témoignages
+========================================= -->
+
+<section class="home-point-intro" id="home-point-depart">
+
+  <div class="home-point-container">
+
+    <div class="home-point-content">
+
+      <div class="image-caption home-point-caption">
+        <span>LE POINT DE DÉPART</span>
+      </div>
+
+      <h2 class="home-point-title">
+        Pour commencer, faisons le point.
+      </h2>
+
+      <p class="home-point-text">
+        Un temps pour prendre du recul sur votre activité,
+        mettre les choses à plat et identifier ce qui mérite
+        votre attention.
+      </p>
+
+      <p class="home-point-text">
+        Nous partons de votre situation, de vos questions
+        et de vos besoins pour déterminer la suite qui vous
+        correspond.
+      </p>
+
+      <a href="/point-de-depart/" class="cta-primary home-point-btn">
+        Commencer le Point de Départ · 89 €
+      </a>
+
+    </div>
+
+    <figure class="home-point-image">
+      <img
+        src="/assets/images/carnet.png"
+        alt="Un carnet pour poser ses idées et préparer la suite"
+        loading="lazy"
+      >
+    </figure>
+
+  </div>
+
+</section>
+
+
+
+
+    
 
 <section class="point-depart" id="point-depart">
 
