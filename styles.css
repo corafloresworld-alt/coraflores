@@ -443,7 +443,7 @@ main p:not(.eyebrow):not(.editorial-kicker):not(.offer-card__subtitle), main li 
 .about-story__subheading { margin: 42px 0 18px; color: var(--paper); font-family: var(--sans); font-size: clamp(1.4rem, 2.1vw, 1.8rem); font-weight: 600; line-height: 1.25; }
 .about-story__list { display: grid; gap: 15px; margin: 0 0 24px; padding: 0; list-style: none; }
 .about-story__list li { position: relative; padding-left: 28px; color: rgba(255, 253, 249, 0.9); font-size: 0.96rem; font-weight: 400; line-height: 1.6; }
-.about-story__list li::before { content: "âœ¦"; position: absolute; top: 0.05em; left: 0; color: var(--gold); font-size: 0.9rem; }
+.about-story__list li::before { content: "\2713"; position: absolute; top: 0.05em; left: 0; color: var(--gold); font-size: 0.9rem; }
 .about-story__continuation > .about-story__emphasis { color: var(--paper); font-weight: 600; }
 
 .offers-menu__toggle.is-current::after, .offers-menu__toggle[aria-expanded="true"]::after { transform: scaleX(1); }
