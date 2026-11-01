@@ -1,1 +1,183 @@
+.contact-hero.hero {
+  min-height: clamp(410px, 42vw, 570px);
+  align-items: center;
+}
 
+.contact-hero__image {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 54%;
+  filter: none;
+}
+
+.contact-hero .hero__scrim {
+  background: linear-gradient(90deg, rgba(20, 34, 27, 0.43) 0%, rgba(20, 34, 27, 0.18) 62%, rgba(20, 34, 27, 0.11) 100%),
+    linear-gradient(0deg, rgba(20, 34, 27, 0.24), transparent 60%);
+}
+
+.contact-hero__content {
+  padding-block: clamp(82px, 9vw, 132px);
+}
+
+.contact-hero h1 {
+  max-width: 720px;
+  margin-bottom: 18px;
+  font-size: clamp(2.8rem, 5vw, 4.5rem);
+}
+
+.contact-hero__intro {
+  max-width: 540px;
+  margin-bottom: 0;
+  font-size: clamp(1rem, 1.35vw, 1.15rem);
+  line-height: 1.65;
+}
+
+.contact-section {
+  padding-block: clamp(64px, 7vw, 100px) clamp(76px, 8vw, 116px);
+  background: var(--green);
+  color: var(--paper);
+}
+
+.contact-section__layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.12fr) minmax(300px, 0.78fr);
+  align-items: start;
+  gap: clamp(48px, 7vw, 104px);
+}
+
+.contact-section__main { min-width: 0; }
+.contact-section__main > .editorial-kicker { margin-bottom: 14px; }
+.contact-section__title { margin-bottom: 32px; font-size: clamp(2.1rem, 3.3vw, 3.25rem); }
+
+.contact-form {
+  display: grid;
+  gap: 20px;
+  padding: clamp(22px, 3vw, 38px);
+  border: 1px solid rgba(255, 253, 249, 0.16);
+  border-radius: 4px;
+  background: rgba(255, 253, 249, 0.045);
+  box-shadow: 0 14px 34px rgba(12, 25, 18, 0.12);
+}
+
+.contact-form__field { display: grid; gap: 8px; }
+.contact-form__field > label, .contact-form__needs legend {
+  color: var(--paper);
+  font-size: 0.82rem;
+  font-weight: 500;
+  line-height: 1.45;
+}
+.contact-form__field > label span, .contact-form__needs legend span { color: var(--gold); }
+
+.contact-form input:not([type="checkbox"]),
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  min-height: 48px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 253, 249, 0.2);
+  border-radius: 3px;
+  background: rgba(255, 253, 249, 0.085);
+  color: var(--paper);
+  font: inherit;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: rgba(255, 253, 249, 0.58); }
+.contact-form select { color-scheme: dark; }
+.contact-form select:invalid { color: rgba(255, 253, 249, 0.58); }
+.contact-form select option { color: var(--paper); background: var(--green); }
+.contact-form textarea { min-height: 140px; resize: vertical; }
+
+.contact-form__needs {
+  min-width: 0;
+  display: grid;
+  gap: 9px;
+  margin: 2px 0 0;
+  padding: 0;
+  border: 0;
+}
+.contact-form__needs legend { margin-bottom: 5px; padding: 0; }
+.contact-need {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: 18px minmax(0, 1fr);
+  align-items: start;
+  gap: 11px;
+  padding: 12px 13px;
+  border: 1px solid rgba(255, 253, 249, 0.14);
+  border-radius: 3px;
+  background: rgba(255, 253, 249, 0.045);
+  cursor: pointer;
+}
+.contact-need:has(input:checked) { border-color: rgba(229, 182, 83, 0.75); background: rgba(229, 182, 83, 0.08); }
+.contact-need input { width: 17px; height: 17px; margin: 2px 0 0; accent-color: var(--gold); }
+.contact-need > span { display: grid; gap: 4px; }
+.contact-need strong { color: var(--paper); font-size: 0.88rem; font-weight: 500; line-height: 1.4; }
+.contact-need small { color: rgba(255, 253, 249, 0.7); font-size: 0.78rem; line-height: 1.45; }
+.contact-form__error { margin: 2px 0 0; color: #ffd78b; font-size: 0.82rem; }
+
+.contact-form__actions { display: grid; justify-items: start; gap: 12px; padding-top: 2px; }
+.contact-form__submit {
+  min-width: 190px;
+  border: 0;
+  background: var(--gold);
+  color: var(--green);
+  font-weight: 600;
+  cursor: pointer;
+}
+.contact-form__submit:hover { background: #efc76f; }
+.contact-form__submit:disabled { transform: none; cursor: wait; opacity: 0.75; }
+.contact-form__status { margin: 0; font-size: 0.88rem; line-height: 1.5; }
+.contact-form__status.is-success { color: #d9e8d2; }
+.contact-form__status.is-error { color: #ffd0bf; }
+
+.contact-gallery {
+  position: sticky;
+  top: 32px;
+  display: grid;
+  justify-items: start;
+  gap: 24px;
+  padding-top: 66px;
+}
+.contact-gallery img { width: 100%; box-shadow: 0 18px 35px rgba(12, 25, 18, 0.2); }
+.contact-gallery__card { max-width: 430px; aspect-ratio: 1.2; object-fit: cover; }
+.contact-gallery__botanical {
+  width: 78% !important;
+  max-width: 340px;
+  justify-self: end;
+  aspect-ratio: 1.38;
+  object-fit: cover;
+}
+
+@media (max-width: 1040px) {
+  .contact-section__layout { grid-template-columns: minmax(0, 1.1fr) minmax(250px, 0.75fr); gap: 34px; }
+  .contact-gallery { padding-top: 72px; }
+}
+
+@media (max-width: 850px) {
+  .contact-hero.hero { min-height: clamp(460px, 74svh, 620px); align-items: end; }
+  .contact-hero__image { object-position: 58% center; }
+  .contact-hero .hero__scrim { background: linear-gradient(0deg, rgba(20, 34, 27, 0.72) 0%, rgba(20, 34, 27, 0.28) 65%, rgba(20, 34, 27, 0.12) 100%); }
+  .contact-hero__content { padding-block: 130px 72px; }
+  .contact-hero h1 { font-size: clamp(2.7rem, 9vw, 4.15rem); }
+  .contact-section__layout { grid-template-columns: 1fr; gap: 44px; }
+  .contact-section__title { margin-bottom: 26px; }
+  .contact-gallery { position: static; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); align-items: center; gap: 18px; padding-top: 0; }
+  .contact-gallery__card { max-width: none; aspect-ratio: 1.15; }
+  .contact-gallery__botanical { width: 100% !important; max-width: none; justify-self: stretch; aspect-ratio: 1.15; }
+}
+
+@media (max-width: 520px) {
+  .contact-section { padding-block: 52px 64px; }
+  .contact-section__layout { gap: 34px; }
+  .contact-form { gap: 17px; padding: 20px 16px; }
+  .contact-form__submit { width: 100%; }
+  .contact-gallery { grid-template-columns: 1fr; gap: 16px; }
+  .contact-gallery__card { width: 100%; aspect-ratio: 1.3; }
+  .contact-gallery__botanical { width: min(82%, 320px) !important; justify-self: end; aspect-ratio: 1.38; }
+}
