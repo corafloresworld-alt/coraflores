@@ -1,1101 +1,138 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>À propos – Cora Flores</title>
-
-  
-<link rel="icon" type="image/png" href="/favicon/logo-fav-cf.png">
-
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Francois+One&display=swap" rel="stylesheet">
-
-
-  <style>
-    /* ================================
-       🎨 PALETTE DE COULEURS – SITE
-    ================================ */
-    :root {
-      --color-bg-main: #263F32;
-      --color-bg-secondary: #021f5a;
-      --color-text-main: #ffffff;
-      --color-text-muted: #cfd8ff;
-      --color-accent: #4e8dff;
-      --color-border: rgba(255,255,255,0.2);
-    }
-
-    @font-face {
-      font-family: 'Euclid';
-      src: url('../fonts/euclid.woff') format('woff');
-      font-weight: normal;
-      font-style: normal;
-    }
-
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-  body{
-    font-family:'Euclid',sans-serif;
-    background:var(--color-bg-main);
-    color:var(--color-text-main);
-    padding-top:95px;
-}
-
-    /* ================================
-       NAVBAR
-    ================================ */
-    .navbar {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      height: 95px;
-      background: rgba(20,20,20,.12);
-      backdrop-filter: blur(18px);
-      border-bottom:1px solid rgba(255,255,255,.08);
-      z-index: 9999;
-    }
-
-    .navbar-inner {
-      max-width: 1200px;
-      height: 100%;
-      margin: 0 auto;
-      padding: 0 1.5rem;
-      display: grid;
-      grid-template-columns: auto 1fr auto;
-      align-items: center;
-    }
-
-    .navbar-logo img {
-      height: 70px;
-    }
-
- .navbar-links {
-  display: flex;
-  gap: 3.5rem;
-  margin-left: auto;
-  align-items: center;
-  flex-wrap: nowrap;
-}
-
-.navbar-links a {
-  color: #ffffff;
-  text-decoration: none;
-  font-size: 15.5px;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  transition: opacity 0.3s ease;
-}
-
-.navbar-links a:hover {
-  opacity: 0.7;
-}
-
-.navbar-links a.active {
-  text-decoration: underline;
-  text-underline-offset: 6px;
-  text-decoration-thickness: 1px;
-}
-
-.navbar-links .cta {
-  background: none;
-  padding: 0;
-  border-radius: 0;
-  font-weight: 400;
-}
-
-.navbar-links .cta:hover {
-  background: var(--color-accent);
-}
-    /* ================================
-       CONTENU À PROPOS
-    ================================ */
-.about-container{
-
-    max-width:1400px;
-
-    margin:0 auto;
-
-    padding:90px 40px;
-
-    text-align:left;
-
-}
-
-   .about-container h1{
-
-    font-family:'Francois One',sans-serif;
-
-    font-size:58px;
-
-    line-height:1.05;
-
-    font-weight:400;
-
-    color:#fff;
-
-    margin-bottom:34px;
-
-}
-
-   .about-intro{
-
-    max-width:520px;
-
-    font-size:22px;
-
-    line-height:1.8;
-
-    color:#fff;
-
-    margin-bottom:60px;
-
-}
-
-    .about-section {
-    max-width:760px;
-
-    margin-bottom:55px;
-
-    }
-
- .about-section h2{
-
-    font-family:'Francois One',sans-serif;
-
-    font-size:32px;
-
-    font-weight:400;
-
-    margin-bottom:18px;
-
-    color:#fff;
-
-}
-
-    .about-section p{
-
-    font-size:18px;
-
-    line-height:1.8;
-
-    color:#fff;
-
-}
-
-.about-gap{
-    margin-top:18px;
-}
-
-
-.about-list{
-    display:flex;
-    flex-direction:column;
-    gap:16px;
-}
-
-.about-item{
-    display:flex;
-    align-items:flex-start;
-    gap:18px;
-}
-
-.about-item span{
-    width:18px;
-    flex:0 0 18px;
-    color:#E5B657;
-    font-size:14px;
-    line-height:34px;
-}
-
-.about-item p{
-    margin:0;
-}
-
-
-.about-closing{
-    font-size:21px;
-    font-weight:550;
-    line-height:1.6;
-    color:#fff;
-}
-    
-    /* ================================
-   🖼️ IMAGE IMMERSIVE – BAS DE PAGE IMAGE IMMERSIVE – TEMPLATE
-
-Dimensions idéales :
-- 2000 x 900 px
-================================ */
-
-    
-.about-gallery{
-
-    display:flex;
-
-    flex-direction:column;
-
-    gap:24px;
-
-    position:sticky;
-
-    top:120px;
-
-    width:360px;
-
-}
-
-  .about-gallery img{
-
-    width:100%;
-
-    display:block;
-
-    object-fit:cover;
-
-    border-radius:14px;
-
-}
-
-.about-gallery img:first-child{
-
-    height:300px;
-
-}
-
-.about-gallery img:last-child{
-
-    width:82%;
-
-    height:220px;
-
-    margin-left:auto;
-
-}
-
-
-/* ================================
-   HERO À PROPOS — DESKTOP
-================================ */
-
-.about-hero {
-    position: relative;
-    width: 100%;
-    height: 70vh;
-    min-height: 600px;
-    overflow: hidden;
-}
-
-.about-hero video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center center;
-}
-
-.about-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.25);
-    z-index: 1;
-}
-
-.about-content {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 0 40px 160px;
-
-    box-sizing: border-box;
-    z-index: 2;
-
-    color: #fff;
-}
-
-.about-content h1 {
-    font-family: 'Francois One', sans-serif;
-    font-size: 58px;
-    line-height: 1.05;
-    font-weight: 400;
-
-    max-width: 760px;
-    margin: 0 0 20px;
-}
-
-.about-content .about-intro {
-    max-width: 620px;
-    font-size: 22px;
-    line-height: 1.5;
-    color: #fff;
-
-    margin: 0;
-}
-
-
-/* ================================
-   ABOUT GRID — DESKTOP
-================================ */
-
-.about-grid {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 360px;
-    gap: 80px;
-
-    align-items: start;
-
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.about-text {
-    width: 100%;
-    max-width: 760px;
-}
-
-.point-label {
-    font-size: 14px;
-    letter-spacing: 0.08em;
-    color: #E5B657;
-
-    margin-bottom: 40px;
-}
-
-
-/* ================================
-   GALERIE — DESKTOP
-================================ */
-
-.about-gallery {
-    display: flex;
-    flex-direction: column;
-
-    gap: 24px;
-
-    position: sticky;
-    top: 120px;
-
-    width: 360px;
-}
-
-.about-gallery img {
-    width: 100%;
-    display: block;
-
-    object-fit: cover;
-    border-radius: 14px;
-}
-
-.about-gallery img:first-child {
-    height: 300px;
-}
-
-.about-gallery img:last-child {
-    width: 82%;
-    height: 220px;
-    margin-left: auto;
-}
-
-    
-
-/* ================================
-   RESPONSIVE — MOBILE
-================================ */
-
-@media (max-width: 768px) {
-
-    /* =================================
-       NAVBAR
-    ================================= */
-
-    .navbar {
-        height: 72px;
-    }
-
-    body {
-        padding-top: 72px;
-    }
-
-    .navbar-inner {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        padding: 0 20px;
-        box-sizing: border-box;
-    }
-
-    .navbar-logo img {
-        height: 46px;
-        width: auto;
-    }
-
-    .navbar-info,
-    .announcement {
-        display: none !important;
-    }
-
- /* ================================
-   MENU MOBILE
-================================ */
-
-.navbar-inner {
-    position: relative;
-}
-
-/* Menu fermé */
-.navbar-links {
-    display: none;
-}
-
-/* Menu ouvert */
-.navbar-links.is-open {
-    display: flex;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-
-    flex-direction: column;
-    align-items: flex-start;
-
-    gap: 0;
-    margin: 0;
-    padding: 1rem 20px 1.2rem;
-
-    background: # 263F32;
-
-    box-sizing: border-box;
-    z-index: 10000;
-}
-
-/* Les 4 liens */
-.navbar-links.is-open a {
-    display: block !important;
-    width: 100%;
-    padding: 0.7rem 0;
-
-    color: #ffffff;
-}
-
-/* Bouton burger */
-.mobile-menu-toggle {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 5px;
-
-    width: 40px;
-    height: 40px;
-
-    padding: 0;
-    margin-left: auto;
-
-    border: none;
-    background: transparent;
-    cursor: pointer;
-}
-
-.mobile-menu-toggle span {
-    display: block;
-    width: 23px;
-    height: 1px;
-    background: #ffffff;
-}
-
-
-    /* =================================
-       HERO À PROPOS
-    ================================= */
-
-    .about-hero {
-        height: 72vh;
-        min-height: 500px;
-        max-height: 720px;
-    }
-
-    .about-hero video {
-        object-position: 70% center;
-        transform: scale(1.08);
-    }
-
-.about-content {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-
-    width: 100%;
-    height: 100%;
-    max-width: none;
-    margin: 0;
-
-    padding: 0 22px;
-    box-sizing: border-box;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-    .about-content h1 {
-        width: 100%;
-        max-width: 100%;
-        font-size: 2.45rem;
-        line-height: 1.08;
-        margin-bottom: 1.4rem;
-    }
-
-    .about-content h1 br {
-        display: none;
-    }
-
-    .about-content .about-intro {
-        width: 100%;
-        max-width: 100%;
-        font-size: 1rem;
-        line-height: 1.55;
-    }
-
-    .about-content .about-intro br {
-        display: none;
-    }
-
-
-    /* =================================
-       ABOUT CONTAINER
-    ================================= */
-
-    .about-container {
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        padding: 2.5rem 22px;
-        box-sizing: border-box;
-    }
-
-    .about-grid {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        max-width: none;
-        margin: 0;
-        gap: 0;
-    }
-
-    .about-text {
-        width: 100%;
-        max-width: 100%;
-    }
-
-
-    /* =================================
-       TEXTE À PROPOS
-    ================================= */
-
-    .point-label {
-        width: 100%;
-        max-width: none;
-        font-size: 13px;
-        margin-bottom: 2rem;
-        padding-bottom: 1rem;
-    }
-
-    .about-section {
-        width: 100%;
-        max-width: none;
-        margin-bottom: 3rem;
-    }
-
-    .about-section h2 {
-        font-size: 2rem;
-        line-height: 1.15;
-        margin-bottom: 1.2rem;
-    }
-
-    .about-section h2 br {
-        display: block;
-    }
-
-    .about-section p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .about-gap {
-        margin-top: 1.2rem;
-    }
-
-    .about-list {
-        gap: 1rem;
-    }
-
-    .about-item {
-        gap: 12px;
-    }
-
-    .about-item p {
-        font-size: 1rem;
-        line-height: 1.6;
-    }
-
-    .about-closing {
-        font-size: 1.05rem;
-        line-height: 1.6;
-    }
-
-
-    /* =================================
-       GALERIE
-    ================================= */
-
-    .about-gallery {
-        position: static;
-        width: 100%;
-        max-width: 100%;
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
-
-    .about-gallery img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-    }
-
-    .about-gallery img:first-child {
-        height: 280px;
-    }
-
-    .about-gallery img:last-child {
-        width: 82%;
-        height: 220px;
-        margin-left: auto;
-    }
-}
-
-
-/* ================================
-   PETITS TÉLÉPHONES
-================================ */
-
-@media (max-width: 480px) {
-
-    .navbar {
-        height: 68px;
-    }
-
-    body {
-        padding-top: 68px;
-    }
-
-    .navbar-inner {
-        padding: 0 18px;
-    }
-
-    .navbar-logo img {
-        height: 43px;
-    }
-
-    .navbar-links {
-        gap: 1rem;
-    }
-
-    .navbar-links a {
-        font-size: 12px;
-    }
-
-    .about-hero {
-        height: 75vh;
-        min-height: 480px;
-    }
-
-    .about-content {
-        padding: 0 22px;
-    }
-
-    .about-content h1 {
-        font-size: 2.35rem;
-    }
-
-    .about-content .about-intro {
-        font-size: 1rem;
-    }
-
-    .about-container {
-        padding: 2.2rem 20px;
-    }
-
-    .about-section h2 {
-        font-size: 1.85rem;
-    }
-
-    .about-gallery img:first-child {
-        height: 250px;
-    }
-
-    .about-gallery img:last-child {
-        height: 200px;
-    }
-}
-
-
-/* ================================
-   SÉCURITÉ
-================================ */
-
-html,
-body {
-    overflow-x: hidden;
-}
-
-img,
-video {
-    max-width: 100%;
-    display: block;
-}
-
-
-/* MENU DÉROULANT MES OFFRES — À PROPOS */
-.navbar-inner {
-    position: relative;
-}
-
-.offers-dropdown {
-    position: fixed;
-    top: 105px;
-    right: max(24px, calc((100vw - 1000px) / 2));
-    left: auto;
-    width: min(620px, calc(100vw - 32px));
-    padding: 26px 28px;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    gap: 26px;
-    box-sizing: border-box;
-    background: #f7f3eb;
-    color: #263f32;
-    border-radius: 8px;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.16);
-    z-index: 10000;
-}
-
-.offers-dropdown[hidden] {
-    display: none !important;
-}
-
-.offers-dropdown .offer-dropdown-item {
-    min-width: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-.offers-dropdown .offer-dropdown-item + .offer-dropdown-item {
-    border-left: 1px solid rgba(65, 87, 69, 0.2);
-    padding-left: 24px;
-}
-
-.offers-dropdown .offer-dropdown-heading {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    margin-bottom: 10px;
-}
-
-.offers-dropdown img.offer-thumbnail {
-    width: 50px !important;
-    height: 50px !important;
-    min-width: 50px;
-    max-width: 50px;
-    object-fit: cover;
-    border-radius: 5px;
-}
-
-.offers-dropdown h3,
-.offers-dropdown p,
-.offers-dropdown a {
-    color: #263f32 !important;
-}
-
-.offers-dropdown .offer-dropdown-link {
-    display: inline-block;
-    margin-top: 8px;
-    align-self: flex-start;
-}
-
-@media (max-width: 768px) {
-    .offers-dropdown {
-        position: fixed;
-        top: 80px;
-        left: 12px;
-        right: 12px;
-        width: auto;
-        grid-template-columns: minmax(0, 1fr);
-        padding: 20px;
-        gap: 20px;
-        max-height: calc(100vh - 100px);
-        overflow-y: auto;
-    }
-
-    .offers-dropdown .offer-dropdown-item + .offer-dropdown-item {
-        border-left: none;
-        border-top: 1px solid rgba(65, 87, 69, 0.2);
-        padding: 18px 0 0;
-    }
-}
-
-
-</style>
-</head>
-
-<body>
-
-
-<nav class="navbar">
-  <div class="navbar-inner">
-
-    <!-- Logo -->
-    <a href="/" class="navbar-logo">
-      <img src="/assets/images/sign_blanc3.png" alt="Cora Flores">
-    </a>
-
-   <div class="navbar-info">
-  <div class="announcement">
-    <span></span>
-  </div>
-</div>
-
-
-    <!-- Liens / Boutons à droite -->
-
-<div class="navbar-links">
-    <a href="#" class="offers-toggle"
-       aria-expanded="false"
-       aria-controls="offers-dropdown">
-       Mes offres <span class="offers-chevron">⌄</span>
-    </a>
-    <a href="/apropos/">À propos</a>
-    <a href="/contact/" class="cta">Contact</a>
-</div>
-
-<div class="offers-dropdown" id="offers-dropdown" hidden>
-    <div class="offer-dropdown-item">
-<div class="offer-dropdown-heading">
-    <img src="/assets/images/approche.png" alt="" class="offer-thumbnail">
-    <h3>Accompagnements</h3>
-</div>        <p>Prendre du recul, clarifier et avancer ensemble.</p>
-        <p class="offer-details">carnet de route · échanges personnalisés · actions</p>
-        <a href="/point-de-depart/" class="offer-dropdown-link">
-            Découvrir les accompagnements →
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#293d32" />
+    <meta name="description" content="Et puisque nous pourrions être amenés à travailler ensemble, autant commencer par les présentations." />
+    <title>À propos — Cora Flores</title>
+    <link rel="icon" type="image/png" href="/favicon/LOGO_SIMPLE.png" />
+    <link rel="stylesheet" href="/styles.css?v=sticky-nav-social-2026-10-31" />
+    <script src="/app.js?v=sticky-nav-offers-2026-10-31" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
+    <header class="site-header">
+      <div class="site-header__inner page-wrap">
+        <a class="brand" href="/" aria-label="Cora Flores, accueil">
+          <img src="/assets/LOGO_AVEC_SIGNATURE.png" alt="Cora Flores — Entrepreneure opérationnelle" />
         </a>
-    </div>
 
-    <div class="offer-dropdown-item">
-<div class="offer-dropdown-heading">
-    <img src="/assets/images/mission-ponctuelle11.jpg" alt="" class="offer-thumbnail">
-    <h3>Missions ponctuelles</h3>
-</div>
-      <p>Faire avancer un sujet précis.</p>
-        <p class="offer-details">
-            Commercial · Communication · Site web · Organisation
-        </p>
-     
-<a href="/missions/" class="offer-dropdown-link">
-    Découvrir les missions →
-</a>
+        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation">
+          <span class="menu-toggle__icon" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="sr-only">Ouvrir le menu</span>
+        </button>
 
-    </div>
-</div>
+        <nav class="primary-navigation" id="primary-navigation" aria-label="Navigation principale">
+          <div class="offers-menu">
+            <button class="offers-menu__toggle" type="button" aria-expanded="false" aria-controls="offers-menu-list">
+              Mes offres <span class="chevron" aria-hidden="true"></span>
+            </button>
+            <div class="offers-menu__list" id="offers-menu-list" hidden>
+              <article class="offers-menu-card offers-menu-card--mission">
+                <img src="/assets/mission-ponctuelle11.jpg" alt="" />
+                <div class="offers-menu-card__content">
+                  <p class="offers-menu-card__eyebrow">Mission ponctuelle</p>
+                  <p>Un besoin précis, une action ciblée. Vous savez ce qu'il faut mettre en place&nbsp;? Nous avançons directement sur le sujet.</p>
+                  <a class="button button--light" href="/missions/">Voir comment je peux vous aider <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+              <article class="offers-menu-card offers-menu-card--collaboration">
+                <img src="/assets/pointdedepart-fond1.png" alt="" />
+                <div class="offers-menu-card__content">
+                  <p class="offers-menu-card__eyebrow">Collaboration</p>
+                  <p>Prendre du recul, clarifier vos priorités et construire la suite pour faire avancer votre activité.</p>
+                  <a class="button button--light" href="/point-de-depart/">Découvrir mon approche <span aria-hidden="true">→</span></a>
+                </div>
+              </article>
+            </div>
+          </div>
+          <a href="/apropos/" aria-current="page">À propos</a>
+          <a href="/contact/">Contact</a>
+          <a class="button button--nav" href="/point-de-depart/">Commencer le Point de Départ <span aria-hidden="true">→</span></a>
+        </nav>
+      </div>
+    </header>
 
-<button class="mobile-menu-toggle" type="button" aria-label="Ouvrir le menu">
-    <span></span>
-    <span></span>
-    <span></span>
-</button>
-    
-  </div>
-</nav>
-
-
-<header class="about-hero">
-<video autoplay muted loop playsinline>
-<source src="/assets/videos/video-velo.mp4" type="video/mp4">
-</video>
-<div class="about-overlay"></div>
-<div class="about-content">
-<h1>Derrière chaque entreprise, <br>il y a un entrepreneur.</h1>
-  <p class="about-intro">
-    Et puisque nous pourrions être amenés à travailler&nbsp;ensemble,<br>
-    autant commencer par les présentations.
-</p>
-</div>
-</header>
-
-<main class="about-container">
-
-    <div class="about-grid">
-
-        <div class="about-text">
-
-            <p class="point-label">À PROPOS DE CORA</p>
-
-            <section class="about-section">
-                <h2>J'ai rarement eu une seule casquette…<br>et ça me va plutôt bien.</h2>
-               <p>
-    Entreprendre, c'est souvent devoir passer d'un rôle à l'autre : réfléchir à une idée, chercher des clients, communiquer, créer, organiser, décider… et recommencer.
-    </p>
-
-      <p class="about-gap">
-    Cette diversité m'a fait naviguer entre la vente, le développement commercial,<br>la communication, le design, le web, les outils et la création de concepts...
-      </p>
-
-    <p class="about-gap">
-  La routine et moi, on ne se croise pas très souvent.
-    </p>
-        
-              
-            </section>
-
-            <section class="about-section">
-          <h2>J'aime ce moment où un<br>« ce serait bien »<br>devient un « on le fait »</h2>              
-                <p>J'aime le moment où on arrête d'en parler pendant des semaines et où, tout à coup, quelque chose commence vraiment à se passer.
-
-              <p class="about-gap">
-            Au fil des années, j’ai développé différentes activités dans des univers très différents : des jeux de cartes, un coffee shop ambulant, des produits, une application,<br>des événements, des collaborations…
-            <br>À chaque fois, il a fallu imaginer, décider, vendre, communiquer, s'adapter…<br>et parfois recommencer.
-              </p>
-
-            </section>
-
-            <section class="about-section">
-                <h2>Je sais ce que c'est…</h2>
-              
-       <div class="about-list">
-
-    <div class="about-item">
-        <span>✦</span>
-        <p>d'avoir trop d'idées et de ne plus savoir par laquelle commencer.</p>
-    </div>
-
-    <div class="about-item">
-        <span>✦</span>
-        <p>de passer d'une casquette à l'autre dans la même journée.</p>
-    </div>
-
-    <div class="about-item">
-        <span>✦</span>
-        <p>de savoir qu'un sujet doit avancer, sans toujours trouver le temps ou l'énergie<br>pour s'en occuper.</p>
-    </div>
-
-</div>
-                 <p class="about-gap">
-                 Bref, le joyeux bazar de l'entrepreneuriat !             
-                </p>
-
-
-<p class="about-gap about-closing">
-    Mais c'est aussi ça que j'aime : les projets qui bougent, les idées qui prennent forme et les personnes qui ont envie d'essayer.
-</p>
-
-<p class="about-gap about-closing">
-    J'aime travailler aux côtés des entrepreneurs et, pendant un temps,<br>faire partie de leur aventure.
-</p>
-              
-            </section>
-
-      
-
+    <main id="contenu">
+      <section class="hero about-hero" aria-labelledby="about-hero-title">
+        <video class="hero__video" autoplay muted loop playsinline preload="metadata" poster="/assets/approche1.png" aria-hidden="true" tabindex="-1">
+          <source src="/assets/video-velo.mp4" type="video/mp4" />
+        </video>
+        <div class="hero__scrim"></div>
+        <div class="hero__content page-wrap">
+          <h1 id="about-hero-title"><span>Derrière chaque entreprise,</span><span>il y a un entrepreneur.</span></h1>
+          <p class="hero__intro">Et puisque nous pourrions être amenés à travailler ensemble, autant commencer par les présentations.</p>
         </div>
+      </section>
 
-  <div class="about-gallery">
+      <section class="about-story section-pad" aria-labelledby="about-page-title">
+        <div class="page-wrap">
+          <div class="about-story__opening">
+            <div class="about-story__copy">
+              <p class="editorial-kicker editorial-kicker--gold">À propos de Cora</p>
+              <h2 class="about-story__title" id="about-page-title">J'ai rarement eu une seule casquette... et ça me va plutôt bien.</h2>
+              <p>Entreprendre, c'est souvent devoir passer d'un rôle à l'autre : réfléchir à une idée, chercher des clients, communiquer, créer, organiser, décider... et recommencer.</p>
+              <p>Cette diversité m'a fait naviguer entre la vente, le développement commercial, la communication, le design, le web, les outils et la création de concepts...</p>
+              <p>La routine et moi, on ne se croise pas très souvent.</p>
+              <div class="about-story__continuation">
+                <h2 class="about-story__title about-story__title--section">
+                  <span>J'aime ce moment où un</span>
+                  <span>« ce serait bien »</span>
+                  <span>devient un « on le fait »</span>
+                </h2>
+                <p>J'aime le moment où on arrête d'en parler pendant des semaines et où, tout à coup, quelque chose commence vraiment à se passer.</p>
+                <p>Au fil des années, j'ai développé différentes activités dans des univers très différents : des jeux de cartes, un coffee shop ambulant, des produits, une application, des événements, des collaborations... À chaque fois, il a fallu imaginer, décider, vendre, communiquer, s'adapter... et parfois recommencer.</p>
 
-    <img src="/assets/images/cora.png" alt="moi">
+                <h3 class="about-story__subheading">Je sais ce que c'est...</h3>
+                <ul class="about-story__list">
+                  <li>d'avoir trop d'idées et de ne plus savoir par laquelle commencer.</li>
+                  <li>de passer d'une casquette à l'autre dans la même journée.</li>
+                  <li>de savoir qu'un sujet doit avancer, sans toujours trouver le temps ou l'énergie pour s'en occuper.</li>
+                </ul>
 
-    <img src="/assets/images/contact11.jpg" alt="contact11">
+                <p>Bref, le joyeux bazar de l'entrepreneuriat !</p>
+                <p class="about-story__emphasis">Mais c'est aussi ça que j'aime : les projets qui bougent, les idées qui prennent forme et les personnes qui ont envie d'essayer.</p>
+                <p class="about-story__emphasis">J'aime travailler aux côtés des entrepreneurs et, pendant un temps, faire partie de leur aventure.</p>
+              </div>
+            </div>
+            <div class="about-story__visuals">
+              <img class="about-story__portrait" src="/assets/reference-home-portrait-cora.jpg" alt="Cora Flores dans un jardin" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-</div>
-
- </div>
-
-</main>
-
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const burger = document.querySelector(".mobile-menu-toggle");
-    const menu = document.querySelector(".navbar-links");
-    const offersToggle = document.querySelector(".offers-toggle");
-    const dropdown = document.getElementById("offers-dropdown");
-
-    /* Ouvrir / fermer le menu mobile */
-    if (burger && menu) {
-        burger.addEventListener("click", function () {
-            const isOpen = menu.classList.toggle("is-open");
-            burger.setAttribute("aria-expanded", String(isOpen));
-        });
-
-        menu.querySelectorAll("a:not(.offers-toggle)").forEach(function (link) {
-            link.addEventListener("click", function () {
-                menu.classList.remove("is-open");
-                burger.setAttribute("aria-expanded", "false");
-            });
-        });
-    }
-
-    /* Ouvrir / fermer Mes offres */
-    if (offersToggle && dropdown) {
-
-        function closeOffers() {
-            dropdown.hidden = true;
-            offersToggle.setAttribute("aria-expanded", "false");
-        }
-
-        offersToggle.addEventListener("click", function (event) {
-            event.preventDefault();
-
-            const isOpen =
-                offersToggle.getAttribute("aria-expanded") === "true";
-
-            dropdown.hidden = isOpen;
-            offersToggle.setAttribute("aria-expanded", String(!isOpen));
-        });
-
-        /* Fermer en cliquant à l'extérieur */
-        document.addEventListener("click", function (event) {
-            if (
-                !dropdown.contains(event.target) &&
-                !offersToggle.contains(event.target)
-            ) {
-                closeOffers();
-            }
-        });
-
-        /* Fermer après avoir choisi une offre */
-        dropdown.querySelectorAll("a").forEach(function (link) {
-            link.addEventListener("click", closeOffers);
-        });
-
-        /* Fermer avec la touche Échap */
-        document.addEventListener("keydown", function (event) {
-            if (event.key === "Escape") {
-                closeOffers();
-            }
-        });
-    }
-
-});
-</script>
-  
-  
-</body>
+    <footer class="site-footer">
+      <div class="page-wrap site-footer__main site-footer__main--home">
+        <div class="site-footer__brand">
+          <img src="/assets/LOGO_SIMPLE.png" alt="Monogramme Cora Flores" loading="lazy" />
+          <p>Faire le point.<br />Faire les bons choix.<br />Passer à l’action.</p>
+        </div>
+        <div class="site-footer__column">
+          <h2>Navigation</h2>
+          <a href="/">Accueil</a>
+          <a href="/apropos/" aria-current="page">À propos</a>
+          <a href="/contact/">Contact</a>
+        </div>
+        <div class="site-footer__column">
+          <h2>Suivez-moi</h2>
+          <a href="https://www.instagram.com/coraflores.pro/" target="_blank" rel="noopener noreferrer">Instagram</a>
+          <a href="https://www.linkedin.com/in/cora-flores" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        </div>
+        <div class="site-footer__column">
+          <h2>Informations légales</h2>
+          <a href="/mentions-legales/">Mentions légales</a>
+          <a href="/politique-de-confidentialite/">Politique de confidentialité</a>
+        </div>
+      </div>
+      <div class="page-wrap site-footer__bottom">
+        <span>© 2026 Cora Flores. Tous droits réservés.</span>
+        <span>Fait avec ♥ par Cora Flores</span>
+        <span>Entrepreneure opérationnelle · Partenaire business</span>
+      </div>
+    </footer>
+  </body>
 </html>
-
