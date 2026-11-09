@@ -37,38 +37,13 @@
 
   <link rel="stylesheet" href="/styles.css?v=visual-fixes-2026-11-01" />
   <style>
-    .linkedin-testimonial {
-      box-sizing: border-box;
-      width: min(100%, 760px);
-      margin: clamp(2rem, 5vw, 3.5rem) auto 0;
-      padding: clamp(1.25rem, 4vw, 2rem);
-      border: 1px solid rgba(41, 61, 50, 0.16);
-      border-radius: 1.25rem;
-      background: #fff;
-      box-shadow: 0 16px 40px rgba(41, 61, 50, 0.08);
-      text-align: center;
-    }
-
-    .linkedin-testimonial__name {
-      margin: 0.5rem 0 1.25rem;
-      color: #293d32;
-      font-weight: 600;
-    }
-
-    .linkedin-testimonial__embed {
+    .testimonial-card__linkedin-embed {
       display: block;
       width: 100%;
-      max-width: 504px;
-      height: 719px;
-      margin: 0 auto;
+      max-width: 100%;
+      height: 300px;
+      margin: 1rem auto 0;
       border: 0;
-    }
-
-    @media (max-width: 600px) {
-      .linkedin-testimonial {
-        padding: 1rem;
-        border-radius: 1rem;
-      }
     }
   </style>
   <script src="/app.js?v=sticky-nav-offers-2026-10-31" defer></script>
@@ -299,6 +274,19 @@ La conception des boîtes et le design des cartes de mes deux jeux Voile & Vous,
 <br>Je recommande les yeux fermés et n'hésiterai pas à refaire appel à elle !&nbsp;»</blockquote>
                   <cite>Ienke <span>Voile & Vous</span></cite>
                 </article>
+                <article class="testimonial-card testimonial-card--linkedin">
+                  <span class="testimonial-card__tag">Post LinkedIn</span>
+                  <p class="testimonial-card__context">Jean-Michel Peignon</p>
+                  <iframe
+                    class="testimonial-card__linkedin-embed"
+                    src="https://www.linkedin.com/embed/feed/update/urn:li:share:7524773140967780353"
+                    height="719"
+                    width="504"
+                    frameborder="0"
+                    allowfullscreen=""
+                    title="Post intégré"
+                  ></iframe>
+                </article>
                 <article class="testimonial-card">
                   <img class="testimonial-card__avatar" src="/assets/images/nuvia.png" alt="Logo de Nuvia" loading="lazy" />
                   <span class="testimonial-card__tag">Accompagnement</span>
@@ -336,19 +324,6 @@ La conception des boîtes et le design des cartes de mes deux jeux Voile & Vous,
             </div>
             <p class="sr-only" data-carousel-status aria-live="polite" aria-atomic="true"></p>
           </div>
-          <article class="linkedin-testimonial" aria-labelledby="linkedin-testimonial-title">
-            <p class="editorial-kicker editorial-kicker--gold" id="linkedin-testimonial-title">Un témoignage publié sur LinkedIn</p>
-            <p class="linkedin-testimonial__name">Jean-Michel Peignon</p>
-            <iframe
-              class="linkedin-testimonial__embed"
-              src="https://www.linkedin.com/embed/feed/update/urn:li:share:7524773140967780353"
-              height="719"
-              width="504"
-              frameborder="0"
-              allowfullscreen=""
-              title="Post intégré"
-            ></iframe>
-          </article>
           <hr class="editorial-rule editorial-rule--center" />
           <p class="section-footnote">Des entrepreneurs, des idées débordantes...</p>
         </div>
